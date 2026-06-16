@@ -1,5 +1,6 @@
 <!-- Pretendard (한국 사이트에서 최근 가장 인기 많음) -->
 <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
 <head>
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.org_name }}{% endif %}</title>
     <!-- Meta -->
@@ -26,4 +27,27 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- === Pretendard 강제 적용 + 글자 퍼짐 방지 === -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap');
+
+        body, 
+        h1, h2, h3, h4, h5, h6, 
+        p, a, button, span, div, li, nav, .title, .intro {
+            font-family: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+            font-weight: 400;
+            letter-spacing: -0.02em !important;     /* 글자 퍼짐 방지 */
+            word-break: keep-all !important;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .title {
+            font-weight: 700 !important;
+        }
+
+        .logo-title {
+            font-weight: 700 !important;
+        }
+    </style>
 </head>
