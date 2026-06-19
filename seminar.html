@@ -300,17 +300,16 @@ title: AI Seminar Vol.1 - The Helper Ministry
   }
 
   /* 반응형 모바일 미디어 쿼리 */
-  @media (max-width: 768px) {
-    .offset-header { padding-top: 20px !important; }
-    .hero { padding: 4rem 1rem 3.5rem !important; }
-    .hero-title { font-size: 28px !important; line-height: 1.35; word-break: keep-all; }
-    .hero-sub { font-size: 15px !important; padding: 0 10px; }
-    .section { padding: 4rem 1.5rem; }
-    .section-title { font-size: 24px; word-break: keep-all; }
-    .core-benefits { grid-template-columns: 1fr; gap: 16px; }
-    .cards-grid { grid-template-columns: 1fr; gap: 12px; }
-    .info-row { grid-template-columns: 1fr; gap: 12px; margin-top: 2rem; padding-top: 2rem; }
-  }
+ /* seminar.html 내부 스타일 중 이 부분을 찾아서 아래처럼 패딩 값을 수정하거나 없애주세요 */
+@media (max-width: 768px) {
+  .hero { padding: 130px 1rem 3.5rem !important; } /* padding-top을 130px로 변경하여 가려짐 방지 */
+  .hero-title { font-size: 28px !important; line-height: 1.35; word-break: keep-all; }
+  .hero-sub { font-size: 15px !important; padding: 0 10px; }
+  .section-title { font-size: 24px; word-break: keep-all; }
+  .core-benefits { grid-template-columns: 1fr; gap: 16px; }
+  .cards-grid { grid-template-columns: 1fr; gap: 12px; }
+  .info-row { grid-template-columns: 1fr; gap: 12px; margin-top: 2rem; padding-top: 2rem; }
+}
 </style>
 
 <h2 class="sr-only">목회자를 위한 AI 활용 세미나 Vol.1 - 설교 준비 혁신 안내</h2>
