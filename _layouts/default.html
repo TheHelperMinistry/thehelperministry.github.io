@@ -3,9 +3,9 @@
 <head>
     {% include head.html %}
     <style>
+      /* ====== 전역 모던 디자인 시스템 고정 ====== */
       :root {
         --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
-        --font-serif: 'Noto Serif KR', Georgia, serif;
         --color-text-primary: #111111;
         --color-text-secondary: #444444;
         --color-border-tertiary: #e5e7eb;
@@ -15,34 +15,71 @@
       * { box-sizing: border-box; margin: 0; padding: 0; }
       body { font-family: var(--font-sans); background: transparent; color: var(--color-text-primary); }
 
-      /* 데스크톱 고정 기본 오프셋 여백 */
-      .offset-header, .hero, .promo, section[id] {
-        padding-top: 130px !important; 
+      /* ====== [여백 불일치 해결] 모든 페이지 첫 섹션 여백 완벽 통일 ====== */
+      .offset-header, .hero, .promo, section[id^="promo"], .main-container {
+        padding-top: 130px !important; /* 데스크톱 최적 여백 고정 */
       }
 
-      /* 헤더 기본 상단 고정 */
+      /* ====== [높이 제각각 해결] 고정 헤더 프레임 강제 제어 ====== */
       #header.header {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
-        z-index: 10000 !important;
+        height: 80px !important; /* 데스크톱 헤더 높이 80px 절대 고정 */
         background: #ffffff !important; 
         border-bottom: 1px solid var(--color-border-tertiary) !important;
-        height: 80px !important; 
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
+        z-index: 10000 !important;
         display: block !important;
       }
+      
+      /* 헤더 내부 양끝 레이아웃 정렬 */
+      #header.header .container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        height: 100% !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
+        width: 100% !important;
+      }
+      
+      /* 로고 무조건 왼쪽 고정 */
+      #header.header .logo {
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 24px !important;
+        line-height: 1 !important;
+        float: none !important;
+        text-align: left !important;
+      }
+      #header.header .logo a {
+        color: var(--color-text-primary) !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+      }
 
-      /* 데스크톱 메뉴 배치 */
+      /* 데스크톱 메뉴 무조건 오른쪽 고정 */
+      #header.header .main-nav {
+        float: none !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
       #header.header .main-nav .nav {
         list-style: none !important;
         display: flex !important;
         flex-direction: row !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
       #header.header .main-nav .nav .nav-item {
         margin-right: 25px !important;
         display: inline-block !important;
+        float: none !important;
       }
       #header.header .main-nav .nav .nav-item.last { margin-right: 0 !important; }
       #header.header .main-nav .nav .nav-item a {
@@ -57,26 +94,32 @@
 
       .custom-hamburger-btn { display: none !important; }
 
-      /* ====== 📱 모바일 환경 최적화 제어 (오류 완전 종결) ====== */
+      /* ====== 📱 [모바일 붕괴 해결] 스마트폰/태블릿 환경 강제 규칙 ====== */
       @media (max-width: 768px) {
-        .offset-header, .hero, .promo, section[id] {
-          padding-top: 105px !important; /* [여백 문제 종결] 헤더와 너무 멀지 않은 완벽한 크기 */
-          padding-bottom: 4rem !important;
+        /* 모바일 첫 섹션 간격 완전 일치화 */
+        .offset-header, .hero, .promo, section[id^="promo"], .main-container {
+          padding-top: 105px !important; /* 모바일에서 가려지지 않는 완벽한 간격 */
+          padding-bottom: 3rem !important;
         }
 
-        #header.header { height: 70px !important; }
+        #header.header {
+          height: 70px !important; /* 모바일 헤더 높이 70px 완전 고정 */
+        }
         
-        /* [센터 정렬 무력화] 무조건 로고 왼쪽, 햄버거 오른쪽 배치 */
+        /* [중앙 정렬 완벽 격파] 홈 화면 포함 무조건 로고 왼쪽, 햄버거 오른쪽 배치 */
         #header.header .container {
           display: flex !important;
           flex-direction: row !important; 
           justify-content: space-between !important;
           align-items: center !important;
           padding: 0 20px !important;
+          width: 100% !important;
           text-align: left !important;
         }
 
-        /* 🍔 모바일 햄버거 아이콘 우측 끝 강제 고정 */
+        #header.header .logo { text-align: left !important; }
+
+        /* 🍔 모바일 햄버거 아이콘 우측 끝 절대 고정 */
         .custom-hamburger-btn {
           display: block !important;
           width: 24px !important;
@@ -86,6 +129,8 @@
           background: none !important;
           border: none !important;
           z-index: 10005 !important;
+          padding: 0 !important;
+          margin: 0 !important;
           float: right !important;
         }
         .custom-hamburger-btn span {
@@ -101,7 +146,7 @@
         .custom-hamburger-btn span:nth-child(2) { top: 8px !important; }
         .custom-hamburger-btn span:nth-child(3) { top: 16px !important; }
 
-        /* 모바일 서랍 메뉴 */
+        /* 모바일 서랍 내비게이션 바 외부 간섭 차단 */
         #header.header .navbar-collapse {
           position: absolute !important;
           top: 70px !important;
@@ -120,19 +165,19 @@
           text-align: left !important;
         }
 
-        /* 메뉴 개폐 동작 클래스 */
+        /* 서랍 메뉴 오픈 상태 */
         #header.header .navbar-collapse.mobile-open {
-          max-height: 400px !important; /* 마지막 메뉴 노출 보장 */
+          max-height: 400px !important; 
           padding: 12px 20px !important;
           visibility: visible !important;
         }
 
-        /* 🍔 삼선 아이콘 X자 변형 */
+        /* 🍔 아이콘 X 변형 */
         .custom-hamburger-btn.toggle-active span:nth-child(1) { top: 8px !important; transform: rotate(135deg) !important; }
         .custom-hamburger-btn.toggle-active span:nth-child(2) { opacity: 0 !important; left: -60px !important; }
         .custom-hamburger-btn.toggle-active span:nth-child(3) { top: 8px !important; transform: rotate(-135deg) !important; }
 
-        /* 모바일 세로 목록 간격 축소 */
+        /* 모바일 세로 목록 정렬 및 촘촘한 간격 */
         #header.header .main-nav .nav {
           display: flex !important;
           flex-direction: column !important;
@@ -143,6 +188,7 @@
           display: block !important;
           width: 100% !important;
           text-align: left !important;
+          float: none !important;
         }
         #header.header .main-nav .nav .nav-item a {
           font-size: 14.5px !important;
@@ -150,7 +196,6 @@
           display: block !important;
           border-bottom: 0.5px solid #f7f7f7 !important;
           color: var(--color-text-secondary) !important;
-          text-decoration: none !important;
         }
         #header.header .main-nav .nav .nav-item.last a { border-bottom: none !important; }
         #header.header .navbar-toggle { display: none !important; }
@@ -159,15 +204,17 @@
 </head>
 <body>
 
-    <!-- 공통 상단 헤더 프레임 호출 -->
+    <!-- ====== 공통 고정 헤더 프레임 ====== -->
     <header id="header" class="header">
-      {% include header.html %}
+      <div class="container">
+        {% include header.html %}
+      </div>
     </header>
 
-    <!-- 본문 영역 -->
+    <!-- 개별 페이지 본문 알맹이 조립 위치 -->
     {{ content }}
 
-    <!-- 공통 하단 스크립트 및 독립형 토글 액션 활성화 -->
+    <!-- 공통 하단 부속 및 자바스크립트 독립 제어 -->
     {% include scripts.html %}
 
     <script>
