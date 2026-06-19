@@ -19,9 +19,9 @@
 
       /* ====== 데스크톱 환경 기본 구조 설정 ====== */
       
-      /* 모든 하위 페이지의 최상단 박스(.hero 또는 .promo)가 헤더 뒤로 숨지 않도록 강제 오프셋 밀어내기 */
+      /* 모든 하위 페이지의 최상단 박스가 헤더 뒤로 숨지 않도록 강제 오프셋 밀어내기 */
       .offset-header, .hero, .promo {
-        padding-top: 140px !important; /* 데스크톱에서 안전 거리 확보 */
+        padding-top: 140px !important; 
       }
 
       /* 헤더 상단 고정 */
@@ -61,7 +61,7 @@
         text-decoration: none !important;
       }
 
-      /* 데스크톱 메뉴 스타일 */
+      /* 데스크톱 내비게이션 메뉴 목록 바 */
       #header.header .main-nav .nav {
         list-style: none !important;
         margin: 0 !important;
@@ -87,39 +87,41 @@
         font-weight: 600 !important;
       }
 
-      /* 데스크톱에서는 햄버거 토글 스위치(체크박스)와 아이콘을 숨김 */
-      #menu-toggle, .hamburger-icon {
+      /* 데스크톱에서는 햄버거 토글 버튼 숨김 */
+      .custom-hamburger-btn {
         display: none !important;
       }
 
       /* ====== 📱 스마트폰 및 태블릿 모바일 환경 미디어 쿼리 ====== */
       @media (max-width: 768px) {
-        /* 하위 페이지까지 통틀어 모바일에서 첫 박스가 무조건 안 가려지도록 상단 여백 절대 제어 */
+        /* 하위 페이지까지 모바일에서 첫 박스가 절대 안 가려지도록 안전 거리 절대 고정 */
         .offset-header, .hero, .promo, section[id] {
           padding-top: 130px !important; 
         }
 
         #header.header {
-          height: 70px !important; /* 모바일에서는 헤더를 조금 더 날씬하게 조정 */
+          height: 70px !important; 
         }
         
         #header.header .container {
           position: relative !important;
           justify-content: space-between !important;
-          flex-direction: row !important; /* 가로 정렬 유지 */
+          flex-direction: row !important; 
           gap: 0 !important;
         }
 
-        /* 🍔 햄버거 아이콘 스타일 정의 (세 줄 선 형태) */
-        .hamburger-icon {
+        /* 🍔 햄버거 버튼 디자인 구성 */
+        .custom-hamburger-btn {
           display: block !important;
           width: 24px;
           height: 18px;
           position: relative;
           cursor: pointer;
+          background: none;
+          border: none;
           z-index: 10005 !important;
         }
-        .hamburger-icon span {
+        .custom-hamburger-btn span {
           display: block;
           position: absolute;
           height: 2px;
@@ -128,11 +130,11 @@
           border-radius: 2px;
           transition: all 0.25s ease-in-out;
         }
-        .hamburger-icon span:nth-child(1) { top: 0px; }
-        .hamburger-icon span:nth-child(2) { top: 8px; }
-        .hamburger-icon span:nth-child(3) { top: 16px; }
+        .custom-hamburger-btn span:nth-child(1) { top: 0px; }
+        .custom-hamburger-btn span:nth-child(2) { top: 8px; }
+        .custom-hamburger-btn span:nth-child(3) { top: 16px; }
 
-        /* 모바일 전체 서랍 메뉴 숨김 기본 상태 */
+        /* 외부 코드 방해를 차단하기 위해 강제 오버라이딩 숨김 기본 상태 설정 */
         #header.header .navbar-collapse {
           position: absolute !important;
           top: 70px !important;
@@ -140,16 +142,38 @@
           width: 100% !important;
           background: #ffffff !important;
           border-bottom: 1px solid var(--color-border-tertiary) !important;
-          padding: 15px 20px !important;
-          max-height: 0 !important; /* 평소에는 높이를 0으로 숨김 */
+          padding: 0 20px !important; /* 자바스크립트로 열릴 때 부드러운 패딩 효과 */
+          max-height: 0 !important; /* 기본 높이 0 */
           overflow: hidden !important;
+          display: block !important; /* 부트스트랩의 display: none 방해 방지 */
           visibility: hidden !important;
-          transition: max-height 0.3s ease-in-out, visibility 0.3s !important;
+          transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out !important;
           box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
           z-index: 10002 !important;
         }
 
-        /* 모바일 메뉴 항목 리스트 세로 정렬 */
+        /* 💡 자바스크립트 활성화 클래스 스크립트 */
+        #header.header .navbar-collapse.mobile-open {
+          max-height: 350px !important; /* 메뉴가 열릴 때 높이 확장 */
+          padding: 15px 20px !important;
+          visibility: visible !important;
+        }
+
+        /* 🍔 애니메이션 효과 스크립트 결합 */
+        .custom-hamburger-btn.toggle-active span:nth-child(1) {
+          top: 8px;
+          transform: rotate(135deg);
+        }
+        .custom-hamburger-btn.toggle-active span:nth-child(2) {
+          opacity: 0;
+          left: -60px;
+        }
+        .custom-hamburger-btn.toggle-active span:nth-child(3) {
+          top: 8px;
+          transform: rotate(-135deg);
+        }
+
+        /* 모바일 내비게이션 세로 레이아웃 고정 */
         #header.header .main-nav .nav {
           display: flex !important;
           flex-direction: column !important;
@@ -168,25 +192,10 @@
           display: block !important;
           border-bottom: 0.5px solid #f5f5f5;
         }
-
-        /* 💡 핵심 작동 원리: 햄버거 스위치(체크박스)가 선택되면 메뉴판을 아래로 활짝 엶 */
-        #menu-toggle:checked ~ .navbar-collapse {
-          max-height: 350px !important; /* 메뉴가 담길 만큼 높이 확장 */
-          visibility: visible !important;
-        }
-
-        /* 🍔 애니메이션: 클릭 시 세 줄 아이콘이 깔끔한 'X' 자 닫기 모양으로 변형 */
-        #menu-toggle:checked ~ .hamburger-icon span:nth-child(1) {
-          top: 8px;
-          transform: rotate(135deg);
-        }
-        #menu-toggle:checked ~ .hamburger-icon span:nth-child(2) {
-          opacity: 0;
-          left: -60px;
-        }
-        #menu-toggle:checked ~ .hamburger-icon span:nth-child(3) {
-          top: 8px;
-          transform: rotate(-135deg);
+        
+        /* 기존 테마의 토글 버튼 무력화 */
+        #header.header .navbar-toggle {
+          display: none !important;
         }
       }
     </style>
@@ -202,13 +211,11 @@
         </h1>
         
         <nav id="main-nav" class="main-nav navbar-right" role="navigation">
-          <input type="checkbox" id="menu-toggle" style="display: none !important;">
-          
-          <label for="menu-toggle" class="hamburger-icon">
+          <button type="button" class="custom-hamburger-btn" id="js-hamburger-trigger">
             <span></span>
             <span></span>
             <span></span>
-          </label>
+          </button>
           
           <div class="navbar-collapse collapse" id="navbar-collapse">
             <ul class="nav navbar-nav">
@@ -226,6 +233,32 @@
     </header>
 
     {{ content }}
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var trigger = document.getElementById("js-hamburger-trigger");
+        var menu = document.getElementById("navbar-collapse");
+        
+        if (trigger && menu) {
+          trigger.addEventListener("click", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // 클래스 교차 적용을 통해 메뉴 개폐 및 아이콘 X자 변형 제어
+            trigger.classList.toggle("toggle-active");
+            menu.classList.toggle("mobile-open");
+          });
+          
+          // 메뉴가 열린 상태에서 빈 공간 터치 시 자동으로 메뉴 숨김 처리
+          document.addEventListener("click", function(e) {
+            if (!trigger.contains(e.target) && !menu.contains(e.target)) {
+              trigger.classList.remove("toggle-active");
+              menu.classList.remove("mobile-open");
+            }
+          });
+        }
+      });
+    </script>
 
 </body>
 </html>
