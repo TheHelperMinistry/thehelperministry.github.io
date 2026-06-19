@@ -1,7 +1,9 @@
 # ====== THE HELPER MINISTRY CONFIGURATION ======
 
 # REQUIRED
-theme: "jekyll-theme-primer"
+# 외부 테마 플러그인을 완전히 null(배제) 처리하여 GitHub 토큰 요구를 차단합니다.
+theme: null
+remote_theme: null
 
 org_name: "The Helper Ministry"
 org_summary: "작은 교회와 목회자를 위한 디지털 동역자"
@@ -30,7 +32,7 @@ publish: true
 # COLOR SCHEME
 color_scheme: "default"
 
-# ====== BUILD SETTINGS (DO NOT CHANGE) ======
+# ====== BUILD SETTINGS ======
 baseurl: ""
 markdown: kramdown
 kramdown:
