@@ -9,22 +9,61 @@ title: AI Seminar Vol.1 - The Helper Ministry
 
   /* 헤더 고정 오프셋 */
   .offset-header {
-    padding-top: 120px !important;
+    padding-top: 140px !important;
   }
 
+  /* ====== 테마 컬러를 활용한 섹션별 배경색 시스템 ====== */
   .hero {
+    background-color: #ffffff !important;
     padding: 6rem 2rem 5rem;
     text-align: center;
-    border-bottom: 0.5px solid var(--color-border-tertiary);
     position: relative;
     overflow: hidden;
   }
+  
+  .verse-bar {
+    background-color: #f4f7fa !important; /* 타 페이지와 일치시킨 은은한 푸른빛 미색 */
+    border-top: 0.5px solid #e1e8f0;
+    border-bottom: 0.5px solid #e1e8f0;
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+
+  .value-section {
+    background-color: #ffffff !important; /* 순백색 배경 */
+  }
+
+  .deliverables-section {
+    background-color: #fafbfc !important; /* 아주 옅은 블루그레이로 실전 자산 단락 구별 */
+    border-top: 0.5px solid var(--color-border-tertiary);
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .models-section {
+    background-color: #ffffff !important; /* 4대 모델 카드가 돋보이도록 백색 처리 */
+  }
+
+  .system-section {
+    background-color: #f7f6f3 !important; /* 정갈하고 차분한 아이보리 웜그레이 */
+    border-top: 0.5px solid var(--color-border-tertiary);
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .cta-section {
+    background-color: #eef4f9 !important; /* 결단 및 등록 유도를 위한 은은한 테마 컬러 적용 */
+    padding: 6rem 2rem;
+    text-align: center;
+    border-top: 0.5px solid #d0dee9;
+  }
+
+  /* ====== 타이틀 및 라벨 폰트 서식 정형 ====== */
   .hero-eyebrow {
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 0.18em;
-    color: var(--color-text-tertiary);
+    color: #6690b9; /* 라벨에 시그니처 포인트 지정 */
     text-transform: uppercase;
     margin-bottom: 2rem;
+    font-weight: 700;
   }
   .hero-title {
     font-family: var(--font-serif);
@@ -43,88 +82,71 @@ title: AI Seminar Vol.1 - The Helper Ministry
     margin: 0 auto 2.5rem;
     word-break: keep-all;
   }
-  .btn-primary {
-    display: inline-block;
-    padding: 16px 42px;
-    background: var(--color-text-primary);
-    color: var(--color-background-primary);
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: var(--border-radius-md);
-    cursor: pointer;
-    border: none;
-    text-decoration: none;
-    transition: opacity 0.15s;
-  }
-  .btn-primary:hover { opacity: 0.8; }
 
-  .verse-bar {
-    background: var(--color-background-secondary);
-    border-top: 0.5px solid var(--color-border-tertiary);
-    border-bottom: 0.5px solid var(--color-border-tertiary);
-    padding: 2rem;
-    text-align: center;
+  .section {
+    padding: 6rem 2rem;
+    max-width: 100%;
   }
+  .section-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #6690b9;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+  }
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    color: var(--color-text-primary);
+  }
+  .section-body {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+  }
+  .section-body p { margin-bottom: 1.25rem; }
+
   .verse-text {
     font-family: var(--font-serif);
     font-size: 17px;
     line-height: 1.8;
-    color: var(--color-text-secondary);
-    max-width: 560px;
+    color: #4a5b6d;
+    max-width: 600px;
     margin: 0 auto 0.5rem;
     font-style: italic;
   }
   .verse-ref {
     font-size: 12px;
     letter-spacing: 0.1em;
-    color: var(--color-text-tertiary);
+    color: #7c91a6;
   }
 
-  .section {
-    padding: 5rem 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .section-label {
-    font-size: 14px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--color-text-tertiary);
-    margin-bottom: 1.25rem;
-    font-weight: 600;
-  }
-  .section-title {
-    font-family: var(--font-serif);
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 1.3;
-    margin-bottom: 1.5rem;
-    color: var(--color-text-primary);
-  }
-  .section-body {
-    font-size: 16px;
-    line-height: 1.85;
-    color: var(--color-text-secondary);
-  }
-  .section-body p { margin-bottom: 1.25rem; }
-
-  /* 2단 핵심 변화 그리드 */
+  /* 2단 핵심 변화 그리드 상자 */
   .core-benefits {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    margin: 2.5rem 0;
+    margin: 2.5rem 0 1rem;
   }
   .benefit-box {
-    background: var(--color-background-primary, #ffffff);
-    border: 1px solid var(--color-border-tertiary, #e5e7eb);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: var(--border-radius-lg, 8px);
     padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
   }
   .benefit-box h3 {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 600;
-    color: var(--color-text-primary);
+    color: #6690b9; /* 유익 소제목 강조 */
     margin-bottom: 1rem;
   }
   .benefit-box p {
@@ -134,55 +156,64 @@ title: AI Seminar Vol.1 - The Helper Ministry
     word-break: keep-all;
   }
 
-  /* 현장 제공 자산 리스트 */
+  /* 현장 제공 자산 리스트 양식 */
   .asset-list {
     list-style: none;
     margin-top: 1.5rem;
   }
   .asset-item {
-    padding: 1.5rem;
-    background: var(--color-background-secondary, #f9fafb);
+    padding: 1.75rem;
+    background: #ffffff;
     border-radius: var(--border-radius-md, 6px);
     margin-bottom: 1rem;
-    border-left: 3px solid var(--color-text-primary);
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #6690b9; /* 포인트 컬러 선 적용 */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.01);
   }
   .asset-title {
     font-size: 16px;
     font-weight: 600;
     color: var(--color-text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
   }
   .asset-body {
     font-size: 14px;
     color: var(--color-text-secondary);
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
-  /* 4대 AI 도구 그리드 */
+  /* 4대 AI 도구 사각형 격자 디자인 */
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 16px; 
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
   .card {
-    background: var(--color-background-primary, #ffffff);
-    border: 1px solid var(--color-border-tertiary, #e5e7eb); 
+    background: #ffffff;
+    border: 1px solid #e2e8f0; 
     border-radius: var(--border-radius-lg, 8px);
-    padding: 1.25rem; 
+    padding: 1.5rem 1.25rem; 
     display: flex;
     flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+    transition: border-color 0.2s ease;
+  }
+  .card:hover {
+    border-color: #6690b9;
   }
   .card-title {
-    font-size: 14px;
+    font-size: 14.5px;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     color: var(--color-text-primary);
+    line-height: 1.4;
   }
   .card-body {
-    font-size: 12.5px;
+    font-size: 13px;
     color: var(--color-text-secondary);
-    line-height: 1.6;
+    line-height: 1.65;
+    word-break: keep-all;
   }
 
   /* 하단 요약 정보 행 */
@@ -190,200 +221,233 @@ title: AI Seminar Vol.1 - The Helper Ministry
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    margin-top: 3.5rem;
+    margin-top: 3rem;
     padding-top: 2.5rem;
-    border-top: 0.5px solid var(--color-border-tertiary);
+    border-top: 0.5px solid #e2e8f0;
     text-align: center;
   }
   .info-item {
-    background: var(--color-background-secondary, #f9fafb); 
-    border: 1px solid var(--color-border-tertiary, #e5e7eb);
+    background: #ffffff; 
+    border: 1px solid #e2e8f0;
     border-radius: var(--border-radius-md, 6px);
     padding: 1.5rem 1rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.01);
   }
   .info-label {
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-text-tertiary);
+    color: #7c91a6;
     margin-bottom: 0.6rem;
-    font-weight: 600;
+    font-weight: 700;
   }
   .info-value {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-text-primary);
     word-break: keep-all;
   }
 
-  .cta-section {
-    padding: 5rem 2rem;
-    text-align: center;
-    background: var(--color-background-secondary);
-    border-top: 0.5px solid var(--color-border-tertiary);
+  /* 공통 메인 컬러 버튼 */
+  .btn-primary {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #6690b9 !important; 
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: background 0.2s ease, opacity 0.15s;
+    box-shadow: 0 2px 8px rgba(102, 144, 185, 0.2);
+    margin-top: 1rem;
   }
+  .btn-primary:hover { opacity: 0.9; background: #537ca5 !important; color: #ffffff !important; text-decoration: none; }
+
+  .divider {
+    border: none;
+    border-top: 0.5px solid var(--color-border-tertiary);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
   .cta-title {
     font-family: var(--font-serif);
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 500;
-    line-height: 1.35;
+    line-height: 1.4;
     margin-bottom: 1.5rem;
+    color: var(--color-text-primary);
   }
   .cta-sub {
     font-size: 16px;
     color: var(--color-text-secondary);
-    line-height: 1.75;
+    line-height: 1.8;
     max-width: 640px;
     margin: 0 auto 2.5rem;
   }
 
-  footer {
-    padding: 2rem;
+  /* index와 완벽히 동일한 먹색 크레딧 푸터 고정 */
+  .footer-clean {
+    padding: 2rem 0;
+    background: #111111; 
+    color: #767676;
     text-align: center;
-    border-top: 0.5px solid var(--color-border-tertiary);
-  }
-  footer p {
     font-size: 12px;
-    color: var(--color-text-tertiary);
-    line-height: 1.8;
+    letter-spacing: 0.05em;
   }
 
   /* 반응형 모바일 미디어 쿼리 */
   @media (max-width: 768px) {
-    .hero { padding: 4rem 1rem 3.5rem; }
-    .hero-title { font-size: 28px; line-height: 1.35; word-break: keep-all; }
-    .hero-sub { font-size: 15px; padding: 0 10px; }
+    .offset-header { padding-top: 20px !important; }
+    .hero { padding: 4rem 1rem 3.5rem !important; }
+    .hero-title { font-size: 28px !important; line-height: 1.35; word-break: keep-all; }
+    .hero-sub { font-size: 15px !important; padding: 0 10px; }
+    .section { padding: 4rem 1.5rem; }
     .section-title { font-size: 24px; word-break: keep-all; }
     .core-benefits { grid-template-columns: 1fr; gap: 16px; }
     .cards-grid { grid-template-columns: 1fr; gap: 12px; }
-    .info-row { grid-template-columns: 1fr; gap: 12px; margin-top: 2.5rem; padding-top: 2rem; }
+    .info-row { grid-template-columns: 1fr; gap: 12px; margin-top: 2rem; padding-top: 2rem; }
   }
 </style>
 
 <h2 class="sr-only">목회자를 위한 AI 활용 세미나 Vol.1 - 설교 준비 혁신 안내</h2>
 
-<!-- 본문 시작 -->
-<div class="hero offset-header">
+<!-- ====== 본문 시작 (메인 히어로 영역) ====== -->
+<section id="promo" class="hero offset-header">
   <p class="hero-eyebrow">THE HELPER MINISTRY AI SEMINAR</p>
-  <h1 class="hero-title">2시간으로 완벽해지는 AI 활용 설교 준비</h1>
+  <h1 class="hero-title">2시간으로 완벽해지는<br>AI 설교 준비의 틀</h1>
   <p class="hero-sub">설교 준비 시간은 획기적으로 줄어들고, 자료 활용의 넓이와 깊이는 압도적으로 증대됩니다. 이번 주 강단부터 곧바로 적용할 수 있는 목회자 맞춤형 실전 세미나입니다.</p>
-</div>
+</section>
 
 <div class="verse-bar">
   <p class="verse-text">"주의 법을 사랑하는 자에게는 큰 평안이 있으니 저희에게 장애물이 없으리이다"</p>
   <p class="verse-ref">시편 119:165 (개역한글)</p>
 </div>
 
-<!-- 핵심 혜택 섹션 -->
-<div class="section">
-  <p class="section-label">THE CORE VALUE</p>
-  <h2 class="section-title">2시간 후, 목사님의 설교 사역에 일어날 2가지 획기적인 변화</h2>
-  <div class="section-body">
-    <p>본 강의는 단순한 이론 설명에 머물지 않고, 매주 직면하는 설교 준비의 무게를 근본적으로 경감시키는 데 목적을 둡니다.</p>
-    
-    <div class="core-benefits">
-      <div class="benefit-box">
-        <h3>01. 설교 준비 시간의 획기적 단축</h3>
-        <p>원어 분석, 주석 비교, 시사 통계 자료 검색 등 매주 수많은 시간을 소모하던 단순 반복형 자료 정리 과정을 인공지능 조교에게 맡겨 준비 시간을 압도적으로 단축시킵니다. 설교자는 본문 묵상과 기도, 깊이 있는 적용에 온전히 집중할 수 있게 됩니다.</p>
-      </div>
-      <div class="benefit-box">
-        <h3>02. 자료 활용의 넓이와 깊이의 획기적 증대</h3>
-        <p>시간적 한계로 평소 다 찾아보기 어려웠던 국내외 방대한 신학 주석서와 최신 논문 자료의 핵심을 단 몇 초 만에 비교·분석합니다. 신학계의 최신 동향과 신뢰할 수 있는 시사 통계까지 빠짐없이 엮어내어 설교의 신학적 무게감과 시대적 스펙트럼을 넓혀드립니다.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr class="divider">
-
-<!-- 현장 지급 실전 자산 섹션 -->
-<div class="section">
-  <p class="section-label">HANDOUT & DELIVERABLES</p>
-  <h2 class="section-title">세미나가 끝날 때 확실하게 쥐고 돌아가는 실전 자산</h2>
-  <div class="section-body">
-    <p>강의가 끝난 후 목회 현장에 복귀하셨을 때 곧바로 마우스 클릭 한 번으로 사용하실 수 있는 결과물들을 전수합니다.</p>
-    
-    <ul class="asset-list">
-      <li class="asset-item">
-        <p class="asset-title">마우스 클릭 한 번으로 끝나는 '목회자 전용 질문틀' 제공</p>
-        <p class="asset-body"> 본문 연구, 원어 분석, 시사 보강에 최적화되어 검증된 완성형 프롬프트(질문 템플릿) 모음집(핸드아웃 9장)을 드립니다. 복사해서 붙여넣기만 하면 목사님만의 완벽한 설교 준비 체계가 잡힙니다.</p>
-      </li>
-      <li class="asset-item">
-        <p class="asset-title">오늘 본문으로 현장에서 완성하는 설교 초안 1편</p>
-        <p class="asset-body"> 단순히 보고 듣는 강의가 아닙니다. 당일 제시되는 실제 본문을 활용해 자료 수집부터 대지 추출, 글 완성까지의 전 과정을 인공지능과 협업하며 현장에서 초안 1편을 직접 도출합니다.</p>
-      </li>
-      <li class="asset-item">
-        <p class="asset-title">전 세대를 아우르는 맞춤형 설교 가공 및 미디어 활용 샘플</p>
-        <p class="asset-body"> 주일 설교 본문을 기반으로 청소년, 청년 등 다음 세대의 눈높이에 맞춰 재서술한 메시지 샘플과, 주중에 성도들과 단톡방에서 나눌 수 있는 주보용 카드뉴스 문구·이미지 시안까지 함께 만들어 가져갑니다.</p>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<hr class="divider">
-
-<!-- 4대 AI 분석 섹션 -->
-<div class="section">
-  <p class="section-label">TOP 4 AI MODELS</p>
-  <h2 class="section-title">시중 최고 성능의 4대 AI 모델 완벽 분석 및 효율적 사용법</h2>
-  <div class="section-body">
-    <p> 한 가지 도구만 사용하면 인공지능이 거짓 정보를 지어내는 '환각 현상'에 노출되기 쉽습니다. 각 도구의 명확한 장단점을 파악해 설교 준비 단계마다 가장 똑똑한 조교를 배치하는 지혜를 나눕니다.</p>
-    
-    <div class="cards-grid">
-      <div class="card">
-        <p class="card-title">NotebookLM<br>(자료 분석의 강자)</p>
-        <p class="card-body"> 내가 직접 업로드한 주석과 논문 데이터 안에서만 답변하므로, 거짓말을 하지 않는 가장 안전하고 충실한 사서 조교입니다.</p>
-      </div>
-      <div class="card">
-        <p class="card-title">Perplexity<br>(최신 검색의 강자)</p>
-        <p class="card-body"> 실시간 웹을 정밀하게 검색하고 명확한 출처 링크를 함께 제시하여, 최신 신학 동향이나 신뢰성 있는 시사 통계를 찾을 때 탁월합니다.</p>
-      </div>
-      <div class="card">
-        <p class="card-title">Claude<br>(문장력의 강자)</p>
-        <p class="card-body"> 긴 글의 문맥과 논리 구조를 가장 잘 이해하며, 한국어 신학 문장을 부드럽고 자연스러운 설교체 표현으로 빚어내는 작가입니다.</p>
-      </div>
-      <div class="card">
-        <p class="card-title">ChatGPT<br>(기획·확장의 강자)</p>
-        <p class="card-body"> 완성된 설교를 바탕으로 시각적인 이미지 시안을 구상하거나 다음 세대용 요약문 등 다각도 매체로 재가공하는 만능 기획자입니다.</p>
+<!-- ====== 핵심 혜택 섹션 (WHITE BACKGROUND) ====== -->
+<section class="value-section section">
+  <div class="section-inner">
+    <p class="section-label">THE CORE VALUE</p>
+    <h2 class="section-title">2시간 후, 목사님의 설교 사역에 일어날 2가지 획기적인 변화</h2>
+    <div class="section-body">
+      <p>본 강의는 단순한 이론 설명에 머물지 않고, 매주 직면하는 설교 준비의 무게를 근본적으로 경감시키는 데 목적을 둡니다.</p>
+      
+      <div class="core-benefits">
+        <div class="benefit-box">
+          <h3>01. 설교 준비 시간의 획기적 단축</h3>
+          <p>원어 분석, 주석 비교, 시사 통계 자료 검색 등 매주 수많은 시간을 소모하던 단순 반복형 자료 정리 과정을 인공지능 조교에게 맡겨 준비 시간을 압도적으로 단축시킵니다. 설교자는 본문 묵상과 기도, 깊이 있는 적용에 온전히 집중할 수 있게 됩니다.</p>
+        </div>
+        <div class="benefit-box">
+          <h3>02. 자료 활용의 넓이와 깊이의 획기적 증대</h3>
+          <p>시간적 한계로 평소 다 찾아보기 어려웠던 국내외 방대한 신학 주석서와 최신 논문 자료의 핵심을 단 몇 초 만에 비교·분석합니다. 신학계의 최신 동향과 신뢰할 수 있는 시사 통계까지 빠짐없이 엮어내어 설교의 신학적 무게감과 시대적 스펙트럼을 넓혀드립니다.</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<hr class="divider">
+<!-- ====== 현장 지급 실전 자산 섹션 (LIGHT GRAY-BLUE BACKGROUND) ====== -->
+<section class="deliverables-section section">
+  <div class="section-inner">
+    <p class="section-label">HANDOUT & DELIVERABLES</p>
+    <h2 class="section-title">세미나가 끝날 때 확실하게 쥐고 돌아가는 실전 자산</h2>
+    <div class="section-body">
+      <p>강의가 끝난 후 목회 현장에 복귀하셨을 때 곧바로 마우스 클릭 한 번으로 사용하실 수 있는 결과물들을 전수합니다.</p>
+      
+      <ul class="asset-list">
+        <li class="asset-item">
+          <p class="asset-title">마우스 클릭 한 번으로 끝나는 '목회자 전용 질문틀' 제공</p>
+          <p class="asset-body">본문 연구, 원어 분석, 시사 보강에 최적화되어 검증된 완성형 프롬프트(질문 템플릿) 모음집(핸드아웃 9장)을 드립니다. 복사해서 붙여넣기만 하면 목사님만의 완벽한 설교 준비 체계가 잡힙니다.</p>
+        </li>
+        <li class="asset-item">
+          <p class="asset-title">오늘 본문으로 현장에서 완성하는 설교 초안 1편</p>
+          <p class="asset-body">단순히 보고 듣는 강의가 아닙니다. 당일 제시되는 실제 본문을 활용해 자료 수집부터 대지 추출, 글 완성까지의 전 과정을 인공지능과 협업하며 현장에서 초안 1편을 직접 도출합니다.</p>
+        </li>
+        <li class="asset-item">
+          <p class="asset-title">전 세대를 아우르는 맞춤형 설교 가공 및 미디어 활용 샘플</p>
+          <p class="asset-body">주일 설교 본문을 기반으로 청소년, 청년 등 다음 세대의 눈높이에 맞춰 재서술한 메시지 샘플과, 주중에 성도들과 단톡방에서 나눌 수 있는 주보용 카드뉴스 문구·이미지 시안까지 함께 만들어 가져갑니다.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-<!-- 지속 가능한 시스템 안내 -->
-<div class="section">
-  <p class="section-label">CONTINUOUS MINISTRY SYSTEM</p>
-  <h2 class="section-title">30년 목회 자산으로 이어지는 나만의 라이브러리 설계</h2>
-  <div class="section-body">
-    <p> 2시간 동안 익히는 설교 준비의 틀은 시작에 불과합니다. 매주 선포되는 소중한 말씀 자료가 파편화되어 사라지지 않고, 평생의 체계적인 신학 데이터베이스로 축적되는 확장 로드맵을 선사합니다.</p>
-    
-    <div class="info-row">
-      <div class="info-item">
-        <p class="info-label">세미나 시간</p>
-        <p class="info-value"> 집중 실습 총 2시간</p>
-      </div>
-      <div class="info-item">
-        <p class="info-label">심화 과정 트랙 A</p>
-        <p class="info-value"> 나만의 설교 DB 구축<br>(평생 자산화 시스템)</p>
-      </div>
-      <div class="info-item">
-        <p class="info-label">심화 과정 트랙 B</p>
-        <p class="info-value"> 부서 사역 콘텐츠 제작<br>(미디어 사역 실전 활용)</p>
+<!-- ====== 4대 AI 분석 섹션 (WHITE BACKGROUND) ====== -->
+<section class="models-section section">
+  <div class="section-inner">
+    <p class="section-label">TOP 4 AI MODELS</p>
+    <h2 class="section-title">시중 최고 성능의 4대 AI 모델 완벽 분석 및 효율적 사용법</h2>
+    <div class="section-body">
+      <p>한 가지 도구만 사용하면 인공지능이 거짓 정보를 지어내는 '환각 현상'에 노출되기 쉽습니다. 각 도구의 명확한 장단점을 파악해 설교 준비 단계마다 가장 똑똑한 조교를 배치하는 지혜를 나눕니다.</p>
+      
+      <div class="cards-grid">
+        <div class="card">
+          <h3 class="card-title">NotebookLM<br>(자료 분석의 강자)</h3>
+          <p class="card-body">내가 직접 업로드한 주석과 논문 데이터 안에서만 답변하므로, 거짓말을 하지 않는 가장 안전하고 충실한 사서 조교입니다.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Perplexity<br>(최신 검색의 강자)</h3>
+          <p class="card-body">실시간 웹을 정밀하게 검색하고 명확한 출처 링크를 함께 제시하여, 최신 신학 동향이나 신뢰성 있는 시사 통계를 찾을 때 탁월합니다.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Claude<br>(문장력의 강자)</h3>
+          <p class="card-body">긴 글의 문맥과 논리 구조를 가장 잘 이해하며, 한국어 신학 문장을 부드럽고 자연스러운 설교체 표현으로 빚어내는 작가입니다.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">ChatGPT<br>(기획 · 확장의 강자)</h3>
+          <p class="card-body">완성된 설교를 바탕으로 시각적인 이미지 시안을 구상하거나 다음 세대용 요약문 등 다각도 매체로 재가공하는 만능 기획자입니다.</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- CTA 섹션 -->
-<div class="cta-section">
-  <h2 class="cta-title">"인공지능에게 설교를 맡기지 않고,<br>인공지능을 완벽히 지배하는 설교자로 서십시오."</h2>
-  <p class="cta-sub"> 신학 균형과 성경적 깊이를 견고히 유지하면서 AI를 가장 유능한 조교로 부리는 실제적인 방법,<br>지금 목회 사역에 장착하시길 바랍니다.</p>
-  <a href="mailto:thehelperministry@gmail.com" class="btn-primary">실전 프롬프트 및 세미나 등록하기</a>
-</div>
+<hr class="divider">
 
-<!-- 푸터 -->
-<footer>
-  <p> 목회자를 위한 AI 활용 세미나 · The Helper Ministry</p>
+<!-- ====== 지속 가능한 시스템 안내 (LIGHT IVORY WARM BACKGROUND) ====== -->
+<section class="system-section section">
+  <div class="section-inner">
+    <p class="section-label">CONTINUOUS MINISTRY SYSTEM</p>
+    <h2 class="section-title">30년 목회 자산으로 이어지는 나만의 라이브러리 설계</h2>
+    <div class="section-body">
+      <p>2시간 동안 익히는 설교 준비의 틀은 시작에 불과합니다. 매주 선포되는 소중한 말씀 자료가 파편화되어 사라지지 않고, 평생의 체계적인 신학 데이터베이스로 축적되는 확장 로드맵을 선사합니다.</p>
+      
+      <div class="info-row">
+        <div class="info-item">
+          <p class="info-label">세미나 시간</p>
+          <p class="info-value">집중 실습 총 2시간</p>
+        </div>
+        <div class="info-item">
+          <p class="info-label">심화 과정 트랙 A</p>
+          <p class="info-value">나만의 설교 DB 구축<br>(평생 자산화 시스템)</p>
+        </div>
+        <div class="info-item">
+          <p class="info-label">심화 과정 트랙 B</p>
+          <p class="info-value">부서 사역 콘텐츠 제작<br>(미디어 사역 실전 활용)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA 섹션 (LIGHT BLUE BACKGROUND) ====== -->
+<section id="contact" class="cta-section">
+  <div class="section-inner">
+    <h2 class="cta-title">"인공지능에게 설교를 맡기지 않고,<br>인공지능을 완벽히 지배하는 설교자로 서십시오."</h2>
+    <div class="cta-sub">
+      <p style="margin-bottom: 1.5rem;">개혁주의적 신학 균형과 성경적 깊이를 견고히 유지하면서 AI를 가장 유능한 조교로 부리는 실제적인 방법, 지금 목회 사역에 장착하시길 바랍니다.</p>
+      <strong>목회자 AI 세미나 수강 및 사역 문의</strong>
+    </div>
+    <a href="mailto:thehelperministry@gmail.com" class="btn-primary">실전 프롬프트 및 세미나 등록하기</a>
+  </div>
+</section>
+
+<!-- ====== CLEAN FOOTER (수정 완료) ====== -->
+<footer class="footer-clean">
+  <div class="container">
+    <p>Copyright &copy; {{ "now" | date: "%Y" }} The Helper Ministry. All rights reserved.</p>
+  </div>
 </footer>
