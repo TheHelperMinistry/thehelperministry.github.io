@@ -3,13 +3,11 @@
 <head>
     {% include head.html %}
     <style>
-      /* ====== 전역 디자인 시스템 변수 고정 ====== */
       :root {
         --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
         --font-serif: 'Noto Serif KR', Georgia, serif;
         --color-text-primary: #111111;
         --color-text-secondary: #444444;
-        --color-text-tertiary: #767676;
         --color-border-tertiary: #e5e7eb;
         --theme-blue: #6690b9;
       }
@@ -17,14 +15,12 @@
       * { box-sizing: border-box; margin: 0; padding: 0; }
       body { font-family: var(--font-sans); background: transparent; color: var(--color-text-primary); }
 
-      /* ====== 데스크톱 환경 기본 구조 설정 ====== */
-      
-      /* 모든 페이지의 최상단 박스가 헤더 뒤로 숨지 않도록 강제 오프셋 밀어내기 (여백 조정) */
+      /* 데스크톱 고정 기본 오프셋 여백 */
       .offset-header, .hero, .promo, section[id] {
-        padding-top: 130px !important; /* 데스크톱에서 깔끔한 고정 여백 확보 */
+        padding-top: 130px !important; 
       }
 
-      /* 헤더 상단 고정 */
+      /* 헤더 기본 상단 고정 */
       #header.header {
         position: fixed !important;
         top: 0 !important;
@@ -37,58 +33,18 @@
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
         display: block !important;
       }
-      
-      /* 데스크톱 컨테이너 정렬 및 정형 */
-      #header.header .container {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        height: 100% !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 0 20px !important;
-        width: 100% !important;
-      }
-      
-      #header.header .logo {
-        margin: 0 !important;
-        padding: 0 !important;
-        font-size: 24px !important;
-        line-height: 1 !important;
-        float: left !important;
-        text-align: left !important;
-      }
-      
-      #header.header .logo-title,
-      #header.header .logo a {
-        color: var(--color-text-primary) !important;
-        font-weight: 700 !important;
-        text-decoration: none !important;
-        display: inline-block !important;
-      }
 
-      /* 데스크톱 내비게이션 메뉴 목록 바 */
-      #header.header .main-nav {
-        float: right !important;
-        display: block !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
+      /* 데스크톱 메뉴 배치 */
       #header.header .main-nav .nav {
         list-style: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
         display: flex !important;
         flex-direction: row !important;
       }
       #header.header .main-nav .nav .nav-item {
         margin-right: 25px !important;
         display: inline-block !important;
-        float: none !important;
       }
-      #header.header .main-nav .nav .nav-item.last {
-        margin-right: 0 !important;
-      }
+      #header.header .main-nav .nav .nav-item.last { margin-right: 0 !important; }
       #header.header .main-nav .nav .nav-item a {
         color: var(--color-text-secondary) !important;
         font-size: 14.5px !important;
@@ -97,53 +53,30 @@
         font-weight: 500;
         transition: color 0.2s ease;
       }
-      #header.header .main-nav .nav .nav-item a:hover {
-        color: var(--theme-blue) !important;
-        font-weight: 600 !important;
-      }
+      #header.header .main-nav .nav .nav-item a:hover { color: var(--theme-blue) !important; font-weight: 600 !important; }
 
-      /* 데스크톱에서는 독립형 햄버거 버튼 절대 숨김 */
-      .custom-hamburger-btn {
-        display: none !important;
-      }
+      .custom-hamburger-btn { display: none !important; }
 
-      /* ====== 📱 스마트폰 및 태블릿 모바일 환경 대응 (오류 완전 종결) ====== */
+      /* ====== 📱 모바일 환경 최적화 제어 (오류 완전 종결) ====== */
       @media (max-width: 768px) {
-        /* [여백 문제 완벽 해결] 모바일 화면에서 첫 섹션이 헤더와 너무 벌어지지 않도록 최적의 여백 고정 */
         .offset-header, .hero, .promo, section[id] {
-          padding-top: 105px !important; /* 가려지지도 않고 너무 멀지도 않은 완벽한 크기 */
+          padding-top: 105px !important; /* [여백 문제 종결] 헤더와 너무 멀지 않은 완벽한 크기 */
           padding-bottom: 4rem !important;
         }
 
-        #header.header {
-          height: 70px !important; 
-        }
+        #header.header { height: 70px !important; }
         
-        /* [센터 정렬 문제 완벽 해결] 기존 부트스트랩 text-center 강제 초기화 및 양끝 정렬 배치 */
+        /* [센터 정렬 무력화] 무조건 로고 왼쪽, 햄버거 오른쪽 배치 */
         #header.header .container {
           display: flex !important;
           flex-direction: row !important; 
           justify-content: space-between !important;
           align-items: center !important;
           padding: 0 20px !important;
-          width: 100% !important;
-          text-align: left !important; /* 센터 정렬 무력화 */
-        }
-
-        #header.header .logo {
-          float: left !important;
-          display: block !important;
           text-align: left !important;
         }
 
-        #header.header .main-nav {
-          float: right !important;
-          display: block !important;
-          margin: 0 !important;
-          padding: 0 !important;
-        }
-
-        /* 🍔 모바일 햄버거 아이콘 오른쪽 끝 완벽 강제 고정 */
+        /* 🍔 모바일 햄버거 아이콘 우측 끝 강제 고정 */
         .custom-hamburger-btn {
           display: block !important;
           width: 24px !important;
@@ -153,9 +86,7 @@
           background: none !important;
           border: none !important;
           z-index: 10005 !important;
-          padding: 0 !important;
-          margin: 0 !important;
-          float: right !important; /* 정렬 방해 방지 */
+          float: right !important;
         }
         .custom-hamburger-btn span {
           display: block !important;
@@ -170,7 +101,7 @@
         .custom-hamburger-btn span:nth-child(2) { top: 8px !important; }
         .custom-hamburger-btn span:nth-child(3) { top: 16px !important; }
 
-        /* 모바일 서랍 메뉴 - 부트스트랩 클래스 강제 오버라이딩 */
+        /* 모바일 서랍 메뉴 */
         #header.header .navbar-collapse {
           position: absolute !important;
           top: 70px !important;
@@ -189,97 +120,55 @@
           text-align: left !important;
         }
 
-        /* 자바스크립트 모바일 활성화 클래스 */
+        /* 메뉴 개폐 동작 클래스 */
         #header.header .navbar-collapse.mobile-open {
-          max-height: 400px !important; /* Jeremiah Project까지 완전 노출되도록 보장 */
+          max-height: 400px !important; /* 마지막 메뉴 노출 보장 */
           padding: 12px 20px !important;
           visibility: visible !important;
         }
 
-        /* 🍔 애니메이션 엑스 자 대칭 변경 */
-        .custom-hamburger-btn.toggle-active span:nth-child(1) {
-          top: 8px !important;
-          transform: rotate(135deg) !important;
-        }
-        .custom-hamburger-btn.toggle-active span:nth-child(2) {
-          opacity: 0 !important;
-          left: -60px !important;
-        }
-        .custom-hamburger-btn.toggle-active span:nth-child(3) {
-          top: 8px !important;
-          transform: rotate(-135deg) !important;
-        }
+        /* 🍔 삼선 아이콘 X자 변형 */
+        .custom-hamburger-btn.toggle-active span:nth-child(1) { top: 8px !important; transform: rotate(135deg) !important; }
+        .custom-hamburger-btn.toggle-active span:nth-child(2) { opacity: 0 !important; left: -60px !important; }
+        .custom-hamburger-btn.toggle-active span:nth-child(3) { top: 8px !important; transform: rotate(-135deg) !important; }
 
-        /* 모바일 내비게이션 세로 촘촘 정렬 */
+        /* 모바일 세로 목록 간격 축소 */
         #header.header .main-nav .nav {
           display: flex !important;
           flex-direction: column !important;
           align-items: flex-start !important;
-          gap: 0 !important; 
           width: 100% !important;
-          margin: 0 !important;
-          padding: 0 !important;
         }
         #header.header .main-nav .nav .nav-item {
-          margin-right: 0 !important;
           display: block !important;
           width: 100% !important;
-          padding: 0 !important;
-          float: none !important;
           text-align: left !important;
         }
         #header.header .main-nav .nav .nav-item a {
           font-size: 14.5px !important;
-          padding: 10px 0 !important; /* 정갈하고 단정한 간격 부여 */
+          padding: 10px 0 !important; 
           display: block !important;
           border-bottom: 0.5px solid #f7f7f7 !important;
           color: var(--color-text-secondary) !important;
           text-decoration: none !important;
         }
-        #header.header .main-nav .nav .nav-item.last a {
-          border-bottom: none !important; 
-        }
-        
-        /* 테마 기존 구형 토글 강제 소멸 */
-        #header.header .navbar-toggle {
-          display: none !important;
-        }
+        #header.header .main-nav .nav .nav-item.last a { border-bottom: none !important; }
+        #header.header .navbar-toggle { display: none !important; }
       }
     </style>
 </head>
 <body>
 
+    <!-- 공통 상단 헤더 프레임 호출 -->
     <header id="header" class="header">
-      <div class="container">
-        <h1 class="logo pull-left">
-          <a href="/">
-            <span class="logo-title">{{ site.org_name }}</span>
-          </a>
-        </h1>
-        
-        <nav id="main-nav" class="main-nav navbar-right" role="navigation">
-          <button type="button" class="custom-hamburger-btn" id="js-hamburger-trigger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          
-          <div class="navbar-collapse collapse" id="navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class="nav-item"><a href="/#promo">Home</a></li>
-              <li class="nav-item"><a href="/#about">About</a></li>
-              <li class="nav-item"><a href="/#What-We-Do">What We Do</a></li>
-              <li class="nav-item"><a href="/#resources">Resources</a></li>
-              <li class="nav-item"><a href="/#contact">Contact</a></li>
-              <li class="nav-item"><a href="/seminar.html">AI Seminar</a></li>
-              <li class="nav-item last"><a href="/jeremiah.html">Jeremiah Project</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      {% include header.html %}
     </header>
 
+    <!-- 본문 영역 -->
     {{ content }}
+
+    <!-- 공통 하단 스크립트 및 독립형 토글 액션 활성화 -->
+    {% include scripts.html %}
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
@@ -290,7 +179,6 @@
           trigger.addEventListener("click", function(e) {
             e.preventDefault();
             e.stopPropagation();
-            
             trigger.classList.toggle("toggle-active");
             menu.classList.toggle("mobile-open");
           });
@@ -304,6 +192,5 @@
         }
       });
     </script>
-
 </body>
 </html>
