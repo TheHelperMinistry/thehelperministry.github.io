@@ -1,28 +1,67 @@
----
-layout: default
-title: AI Seminar Vol.1 - The Helper Ministry
----
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="목회자를 위한 AI 활용 설교 준비 세미나 Vol.1 안내 페이지입니다.">
+    <title>AI Seminar Vol.1 - The Helper Ministry</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+
+    <header id="unified-header">
+      <div class="header-flex-wrapper">
+        <h1 class="custom-logo">
+          <a href="/index.html">
+            <span class="logo-title">The Helper Ministry</span>
+          </a>
+        </h1>
+        <nav class="custom-nav-frame">
+          <button type="button" class="custom-hamburger-btn" id="custom-menu-trigger" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="custom-menu-box" id="custom-menu-box">
+            <ul class="custom-nav-list">
+              <li class="nav-item"><a href="/index.html#promo">Home</a></li>
+              <li class="nav-item"><a href="/index.html#about">About</a></li>
+              <li class="nav-item"><a href="/index.html#What-We-Do">What We Do</a></li>
+              <li class="nav-item"><a href="/index.html#resources">Resources</a></li>
+              <li class="nav-item"><a href="/index.html#contact">Contact</a></li>
+              <li class="nav-item"><a href="/seminar.html">AI Seminar</a></li>
+              <li class="nav-item last"><a href="/jeremiah.html">Jeremiah Project</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
 
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: var(--font-sans); background: transparent; color: var(--color-text-primary); }
-
-  /* 헤더 고정 오프셋 */
-  .offset-header {
-    padding-top: 140px !important;
-  }
-
-  /* ====== 테마 컬러를 활용한 섹션별 배경색 시스템 ====== */
   .hero {
-    background-color: #ffffff !important;
+    background-color: #ffffff;
     padding: 6rem 2rem 5rem;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
-  
+
   .verse-bar {
-    background-color: #f4f7fa !important; /* 타 페이지와 일치시킨 은은한 푸른빛 미색 */
+    background-color: #f4f7fa;
     border-top: 0.5px solid #e1e8f0;
     border-bottom: 0.5px solid #e1e8f0;
     padding: 2.5rem 2rem;
@@ -30,37 +69,36 @@ title: AI Seminar Vol.1 - The Helper Ministry
   }
 
   .value-section {
-    background-color: #ffffff !important; /* 순백색 배경 */
+    background-color: #ffffff;
   }
 
   .deliverables-section {
-    background-color: #fafbfc !important; /* 아주 옅은 블루그레이로 실전 자산 단락 구별 */
+    background-color: #fafbfc;
     border-top: 0.5px solid var(--color-border-tertiary);
     border-bottom: 0.5px solid var(--color-border-tertiary);
   }
 
   .models-section {
-    background-color: #ffffff !important; /* 4대 모델 카드가 돋보이도록 백색 처리 */
+    background-color: #ffffff;
   }
 
   .system-section {
-    background-color: #f7f6f3 !important; /* 정갈하고 차분한 아이보리 웜그레이 */
+    background-color: #f7f6f3;
     border-top: 0.5px solid var(--color-border-tertiary);
     border-bottom: 0.5px solid var(--color-border-tertiary);
   }
 
   .cta-section {
-    background-color: #eef4f9 !important; /* 결단 및 등록 유도를 위한 은은한 테마 컬러 적용 */
+    background-color: #eef4f9;
     padding: 6rem 2rem;
     text-align: center;
     border-top: 0.5px solid #d0dee9;
   }
 
-  /* ====== 타이틀 및 라벨 폰트 서식 정형 ====== */
   .hero-eyebrow {
     font-size: 14px;
     letter-spacing: 0.18em;
-    color: #6690b9; /* 라벨에 시그니처 포인트 지정 */
+    color: #6690b9;
     text-transform: uppercase;
     margin-bottom: 2rem;
     font-weight: 700;
@@ -129,7 +167,6 @@ title: AI Seminar Vol.1 - The Helper Ministry
     color: #7c91a6;
   }
 
-  /* 2단 핵심 변화 그리드 상자 */
   .core-benefits {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -139,14 +176,14 @@ title: AI Seminar Vol.1 - The Helper Ministry
   .benefit-box {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: var(--border-radius-lg, 8px);
+    border-radius: var(--border-radius-lg);
     padding: 2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.01);
   }
   .benefit-box h3 {
     font-size: 18px;
     font-weight: 600;
-    color: #6690b9; /* 유익 소제목 강조 */
+    color: #6690b9;
     margin-bottom: 1rem;
   }
   .benefit-box p {
@@ -156,7 +193,6 @@ title: AI Seminar Vol.1 - The Helper Ministry
     word-break: keep-all;
   }
 
-  /* 현장 제공 자산 리스트 양식 */
   .asset-list {
     list-style: none;
     margin-top: 1.5rem;
@@ -164,10 +200,10 @@ title: AI Seminar Vol.1 - The Helper Ministry
   .asset-item {
     padding: 1.75rem;
     background: #ffffff;
-    border-radius: var(--border-radius-md, 6px);
+    border-radius: var(--border-radius-md);
     margin-bottom: 1rem;
     border: 1px solid #e2e8f0;
-    border-left: 4px solid #6690b9; /* 포인트 컬러 선 적용 */
+    border-left: 4px solid #6690b9;
     box-shadow: 0 1px 2px rgba(0,0,0,0.01);
   }
   .asset-title {
@@ -182,18 +218,17 @@ title: AI Seminar Vol.1 - The Helper Ministry
     line-height: 1.7;
   }
 
-  /* 4대 AI 도구 사각형 격자 디자인 */
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 16px; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
     margin-top: 2rem;
   }
   .card {
     background: #ffffff;
-    border: 1px solid #e2e8f0; 
-    border-radius: var(--border-radius-lg, 8px);
-    padding: 1.5rem 1.25rem; 
+    border: 1px solid #e2e8f0;
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem 1.25rem;
     display: flex;
     flex-direction: column;
     box-shadow: 0 2px 4px rgba(0,0,0,0.01);
@@ -216,7 +251,6 @@ title: AI Seminar Vol.1 - The Helper Ministry
     word-break: keep-all;
   }
 
-  /* 하단 요약 정보 행 */
   .info-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -227,9 +261,9 @@ title: AI Seminar Vol.1 - The Helper Ministry
     text-align: center;
   }
   .info-item {
-    background: #ffffff; 
+    background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: var(--border-radius-md, 6px);
+    border-radius: var(--border-radius-md);
     padding: 1.5rem 1rem;
     box-shadow: 0 1px 2px rgba(0,0,0,0.01);
   }
@@ -248,12 +282,11 @@ title: AI Seminar Vol.1 - The Helper Ministry
     word-break: keep-all;
   }
 
-  /* 공통 메인 컬러 버튼 */
   .btn-primary {
     display: inline-block;
     padding: 15px 40px;
-    background: #6690b9 !important; 
-    color: #ffffff !important;
+    background: #6690b9;
+    color: #ffffff;
     font-size: 15px;
     font-weight: 600;
     border-radius: var(--border-radius-md);
@@ -264,7 +297,7 @@ title: AI Seminar Vol.1 - The Helper Ministry
     box-shadow: 0 2px 8px rgba(102, 144, 185, 0.2);
     margin-top: 1rem;
   }
-  .btn-primary:hover { opacity: 0.9; background: #537ca5 !important; color: #ffffff !important; text-decoration: none; }
+  .btn-primary:hover { opacity: 0.9; background: #537ca5; color: #ffffff; text-decoration: none; }
 
   .divider {
     border: none;
@@ -289,32 +322,19 @@ title: AI Seminar Vol.1 - The Helper Ministry
     margin: 0 auto 2.5rem;
   }
 
-  /* index와 완벽히 동일한 먹색 크레딧 푸터 고정 */
-  .footer-clean {
-    padding: 2rem 0;
-    background: #111111; 
-    color: #767676;
-    text-align: center;
-    font-size: 12px;
-    letter-spacing: 0.05em;
+  @media (max-width: 768px) {
+    .hero { padding: 130px 1rem 3.5rem; }
+    .hero-title { font-size: 28px; line-height: 1.35; word-break: keep-all; }
+    .hero-sub { font-size: 15px; padding: 0 10px; }
+    .section-title { font-size: 24px; word-break: keep-all; }
+    .core-benefits { grid-template-columns: 1fr; gap: 16px; }
+    .cards-grid { grid-template-columns: 1fr; gap: 12px; }
+    .info-row { grid-template-columns: 1fr; gap: 12px; margin-top: 2rem; padding-top: 2rem; }
   }
-
-  /* 반응형 모바일 미디어 쿼리 */
- /* seminar.html 내부 스타일 중 이 부분을 찾아서 아래처럼 패딩 값을 수정하거나 없애주세요 */
-@media (max-width: 768px) {
-  .hero { padding: 130px 1rem 3.5rem !important; } /* padding-top을 130px로 변경하여 가려짐 방지 */
-  .hero-title { font-size: 28px !important; line-height: 1.35; word-break: keep-all; }
-  .hero-sub { font-size: 15px !important; padding: 0 10px; }
-  .section-title { font-size: 24px; word-break: keep-all; }
-  .core-benefits { grid-template-columns: 1fr; gap: 16px; }
-  .cards-grid { grid-template-columns: 1fr; gap: 12px; }
-  .info-row { grid-template-columns: 1fr; gap: 12px; margin-top: 2rem; padding-top: 2rem; }
-}
 </style>
 
 <h2 class="sr-only">목회자를 위한 AI 활용 세미나 Vol.1 - 설교 준비 혁신 안내</h2>
 
-<!-- ====== 본문 시작 (메인 히어로 영역) ====== -->
 <section id="promo" class="hero offset-header">
   <p class="hero-eyebrow">THE HELPER MINISTRY AI SEMINAR</p>
   <h1 class="hero-title">2시간으로 완벽해지는<br>AI 설교 준비의 틀</h1>
@@ -326,14 +346,13 @@ title: AI Seminar Vol.1 - The Helper Ministry
   <p class="verse-ref">시편 119:165 (개역한글)</p>
 </div>
 
-<!-- ====== 핵심 혜택 섹션 (WHITE BACKGROUND) ====== -->
 <section class="value-section section">
   <div class="section-inner">
     <p class="section-label">THE CORE VALUE</p>
     <h2 class="section-title">2시간 후, 목사님의 설교 사역에 일어날 2가지 획기적인 변화</h2>
     <div class="section-body">
       <p>본 강의는 단순한 이론 설명에 머물지 않고, 매주 직면하는 설교 준비의 무게를 근본적으로 경감시키는 데 목적을 둡니다.</p>
-      
+
       <div class="core-benefits">
         <div class="benefit-box">
           <h3>01. 설교 준비 시간의 획기적 단축</h3>
@@ -348,14 +367,13 @@ title: AI Seminar Vol.1 - The Helper Ministry
   </div>
 </section>
 
-<!-- ====== 현장 지급 실전 자산 섹션 (LIGHT GRAY-BLUE BACKGROUND) ====== -->
 <section class="deliverables-section section">
   <div class="section-inner">
     <p class="section-label">HANDOUT & DELIVERABLES</p>
     <h2 class="section-title">세미나가 끝날 때 확실하게 쥐고 돌아가는 실전 자산</h2>
     <div class="section-body">
       <p>강의가 끝난 후 목회 현장에 복귀하셨을 때 곧바로 마우스 클릭 한 번으로 사용하실 수 있는 결과물들을 전수합니다.</p>
-      
+
       <ul class="asset-list">
         <li class="asset-item">
           <p class="asset-title">마우스 클릭 한 번으로 끝나는 '목회자 전용 질문틀' 제공</p>
@@ -374,14 +392,13 @@ title: AI Seminar Vol.1 - The Helper Ministry
   </div>
 </section>
 
-<!-- ====== 4대 AI 분석 섹션 (WHITE BACKGROUND) ====== -->
 <section class="models-section section">
   <div class="section-inner">
     <p class="section-label">TOP 4 AI MODELS</p>
     <h2 class="section-title">시중 최고 성능의 4대 AI 모델 완벽 분석 및 효율적 사용법</h2>
     <div class="section-body">
       <p>한 가지 도구만 사용하면 인공지능이 거짓 정보를 지어내는 '환각 현상'에 노출되기 쉽습니다. 각 도구의 명확한 장단점을 파악해 설교 준비 단계마다 가장 똑똑한 조교를 배치하는 지혜를 나눕니다.</p>
-      
+
       <div class="cards-grid">
         <div class="card">
           <h3 class="card-title">NotebookLM<br>(자료 분석의 강자)</h3>
@@ -406,14 +423,13 @@ title: AI Seminar Vol.1 - The Helper Ministry
 
 <hr class="divider">
 
-<!-- ====== 지속 가능한 시스템 안내 (LIGHT IVORY WARM BACKGROUND) ====== -->
 <section class="system-section section">
   <div class="section-inner">
     <p class="section-label">CONTINUOUS MINISTRY SYSTEM</p>
     <h2 class="section-title">30년 목회 자산으로 이어지는 나만의 라이브러리 설계</h2>
     <div class="section-body">
       <p>2시간 동안 익히는 설교 준비의 틀은 시작에 불과합니다. 매주 선포되는 소중한 말씀 자료가 파편화되어 사라지지 않고, 평생의 체계적인 신학 데이터베이스로 축적되는 확장 로드맵을 선사합니다.</p>
-      
+
       <div class="info-row">
         <div class="info-item">
           <p class="info-label">세미나 시간</p>
@@ -432,7 +448,6 @@ title: AI Seminar Vol.1 - The Helper Ministry
   </div>
 </section>
 
-<!-- ====== CTA 섹션 (LIGHT BLUE BACKGROUND) ====== -->
 <section id="contact" class="cta-section">
   <div class="section-inner">
     <h2 class="cta-title">"인공지능에게 설교를 맡기지 않고,<br>인공지능을 완벽히 지배하는 설교자로 서십시오."</h2>
@@ -444,9 +459,37 @@ title: AI Seminar Vol.1 - The Helper Ministry
   </div>
 </section>
 
-<!-- ====== CLEAN FOOTER (수정 완료) ====== -->
-<footer class="footer-clean">
-  <div class="container">
-    <p>Copyright &copy; {{ "now" | date: "%Y" }} The Helper Ministry. All rights reserved.</p>
-  </div>
-</footer>
+
+    <footer class="footer-clean">
+      <div class="container">
+        <p>Copyright &copy; 2026 The Helper Ministry. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var triggerBtn = document.getElementById("custom-menu-trigger");
+        var drawerBox = document.getElementById("custom-menu-box");
+
+        if (triggerBtn && drawerBox) {
+          triggerBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            triggerBtn.classList.toggle("btn-active");
+            drawerBox.classList.toggle("box-open");
+          });
+
+          document.addEventListener("click", function (e) {
+            if (!triggerBtn.contains(e.target) && !drawerBox.contains(e.target)) {
+              triggerBtn.classList.remove("btn-active");
+              drawerBox.classList.remove("box-open");
+            }
+          });
+        }
+      });
+    </script>
+
+</body>
+</html>

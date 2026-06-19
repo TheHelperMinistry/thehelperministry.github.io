@@ -1,28 +1,67 @@
----
-layout: default
-title: Jeremiah Project
----
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="예레미야 프로젝트 — 국가와 민족을 위해 하나님 앞에 정직하게 서는 청년들의 모임 소개 페이지입니다.">
+    <title>Jeremiah Project</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+
+    <header id="unified-header">
+      <div class="header-flex-wrapper">
+        <h1 class="custom-logo">
+          <a href="/index.html">
+            <span class="logo-title">The Helper Ministry</span>
+          </a>
+        </h1>
+        <nav class="custom-nav-frame">
+          <button type="button" class="custom-hamburger-btn" id="custom-menu-trigger" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="custom-menu-box" id="custom-menu-box">
+            <ul class="custom-nav-list">
+              <li class="nav-item"><a href="/index.html#promo">Home</a></li>
+              <li class="nav-item"><a href="/index.html#about">About</a></li>
+              <li class="nav-item"><a href="/index.html#What-We-Do">What We Do</a></li>
+              <li class="nav-item"><a href="/index.html#resources">Resources</a></li>
+              <li class="nav-item"><a href="/index.html#contact">Contact</a></li>
+              <li class="nav-item"><a href="/seminar.html">AI Seminar</a></li>
+              <li class="nav-item last"><a href="/jeremiah.html">Jeremiah Project</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
 
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: var(--font-sans); background: transparent; color: var(--color-text-primary); }
-
-  /* 헤더가 고정되어 있으므로 본문이 파묻히지 않도록 오프셋 추가 */
-  .offset-header {
-    padding-top: 140px !important;
-  }
-
-  /* ====== 테마 컬러를 활용한 섹션별 배경색 시스템 ====== */
   .hero {
-    background-color: #ffffff !important;
+    background-color: #ffffff;
     padding: 6rem 2rem 5rem;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
-  
+
   .verse-bar {
-    background-color: #f4f7fa !important; /* index와 통일된 은은한 푸른빛 미색 */
+    background-color: #f4f7fa;
     border-top: 0.5px solid #e1e8f0;
     border-bottom: 0.5px solid #e1e8f0;
     padding: 2.5rem 2rem;
@@ -30,32 +69,31 @@ title: Jeremiah Project
   }
 
   .why-section {
-    background-color: #ffffff !important; /* 순백색 배경 */
+    background-color: #ffffff;
   }
 
   .message-section {
-    background-color: #fafbfc !important; /* 옅은 블루그레이로 진중한 메시지 단락 구별 */
+    background-color: #fafbfc;
     border-top: 0.5px solid #e2e8f0;
     border-bottom: 0.5px solid #e2e8f0;
   }
 
   .intro-section {
-    background-color: #f7f6f3 !important; /* 따뜻하고 정갈한 아이보리 웜그레이 */
+    background-color: #f7f6f3;
     border-bottom: 0.5px solid #e2e8f0;
   }
 
   .cta-section {
-    background-color: #eef4f9 !important; /* 하단 결단 영역에 은은한 테마 컬러 적용 */
+    background-color: #eef4f9;
     padding: 6rem 2rem;
     text-align: center;
     border-top: 0.5px solid #d0dee9;
   }
 
-  /* ====== 타이틀 및 라벨 폰트 서식 정형 ====== */
   .hero-eyebrow {
     font-size: 14px;
     letter-spacing: 0.18em;
-    color: #6690b9; /* 포인트 컬러로 아이브로우 강조 */
+    color: #6690b9;
     text-transform: uppercase;
     margin-bottom: 2rem;
     font-weight: 700;
@@ -69,7 +107,7 @@ title: Jeremiah Project
     margin-bottom: 1.5rem;
     word-break: keep-all;
   }
-  
+
   .section {
     padding: 6rem 2rem;
     max-width: 100%;
@@ -82,7 +120,7 @@ title: Jeremiah Project
     font-size: 13px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #6690b9; /* 라벨에 시그니처 블루 적용 */
+    color: #6690b9;
     font-weight: 700;
     margin-bottom: 1.25rem;
   }
@@ -102,9 +140,8 @@ title: Jeremiah Project
   .section-body p { margin-bottom: 1.5rem; }
   .section-body p:last-child { margin-bottom: 0; }
 
-  /* 강해 및 성구 인용 박스 */
   .pullquote {
-    border-left: 3px solid #6690b9; /* 포인트 컬러 선 적용 */
+    border-left: 3px solid #6690b9;
     margin: 2.5rem 0;
     padding: 0.5rem 0 0.5rem 1.5rem;
     font-family: var(--font-serif);
@@ -125,26 +162,25 @@ title: Jeremiah Project
     font-weight: 600;
   }
 
-  /* 사역 카드 디자인 */
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
   }
   .card {
-    background: #ffffff; 
-    border: 1px solid #e2e8f0; 
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
-    padding: 1.5rem; 
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     box-shadow: 0 2px 4px rgba(0,0,0,0.01);
   }
   .card-icon {
     font-size: 20px;
-    color: #6690b9; /* 아이콘에 포인트 컬러 적용 */
+    color: #6690b9;
     margin-bottom: 0.75rem;
   }
   .card-title {
@@ -159,7 +195,6 @@ title: Jeremiah Project
     line-height: 1.65;
   }
 
-  /* 장소, 대상, 일시 정보 안내 박스 */
   .info-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -170,7 +205,7 @@ title: Jeremiah Project
     text-align: center;
   }
   .info-item {
-    background: #ffffff; 
+    background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 6px;
     padding: 1.5rem 1rem;
@@ -212,22 +247,18 @@ title: Jeremiah Project
     text-decoration: underline;
   }
 
-  /* 모바일 반응형 대응 */
- /* jeremiah.html 내부 스타일 중 이 부분을 찾아서 아래처럼 패딩 값을 수정하거나 없애주세요 */
-@media (max-width: 768px) {
-  .offset-header { padding-top: 20px !important; }
-  .hero { padding: 130px 1rem 3.5rem !important; } /* padding-top을 130px로 변경하여 가려짐 방지 */
-  .hero-title { font-size: 28px !important; line-height: 1.35; word-break: keep-all; }
-  .section { padding: 4rem 1.5rem; }
-  .section-title { font-size: 24px; word-break: keep-all; }
-  .cards-grid { grid-template-columns: 1fr; gap: 16px; }
-  .info-row { grid-template-columns: 1fr; gap: 12px; margin-top: 2rem; padding-top: 2rem; }
-}
+  @media (max-width: 768px) {
+    .hero { padding: 130px 1rem 3.5rem; }
+    .hero-title { font-size: 28px; line-height: 1.35; word-break: keep-all; }
+    .section { padding: 4rem 1.5rem; }
+    .section-title { font-size: 24px; word-break: keep-all; }
+    .cards-grid { grid-template-columns: 1fr; gap: 16px; }
+    .info-row { grid-template-columns: 1fr; gap: 12px; margin-top: 2rem; padding-top: 2rem; }
+  }
 </style>
 
 <h2 class="sr-only">예레미야 프로젝트 — 국가와 민족을 위해 하나님 앞에 정직하게 서는 청년들의 모임 소개 페이지</h2>
 
-<!-- ====== 본문 시작 (메인 히어로 영역) ====== -->
 <section id="promo" class="hero offset-header">
   <p class="hero-eyebrow">The Helper Ministry X Jeremiah Project</p>
   <h1 class="hero-title">뜨거운 감동으로 시작해서 감동으로만 끝나서는 안 됩니다.<br>말씀으로 돌아가는 것, 그것이 출발점이 되어야 합니다.</h1>
@@ -238,7 +269,6 @@ title: Jeremiah Project
   <p class="verse-ref">예레미야애가 3:22–23 (개역한글)</p>
 </div>
 
-<!-- ====== 왜 이 자리인가 (WHITE BACKGROUND) ====== -->
 <section class="why-section section">
   <div class="section-inner">
     <p class="section-label">왜 이 자리인가</p>
@@ -253,29 +283,27 @@ title: Jeremiah Project
   </div>
 </section>
 
-<!-- ====== 핵심 메시지 (LIGHT GRAY-BLUE BACKGROUND) ====== -->
 <section class="message-section section">
   <div class="section-inner">
     <p class="section-label">핵심 메시지</p>
     <h2 class="section-title">"괜찮아질 거야"는 너무 이릅니다</h2>
     <div class="section-body">
       <p>회복과 용서와 부흥. 우리는 이 단어들을 너무 가볍게 씁니다.</p>
-      
+
       <div class="pullquote">
         "밤에 예루살렘 성벽을 살지게 돌아본즉 성벽이 다 무너졌고 성문은 불탔더라... 내가 수일 동안 앉아서 울고 슬퍼하며 하늘의 하나님 앞에 금식하며 기도하여"
         <span class="pullquote-ref">이사야 6:13, 하박국 3장, 느헤미야 1:4 종합 (개역한글)</span>
       </div>
-      
+
       <p>이사야는 백성이 멸망하고 그 십분의 일이 남아도 다시 황폐해질 것이라 선포했습니다. 그런데도 남는 것은 베어진 나무의 그루터기, 그 안에 숨은 거룩한 씨 하나였습니다. 회복은 그 정도의 심판을 통과한 후에야 겨우 보이는 희미한 약속이었습니다.</p>
       <p>하박국은 부흥을 구하면서도, 그 부흥이 하나님의 거룩한 진노를 건너뛰고 오지 않는다는 것을 알았습니다. 그는 심판을 수긍하며 그 가운데 긍휼을 구했습니다. 느헤미야는 성벽이 무너졌다는 소식에 수일 동안 앉아 울었습니다. 다니엘은 칠십 년의 끝자락에서야 비로소 말씀으로 돌아가 죄를 고백했습니다. 예레미야는 평생 외쳤지만 그 생애 동안 회복을 보지 못했습니다.</p>
       <p>우리가 배워야 할 것은 그들의 결론이 아니라 그들의 자리입니다.</p>
-      <p>하나님의 때를 앞서지 않고 기다리는 자, 자신의 시대를 향한 하나님의 뜻 앞에 무릎 꿇고 애통하는 자, 심판이 마땅함을 인정하면서도 거룩함을 추구하는 자 — 우리는 그런 사람이 되고자 합니다.</p> 
+      <p>하나님의 때를 앞서지 않고 기다리는 자, 자신의 시대를 향한 하나님의 뜻 앞에 무릎 꿇고 애통하는 자, 심판이 마땅함을 인정하면서도 거룩함을 추구하는 자 — 우리는 그런 사람이 되고자 합니다.</p>
       <p>회복을 바란다면, 먼저 하나님이 말씀을 통해 우리에게 요구하시는 것이 무엇인지 물어야 합니다.</p>
     </div>
   </div>
 </section>
 
-<!-- ====== 이런 자리입니다 (LIGHT IVORY WARM BACKGROUND) ====== -->
 <section class="intro-section section">
   <div class="section-inner">
     <p class="section-label">이런 자리입니다</p>
@@ -283,7 +311,7 @@ title: Jeremiah Project
     <div class="section-body">
       <p>우리는 이 모임을 예레미야 프로젝트라고 부릅니다.</p>
       <p>예레미야는 단지 우는 선지자가 아니었습니다. 그는 예루살렘이 무너지는 것을 눈으로 보면서도 도망치지 않았고, 그 폐허 한가운데서 하나님의 약속을 붙들었으며, 심판 속에서도 새 언약을 선포했습니다. 그의 눈물은 절망이 아니라 신앙이었습니다. 우리도 이 시대 앞에서 그렇게 서고 싶습니다. 현실을 외면하지 않고, 그러나 절망하지도 않고 — 하나님의 약속을 붙든 채로, 그분 앞에 정직하게.</p>
-      
+
       <div class="cards-grid">
         <div class="card">
           <div class="card-icon"><i class="fa fa-fire-extinguisher" aria-hidden="true"></i></div>
@@ -306,7 +334,7 @@ title: Jeremiah Project
           <p class="card-body">하나님의 주권적 은혜와 신실하심만을 다시 겸손히 구하는 낮은 예배의 자리입니다.</p>
         </div>
       </div>
-      
+
       <div class="info-row">
         <div class="info-item">
           <p class="info-label">장소</p>
@@ -325,7 +353,6 @@ title: Jeremiah Project
   </div>
 </section>
 
-<!-- ====== CONTACT & CTA (LIGHT BLUE BACKGROUND) ====== -->
 <section id="contact" class="cta-section">
   <div class="section-inner">
     <h2 class="cta-title">함께 서시겠습니까?</h2>
@@ -336,3 +363,38 @@ title: Jeremiah Project
     </div>
   </div>
 </section>
+
+
+    <footer class="footer-clean">
+      <div class="container">
+        <p>Copyright &copy; 2026 The Helper Ministry. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var triggerBtn = document.getElementById("custom-menu-trigger");
+        var drawerBox = document.getElementById("custom-menu-box");
+
+        if (triggerBtn && drawerBox) {
+          triggerBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            triggerBtn.classList.toggle("btn-active");
+            drawerBox.classList.toggle("box-open");
+          });
+
+          document.addEventListener("click", function (e) {
+            if (!triggerBtn.contains(e.target) && !drawerBox.contains(e.target)) {
+              triggerBtn.classList.remove("btn-active");
+              drawerBox.classList.remove("box-open");
+            }
+          });
+        }
+      });
+    </script>
+
+</body>
+</html>
