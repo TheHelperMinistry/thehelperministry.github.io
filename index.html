@@ -11,34 +11,60 @@ layout: default
     padding-top: 120px !important;
   }
 
-  .hero {
-    padding: 6rem 2rem 5rem;
+  /* 각 섹션별 구별을 위한 교차 배경색 시스템 */
+  .promo {
+    background-color: #ffffff;
+    padding: 7rem 2rem 6rem;
     text-align: center;
     border-bottom: 0.5px solid var(--color-border-tertiary);
     position: relative;
     overflow: hidden;
   }
-  .hero-eyebrow {
-    font-size: 15px;
-    letter-spacing: 0.18em;
-    color: var(--color-text-tertiary);
-    text-transform: uppercase;
-    margin-bottom: 2rem;
+  
+  .verse-bar {
+    background-color: #f4f5f6; /* 약간의 무게감을 주는 은은한 쿨그레이 */
+    border-top: 0.5px solid var(--color-border-tertiary);
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    padding: 2.5rem 2rem;
+    text-align: center;
   }
-  .hero-title {
+
+  .about-section {
+    background-color: #ffffff; /* 순백색 배경 */
+  }
+
+  .what-we-do-section {
+    background-color: #fafafa; /* 아주 옅은 뉴트럴 그레이로 사역 카드 영역 구별 */
+    border-top: 0.5px solid var(--color-border-tertiary);
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .resources-section {
+    background-color: #f7f6f3; /* 따뜻하고 정갈한 느낌을 주는 옅은 웜그레이/아이보리 */
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .contact {
+    background-color: #ffffff; /* 하단 문의 영역은 다시 백색으로 정돈 */
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+
+  /* 기본 타이틀 및 본문 스타일 */
+  .promo .title {
     font-family: var(--font-serif);
-    font-size: 38px;
-    font-weight: 400;
-    line-height: 1.35;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.4;
     color: var(--color-text-primary);
     margin-bottom: 1.5rem;
     word-break: keep-all;
   }
-  .hero-sub {
+  .promo .intro {
     font-size: 18px;
     color: var(--color-text-secondary);
-    line-height: 1.75;
-    max-width: 640px;
+    line-height: 1.8;
+    max-width: 720px;
     margin: 0 auto 2.5rem;
     word-break: keep-all;
   }
@@ -57,19 +83,12 @@ layout: default
   }
   .btn-primary:hover { opacity: 0.8; color: var(--color-background-primary); text-decoration: none; }
 
-  .verse-bar {
-    background: var(--color-background-secondary);
-    border-top: 0.5px solid var(--color-border-tertiary);
-    border-bottom: 0.5px solid var(--color-border-tertiary);
-    padding: 2rem;
-    text-align: center;
-  }
   .verse-text {
     font-family: var(--font-serif);
     font-size: 17px;
     line-height: 1.8;
     color: var(--color-text-secondary);
-    max-width: 560px;
+    max-width: 600px;
     margin: 0 auto 0.5rem;
     font-style: italic;
   }
@@ -80,7 +99,10 @@ layout: default
   }
 
   .section {
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
+    max-width: 100%;
+  }
+  .section-inner {
     max-width: 800px;
     margin: 0 auto;
   }
@@ -93,27 +115,42 @@ layout: default
   }
   .section-title {
     font-family: var(--font-serif);
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1.3;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-primary);
   }
   .section-body {
     font-size: 16px;
-    line-height: 1.85;
+    line-height: 1.9;
     color: var(--color-text-secondary);
   }
-  .section-body p { margin-bottom: 1.25rem; }
+  .section-body p { margin-bottom: 1.5rem; }
   .section-body p:last-child { margin-bottom: 0; }
 
-  .divider {
-    border: none;
-    border-top: 0.5px solid var(--color-border-tertiary);
-    max-width: 800px;
-    margin: 0 auto;
+  /* 프로필 상자 스타일 (배경이 흰색일 때 돋보이도록 조정) */
+  .profile-box {
+    background: #fdfdfd;
+    border: 1px solid var(--color-border-tertiary, #e5e7eb);
+    border-radius: var(--border-radius-lg, 8px);
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+  .profile-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.75rem;
+  }
+  .profile-body {
+    font-size: 14.5px;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
   }
 
-  /* 예레미야 프로젝트 양식의 깔끔한 사역 카드 그리드 */
+  /* 사역 항목 카드 그리드 레이아웃 (배경색 구별용 순백색 카드) */
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -121,12 +158,13 @@ layout: default
     margin-top: 2rem;
   }
   .card {
-    background: var(--color-background-primary, #ffffff);
+    background: #ffffff; 
     border: 1px solid var(--color-border-tertiary, #e5e7eb); 
     border-radius: var(--border-radius-lg, 8px);
     padding: 1.75rem; 
     display: flex;
     flex-direction: column;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.01);
   }
   .card.full-width {
     grid-column: span 2;
@@ -144,14 +182,14 @@ layout: default
     word-break: keep-all;
   }
 
-  /* 예레미야 리소스 세로 리스트 양식 */
+  /* 자료실 리스트 스타일 (배경과 대비되도록 순백색 처리) */
   .resource-list {
     list-style: none;
     margin-top: 1.5rem;
   }
   .resource-item {
     padding: 1.25rem;
-    background: var(--color-background-secondary, #f9fafb);
+    background: #ffffff;
     border: 1px solid var(--color-border-tertiary, #e5e7eb);
     border-radius: var(--border-radius-md, 6px);
     margin-bottom: 0.75rem;
@@ -159,29 +197,25 @@ layout: default
     font-weight: 500;
     color: var(--color-text-primary);
     text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.01);
   }
 
-  .cta-section {
-    padding: 5rem 2rem;
-    text-align: center;
-    background: var(--color-background-secondary);
-    border-top: 0.5px solid var(--color-border-tertiary);
-  }
-  .cta-title {
+  .contact .title {
     font-family: var(--font-serif);
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 500;
-    line-height: 1.3;
-    margin-bottom: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
   }
-  .cta-sub {
-    font-size: 15px;
+  .contact address {
+    font-size: 16px;
     color: var(--color-text-secondary);
-    line-height: 1.75;
+    line-height: 1.8;
     max-width: 640px;
     margin: 0 auto;
+    font-style: normal;
   }
-  .cta-sub a {
+  .contact address a {
     color: var(--color-text-primary);
     font-weight: 600;
     text-decoration: underline;
@@ -189,16 +223,17 @@ layout: default
 
   /* 모바일 반응형 대응 */
   @media (max-width: 768px) {
-    .hero { padding: 4rem 1rem 3.5rem; }
-    .hero-title { font-size: 28px; line-height: 1.3; word-break: keep-all; }
-    .hero-sub { font-size: 15px; padding: 0 10px; }
+    .promo { padding: 5rem 1rem 4.5rem; }
+    .promo .title { font-size: 30px; line-height: 1.4; word-break: keep-all; }
+    .promo .intro { font-size: 16px; padding: 0 10px; }
     .section { padding: 4rem 1.5rem; }
-    .section-title { font-size: 22px; word-break: keep-all; }
+    .section-title { font-size: 26px; word-break: keep-all; }
     .cards-grid { grid-template-columns: 1fr; gap: 16px; }
     .card.full-width { grid-column: span 1; }
   }
 </style>
 
+<!-- ******HEADER****** -->
 <header id="header" class="header" style="position: fixed; top: 0; width: 100%; z-index: 1000; background: #fff; border-bottom: 1px solid #eee;">
   <div class="container">
     <h1 class="logo pull-left">
@@ -229,90 +264,102 @@ layout: default
   </div>
 </header>
 
-<div id="promo" class="hero offset-header">
-  <p class="hero-eyebrow">The Helper Ministry</p>
-  <h1 class="hero-title">작은 교회와 목회자를 위한<br>디지털 동역자</h1>
-  <p class="hero-sub">변화하는 시대 속에서 소규모 교회와 비영리 단체가 한계에 부딪히지 않고 본질적인 사역에 전념할 수 있도록 디지털 생태계 전반을 정성껏 보좌합니다.</p>
-  <a class="btn-primary scrollto" href="#about">더 알아보기</a>
-</div>
+<!-- ******PROMO (HERO SECTION)****** -->
+<section id="promo" class="promo section offset-header">
+  <div class="container text-center">
+    <h2 class="title"><span class="highlight">The Helper Ministry</span></h2>
+    <p class="intro">작은 교회와 목회자를 위한 디지털 동역자</p>
+    <div class="btns">
+      <a class="btn-primary scrollto" href="#about">더 알아보기</a>
+    </div>
+  </div><!--//container-->
+</section><!--//promo-->
 
 <div class="verse-bar">
   <p class="verse-text">"오라 우리가 여호와께로 돌아가자 여호와께서 우리를 찢으셨으나 도로 낫게 하실 것이요 우리를 치셨으나 싸매어 주실 것임이라"</p>
   <p class="verse-ref">호세아 6:1 (개역한글)</p>
 </div>
 
-<div id="about" class="section">
-  <p class="section-label">About Us</p>
-  <h2 class="section-title">작고 힘없는 교회를 조금씩이라도 돕고자 시작되었습니다</h2>
-  <div class="section-body">
-    <p><strong>The Helper Ministry</strong>는 소규모 교회와 목회자, 비영리 단체가 디지털 시대에 더 잘 사역할 수 있도록 돕는 사역 단체입니다.</p>
-    <p>2019년 여름 창립되어 오늘까지 소규모/미자립 교회 및 목회자와 함께 말씀·설교·신학 자료 공유, 교회 행정 및 IT 활용 지원, 음향·영상·홈페이지 등 교회 전반적 시스템 컨설팅 및 지원 사역을 지속적으로 감당해 오고 있습니다.</p>
-    <p><strong>The Helper Ministry</strong>는 이한 목사가 대표로 사역하고 있습니다. 이한 목사는 Golden Gate Baptist Theological Seminary 에서 M.Div.와 M.Miss를, Midwestern Baptist Theological Seminary 에서 D.Min. 을 수여받았고 Golden Gate Baptist Theological Seminary 평신도 사역원 교수로, 또 지역 교회 담임목사로 10년 이상 사역해 왔습니다.</p>
-    <p>그의 현장 목회 경험과 지식, 그리고 그와 뜻을 함께하는 다양한 분야의 전문가 그룹이 연대하여 작고 힘없는 이 땅의 교회들을 조금씩이라도 돕고 받쳐주고자 동역을 이어가고 있습니다.</p>
+<!-- ******ABOUT US (WHITE BACKGROUND)****** -->
+<section id="about" class="about-section section">
+  <div class="section-inner">
+    <p class="section-label">About Us</p>
+    <h2 class="section-title">작고 힘없는 교회를 조금씩이라도 돕고자 시작되었습니다</h2>
+    <div class="section-body">
+      <p><strong>The Helper Ministry</strong>는 소규모 교회와 목회자, 비영리 단체가 디지털 시대에 더 잘 사역할 수 있도록 돕는 사역 단체입니다.</p>
+      <p>2019년 여름 창립되어 오늘까지 소규모/미자립 교회 및 목회자와 함께 말씀·설교·신학 자료 공유, 교회 행정 및 IT 활용 지원, 음향·영상·홈페이지 등 교회 전반적 시스템 컨설팅 및 지원 사역을 지속적으로 감당해 오고 있습니다.</p>
+      <p><strong>The Helper Ministry</strong>는 이한 목사가 대표로 사역하고 있습니다. 이한 목사는 Golden Gate Baptist Theological Seminary 에서 M.Div.와 M.Miss를, Midwestern Baptist Theological Seminary 에서 D.Min. 을 수여받았고 Golden Gate Baptist Theological Seminary 평신도 사역원 교수로, 또 지역 교회 담임목사로 10년 이상 사역해 왔습니다.</p>
+      <p>그의 현장 목회 경험과 지식, 그리고 그와 뜻을 함께하는 다양한 분야의 전문가 그룹이 연대하여 작고 힘없는 이 땅의 교회들을 조금씩이라도 돕고 받쳐주고자 동역을 이어가고 있습니다.</p>
+    </div>
   </div>
-</div>
+</section>
 
-<hr class="divider">
-
-<div id="What-We-Do" class="section">
-  <p class="section-label">What We Do</p>
-  <h2 class="section-title">목회 현장에 밀착된 실제적인 동역 사역</h2>
-  <div class="section-body">
-    <p>목회자의 마음을 가장 잘 아는 전문적인 시선으로, 소규모 교회의 형편에 꼭 맞춘 5가지 핵심 지원 체계를 운영합니다.</p>
-    
-    <div class="cards-grid">
-      <div class="card">
-        <p class="card-title">말씀 · 설교 자료 공유</p>
-        <p class="card-body">신뢰성 있는 묵상 자료, 깊이 있는 설교 아웃라인, 목회 연구에 디딤돌이 되는 성경적·신학적 자료들을 가공 없이 투명하게 나눕니다.</p>
-      </div>
-      <div class="card">
-        <p class="card-title">음향 · 영상 시스템 지원</p>
-        <p class="card-body">예배의 현장감을 살리는 음향 컨설팅부터 교회의 규모와 한정된 예산에 최적화된 영상·송출 시스템 구성을 정교하게 제안합니다.</p>
-      </div>
-      <div class="card">
-        <p class="card-title">워크숍 및 세미나</p>
-        <p class="card-body">목회 현업에서 즉시 적용 가능한 IT 활용 실무 워크숍과 시간을 아끼고 깊이를 더하는 설교 준비 인공지능 세미나를 정기적으로 개최합니다.</p>
-      </div>
-      <div class="card">
-        <p class="card-title">디지털 전환 상담 & 교육</p>
-        <p class="card-body">번거로운 교회 행정 업무의 자동화 시스템 설계, 끊김 없는 온라인 예배 구축 및 안전한 클라우드 협업 기반 활용법을 밀착 교육합니다.</p>
-      </div>
-      <div class="card full-width">
-        <p class="card-title">IT 지원 프로그램 신청 및 연계 지원</p>
-        <p class="card-body">TechSoup Korea(테크숩 코리아) 가입 절차 및 Google for Nonprofits(구글 비영리단체 프로그램) 획득 등 작은 교회가 무상 혹은 공익 혜택으로 누릴 수 있는 유용한 글로벌 클라우드 자산 신청을 꼼꼼하게 대행하고 돕습니다.</p>
+<!-- ******WHAT WE DO (LIGHT GRAY BACKGROUND)****** -->
+<section id="What-We-Do" class="what-we-do-section section">
+  <div class="section-inner">
+    <p class="section-label">What We Do</p>
+    <h2 class="section-title">목회 현장에 밀착된 실제적인 동역 사역</h2>
+    <div class="section-body">
+      <p style="margin-bottom: 2rem;">단체의 풍부한 목회적 경험과 기술적 전문성을 바탕으로, 작은 교회의 사역 환경에 가장 실질적이고 유용한 솔루션을 제안합니다.</p>
+      
+      <div class="cards-grid">
+        <div class="card">
+          <h3 class="card-title">말씀 · 설교 자료 공유</h3>
+          <p class="card-body">신뢰성 있는 묵상 자료, 깊이 있는 설교 아웃라인, 목회 연구에 디딤돌이 되는 성경적·신학적 자료들을 가공 없이 투명하게 나눕니다.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">음향 · 영상 시스템 지원</h3>
+          <p class="card-body">예배의 현장감을 살리는 음향 컨설팅부터 교회의 규모와 한정된 예산에 최적화된 영상·송출 시스템 구성을 정교하게 제안합니다.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">워크숍 및 세미나</h3>
+          <p class="card-body">목회 현업에서 즉시 적용 가능한 IT 활용 실무 워크숍과 시간을 아끼고 깊이를 더하는 설교 준비 인공지능 세미나를 정기적으로 개최합니다.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">디지털 전환 상담 & 교육</h3>
+          <p class="card-body">반복되는 교회 행정 업무의 자동화 시스템 설계, 끊김 없는 온라인 예배 구축 및 안전한 클라우드 협업 기반 활용법을 밀착 교육합니다.</p>
+        </div>
+        <div class="card full-width">
+          <h3 class="card-title">IT 지원 프로그램 안내 및 활용 지원</h3>
+          <p class="card-body">TechSoup Korea(테크숩 코리아) 가입 절차 및 Google for Nonprofits(구글 비영리단체 프로그램) 획득 등 작은 교회가 무상 혹은 공익 혜택으로 누릴 수 있는 유용한 글로벌 클라우드 자산 신청을 꼼꼼하게 안내하고 돕습니다.</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<hr class="divider">
-
-<div id="resources" class="section">
-  <p class="section-label">Resources</p>
-  <h2 class="section-title">작은 교회와 목회자들을 위해 정성껏 준비한 자산</h2>
-  <div class="section-body">
-    <p>강단 사역과 목회 실무에 곧바로 활용하실 수 있도록 준비한 나눔 콘텐츠입니다. 계속해서 현장에 유익한 양질의 자료들을 검증하며 추가해 나가겠습니다.</p>
-    
-    <ul class="resource-list">
-      <li class="resource-item">설교 · 복음 중심적 묵상 자료</li>
-      <li class="resource-item">예배당 음향 및 영상 미디어 시스템 자가 체크리스트</li>
-      <li class="resource-item">모바일 최적화 교회 홈페이지 구축 및 온라인 예배 운영 매뉴얼</li>
-      <li class="resource-item">목회 실무 가속화를 위한 IT 활용 실습 워크숍 교재</li>
-    </ul>
-    
-    <p class="text-center" style="margin-top: 40px; font-size: 15px; font-weight: 500; text-align: center;">
-      해당 목회적 연구 및 기술 가이드 자료가 필요하시면 언제든 편하게 연락 주시기 바랍니다.
-    </p>
+<!-- ******RESOURCES (LIGHT IVORY/WARM GRAY BACKGROUND)****** -->
+<section id="resources" class="resources-section section">
+  <div class="section-inner">
+    <p class="section-label">Resources</p>
+    <h2 class="section-title">작은 교회와 목회자들을 위해 정성껏 준비한 자산</h2>
+    <div class="section-body">
+      <p style="margin-bottom: 2rem;">강단 사역과 목회 실무에 곧바로 활용하실 수 있도록 준비한 나눔 콘텐츠입니다. 계속해서 현장에 유익한 양질의 자료들을 검증하며 추가해 나가겠습니다.</p>
+      
+      <ul class="resource-list">
+        <li class="resource-item">설교 · 복음 중심적 묵상 자료</li>
+        <li class="resource-item">예배당 음향 및 영상 미디어 시스템 자가 체크리스트</li>
+        <li class="resource-item">모바일 최적화 교회 홈페이지 구축 및 온라인 예배 운영 매뉴얼</li>
+        <li class="resource-item">목회 실무 가속화를 위한 IT 활용 실습 워크숍 교재</li>
+      </ul>
+      
+      <p style="margin-top: 40px; font-size: 15px; font-weight: 500; text-align: center;">
+        해당 목회적 연구 및 기술 가이드 자료가 필요하시면 언제든 편하게 연락 주시기 바랍니다.
+      </p>
+    </div>
   </div>
-</div>
+</section>
 
-<div id="contact" class="cta-section">
-  <h2 class="cta-title">Contact</h2>
-  <div class="cta-sub">
-    <p style="margin-bottom: 1.5rem;">사역의 외로운 여정 속에서 시스템, 행정, 미디어의 한계로 고민하지 마십시오.<br>작은 목소리에도 귀 기울이며 신실하게 곁을 지키는 디지털 동역자가 되겠습니다.</p>
-    <strong>The Helper Ministry 공식 소통 창구</strong><br>
-    {% if site.org_general_email_inbox %}
-    <a href="mailto:{{ site.org_general_email_inbox }}">{{ site.org_general_email_inbox }}</a>
-    {% endif %}
+<!-- ******CONTACT (WHITE BACKGROUND)****** -->
+<section id="contact" class="contact section has-pattern">
+  <div class="section-inner">
+    <h2 class="title text-center">Contact</h2>
+    <address class="text-center">
+      <p style="margin-bottom: 1.5rem;">사역의 외로운 여정 속에서 시스템, 행정, 미디어의 한계로 고민하지 마십시오.<br>작은 목소리에도 귀 기울이며 신실하게 곁을 지키는 디지털 동역자가 되겠습니다.</p>
+      <strong>The Helper Ministry 공식 소통 창구</strong><br><br>
+      {% if site.org_general_email_inbox %}
+      <a href="mailto:{{ site.org_general_email_inbox }}">{{ site.org_general_email_inbox }}</a>
+      {% endif %}
+    </address>
   </div>
-</div>
+</section>
