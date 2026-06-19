@@ -1,31 +1,30 @@
-<!-- ====== 통합 공통 내비게이션 바 (header.html) ====== -->
-<header id="header" class="header">
-  <div class="container">
-    <h1 class="logo pull-left">
-      <a href="/">
-        <span class="logo-title">{{ site.org_name }}</span>
-      </a>
-    </h1>
-    <nav id="main-nav" class="main-nav navbar-right" role="navigation">
-      <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="nav-item"><a href="/#promo">Home</a></li>
-          <li class="nav-item"><a href="/#about">About</a></li>
-          <li class="nav-item"><a href="/#What-We-Do">What We Do</a></li>
-          <li class="nav-item"><a href="/#resources">Resources</a></li>
-          <li class="nav-item"><a href="/#contact">Contact</a></li>
-          <li class="nav-item"><a href="/seminar.html">AI Seminar</a></li>
-          <li class="nav-item"><a href="/jeremiah.html">Jeremiah Project</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
+<!-- ====== 대안 및 하위 페이지 완전 연동 공통 메뉴 바 ====== -->
+<div class="container" style="display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; text-align: left !important;">
+  <h1 class="logo" style="margin: 0 !important; padding: 0 !important; font-size: 24px !important; line-height: 1 !important; float: left !important; text-align: left !important;">
+    <a href="/" style="color: #111111 !important; font-weight: 700 !important; text-decoration: none !important; display: inline-block !important;">
+      <span class="logo-title">{{ site.org_name }}</span>
+    </a>
+  </h1>
+  
+  <nav id="main-nav" class="main-nav" style="float: right !important; display: block !important; margin: 0 !important; padding: 0 !important;">
+    <!-- 외부 간섭 우회용 독립형 햄버거 토글 버튼 -->
+    <button type="button" class="custom-hamburger-btn" id="js-hamburger-trigger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <!-- 메뉴 목록 바 -->
+    <div class="navbar-collapse collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a href="/#promo">Home</a></li>
+        <li class="nav-item"><a href="/#about">About</a></li>
+        <li class="nav-item"><a href="/#What-We-Do">What We Do</a></li>
+        <li class="nav-item"><a href="/#resources">Resources</a></li>
+        <li class="nav-item"><a href="/#contact">Contact</a></li>
+        <li class="nav-item"><a href="/seminar.html">AI Seminar</a></li>
+        <li class="nav-item last"><a href="/jeremiah.html">Jeremiah Project</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
