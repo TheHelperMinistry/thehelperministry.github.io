@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.org_name }}</title>
     {% include head.html %}
     <style>
       /* ====== 전역 모던 디자인 시스템 고정 ====== */
@@ -13,28 +16,27 @@
       }
 
       * { box-sizing: border-box; margin: 0; padding: 0; }
-      body { font-family: var(--font-sans); background: transparent; color: var(--color-text-primary); }
+      body { font-family: var(--font-sans); background: #ffffff; color: var(--color-text-primary); -webkit-text-size-adjust: 100%; }
 
-      /* ====== [여백 불일치 해결] 모든 페이지 첫 섹션 여백 완벽 통일 ====== */
-      .offset-header, .hero, .promo, section[id^="promo"], .main-container {
-        padding-top: 130px !important; /* 데스크톱 최적 여백 고정 */
+      /* ====== [데스크톱] 모든 페이지 상단 간격 고정 ====== */
+      .offset-header, .hero, .promo, section, main, .main-container {
+        padding-top: 140px !important; 
       }
 
-      /* ====== [높이 제각각 해결] 고정 헤더 프레임 강제 제어 ====== */
+      /* ====== 고정 헤더 프레임 제어 ====== */
       #header.header {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
-        height: 80px !important; /* 데스크톱 헤더 높이 80px 절대 고정 */
+        height: 80px !important; 
         background: #ffffff !important; 
         border-bottom: 1px solid var(--color-border-tertiary) !important;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
-        z-index: 10000 !important;
         display: block !important;
+        z-index: 10000 !important;
       }
       
-      /* 헤더 내부 양끝 레이아웃 정렬 */
       #header.header .container {
         display: flex !important;
         justify-content: space-between !important;
@@ -46,35 +48,29 @@
         width: 100% !important;
       }
       
-      /* 로고 무조건 왼쪽 고정 */
       #header.header .logo {
         margin: 0 !important;
         padding: 0 !important;
-        font-size: 24px !important;
-        line-height: 1 !important;
+        font-size: 22px !important;
+        font-weight: 700 !important;
         float: none !important;
         text-align: left !important;
       }
       #header.header .logo a {
         color: var(--color-text-primary) !important;
-        font-weight: 700 !important;
         text-decoration: none !important;
+        display: inline-block !important;
       }
 
-      /* 데스크톱 메뉴 무조건 오른쪽 고정 */
       #header.header .main-nav {
         float: none !important;
         display: block !important;
-        margin: 0 !important;
-        padding: 0 !important;
       }
       #header.header .main-nav .nav {
         list-style: none !important;
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
-        margin: 0 !important;
-        padding: 0 !important;
       }
       #header.header .main-nav .nav .nav-item {
         margin-right: 25px !important;
@@ -84,69 +80,56 @@
       #header.header .main-nav .nav .nav-item.last { margin-right: 0 !important; }
       #header.header .main-nav .nav .nav-item a {
         color: var(--color-text-secondary) !important;
-        font-size: 14.5px !important;
+        font-size: 15px !important;
         padding: 10px 5px !important;
         text-decoration: none !important;
-        font-weight: 500;
-        transition: color 0.2s ease;
+        font-weight: 500 !important;
       }
-      #header.header .main-nav .nav .nav-item a:hover { color: var(--theme-blue) !important; font-weight: 600 !important; }
+      #header.header .main-nav .nav .nav-item a:hover { color: var(--theme-blue) !important; }
 
       .custom-hamburger-btn { display: none !important; }
 
-      /* ====== 📱 [모바일 붕괴 해결] 스마트폰/태블릿 환경 강제 규칙 ====== */
+      /* ====== 📱 [모바일] 환경 완전 고정 레시피 ====== */
       @media (max-width: 768px) {
-        /* 모바일 첫 섹션 간격 완전 일치화 */
-        .offset-header, .hero, .promo, section[id^="promo"], .main-container {
-          padding-top: 105px !important; /* 모바일에서 가려지지 않는 완벽한 간격 */
-          padding-bottom: 3rem !important;
+        .offset-header, .hero, .promo, section, main, .main-container {
+          padding-top: 110px !important; 
+          padding-bottom: 2rem !important;
         }
 
-        #header.header {
-          height: 70px !important; /* 모바일 헤더 높이 70px 완전 고정 */
-        }
+        #header.header { height: 70px !important; }
         
-        /* [중앙 정렬 완벽 격파] 홈 화면 포함 무조건 로고 왼쪽, 햄버거 오른쪽 배치 */
         #header.header .container {
           display: flex !important;
-          flex-direction: row !important; 
           justify-content: space-between !important;
           align-items: center !important;
           padding: 0 20px !important;
-          width: 100% !important;
-          text-align: left !important;
         }
 
-        #header.header .logo { text-align: left !important; }
-
-        /* 🍔 모바일 햄버거 아이콘 우측 끝 절대 고정 */
+        /* 🍔 모바일 햄버거 우측 정렬 고정 */
         .custom-hamburger-btn {
           display: block !important;
-          width: 24px !important;
-          height: 18px !important;
+          width: 22px !important;
+          height: 16px !important;
           position: relative !important;
           cursor: pointer !important;
           background: none !important;
           border: none !important;
           z-index: 10005 !important;
-          padding: 0 !important;
-          margin: 0 !important;
-          float: right !important;
         }
         .custom-hamburger-btn span {
           display: block !important;
           position: absolute !important;
           height: 2px !important;
           width: 100% !important;
-          background: var(--color-text-primary) !important;
+          background: #111111 !important;
           border-radius: 2px !important;
-          transition: all 0.25s ease-in-out !important;
+          transition: all 0.2s ease-in-out !important;
         }
         .custom-hamburger-btn span:nth-child(1) { top: 0px !important; }
-        .custom-hamburger-btn span:nth-child(2) { top: 8px !important; }
-        .custom-hamburger-btn span:nth-child(3) { top: 16px !important; }
+        .custom-hamburger-btn span:nth-child(2) { top: 7px !important; }
+        .custom-hamburger-btn span:nth-child(3) { top: 14px !important; }
 
-        /* 모바일 서랍 내비게이션 바 외부 간섭 차단 */
+        /* 모바일 서랍 메뉴 */
         #header.header .navbar-collapse {
           position: absolute !important;
           top: 70px !important;
@@ -159,82 +142,63 @@
           overflow: hidden !important;
           display: block !important; 
           visibility: hidden !important;
-          transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out !important;
+          transition: max-height 0.25s ease-in-out !important;
           box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
           z-index: 10002 !important;
-          text-align: left !important;
         }
 
-        /* 서랍 메뉴 오픈 상태 */
         #header.header .navbar-collapse.mobile-open {
-          max-height: 400px !important; 
-          padding: 12px 20px !important;
+          max-height: 350px !important; 
+          padding: 10px 20px !important;
           visibility: visible !important;
         }
 
-        /* 🍔 아이콘 X 변형 */
-        .custom-hamburger-btn.toggle-active span:nth-child(1) { top: 8px !important; transform: rotate(135deg) !important; }
-        .custom-hamburger-btn.toggle-active span:nth-child(2) { opacity: 0 !important; left: -60px !important; }
-        .custom-hamburger-btn.toggle-active span:nth-child(3) { top: 8px !important; transform: rotate(-135deg) !important; }
+        /* X자 변형 */
+        .custom-hamburger-btn.toggle-active span:nth-child(1) { top: 7px !important; transform: rotate(135deg) !important; }
+        .custom-hamburger-btn.toggle-active span:nth-child(2) { opacity: 0 !important; }
+        .custom-hamburger-btn.toggle-active span:nth-child(3) { top: 7px !important; transform: rotate(-135deg) !important; }
 
-        /* 모바일 세로 목록 정렬 및 촘촘한 간격 */
         #header.header .main-nav .nav {
           display: flex !important;
           flex-direction: column !important;
           align-items: flex-start !important;
-          width: 100% !important;
         }
         #header.header .main-nav .nav .nav-item {
           display: block !important;
           width: 100% !important;
-          text-align: left !important;
-          float: none !important;
         }
         #header.header .main-nav .nav .nav-item a {
-          font-size: 14.5px !important;
-          padding: 10px 0 !important; 
+          font-size: 15px !important;
+          padding: 12px 0 !important; 
           display: block !important;
-          border-bottom: 0.5px solid #f7f7f7 !important;
-          color: var(--color-text-secondary) !important;
+          border-bottom: 1px solid #f5f5f5 !important;
         }
         #header.header .main-nav .nav .nav-item.last a { border-bottom: none !important; }
-        #header.header .navbar-toggle { display: none !important; }
+        .navbar-toggle { display: none !important; }
       }
     </style>
 </head>
 <body>
 
-    <!-- ====== 공통 고정 헤더 프레임 ====== -->
     <header id="header" class="header">
       <div class="container">
         {% include header.html %}
       </div>
     </header>
 
-    <!-- 개별 페이지 본문 알맹이 조립 위치 -->
     {{ content }}
 
-    <!-- 공통 하단 부속 및 자바스크립트 독립 제어 -->
-{% include scripts.html %}
+    {% include scripts.html %}
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        var trigger = document.getElementById("js-hamburger-trigger");
-        var menu = document.getElementById("navbar-collapse");
-        
-        if (trigger && menu) {
-          trigger.addEventListener("click", function(e) {
+        var btn = document.getElementById("js-hamburger-trigger");
+        var box = document.getElementById("navbar-collapse");
+        if (btn && box) {
+          btn.addEventListener("click", function(e) {
             e.preventDefault();
-            e.stopPropagation();
-            trigger.classList.toggle("toggle-active");
-            menu.classList.toggle("mobile-open");
-          });
-          
-          document.addEventListener("click", function(e) {
-            if (!trigger.contains(e.target) && !menu.contains(e.target)) {
-              trigger.classList.remove("toggle-active");
-              menu.classList.remove("mobile-open");
-            }
+            btn.classList.toggle("toggle-active");
+            box.classList.toggle("mobile-open");
           });
         }
       });
