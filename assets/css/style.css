@@ -54,11 +54,10 @@ h1, h2, h3, .title, .logo-title {
   border: 0;
 }
 
-/* ====== 모든 페이지 첫 섹션 상단 오프셋 (고정 헤더 회피) ====== */
+/* ====== 페이지 첫 섹션(히어로) 상단 오프셋 (고정 헤더 회피) ====== */
 .offset-header,
 .hero,
-.promo,
-section[id] {
+.promo {
   padding-top: 140px !important;
 }
 
@@ -126,8 +125,7 @@ section[id] {
 @media (max-width: 768px) {
   .offset-header,
   .hero,
-  .promo,
-  section[id] {
+  .promo {
     padding-top: 110px !important;
   }
 
