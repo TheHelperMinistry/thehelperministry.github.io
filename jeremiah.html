@@ -131,18 +131,32 @@ title: Jeremiah Project
     font-style: normal;
   }
 
+ .cards-grid {
+  display: grid;
+  /* 데스크톱에서 무조건 한 줄에 동일한 비율로 4칸을 만듭니다 */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; /* 카드 사이의 간격을 조금 더 여유롭게 조정 */
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: var(--color-background-primary, #ffffff);
+  /* 테두리가 투명하게 지워져 있었다면 강제로 옅은 회색 선을 부여합니다 */
+  border: 1px solid var(--color-border-tertiary, #e5e7eb); 
+  border-radius: var(--border-radius-lg, 8px);
+  padding: 1.5rem; /* 내부 여백을 늘려 글자가 갇혀 보이지 않게 함 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 스마트폰(모바일) 화면에서도 한 줄에 4칸이 되면 글자가 너무 찌그러지므로, 
+   모바일에서는 한 줄에 1칸씩 아래로 차곡차곡 쌓이도록 안전장치를 추가합니다 */
+@media (max-width: 768px) {
   .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
-    margin-top: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
-  .card {
-    background: var(--color-background-primary);
-    border: 0.5px solid var(--color-border-tertiary);
-    border-radius: var(--border-radius-lg);
-    padding: 1.25rem;
-  }
+}
   .card-icon {
     font-size: 18px;
     color: var(--color-text-tertiary);
