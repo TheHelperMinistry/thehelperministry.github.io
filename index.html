@@ -79,7 +79,7 @@ layout: default
   }
   
   .verse-bar {
-    background-color: #f4f7fa !important; /* 은은한 푸른빛이 도는 미색으로 변경 */
+    background-color: #f4f7fa !important; /* 은은한 푸른빛이 도는 미색 */
     border-top: 0.5px solid #e1e8f0;
     border-bottom: 0.5px solid #e1e8f0;
     padding: 2.5rem 2rem;
@@ -215,7 +215,7 @@ layout: default
     line-height: 1.75;
   }
 
-  /* 사역 항목 카드 디자인 (테두리에 미세하게 브랜드 색상 적용) */
+  /* 사역 항목 카드 디자인 */
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -233,11 +233,11 @@ layout: default
     transition: transform 0.2s ease, border-color 0.2s ease;
   }
   .card:hover {
-    border-color: #6690b9; /* 호버 시 테두리 색상 변화 */
+    border-color: #6690b9; 
   }
   .card.full-width {
     grid-column: span 2;
-    border-left: 3px solid #dd9d71; /* 스키마의 서브 컬러($color-2) 활용 포인트 */
+    border-left: 3px solid #dd9d71; 
   }
   .card-title {
     font-size: 15.5px;
@@ -290,7 +290,7 @@ layout: default
   /* 깔끔하고 정돈된 1차 자료 출처 크레딧 푸터 스타일 */
   .footer-clean {
     padding: 2rem 0;
-    background: #111111; /* 깊은 먹색 배경 */
+    background: #111111; 
     color: #767676;
     text-align: center;
     font-size: 12px;
@@ -312,6 +312,7 @@ layout: default
   }
 </style>
 
+<!-- ******HEADER (AI Seminar 및 Jeremiah Project 병렬 배치 완료)****** -->
 <header id="header" class="header">
   <div class="container">
     <h1 class="logo pull-left">
@@ -335,6 +336,7 @@ layout: default
           <li class="nav-item"><a class="scrollto" href="#What-We-Do">What We Do</a></li>
           <li class="nav-item"><a class="scrollto" href="#resources">Resources</a></li>
           <li class="nav-item"><a class="scrollto" href="#contact">Contact</a></li>
+          <li class="nav-item"><a href="/jeremiah.html" target="_blank">AI Seminar</a></li>
           <li class="nav-item"><a href="/jeremiah.html">Jeremiah Project</a></li>
         </ul>
       </div>
@@ -342,6 +344,7 @@ layout: default
   </div>
 </header>
 
+<!-- ******PROMO (HERO SECTION)****** -->
 <section id="promo" class="promo section offset-header">
   <div class="container text-center">
     <h2 class="title"><span class="highlight">The Helper Ministry</span></h2>
@@ -357,6 +360,7 @@ layout: default
   <p class="verse-ref">호세아 6:1 (개역한글)</p>
 </div>
 
+<!-- ******ABOUT US****** -->
 <section id="about" class="about-section section">
   <div class="section-inner">
     <p class="section-label">About Us</p>
@@ -370,6 +374,7 @@ layout: default
   </div>
 </section>
 
+<!-- ******WHAT WE DO****** -->
 <section id="What-We-Do" class="what-we-do-section section">
   <div class="section-inner">
     <p class="section-label">What We Do</p>
@@ -403,6 +408,7 @@ layout: default
   </div>
 </section>
 
+<!-- ******RESOURCES****** -->
 <section id="resources" class="resources-section section">
   <div class="section-inner">
     <p class="section-label">Resources</p>
@@ -424,6 +430,7 @@ layout: default
   </div>
 </section>
 
+<!-- ******CONTACT****** -->
 <section id="contact" class="contact section has-pattern">
   <div class="section-inner">
     <h2 class="title text-center">Contact</h2>
@@ -437,6 +444,7 @@ layout: default
   </div>
 </section>
 
+<!-- ====== CLEAN FOOTER ====== -->
 <footer class="footer-clean">
   <div class="container">
     <p>Copyright &copy; {{ "now" | date: "%Y" }} The Helper Ministry. All rights reserved.</p>
