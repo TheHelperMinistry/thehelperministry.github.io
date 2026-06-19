@@ -1,7 +1,7 @@
 # ====== THE HELPER MINISTRY CONFIGURATION ======
 
 # REQUIRED
-# 외부 테마 플러그인을 완전히 null(배제) 처리하여 GitHub 토큰 요구를 차단합니다.
+# 외부 테마를 완전히 제거합니다.
 theme: null
 remote_theme: null
 
@@ -41,3 +41,8 @@ kramdown:
 sass:
   sass_dir: assets/_sass
   style: compressed
+
+# ====== PLUGINS EXCLUSION (토큰 에러 원천 차단) ======
+# 지킬 빌드 머신이 메타데이터 수집 및 외부 테마용 깃허브 API를 절대 호출하지 않도록 플러그인 목록을 강제로 비워버립니다.
+plugins: []
+whitelist: []
