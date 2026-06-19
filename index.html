@@ -8,21 +8,49 @@ layout: default
 
   /* 헤더가 고정되어 있으므로 본문이 파묻히지 않도록 오프셋 추가 */
   .offset-header {
-    padding-top: 120px !important;
+    padding-top: 140px !important;
   }
 
-  /* 각 섹션별 구별을 위한 교차 배경색 시스템 */
+  /* ====== 고정 헤더 영역 글자색 및 배경색 강제 고정 ====== */
+  #header.header {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    background: #ffffff !important; /* 무조건 흰색 배경 고정 */
+    border-bottom: 1px solid var(--color-border-tertiary, #eee) !important;
+    padding: 15px 0 !important;
+  }
+  
+  /* 헤더 내부의 로고 텍스트 색상 고정 */
+  #header.header .logo-title,
+  #header.header .logo a {
+    color: var(--color-text-primary, #111111) !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+  }
+
+  /* 헤더 내부의 메뉴 글자색 고정 */
+  #header.header .main-nav .nav .nav-item a {
+    color: var(--color-text-secondary, #444444) !important;
+  }
+  #header.header .main-nav .nav .nav-item.active a,
+  #header.header .main-nav .nav .nav-item a:hover {
+    color: var(--color-text-primary, #111111) !important;
+    font-weight: 600 !important;
+  }
+
+  /* ====== 각 섹션별 구별을 위한 교차 배경색 시스템 ====== */
   .promo {
-    background-color: #ffffff;
-    padding: 7rem 2rem 6rem;
+    background-color: #ffffff !important; /* 메인 히어로 영역 흰색 */
+    padding: 8rem 2rem 6rem !important;
     text-align: center;
-    border-bottom: 0.5px solid var(--color-border-tertiary);
     position: relative;
     overflow: hidden;
   }
   
   .verse-bar {
-    background-color: #f4f5f6; /* 약간의 무게감을 주는 은은한 쿨그레이 */
+    background-color: #f4f5f6 !important; /* 약간의 무게감을 주는 은은한 쿨그레이 */
     border-top: 0.5px solid var(--color-border-tertiary);
     border-bottom: 0.5px solid var(--color-border-tertiary);
     padding: 2.5rem 2rem;
@@ -30,49 +58,50 @@ layout: default
   }
 
   .about-section {
-    background-color: #ffffff; /* 순백색 배경 */
+    background-color: #ffffff !important; /* 백색 */
   }
 
   .what-we-do-section {
-    background-color: #fafafa; /* 아주 옅은 뉴트럴 그레이로 사역 카드 영역 구별 */
+    background-color: #fafafa !important; /* 아주 옅은 뉴트럴 그레이 */
     border-top: 0.5px solid var(--color-border-tertiary);
     border-bottom: 0.5px solid var(--color-border-tertiary);
   }
 
   .resources-section {
-    background-color: #f7f6f3; /* 따뜻하고 정갈한 느낌을 주는 옅은 웜그레이/아이보리 */
+    background-color: #f7f6f3 !important; /* 정갈한 느낌을 주는 옅은 웜그레이/아이보리 */
     border-bottom: 0.5px solid var(--color-border-tertiary);
   }
 
   .contact {
-    background-color: #ffffff; /* 하단 문의 영역은 다시 백색으로 정돈 */
+    background-color: #ffffff !important; /* 하단 문의 영역 백색 */
     padding: 6rem 2rem;
     text-align: center;
   }
 
-  /* 기본 타이틀 및 본문 스타일 */
-  .promo .title {
+  /* ====== 메인 타이틀 및 본문 텍스트 색상 강제 고정 ====== */
+  .promo .title, 
+  .promo .title .highlight {
     font-family: var(--font-serif);
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: var(--color-text-primary);
-    margin-bottom: 1.5rem;
+    font-size: 40px !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    color: var(--color-text-primary, #111111) !important; /* 글자가 보이도록 먹색 고정 */
+    margin-bottom: 1.5rem !important;
     word-break: keep-all;
   }
   .promo .intro {
-    font-size: 18px;
-    color: var(--color-text-secondary);
-    line-height: 1.8;
+    font-size: 18px !important;
+    color: var(--color-text-secondary, #444444) !important; /* 서브 카피 색상 고정 */
+    line-height: 1.8 !important;
     max-width: 720px;
-    margin: 0 auto 2.5rem;
+    margin: 0 auto 2.5rem !important;
     word-break: keep-all;
   }
   .btn-primary {
     display: inline-block;
     padding: 14px 36px;
-    background: var(--color-text-primary);
-    color: var(--color-background-primary);
+    background: var(--color-text-primary, #111111) !important;
+    color: var(--color-background-primary, #ffffff) !important;
     font-size: 15px;
     font-weight: 500;
     border-radius: var(--border-radius-md);
@@ -81,7 +110,7 @@ layout: default
     text-decoration: none;
     transition: opacity 0.15s;
   }
-  .btn-primary:hover { opacity: 0.8; color: var(--color-background-primary); text-decoration: none; }
+  .btn-primary:hover { opacity: 0.8; color: var(--color-background-primary, #ffffff) !important; text-decoration: none; }
 
   .verse-text {
     font-family: var(--font-serif);
@@ -129,7 +158,7 @@ layout: default
   .section-body p { margin-bottom: 1.5rem; }
   .section-body p:last-child { margin-bottom: 0; }
 
-  /* 프로필 상자 스타일 (배경이 흰색일 때 돋보이도록 조정) */
+  /* 프로필 상자 스타일 */
   .profile-box {
     background: #fdfdfd;
     border: 1px solid var(--color-border-tertiary, #e5e7eb);
@@ -150,7 +179,7 @@ layout: default
     line-height: 1.75;
   }
 
-  /* 사역 항목 카드 그리드 레이아웃 (배경색 구별용 순백색 카드) */
+  /* 사역 항목 카드 그리드 레이아웃 */
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -182,7 +211,7 @@ layout: default
     word-break: keep-all;
   }
 
-  /* 자료실 리스트 스타일 (배경과 대비되도록 순백색 처리) */
+  /* 자료실 리스트 스타일 */
   .resource-list {
     list-style: none;
     margin-top: 1.5rem;
@@ -215,28 +244,23 @@ layout: default
     margin: 0 auto;
     font-style: normal;
   }
-  .contact address a {
-    color: var(--color-text-primary);
-    font-weight: 600;
-    text-decoration: underline;
-  }
 
   /* 모바일 반응형 대응 */
   @media (max-width: 768px) {
-    .promo { padding: 5rem 1rem 4.5rem; }
-    .promo .title { font-size: 30px; line-height: 1.4; word-break: keep-all; }
-    .promo .intro { font-size: 16px; padding: 0 10px; }
+    .promo { padding: 5rem 1rem 4.5rem !important; }
+    .promo .title { font-size: 30px !important; line-height: 1.4; word-break: keep-all; }
+    .promo .intro { font-size: 16px !important; padding: 0 10px; }
     .section { padding: 4rem 1.5rem; }
-    .section-title { font-size: 26px; word-break: keep-all; }
+    .section-title { font-size: 22px; word-break: keep-all; }
     .cards-grid { grid-template-columns: 1fr; gap: 16px; }
     .card.full-width { grid-column: span 1; }
   }
 </style>
 
-<!-- ******HEADER****** -->
-<header id="header" class="header" style="position: fixed; top: 0; width: 100%; z-index: 1000; background: #fff; border-bottom: 1px solid #eee;">
+<!-- ******HEADER (스타일 및 글자색 강제 제어 부여)****** -->
+<header id="header" class="header">
   <div class="container">
-    <h1 class="logo pull-left">
+    <h1 class="logo pull-left" style="margin: 0; font-size: 26px; padding-top: 10px;">
       <a href="/">
         <span class="logo-title">{{ site.org_name }}</span>
       </a>
@@ -264,7 +288,7 @@ layout: default
   </div>
 </header>
 
-<!-- ******PROMO (HERO SECTION)****** -->
+<!-- ******PROMO (HERO SECTION - 글자색 피아 식별 고정)****** -->
 <section id="promo" class="promo section offset-header">
   <div class="container text-center">
     <h2 class="title"><span class="highlight">The Helper Ministry</span></h2>
@@ -272,8 +296,8 @@ layout: default
     <div class="btns">
       <a class="btn-primary scrollto" href="#about">더 알아보기</a>
     </div>
-  </div><!--//container-->
-</section><!--//promo-->
+  </div>
+</section>
 
 <div class="verse-bar">
   <p class="verse-text">"오라 우리가 여호와께로 돌아가자 여호와께서 우리를 찢으셨으나 도로 낫게 하실 것이요 우리를 치셨으나 싸매어 주실 것임이라"</p>
