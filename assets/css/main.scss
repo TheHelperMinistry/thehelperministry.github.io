@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 /* 테마 전반의 기본 미니멀 레이아웃 로드 */
-@import "default";
+@use "default";
 
 /* 필요한 경우에만 아래에 아주 최소한의 공통 클래스만 추가합니다 */
 .disabled-link {
