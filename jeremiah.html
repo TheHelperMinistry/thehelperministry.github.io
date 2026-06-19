@@ -173,26 +173,53 @@ title: Jeremiah Project
     line-height: 1.65;
   }
 
+.info-row {
+  display: grid;
+  /* 데스크톱에서 정갈하게 한 줄에 3칸(장소, 대상, 일시)으로 나눕니다 */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 0.5px solid var(--color-border-tertiary);
+  text-align: center; /* 모든 텍스트를 정중앙으로 정렬 */
+}
+
+.info-item {
+  background: var(--color-background-secondary, #f9fafb); /* 은은한 배경색 부여 */
+  border: 1px solid var(--color-border-tertiary, #e5e7eb);
+  border-radius: var(--border-radius-md, 6px);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.info-value {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  word-break: keep-all; /* 모바일에서 글자가 어색하게 깨지지 않도록 방지 */
+}
+
+/* 스마트폰(모바일) 환경에서는 한 줄에 하나씩 세로로 정렬 */
+@media (max-width: 768px) {
   .info-row {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 2.5rem;
     padding-top: 2rem;
-    border-top: 0.5px solid var(--color-border-tertiary);
-    flex-wrap: wrap;
   }
-  .info-item { flex: 1; min-width: 120px; }
-  .info-label {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-text-tertiary);
-    margin-bottom: 0.4rem;
-  }
-  .info-value {
-    font-size: 15px;
-    font-weight: 500;
-  }
+}
 
   .cta-section {
     padding: 4rem 2rem;
