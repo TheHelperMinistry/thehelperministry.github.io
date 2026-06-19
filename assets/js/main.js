@@ -1,1 +1,1 @@
-// The Helper Ministry - Pure Modern Mobile Menu System Active
+// The Helper Ministry - Pure Static HTML Site
