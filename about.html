@@ -372,6 +372,72 @@
     font-weight: 600;
   }
 
+/* 출간 저서 소개 카드 (.profile-box와 동일 톤) */
+  .book-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
+    border: 1px solid #e4e2dd;
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem 1.75rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  }
+  .book-thumb {
+    flex: 0 0 104px;
+    width: 104px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #ebe8e1;
+    background: #f7f6f3;
+  }
+  .book-thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .book-info {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .book-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6690b9;
+    margin: 0 0 0.35rem;
+  }
+  .book-title {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+  .book-title span {
+    font-family: 'Lato', sans-serif;
+    font-size: 13.5px;
+    font-weight: 400;
+    color: #7c8b99;
+    margin-left: 6px;
+  }
+  .book-desc {
+    font-size: 13.5px;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    margin: 0 0 0.55rem;
+    word-break: keep-all;
+  }
+  .book-meta {
+    font-size: 12.5px;
+    color: #7c8b99;
+    margin: 0;
+  }    
+    
   /* 객관적 기록 바 (index.html의 .kaiec-bar 100% 동일 규격) */
   .credentials-stack {
     display: flex;
@@ -618,6 +684,8 @@
     .ministry-item.accent-warm { grid-column: span 1; }
     .kaiec-bar { flex-wrap: wrap; padding: 14px; }
     .kaiec-link { width: 100%; padding-left: 54px; margin-top: 2px; }
+    .book-card { flex-direction: column; align-items: flex-start; padding: 1.4rem; gap: 14px; }
+    .book-thumb { flex: 0 0 auto; width: 120px; }
   }
 </style>
 
@@ -800,6 +868,22 @@
       </div>
     </div>
 
+<!-- 출간 저서 카드 -->
+    <div class="book-card">
+      <div class="book-thumb">
+        <img src="/assets/img/christian-beliefs-book.jpg" alt="장년성경공부시리즈 그리스도인의 신앙과 신학 (Christian Beliefs) 표지">
+      </div>
+      <div class="book-info">
+        <p class="book-label">Published Book · 저서</p>
+        <h3 class="book-title">그리스도인의 신앙과 신학 <span>Christian Beliefs</span></h3>
+        <p class="book-desc">
+          침례교 신앙고백(Baptist Faith &amp; Message)에 담긴 성경적·조직신학적 핵심 교리를 한국 교회 성도들의 눈높이에 맞춰 정리한 장년 성경공부 교재입니다.
+        </p>
+        <!-- 출판사나 출간 연도를 함께 적으시려면 아래 줄 뒤에 ' · 출판사 (연도)' 형태로 덧붙이시면 됩니다 -->
+        <p class="book-meta">장년성경공부시리즈 · 이한 지음</p>
+      </div>
+    </div>
+      
     <!-- 객관적 기록 카드 (기존 KAIEC 바 규격 통일) -->
     <div class="credentials-stack">
       <button type="button" class="kaiec-bar" id="open-award-modal" aria-haspopup="dialog" aria-controls="award-plaque-modal">
