@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="The Helper Ministry 소개 — 작은 교회와 목회자를 돕는 신학적 기준, 3단계 주해 검증 원칙, 대표 이한 목사 약력 및 대외 활동 기록을 안내합니다.">
+    <title>About — The Helper Ministry</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <header id="unified-header">
+      <div class="header-flex-wrapper">
+        <h1 class="custom-logo">
+          <a href="/index.html">
+            <span class="logo-title">The Helper Ministry</span>
+          </a>
+        </h1>
+        <nav class="custom-nav-frame">
+          <button type="button" class="custom-hamburger-btn" id="custom-menu-trigger" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="custom-menu-box" id="custom-menu-box">
+            <ul class="custom-nav-list">
+              <li class="nav-item"><a href="/index.html#promo">Home</a></li>
+              <li class="nav-item active"><a href="/about.html">About</a></li>
+              <li class="nav-item"><a href="/index.html#What-We-Do">What We Do</a></li>
+              <li class="nav-item"><a href="/index.html#resources">Resources</a></li>
+              <li class="nav-item"><a href="/index.html#contact">Contact</a></li>
+              <li class="nav-item"><a href="/seminar.html">AI Seminar</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+<style>
+  /* 페이지 헤더 (index.html의 .promo와 동일 톤, 서브페이지용 여백 조정) */
+  .page-hero {
+    background-color: #ffffff;
+    padding: 7.5rem 2rem 4.5rem;
+    text-align: left;
+  }
+  .page-hero .section-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .page-hero .title {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--color-text-primary);
+    margin: 0 0 1.5rem;
+    word-break: keep-all;
+  }
+  .page-hero .intro {
+    font-size: 17px;
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+    margin: 0;
+    word-break: keep-all;
+  }
+
+  /* 서브 내비게이션 바 (index.html의 .verse-bar와 동일 팔레트) */
+  .subnav-bar {
+    background-color: #f4f7fa;
+    border-top: 0.5px solid #e1e8f0;
+    border-bottom: 0.5px solid #e1e8f0;
+    padding: 1.1rem 2rem;
+  }
+  .subnav-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+  }
+  .subnav-list a {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #4a5b6d;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .subnav-list a:hover,
+  .subnav-list a:focus {
+    color: #6690b9;
+    text-decoration: none;
+  }
+
+  /* 섹션 공통 (index.html과 동일 규격) */
+  .section {
+    padding: 5.5rem 2rem;
+    max-width: 100%;
+  }
+  .section-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #6690b9;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+  }
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.35;
+    margin: 0 0 1.75rem;
+    color: var(--color-text-primary);
+    word-break: keep-all;
+  }
+  .section-body {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+    word-break: keep-all;
+  }
+  .section-body p { margin-bottom: 1.4rem; }
+  .section-body p:last-child { margin-bottom: 0; }
+
+  /* 섹션별 배경 교차 */
+  .bg-white-section {
+    background-color: #ffffff;
+  }
+  .bg-slate-section {
+    background-color: #fafbfc;
+    border-top: 0.5px solid var(--color-border-tertiary);
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  .bg-warm-section {
+    background-color: #f7f6f3;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+
+  /* 신학적 기준 3단 카드 */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 2rem;
+  }
+  .principle-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--border-radius-lg);
+    padding: 1.65rem;
+    box-shadow: 0 4px 12px rgba(102, 144, 185, 0.06);
+  }
+  .principle-num {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #6690b9;
+    margin-bottom: 0.65rem;
+  }
+  .principle-title {
+    font-size: 15.5px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 0.65rem;
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+  .principle-desc {
+    font-size: 13.5px;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    margin: 0;
+    word-break: keep-all;
+  }
+
+  /* 3단계 주해 검증 워크플로우 박스 */
+  .workflow-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #6690b9;
+    border-radius: var(--border-radius-lg);
+    padding: 1.85rem 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 8px rgba(102, 144, 185, 0.05);
+  }
+  .workflow-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 0.4rem;
+  }
+  .workflow-sub {
+    font-size: 13.5px;
+    color: var(--color-text-secondary);
+    margin: 0 0 1.5rem;
+    line-height: 1.7;
+  }
+  .workflow-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .workflow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #edf2f7;
+  }
+  .workflow-step:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+  .step-badge {
+    flex: 0 0 auto;
+    padding: 4px 10px;
+    background: #eef4f9;
+    color: #4a6e91;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: 2px;
+  }
+  .step-content strong {
+    display: block;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 3px;
+  }
+  .step-content span {
+    display: block;
+    font-size: 13.5px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  }
+
+  /* 주석 참조 예시 표 */
+  .ref-table-wrap {
+    margin-top: 2rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+  }
+  .ref-table-head {
+    padding: 1.15rem 1.5rem;
+    background: #f4f7fa;
+    border-bottom: 1px solid #e1e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .ref-table-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+  .ref-table-note {
+    font-size: 12px;
+    color: #6b7c8f;
+  }
+  .ref-table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 560px;
+  }
+  .ref-table th {
+    text-align: left;
+    padding: 11px 16px;
+    font-weight: 600;
+    color: #4a5b6d;
+    background: #fafbfc;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .ref-table td {
+    padding: 11px 16px;
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid #f1f5f9;
+    line-height: 1.55;
+  }
+  .ref-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .ref-table td:first-child {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    white-space: nowrap;
+  }
+  .tgc-tag {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 1px 5px;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #6690b9;
+    background: #eef4f9;
+    border-radius: 3px;
+    vertical-align: middle;
+  }
+
+  /* 대표 약력 박스 (index.html의 .profile-box 계승) */
+  .profile-box {
+    background: #ffffff;
+    border: 1px solid #e4e2dd;
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+  .bio-group {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid #efede8;
+  }
+  .bio-group:first-child { padding-top: 0; }
+  .bio-group:last-child { padding-bottom: 0; border-bottom: none; }
+  .bio-label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #6690b9;
+    padding-top: 2px;
+  }
+  .bio-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .bio-list li {
+    font-size: 14.5px;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    margin-bottom: 0.35rem;
+  }
+  .bio-list li:last-child { margin-bottom: 0; }
+  .bio-list strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+
+  /* 객관적 기록 바 (index.html의 .kaiec-bar 100% 동일 규격) */
+  .credentials-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1.5rem;
+  }
+  .kaiec-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    text-align: left;
+    padding: 14px 16px;
+    background: #ffffff;
+    border: 1px solid #e4e2dd;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+  }
+  .kaiec-bar:hover,
+  .kaiec-bar:focus {
+    border-color: #6690b9;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+  }
+  .kaiec-mark {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1b2a4a;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+  .kaiec-mark.mark-award {
+    background: #4a6e91;
+    font-size: 10px;
+  }
+  .kaiec-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .kaiec-title {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+  .kaiec-meta {
+    font-size: 12.5px;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+  .kaiec-link {
+    flex: 0 0 auto;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6690b9;
+    white-space: nowrap;
+  }
+
+  /* 사역 영역 요약 리스트 */
+  .ministry-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 2rem;
+  }
+  .ministry-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(102, 144, 185, 0.06);
+  }
+  .ministry-item.accent-warm {
+    grid-column: span 2;
+    border-left: 3px solid #dd9d71;
+  }
+  .ministry-item h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 0.5rem;
+  }
+  .ministry-item p {
+    font-size: 13.5px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+    word-break: keep-all;
+  }
+
+  /* 하단 Contact (index.html과 동일) */
+  .contact {
+    background-color: #eef4f9;
+    padding: 5.5rem 2rem;
+    text-align: center;
+    border-top: 0.5px solid #d0dee9;
+  }
+  .contact .title {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0 0 1.25rem;
+    color: var(--color-text-primary);
+  }
+  .contact address {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto;
+    font-style: normal;
+  }
+  .contact-links {
+    margin-top: 1.75rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .btn-outline-soft {
+    display: inline-block;
+    padding: 11px 24px;
+    background: #ffffff;
+    color: #4a6e91;
+    border: 1px solid #c5d6e6;
+    border-radius: var(--border-radius-md);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .btn-outline-soft:hover,
+  .btn-outline-soft:focus {
+    border-color: #6690b9;
+    background: #f9fbfd;
+    color: #4a6e91;
+    text-decoration: none;
+  }
+
+  /* 수상 동판 보기 전용 라이트박스 모달 (Bootstrap .modal과 분리) */
+  .thm-modal-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 24, 39, 0.72);
+    z-index: 9999;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .thm-modal-backdrop.is-open {
+    display: flex;
+  }
+  .thm-modal-dialog {
+    background: #ffffff;
+    border-radius: 10px;
+    max-width: 620px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+  }
+  .thm-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .thm-modal-title {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+  .thm-modal-close {
+    background: none;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 2px 6px;
+  }
+  .thm-modal-close:hover {
+    color: #111827;
+  }
+  .thm-modal-body {
+    padding: 18px;
+    background: #fafbfc;
+    text-align: center;
+  }
+  .thm-modal-body img {
+    max-width: 100%;
+    max-height: 68vh;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    display: block;
+    margin: 0 auto;
+  }
+  .thm-modal-caption {
+    margin: 12px 0 0;
+    font-size: 13px;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  /* 반응형 */
+  @media (max-width: 768px) {
+    .page-hero { padding: 6rem 1.5rem 3.5rem; }
+    .page-hero .title { font-size: 26px; }
+    .page-hero .intro { font-size: 15.5px; }
+    .section { padding: 4rem 1.5rem; }
+    .section-title { font-size: 22px; }
+    .principles-grid { grid-template-columns: 1fr; gap: 14px; }
+    .workflow-box { padding: 1.4rem 1.25rem; }
+    .workflow-step { flex-direction: column; gap: 6px; }
+    .bio-group { grid-template-columns: 1fr; gap: 6px; }
+    .profile-box { padding: 1.5rem; }
+    .ministry-list { grid-template-columns: 1fr; }
+    .ministry-item.accent-warm { grid-column: span 1; }
+    .kaiec-bar { flex-wrap: wrap; padding: 14px; }
+    .kaiec-link { width: 100%; padding-left: 54px; margin-top: 2px; }
+  }
+</style>
+
+<!-- 1. 페이지 헤더 -->
+<section class="page-hero offset-header">
+  <div class="section-inner">
+    <p class="section-label">About Us</p>
+    <h2 class="title">작은 교회의 사역 현장을<br>말씀과 기술로 돕습니다</h2>
+    <p class="intro">
+      The Helper Ministry는 소규모 교회와 목회자, 비영리 단체가 디지털 시대에 본질에 집중하며 사역할 수 있도록 돕기 위해 2019년 여름 시작되었습니다. 거창한 플랫폼이 아니라, 현장에서 실제로 부딪히는 말씀 연구·행정·기술의 장벽을 함께 넘는 조력자를 지향합니다.
+    </p>
+  </div>
+</section>
+
+<!-- 페이지 내 앵커 내비게이션 -->
+<nav class="subnav-bar" aria-label="소개 페이지 목차">
+  <ul class="subnav-list">
+    <li><a href="#mission">사역의 출발</a></li>
+    <li><a href="#standards">신학적 기준과 검증 원칙</a></li>
+    <li><a href="#leader">대표 사역자 및 약력</a></li>
+    <li><a href="#ministry">함께하는 사역</a></li>
+  </ul>
+</nav>
+
+<!-- 2. 사역의 출발 -->
+<section id="mission" class="section bg-white-section">
+  <div class="section-inner">
+    <p class="section-label">Our Mission</p>
+    <h2 class="section-title">작고 어려운 교회를 조금씩이라도 돕고자 시작되었습니다</h2>
+    <div class="section-body">
+      <p><strong>The Helper Ministry</strong>는 2019년 여름 창립되어 오늘까지 소규모·미자립 교회 및 목회자와 함께 말씀·설교·신학 자료 공유, 교회 행정 및 IT 활용 지원, 음향·영상·홈페이지 등 교회 전반의 시스템 컨설팅과 지원 사역을 지속적으로 감당해 오고 있습니다.</p>
+      <p>작은 교회의 목회자는 말씀 준비부터 행정, 음향·영상, 디지털 소통까지 혼자 감당해야 할 영역이 많습니다. The Helper Ministry는 화려한 기술이나 유행을 좇기보다, 현장에서 바로 쓸 수 있는 신뢰할 만한 성경 자료와 지속 가능한 사역 환경을 함께 세워 가는 데 집중합니다.</p>
+      <p>익명 뒤에 숨지 않고 누가, 어떤 신학 훈련과 검증 기준을 가지고 자료를 정리하고 나누는지 투명하게 밝히는 것이 한국 교회와 목회자들에 대한 기본적인 책임이라 믿습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 신학적 기준과 자료 검증 원칙 -->
+<section id="standards" class="section bg-slate-section">
+  <div class="section-inner">
+    <p class="section-label">Theological &amp; Editorial Standards</p>
+    <h2 class="section-title">검증된 신학적 토대와 깐깐한 출처 확인 위에 자료를 세웁니다</h2>
+    <div class="section-body">
+      <p>강단과 성경 연구에 쓰이는 자료는 편리함보다 정확성과 신학적 건전성이 우선입니다. The Helper Ministry에서 나누는 모든 말씀·신학 자료와 AI 활용 교육은 아래 세 가지 원칙을 기준으로 점검합니다.</p>
+    </div>
+
+    <div class="principles-grid">
+      <div class="principle-card">
+        <span class="principle-num">01</span>
+        <h3 class="principle-title">성경 중심의 신학적 기준</h3>
+        <p class="principle-desc">성경의 권위와 본문의 문맥, 저자의 의도, 구속사적 흐름, 교리적 균형을 존중하는 건전한 개혁주의 신학의 토대 위에서 자료를 선별합니다.</p>
+      </div>
+      <div class="principle-card">
+        <span class="principle-num">02</span>
+        <h3 class="principle-title">검증된 출처와 학술적 정직성</h3>
+        <p class="principle-desc">검증 가능한 1차 자료와 신뢰도 높은 표준 주석을 기반으로 작업합니다. 출처를 분명히 남기며, 확인되지 않은 추측이나 근거 없는 인용을 배제합니다.</p>
+      </div>
+      <div class="principle-card">
+        <span class="principle-num">03</span>
+        <h3 class="principle-title">책임 있고 분별 있는 기술 활용</h3>
+        <p class="principle-desc">생성형 AI와 디지털 도구는 목회자의 묵상과 설교를 대체하는 수단이 아닙니다. 연구와 행정을 돕되 정확성·출처·윤리를 지키는 활용법을 다룹니다.</p>
+      </div>
+    </div>
+
+    <!-- 3단계 주해 검증 워크플로우 -->
+    <div class="workflow-box">
+      <h3 class="workflow-heading">성경 자료 검증 3단계 주해 워크플로우</h3>
+      <p class="workflow-sub">묵상·설교·성경공부 자료를 정리할 때는 BestCommentaries 집계와 복음주의권 추천 주석(TGC 등)을 교차 참조하여 아래 순서로 본문을 점검합니다.</p>
+      <ol class="workflow-steps">
+        <li class="workflow-step">
+          <span class="step-badge">STEP 1</span>
+          <div class="step-content">
+            <strong>원문 · 구문 주해</strong>
+            <span>NICOT/NT, WBC, BECNT, NIGTC 등 성경 권별 최상위 학술 주석을 기준으로 사본 비평과 원어 문법 구조를 확인합니다.</span>
+          </div>
+        </li>
+        <li class="workflow-step">
+          <span class="step-badge">STEP 2</span>
+          <div class="step-content">
+            <strong>역사적 배경 · 비평 점검</strong>
+            <span>AYB, OTL, Hermeneia 등 비평 주석을 교차 참조하여 고대 근동 및 역사적 문맥과 주요 해석 논점을 점검합니다.</span>
+          </div>
+        </li>
+        <li class="workflow-step">
+          <span class="step-badge">STEP 3</span>
+          <div class="step-content">
+            <strong>정경 통합 · 강해 적용</strong>
+            <span>NAC, NIVAC, PNTC 등 복음주의 주석과 The Gospel Coalition(TGC) 추천 주석을 대조해 학술적 정밀함과 구속사적 설교 적용의 균형을 맞춥니다.</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- 주요 성경 권별 표준 주석 참조 예시 -->
+    <div class="ref-table-wrap">
+      <div class="ref-table-head">
+        <h4 class="ref-table-title">주요 성경 권별 참조 주석 기준 (일부 예시)</h4>
+        <span class="ref-table-note">BestCommentaries · TGC 교차 기준</span>
+      </div>
+      <div class="ref-table-scroll">
+        <table class="ref-table">
+          <thead>
+            <tr>
+              <th>성경</th>
+              <th>원문 · 학술 주해 기준</th>
+              <th>복음주의 강해 · 적용 참조</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>창세기</td>
+              <td>Wenham (WBC), Hamilton (NICOT)</td>
+              <td>Mathews (NAC) <span class="tgc-tag">TGC</span>, Currid (EPSC) <span class="tgc-tag">TGC</span></td>
+            </tr>
+            <tr>
+              <td>시편</td>
+              <td>Goldingay (BCOT), Craigie/Tate (WBC)</td>
+              <td>Kidner (TOTC), VanGemeren (EBC)</td>
+            </tr>
+            <tr>
+              <td>이사야</td>
+              <td>Oswalt (NICOT), E. J. Young</td>
+              <td>Smith (NAC), Motyer (TOTC)</td>
+            </tr>
+            <tr>
+              <td>마태복음</td>
+              <td>France (NICNT) <span class="tgc-tag">TGC</span></td>
+              <td>Carson (EBC) <span class="tgc-tag">TGC</span>, Blomberg (NAC) <span class="tgc-tag">TGC</span></td>
+            </tr>
+            <tr>
+              <td>로마서</td>
+              <td>Moo (NICNT) <span class="tgc-tag">TGC</span>, Dunn (WBC)</td>
+              <td>Schreiner (BECNT) <span class="tgc-tag">TGC</span></td>
+            </tr>
+            <tr>
+              <td>요한계시록</td>
+              <td>Beale (NIGTC)</td>
+              <td>Mounce (NICNT) <span class="tgc-tag">TGC</span>, Osborne (BECNT) <span class="tgc-tag">TGC</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 대표 사역자 소개 및 약력 -->
+<section id="leader" class="section bg-warm-section">
+  <div class="section-inner">
+    <p class="section-label">Leadership &amp; Credentials</p>
+    <h2 class="section-title">대표 이한 목사</h2>
+    <div class="section-body">
+      <p>The Helper Ministry는 이한 목사가 대표로 사역하고 있습니다. 미국과 한국에서 지역 교회 담임목회와 신학교 강의, 현장 음향·디지털 사역을 두루 경험하며 작은 교회가 겪는 현실적인 어려움을 가까이서 보아 왔습니다.</p>
+      <p>최근에는 교회 현장의 생성형 AI 활용이 늘어나면서, 설교·행정·교육에 AI를 쓰되 책임과 분별이 필요하다는 점을 더 분명히 다루며 작은 교회와 목회자를 위한 AI·디지털 교육 확산에 참여하고 있습니다.</p>
+    </div>
+
+    <!-- 책 날개 스타일의 담백한 약력 정리 -->
+    <div class="profile-box">
+      <div class="bio-group">
+        <div class="bio-label">학력</div>
+        <ul class="bio-list">
+          <li><strong>Midwestern Baptist Theological Seminary</strong> 목회학박사 (D.Min.)</li>
+          <li><strong>Golden Gate Baptist Theological Seminary</strong> 목회학석사 (M.Div.) · 선교학석사 (M.Miss.)</li>
+        </ul>
+      </div>
+      <div class="bio-group">
+        <div class="bio-label">사역 및 강의</div>
+        <ul class="bio-list">
+          <li><strong>The Helper Ministry</strong> 대표 (2019–현재)</li>
+          <li>지역 교회 담임목사 10년 이상 사역</li>
+          <li><strong>Golden Gate Baptist Theological Seminary</strong> 평신도 사역원 교수</li>
+        </ul>
+      </div>
+      <div class="bio-group">
+        <div class="bio-label">수상 및 활동</div>
+        <ul class="bio-list">
+          <li><strong>한국AI윤리위원회(KAIEC)</strong> AI 윤리 캠페인위원 (2026.09–현재)</li>
+          <li><strong>Baker Bookhouse Award in Theology</strong> 수상 (2015)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 객관적 기록 카드 (기존 KAIEC 바 규격 통일) -->
+    <div class="credentials-stack">
+      <button type="button" class="kaiec-bar" id="open-award-modal" aria-haspopup="dialog" aria-controls="award-plaque-modal">
+        <span class="kaiec-mark mark-award" aria-hidden="true">2015</span>
+        <span class="kaiec-text">
+          <span class="kaiec-title">Baker Bookhouse Award in Theology</span>
+          <span class="kaiec-meta">Golden Gate Baptist Theological Seminary · 신학 부문 수상 (2015 · Han Lee)</span>
+        </span>
+        <span class="kaiec-link">수상 동판 보기 →</span>
+      </button>
+
+      <a class="kaiec-bar" href="https://kaiec.kr/members/" target="_blank" rel="noopener">
+        <span class="kaiec-mark" aria-hidden="true">KAIEC</span>
+        <span class="kaiec-text">
+          <span class="kaiec-title">한국AI윤리위원회 · AI 윤리 캠페인위원</span>
+          <span class="kaiec-meta">이한 · LH2185 · 2026.09 · AI·디지털 교육 확산</span>
+        </span>
+        <span class="kaiec-link">공식 명단 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. 함께하는 사역과 네트워크 -->
+<section id="ministry" class="section bg-white-section">
+  <div class="section-inner">
+    <p class="section-label">Network &amp; Ministry</p>
+    <h2 class="section-title">혼자가 아니라 함께 돕습니다</h2>
+    <div class="section-body">
+      <p>The Helper Ministry는 대표 개인의 경험을 넘어, 뜻을 함께하는 다양한 분야의 목회자·전문가·멘토 그룹이 연대하여 작고 어려운 교회들을 조금씩이라도 돕고 섬기고자 사역을 이어가고 있습니다.</p>
+    </div>
+
+    <div class="ministry-list">
+      <div class="ministry-item">
+        <h3>말씀 · 설교 · 신학 자료 공유</h3>
+        <p>검증된 주석과 본문 연구를 바탕으로 묵상 자료, 설교 아웃라인, 목회 연구 가이드를 정리해 나눕니다.</p>
+      </div>
+      <div class="ministry-item">
+        <h3>음향 · 영상 · 디지털 시스템 지원</h3>
+        <p>작은 교회의 규모와 예산에 맞춘 음향 세팅·튜닝, 영상 송출, 홈페이지 및 클라우드 행정 환경을 제안합니다.</p>
+      </div>
+      <div class="ministry-item accent-warm">
+        <h3>목회자 AI 세미나 및 비영리 IT 혜택 지원</h3>
+        <p>설교와 목회 실무에서 AI를 책임 있게 활용하는 세미나를 진행하며, TechSoup Korea 및 Google for Nonprofits 등 작은 교회가 누릴 수 있는 공익 IT 자산 활용을 안내합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 하단 Contact (index.html과 동일 톤) -->
+<section class="contact section has-pattern">
+  <div class="section-inner">
+    <h2 class="title text-center">Contact</h2>
+    <address class="text-center">
+      <p style="margin-bottom: 1.25rem;">사역의 외로운 여정 속에서 말씀 연구, 행정, 미디어의 한계로 고민하지 마십시오.<br>함께 걷는 디지털 동역자가 되겠습니다.</p>
+      <a href="mailto:TheHelperMinistry@gmail.com">TheHelperMinistry@gmail.com</a>
+    </address>
+    <div class="contact-links">
+      <a href="/index.html#resources" class="btn-outline-soft">진행 중인 프로젝트 보기</a>
+      <a href="/seminar.html" class="btn-outline-soft">AI 세미나 안내</a>
+    </div>
+  </div>
+</section>
+
+<!-- 수상 동판 사진 모달 -->
+<div class="thm-modal-backdrop" id="award-plaque-modal" role="dialog" aria-modal="true" aria-labelledby="award-modal-title" aria-hidden="true">
+  <div class="thm-modal-dialog">
+    <div class="thm-modal-header">
+      <h3 class="thm-modal-title" id="award-modal-title">Baker Bookhouse Award in Theology (2015)</h3>
+      <button type="button" class="thm-modal-close" id="close-award-modal" aria-label="닫기">&times;</button>
+    </div>
+    <div class="thm-modal-body">
+      <!-- 실제 저장소 경로에 맞춰 이미지 파일 경로를 연결해 주세요 -->
+      <img src="/assets/img/baker-bookhouse-award-2015.jpg" alt="Baker Bookhouse Award in Theology 역대 수상자 동판 (2015년 Han Lee 등재)">
+      <p class="thm-modal-caption">Golden Gate Baptist Theological Seminary · 역대 수상자 동판 (2015년 Han Lee 등재)</p>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer-clean">
+      <div class="container">
+        <p>Copyright &copy; 2026 The Helper Ministry. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 모바일 햄버거 메뉴 (index.html과 동일)
+        var triggerBtn = document.getElementById("custom-menu-trigger");
+        var drawerBox = document.getElementById("custom-menu-box");
+
+        if (triggerBtn && drawerBox) {
+          triggerBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            triggerBtn.classList.toggle("btn-active");
+            drawerBox.classList.toggle("box-open");
+          });
+
+          document.addEventListener("click", function (e) {
+            if (!triggerBtn.contains(e.target) && !drawerBox.contains(e.target)) {
+              triggerBtn.classList.remove("btn-active");
+              drawerBox.classList.remove("box-open");
+            }
+          });
+        }
+
+        // 수상 동판 모달 제어
+        var openModalBtn = document.getElementById("open-award-modal");
+        var closeModalBtn = document.getElementById("close-award-modal");
+        var modalBackdrop = document.getElementById("award-plaque-modal");
+
+        function openModal() {
+          if (!modalBackdrop) return;
+          modalBackdrop.classList.add("is-open");
+          modalBackdrop.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          if (!modalBackdrop) return;
+          modalBackdrop.classList.remove("is-open");
+          modalBackdrop.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+
+        if (openModalBtn) {
+          openModalBtn.addEventListener("click", openModal);
+        }
+        if (closeModalBtn) {
+          closeModalBtn.addEventListener("click", closeModal);
+        }
+        if (modalBackdrop) {
+          modalBackdrop.addEventListener("click", function (e) {
+            if (e.target === modalBackdrop) {
+              closeModal();
+            }
+          });
+        }
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && modalBackdrop && modalBackdrop.classList.contains("is-open")) {
+            closeModal();
+          }
+        });
+      });
+    </script>
+
+</body>
+</html>
