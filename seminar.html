@@ -19,6 +19,444 @@
 
     <link rel="stylesheet" href="/assets/css/style.css">
 
+    <style>
+      :root {
+        --thm-serif: 'Noto Serif KR', Georgia, serif;
+        --thm-sans: 'Pretendard', 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+        --thm-ink: #1b2a4a;
+        --thm-body: #475569;
+        --thm-accent: #6690b9;
+        --thm-accent-hover: #537ca5;
+        --thm-warm: #dd9d71;
+        --thm-border: #e2e8f0;
+        --thm-radius-md: 10px;
+        --thm-radius-lg: 14px;
+      }
+
+      body {
+        font-family: var(--thm-sans);
+        color: var(--thm-body);
+        background-color: #ffffff;
+        margin: 0;
+      }
+
+      /* 히어로 섹션 (기존 톤 유지 + 우측 일러스트 2단 배치) */
+      section#promo.hero {
+        background-color: #ffffff;
+        padding: 6.25rem 2rem 5rem;
+        border-bottom: 0.5px solid #e8eef5;
+        overflow: hidden;
+      }
+
+      .seminar-hero-wrap {
+        max-width: 1020px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.5rem;
+      }
+
+      .seminar-hero-copy {
+        flex: 1 1 50%;
+        text-align: left;
+      }
+
+      .hero-eyebrow {
+        font-size: 13px;
+        letter-spacing: 0.16em;
+        color: var(--thm-accent);
+        text-transform: uppercase;
+        margin: 0 0 1rem;
+        font-weight: 700;
+      }
+
+      section#promo.hero .hero-title {
+        font-family: var(--thm-serif);
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.35;
+        color: var(--thm-ink);
+        margin: 0 0 1.25rem;
+        word-break: keep-all;
+      }
+
+      section#promo.hero .hero-sub {
+        font-size: 17px;
+        color: var(--thm-body);
+        line-height: 1.75;
+        margin: 0;
+        word-break: keep-all;
+      }
+
+      .seminar-hero-visual {
+        flex: 0 0 47%;
+        max-width: 470px;
+      }
+
+      .seminar-hero-visual img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        border: 1px solid #dce5ef;
+        box-shadow: 0 8px 24px rgba(27, 42, 74, 0.06);
+      }
+
+      /* 말씀 바 */
+      .verse-bar {
+        background-color: #f4f7fa;
+        border-top: 0.5px solid #e1e8f0;
+        border-bottom: 0.5px solid #e1e8f0;
+        padding: 2.5rem 2rem;
+        text-align: center;
+      }
+
+      .verse-text {
+        font-family: var(--thm-serif);
+        font-size: 17px;
+        line-height: 1.8;
+        color: #4a5b6d;
+        max-width: 640px;
+        margin: 0 auto 0.5rem;
+        font-style: italic;
+        word-break: keep-all;
+      }
+
+      .verse-ref {
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        color: #7c91a6;
+        margin: 0;
+      }
+
+      /* 섹션 공통 및 배경색 복구 */
+      section.thm-section {
+        padding: 6rem 2rem;
+        width: 100%;
+      }
+
+      section.value-section {
+        background-color: #ffffff;
+      }
+
+      section.deliverables-section {
+        background-color: #fafbfc;
+        border-top: 0.5px solid #e6ecf2;
+        border-bottom: 0.5px solid #e6ecf2;
+      }
+
+      section.models-section {
+        background-color: #ffffff;
+      }
+
+      section.system-section {
+        background-color: #f7f6f3;
+        border-top: 0.5px solid #e6e3dc;
+        border-bottom: 0.5px solid #e6e3dc;
+      }
+
+      section.cta-section {
+        background-color: #eef4f9;
+        padding: 6rem 2rem;
+        text-align: center;
+        border-top: 0.5px solid #d0dee9;
+      }
+
+      .thm-section-inner {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .section-label {
+        font-size: 13px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--thm-accent);
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+      }
+
+      .section-title {
+        font-family: var(--thm-serif);
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.3;
+        margin: 0 0 2rem;
+        color: var(--thm-ink);
+        word-break: keep-all;
+      }
+
+      .section-body {
+        font-size: 16px;
+        line-height: 1.9;
+        color: var(--thm-body);
+        word-break: keep-all;
+      }
+
+      .section-body p {
+        margin-bottom: 1.25rem;
+      }
+
+      /* 핵심 가치 2단 카드 */
+      .core-benefits {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin: 2.5rem 0 1rem;
+      }
+
+      .benefit-box {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: var(--thm-radius-lg);
+        padding: 2rem;
+        box-shadow: 0 4px 12px rgba(102, 144, 185, 0.06);
+      }
+
+      .benefit-box h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--thm-accent);
+        margin: 0 0 1rem;
+      }
+
+      .benefit-box p {
+        font-size: 14.5px;
+        color: var(--thm-body);
+        line-height: 1.75;
+        margin: 0;
+        word-break: keep-all;
+      }
+
+      /* 실전 자산 리스트 */
+      .asset-list {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0 0;
+      }
+
+      .asset-item {
+        padding: 1.75rem;
+        background: #ffffff;
+        border-radius: var(--thm-radius-md);
+        margin-bottom: 1rem;
+        border: 1px solid #e2e8f0;
+        border-left: 4px solid var(--thm-accent);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      }
+
+      .asset-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--thm-ink);
+        margin: 0 0 0.6rem;
+      }
+
+      .asset-body {
+        font-size: 14px;
+        color: var(--thm-body);
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      /* 4대 AI 모델 카드 + SVG 아이콘 */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 2rem;
+      }
+
+      .model-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: var(--thm-radius-lg);
+        padding: 1.5rem 1.25rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 12px rgba(102, 144, 185, 0.06);
+        transition: border-color 0.2s ease;
+      }
+
+      .model-card:hover {
+        border-color: var(--thm-accent);
+      }
+
+      .model-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0.85rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .model-icon svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .card-title {
+        font-size: 14.5px;
+        font-weight: 600;
+        margin: 0 0 0.6rem;
+        color: var(--thm-ink);
+        line-height: 1.4;
+      }
+
+      .card-body {
+        font-size: 13px;
+        color: var(--thm-body);
+        line-height: 1.65;
+        margin: 0;
+        word-break: keep-all;
+      }
+
+      /* 30년 목회 자산 로드맵 다이어그램 & 3칸 요약 */
+      .roadmap-diagram-box {
+        margin-top: 2rem;
+        background: #ffffff;
+        border: 1px solid #e4e2dd;
+        border-radius: var(--thm-radius-lg);
+        padding: 1.25rem 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      }
+
+      .roadmap-diagram-box svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .info-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 1.75rem;
+        text-align: center;
+      }
+
+      .info-item {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: var(--thm-radius-md);
+        padding: 1.5rem 1rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      }
+
+      .info-label {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #7c91a6;
+        margin: 0 0 0.6rem;
+        font-weight: 700;
+      }
+
+      .info-value {
+        font-size: 15.5px;
+        font-weight: 600;
+        color: var(--thm-ink);
+        margin: 0;
+        line-height: 1.5;
+        word-break: keep-all;
+      }
+
+      /* CTA 버튼 */
+      .seminar-cta-btn {
+        display: inline-block;
+        padding: 15px 40px;
+        background: var(--thm-accent);
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: var(--thm-radius-md);
+        cursor: pointer;
+        border: none;
+        text-decoration: none;
+        transition: background 0.2s ease, opacity 0.15s;
+        box-shadow: 0 2px 8px rgba(102, 144, 185, 0.2);
+        margin-top: 1rem;
+      }
+
+      .seminar-cta-btn:hover,
+      .seminar-cta-btn:focus {
+        opacity: 0.95;
+        background: var(--thm-accent-hover);
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      section.cta-section .cta-title {
+        font-family: var(--thm-serif);
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.4;
+        margin: 0 0 1.5rem;
+        color: var(--thm-ink);
+        word-break: keep-all;
+      }
+
+      section.cta-section .cta-sub {
+        font-size: 16px;
+        color: var(--thm-body);
+        line-height: 1.8;
+        max-width: 640px;
+        margin: 0 auto 2.5rem;
+        word-break: keep-all;
+      }
+
+      @media (max-width: 768px) {
+        section#promo.hero {
+          padding: 5rem 1.5rem 3.5rem;
+        }
+        .seminar-hero-wrap {
+          flex-direction: column;
+          gap: 1.75rem;
+        }
+        .seminar-hero-copy {
+          text-align: center;
+        }
+        .seminar-hero-visual {
+          flex: 1 1 auto;
+          max-width: 100%;
+          width: 100%;
+        }
+        section#promo.hero .hero-title {
+          font-size: 28px;
+          line-height: 1.35;
+        }
+        section#promo.hero .hero-sub {
+          font-size: 15.5px;
+        }
+        section.thm-section,
+        section.cta-section {
+          padding: 4rem 1.5rem;
+        }
+        .section-title,
+        section.cta-section .cta-title {
+          font-size: 24px;
+        }
+        .core-benefits {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .cards-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .info-row {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin-top: 1.5rem;
+        }
+        .roadmap-diagram-box {
+          padding: 1rem;
+        }
+      }
+    </style>
 </head>
 <body>
 
@@ -50,295 +488,23 @@
       </div>
     </header>
 
-
-<style>
-  .hero {
-    background-color: #ffffff;
-    padding: 6rem 2rem 5rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .verse-bar {
-    background-color: #f4f7fa;
-    border-top: 0.5px solid #e1e8f0;
-    border-bottom: 0.5px solid #e1e8f0;
-    padding: 2.5rem 2rem;
-    text-align: center;
-  }
-
-  .value-section {
-    background-color: #ffffff;
-  }
-
-  .deliverables-section {
-    background-color: #fafbfc;
-    border-top: 0.5px solid var(--color-border-tertiary);
-    border-bottom: 0.5px solid var(--color-border-tertiary);
-  }
-
-  .models-section {
-    background-color: #ffffff;
-  }
-
-  .system-section {
-    background-color: #f7f6f3;
-    border-top: 0.5px solid var(--color-border-tertiary);
-    border-bottom: 0.5px solid var(--color-border-tertiary);
-  }
-
-  .cta-section {
-    background-color: #eef4f9;
-    padding: 6rem 2rem;
-    text-align: center;
-    border-top: 0.5px solid #d0dee9;
-  }
-
-  .hero-eyebrow {
-    font-size: 14px;
-    letter-spacing: 0.18em;
-    color: #6690b9;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    font-weight: 700;
-  }
-  .hero-title {
-    font-family: var(--font-serif);
-    font-size: 38px;
-    font-weight: 500;
-    line-height: 1.35;
-    color: var(--color-text-primary);
-    margin-bottom: 1.5rem;
-    word-break: keep-all;
-  }
-  .hero-sub {
-    font-size: 18px;
-    color: var(--color-text-secondary);
-    line-height: 1.75;
-    max-width: 720px;
-    margin: 0 auto 2.5rem;
-    word-break: keep-all;
-  }
-
-  .section {
-    padding: 6rem 2rem;
-    max-width: 100%;
-  }
-  .section-inner {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .section-label {
-    font-size: 13px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #6690b9;
-    font-weight: 700;
-    margin-bottom: 1.25rem;
-  }
-  .section-title {
-    font-family: var(--font-serif);
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 1.3;
-    margin-bottom: 2rem;
-    color: var(--color-text-primary);
-  }
-  .section-body {
-    font-size: 16px;
-    line-height: 1.9;
-    color: var(--color-text-secondary);
-  }
-  .section-body p { margin-bottom: 1.25rem; }
-
-  .verse-text {
-    font-family: var(--font-serif);
-    font-size: 17px;
-    line-height: 1.8;
-    color: #4a5b6d;
-    max-width: 600px;
-    margin: 0 auto 0.5rem;
-    font-style: italic;
-  }
-  .verse-ref {
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    color: #7c91a6;
-  }
-
-  .core-benefits {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin: 2.5rem 0 1rem;
-  }
-  .benefit-box {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: var(--border-radius-lg);
-    padding: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
-  }
-  .benefit-box h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #6690b9;
-    margin-bottom: 1rem;
-  }
-  .benefit-box p {
-    font-size: 14.5px;
-    color: var(--color-text-secondary);
-    line-height: 1.75;
-    word-break: keep-all;
-  }
-
-  .asset-list {
-    list-style: none;
-    margin-top: 1.5rem;
-  }
-  .asset-item {
-    padding: 1.75rem;
-    background: #ffffff;
-    border-radius: var(--border-radius-md);
-    margin-bottom: 1rem;
-    border: 1px solid #e2e8f0;
-    border-left: 4px solid #6690b9;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.01);
-  }
-  .asset-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--color-text-primary);
-    margin-bottom: 0.6rem;
-  }
-  .asset-body {
-    font-size: 14px;
-    color: var(--color-text-secondary);
-    line-height: 1.7;
-  }
-
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 2rem;
-  }
-  .card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: var(--border-radius-lg);
-    padding: 1.5rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
-    transition: border-color 0.2s ease;
-  }
-  .card:hover {
-    border-color: #6690b9;
-  }
-  .card-title {
-    font-size: 14.5px;
-    font-weight: 600;
-    margin-bottom: 0.6rem;
-    color: var(--color-text-primary);
-    line-height: 1.4;
-  }
-  .card-body {
-    font-size: 13px;
-    color: var(--color-text-secondary);
-    line-height: 1.65;
-    word-break: keep-all;
-  }
-
-  .info-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 3rem;
-    padding-top: 2.5rem;
-    border-top: 0.5px solid #e2e8f0;
-    text-align: center;
-  }
-  .info-item {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: var(--border-radius-md);
-    padding: 1.5rem 1rem;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.01);
-  }
-  .info-label {
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #7c91a6;
-    margin-bottom: 0.6rem;
-    font-weight: 700;
-  }
-  .info-value {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--color-text-primary);
-    word-break: keep-all;
-  }
-
-  .btn-primary {
-    display: inline-block;
-    padding: 15px 40px;
-    background: #6690b9;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: var(--border-radius-md);
-    cursor: pointer;
-    border: none;
-    text-decoration: none;
-    transition: background 0.2s ease, opacity 0.15s;
-    box-shadow: 0 2px 8px rgba(102, 144, 185, 0.2);
-    margin-top: 1rem;
-  }
-  .btn-primary:hover { opacity: 0.9; background: #537ca5; color: #ffffff; text-decoration: none; }
-
-  .divider {
-    border: none;
-    border-top: 0.5px solid var(--color-border-tertiary);
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .cta-title {
-    font-family: var(--font-serif);
-    font-size: 34px;
-    font-weight: 500;
-    line-height: 1.4;
-    margin-bottom: 1.5rem;
-    color: var(--color-text-primary);
-  }
-  .cta-sub {
-    font-size: 16px;
-    color: var(--color-text-secondary);
-    line-height: 1.8;
-    max-width: 640px;
-    margin: 0 auto 2.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .hero { padding: 130px 1rem 3.5rem; }
-    .hero-title { font-size: 28px; line-height: 1.35; word-break: keep-all; }
-    .hero-sub { font-size: 15px; padding: 0 10px; }
-    .section-title { font-size: 24px; word-break: keep-all; }
-    .core-benefits { grid-template-columns: 1fr; gap: 16px; }
-    .cards-grid { grid-template-columns: 1fr; gap: 12px; }
-    .info-row { grid-template-columns: 1fr; gap: 12px; margin-top: 2rem; padding-top: 2rem; }
-  }
-</style>
-
 <h2 class="sr-only">목회자를 위한 AI 활용 세미나 Vol.1 - 설교 준비 혁신 안내</h2>
 
 <section id="promo" class="hero offset-header">
-  <p class="hero-eyebrow">THE HELPER MINISTRY AI SEMINAR</p>
-  <h1 class="hero-title">2시간으로 완벽해지는<br>AI 설교 준비의 틀</h1>
-  <p class="hero-sub">설교 준비 시간은 획기적으로 줄어들고, 자료 활용의 넓이와 깊이는 압도적으로 증대됩니다. 이번 주 강단부터 곧바로 적용할 수 있는 목회자 맞춤형 실전 세미나입니다.</p>
+  <div class="seminar-hero-wrap">
+    <div class="seminar-hero-copy">
+      <p class="hero-eyebrow">THE HELPER MINISTRY AI SEMINAR</p>
+      <h1 class="hero-title">2시간으로 완벽해지는<br>AI 설교 준비의 틀</h1>
+      <p class="hero-sub">설교 준비 시간은 획기적으로 줄어들고, 자료 활용의 넓이와 깊이는 압도적으로 증대됩니다. 이번 주 강단부터 곧바로 적용할 수 있는 목회자 맞춤형 실전 세미나입니다.</p>
+    </div>
+
+    <div class="seminar-hero-visual">
+      <img
+        src="/assets/img/seminar-hero-study.webp"
+        alt="열린 성경과 연구 노트 옆에 정돈된 디지털 작업 패널이 놓인 목회자 설교 준비 세미나 일러스트"
+      />
+    </div>
+  </div>
 </section>
 
 <div class="verse-bar">
@@ -346,8 +512,8 @@
   <p class="verse-ref">시편 119:165 (개역한글)</p>
 </div>
 
-<section class="value-section section">
-  <div class="section-inner">
+<section class="value-section thm-section">
+  <div class="thm-section-inner">
     <p class="section-label">THE CORE VALUE</p>
     <h2 class="section-title">2시간 후, 목사님의 설교 사역에 일어날 2가지 획기적인 변화</h2>
     <div class="section-body">
@@ -367,9 +533,9 @@
   </div>
 </section>
 
-<section class="deliverables-section section">
-  <div class="section-inner">
-    <p class="section-label">HANDOUT & DELIVERABLES</p>
+<section class="deliverables-section thm-section">
+  <div class="thm-section-inner">
+    <p class="section-label">HANDOUT &amp; DELIVERABLES</p>
     <h2 class="section-title">세미나가 끝날 때 확실하게 쥐고 돌아가는 실전 자산</h2>
     <div class="section-body">
       <p>강의가 끝난 후 목회 현장에 복귀하셨을 때 곧바로 마우스 클릭 한 번으로 사용하실 수 있는 결과물들을 전수합니다.</p>
@@ -392,27 +558,65 @@
   </div>
 </section>
 
-<section class="models-section section">
-  <div class="section-inner">
+<section class="models-section thm-section">
+  <div class="thm-section-inner">
     <p class="section-label">TOP 4 AI MODELS</p>
     <h2 class="section-title">시중 최고 성능의 4대 AI 모델 완벽 분석 및 효율적 사용법</h2>
     <div class="section-body">
       <p>한 가지 도구만 사용하면 인공지능이 거짓 정보를 지어내는 '환각 현상'에 노출되기 쉽습니다. 각 도구의 명확한 장단점을 파악해 설교 준비 단계마다 가장 똑똑한 조교를 배치하는 지혜를 나눕니다.</p>
 
       <div class="cards-grid">
-        <div class="card">
+        <div class="model-card">
+          <div class="model-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="7" width="24" height="30" rx="3" fill="#f4f7fa"/>
+              <line x1="14" y1="7" x2="14" y2="37"/>
+              <path d="M23 7v9l2.5-1.8L28 16V7" stroke="#6690b9" fill="#eef4f9"/>
+              <path d="M35 12l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z" stroke="#dd9d71" fill="#dd9d71"/>
+            </svg>
+          </div>
           <h3 class="card-title">NotebookLM<br>(자료 분석의 강자)</h3>
           <p class="card-body">내가 직접 업로드한 주석과 논문 데이터 안에서만 답변하므로, 거짓말을 하지 않는 가장 안전하고 충실한 사서 조교입니다.</p>
         </div>
-        <div class="card">
+
+        <div class="model-card">
+          <div class="model-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="18" r="7.5" fill="#f4f7fa" stroke="#6690b9"/>
+              <ellipse cx="24" cy="18" rx="3.2" ry="7.5" stroke="#6690b9"/>
+              <line x1="16.5" y1="18" x2="31.5" y2="18" stroke="#6690b9"/>
+              <circle cx="17" cy="25" r="6.5" fill="#ffffff"/>
+              <line x1="21.8" y1="29.8" x2="28" y2="36" stroke="#1b2a4a" stroke-width="2.2"/>
+              <circle cx="34" cy="10" r="1.4" fill="#dd9d71" stroke="none"/>
+            </svg>
+          </div>
           <h3 class="card-title">Perplexity<br>(최신 검색의 강자)</h3>
           <p class="card-body">실시간 웹을 정밀하게 검색하고 명확한 출처 링크를 함께 제시하여, 최신 신학 동향이나 신뢰성 있는 시사 통계를 찾을 때 탁월합니다.</p>
         </div>
-        <div class="card">
+
+        <div class="model-card">
+          <div class="model-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="8" y1="13" x2="21" y2="13" stroke="#6690b9"/>
+              <line x1="8" y1="19" x2="19" y2="19"/>
+              <line x1="8" y1="25" x2="17" y2="25"/>
+              <path d="M31 9l5 5-13 13-6.5 1.5L18 22 31 9z" fill="#f4f7fa"/>
+              <path d="M28.5 11.5l5 5" stroke="#dd9d71"/>
+            </svg>
+          </div>
           <h3 class="card-title">Claude<br>(문장력의 강자)</h3>
           <p class="card-body">긴 글의 문맥과 논리 구조를 가장 잘 이해하며, 한국어 신학 문장을 부드럽고 자연스러운 설교체 표현으로 빚어내는 작가입니다.</p>
         </div>
-        <div class="card">
+
+        <div class="model-card">
+          <div class="model-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="10" width="16" height="13" rx="2" fill="#f4f7fa" stroke="#6690b9"/>
+              <rect x="20" y="16" width="16" height="13" rx="2" fill="#ffffff"/>
+              <rect x="13" y="25" width="14" height="10" rx="2" fill="#f7f6f3" stroke="#dd9d71"/>
+              <circle cx="35" cy="9" r="1.4" fill="#dd9d71" stroke="none"/>
+            </svg>
+          </div>
           <h3 class="card-title">ChatGPT<br>(기획 · 확장의 강자)</h3>
           <p class="card-body">완성된 설교를 바탕으로 시각적인 이미지 시안을 구상하거나 다음 세대용 요약문 등 다각도 매체로 재가공하는 만능 기획자입니다.</p>
         </div>
@@ -421,14 +625,32 @@
   </div>
 </section>
 
-<hr class="divider">
-
-<section class="system-section section">
-  <div class="section-inner">
+<section class="system-section thm-section">
+  <div class="thm-section-inner">
     <p class="section-label">CONTINUOUS MINISTRY SYSTEM</p>
     <h2 class="section-title">30년 목회 자산으로 이어지는 나만의 라이브러리 설계</h2>
     <div class="section-body">
       <p>2시간 동안 익히는 설교 준비의 틀은 시작에 불과합니다. 매주 선포되는 소중한 말씀 자료가 파편화되어 사라지지 않고, 평생의 체계적인 신학 데이터베이스로 축적되는 확장 로드맵을 선사합니다.</p>
+
+      <div class="roadmap-diagram-box" aria-hidden="true">
+        <svg viewBox="0 0 720 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="16" y="42" width="176" height="56" rx="10" fill="#f4f7fa" stroke="#1b2a4a" stroke-width="1.6"/>
+          <text x="104" y="66" text-anchor="middle" fill="#6690b9" font-size="11" font-weight="700" font-family="Pretendard, sans-serif">STEP 0 · 2H WORKSHOP</text>
+          <text x="104" y="85" text-anchor="middle" fill="#1b2a4a" font-size="13.5" font-weight="600" font-family="Pretendard, sans-serif">집중 실습 총 2시간</text>
+
+          <path d="M192 70 C245 70, 250 34, 304 34" stroke="#6690b9" stroke-width="1.6" stroke-dasharray="4 3"/>
+          <path d="M192 70 C245 70, 250 106, 304 106" stroke="#dd9d71" stroke-width="1.6" stroke-dasharray="4 3"/>
+          <circle cx="192" cy="70" r="4" fill="#1b2a4a"/>
+
+          <rect x="304" y="10" width="400" height="48" rx="10" fill="#ffffff" stroke="#6690b9" stroke-width="1.5"/>
+          <text x="324" y="30" fill="#6690b9" font-size="11" font-weight="700" font-family="Pretendard, sans-serif">TRACK A · ARCHIVE</text>
+          <text x="324" y="47" fill="#1b2a4a" font-size="13.5" font-weight="600" font-family="Pretendard, sans-serif">나만의 설교 DB 구축 (평생 자산화 시스템)</text>
+
+          <rect x="304" y="82" width="400" height="48" rx="10" fill="#ffffff" stroke="#dd9d71" stroke-width="1.5"/>
+          <text x="324" y="102" fill="#c87d4b" font-size="11" font-weight="700" font-family="Pretendard, sans-serif">TRACK B · MEDIA</text>
+          <text x="324" y="119" fill="#1b2a4a" font-size="13.5" font-weight="600" font-family="Pretendard, sans-serif">부서 사역 콘텐츠 제작 (미디어 사역 실전 활용)</text>
+        </svg>
+      </div>
 
       <div class="info-row">
         <div class="info-item">
@@ -449,16 +671,15 @@
 </section>
 
 <section id="contact" class="cta-section">
-  <div class="section-inner">
+  <div class="thm-section-inner">
     <h2 class="cta-title">"인공지능에게 설교를 맡기지 않고,<br>인공지능을 완벽히 지배하는 설교자로 서십시오."</h2>
     <div class="cta-sub">
       <p style="margin-bottom: 1.5rem;">개혁주의적 신학 균형과 성경적 깊이를 견고히 유지하면서 AI를 가장 유능한 조교로 부리는 실제적인 방법, 지금 목회 사역에 장착하시길 바랍니다.</p>
       <strong>목회자 AI 세미나 수강 및 사역 문의</strong>
     </div>
-    <a href="mailto:thehelperministry@gmail.com" class="btn-primary">실전 프롬프트 및 세미나 등록하기</a>
+    <a href="mailto:thehelperministry@gmail.com" class="seminar-cta-btn">실전 프롬프트 및 세미나 등록하기</a>
   </div>
 </section>
-
 
     <footer class="footer-clean">
       <div class="container">
