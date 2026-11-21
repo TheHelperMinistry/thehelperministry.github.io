@@ -319,6 +319,91 @@
     box-shadow: 0 1px 2px rgba(0,0,0,0.01);
   }
 
+/* 9년 매일묵상 커리큘럼 요약 표 */
+  .ref-table-wrap {
+    margin-top: 1.75rem;
+    background: #ffffff;
+    border: 1px solid #e4e2dd;
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+  .ref-table-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 0.75rem;
+  }
+  .ref-table-title {
+    font-family: var(--font-serif);
+    font-size: 16.5px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+  .ref-table-note {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6690b9;
+  }
+  .ref-table-desc {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.15rem;
+    word-break: keep-all;
+  }
+  .ref-table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    text-align: left;
+  }
+  .ref-table th {
+    background: #f4f7fa;
+    color: #1b2a4a;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-top: 1px solid #dce4ec;
+    border-bottom: 1px solid #dce4ec;
+    white-space: nowrap;
+  }
+  .ref-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eceae4;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+    vertical-align: top;
+    word-break: keep-all;
+  }
+  .ref-table td:first-child {
+    font-weight: 600;
+    color: #1b2a4a;
+    white-space: nowrap;
+  }
+  .ref-table td:last-child {
+    white-space: nowrap;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #6690b9;
+  }
+  .ref-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .kaiec-mark.mark-pdf {
+    background: #6690b9;
+    font-size: 10px;
+  }
+  @media (max-width: 768px) {
+    .ref-table-wrap { padding: 1.25rem; }
+  }
+    
   .contact .title {
     font-family: var(--font-serif);
     font-size: 34px;
@@ -427,21 +512,110 @@
     <p class="section-label">Resources</p>
     <h2 class="section-title">현재 진행중인 프로젝트</h2>
     <div class="section-body">
-      <p style="margin-bottom: 2rem;">강단 사역과 목회 실무에 곧바로 활용하실 수 있는 자료들을 준비 중에 있습니다. </p>
+      <p style="margin-bottom: 2rem;">강단 사역과 목회 실무에 곧바로 활용하실 수 있는 자료들을 준비 중에 있습니다.</p>
 
       <ul class="resource-list">
-       <li class="resource-item">
-        <a href="https://thehelperministry.github.io/seminar.html" target="_blank" rel="noopener">
+        <li class="resource-item">
+          <a href="https://thehelperministry.github.io/seminar.html" target="_blank" rel="noopener">
             AI를 활용한 설교 준비 세미나
-        </a>
-   </li>
-    <li class="resource-item">
-        <a href="https://docs.google.com/document/d/1h9VnHSoIdvNOpCW5h1nqoYuG0bhfXbaXG_EiGHezsJI/edit?usp=sharing" target="_blank" rel="noopener">
+          </a>
+        </li>
+        <li class="resource-item">
+          <a href="https://docs.google.com/document/d/1h9VnHSoIdvNOpCW5h1nqoYuG0bhfXbaXG_EiGHezsJI/edit?usp=sharing" target="_blank" rel="noopener">
             9년 주기 매일묵상 성경공부 (Q1, Q3 창세기 / Q2 마가복음)
-        </a>
-    </li>          
+          </a>
+        </li>
       </ul>
+
+      <!-- 9년 성경 전권 매일묵상 커리큘럼 요약 표 -->
+      <div class="ref-table-wrap">
+        <div class="ref-table-head">
+          <h3 class="ref-table-title">9년 성경 전권 매일묵상 커리큘럼 요약 (주 6회 · 총 2,796편)</h3>
+          <span class="ref-table-note">29권(1,857편) 집필 완료 · 구속사적 짝 배치</span>
         </div>
+        <p class="ref-table-desc">
+          단순한 장·절 순서 나열이 아니라 레위기–히브리서, 사사기–룻기, 사도행전–목회서신처럼 구속사적·신학적 연결고리를 살려 9년(주 6회, 466주) 과정으로 설계했습니다. 현재 29권(1,857편)의 원고가 마련되어 있으며, 권별 상세 편수와 주수는 아래 로드맵 PDF에서 확인하실 수 있습니다.
+        </p>
+        <div class="ref-table-scroll">
+          <table class="ref-table">
+            <thead>
+              <tr>
+                <th>연차</th>
+                <th>구속사적 대주제</th>
+                <th>주요 성경 및 구성 흐름</th>
+                <th>진행 현황</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1년차</td>
+                <td>언약의 시작: 창조와 구속, 그리고 거룩</td>
+                <td>창세기 · 마가복음 · 출애굽기 · 레위기</td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td>2년차</td>
+                <td>율법의 완성자와 광야의 훈련</td>
+                <td>히브리서 · 마태복음 · 민수기 · 신명기</td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td>3년차</td>
+                <td>언약의 땅과 복음의 심장</td>
+                <td>로마서 · 여호수아 · 사사기 · 룻기 · 사무엘상</td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td>4년차</td>
+                <td>왕정의 흥망과 지혜, 은혜의 역설</td>
+                <td>사무엘하 · 열왕기상 · 잠언 · 갈라디아서 · 야고보서 · 열왕기하 · 고린도전서</td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td>5년차</td>
+                <td>포로와 귀환, 교회의 영광</td>
+                <td>역대상·하 · 에스라·느헤미야 · 고린도후서 · 에베소서 · 골로새서 · 빌레몬서 · 빌립보서</td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td>6년차</td>
+                <td>위로의 예언과 인자의 복음, 눈물의 선지자</td>
+                <td>이사야 · 누가복음(완료) · 예레미야 전반(예정)</td>
+                <td>일부 완료</td>
+              </tr>
+              <tr>
+                <td>7년차</td>
+                <td>묵시와 하나님의 주권, 사도와 목회</td>
+                <td>예레미야 후반 · 예레미야애가 · 에스겔 · 사도행전 · 데살로니가전·후 · 다니엘 · 에스더 · 목회서신</td>
+                <td>예정</td>
+              </tr>
+              <tr>
+                <td>8년차</td>
+                <td>열방을 향한 공의, 성육신한 하나님</td>
+                <td>소선지서 전반 · 요한복음 · 소선지서 후반 · 요한1·2·3서 · 베드로전·후·유다</td>
+                <td>예정</td>
+              </tr>
+              <tr>
+                <td>9년차</td>
+                <td>지혜와 예배, 완성된 하나님 나라</td>
+                <td>시편(상·하) · 욥기 · 전도서 · 아가 · 요한계시록</td>
+                <td>예정</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 9년 전체계획표 PDF 다운로드 카드 (기존 .kaiec-bar 규격 동일) -->
+      <a class="kaiec-bar" href="/assets/docs/nine-year-devotional-roadmap.pdf" target="_blank" rel="noopener" style="margin-top: 1.25rem; background: #ffffff;">
+        <span class="kaiec-mark mark-pdf" aria-hidden="true">PDF</span>
+        <span class="kaiec-text">
+          <span class="kaiec-title">9년 성경 전권 매일묵상 시리즈 전체계획표 (상세 로드맵)</span>
+          <span class="kaiec-meta">주 6회 · 총 2,796편(466주) · 권별 장수·편수·주수 및 구속사 배치 기준표</span>
+        </span>
+        <span class="kaiec-link">전체 계획표 보기 →</span>
+      </a>
+    </div>
   </div>
 </section>
 
