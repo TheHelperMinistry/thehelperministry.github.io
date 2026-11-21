@@ -193,7 +193,7 @@
     word-break: keep-all;
   }
 
-  /* 3단계 주해 검증 워크플로우 박스 */
+  /* 3단계 주해 검증 워크플로우 박스 + 시각 연결선 */
   .workflow-box {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -221,29 +221,45 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    position: relative;
   }
   .workflow-step {
+    position: relative;
     display: flex;
     align-items: flex-start;
-    gap: 14px;
-    padding-top: 14px;
-    border-top: 1px solid #edf2f7;
+    gap: 16px;
+    padding-bottom: 1.35rem;
   }
-  .workflow-step:first-child {
-    padding-top: 0;
-    border-top: none;
+  .workflow-step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 30px;
+    bottom: 0;
+    width: 1.5px;
+    background: #d7e3ef;
+  }
+  .workflow-step:last-child {
+    padding-bottom: 0;
   }
   .step-badge {
-    flex: 0 0 auto;
-    padding: 4px 10px;
+    position: relative;
+    z-index: 1;
+    flex: 0 0 52px;
+    text-align: center;
+    padding: 4px 8px;
     background: #eef4f9;
-    color: #4a6e91;
-    border-radius: 4px;
-    font-size: 12px;
+    border: 1px solid #cddceb;
+    color: #1b2a4a;
+    border-radius: 999px;
+    font-size: 11px;
     font-weight: 700;
     line-height: 1.4;
     margin-top: 2px;
+  }
+  .step-content {
+    flex: 1 1 auto;
+    min-width: 0;
   }
   .step-content strong {
     display: block;
@@ -331,66 +347,74 @@
     vertical-align: middle;
   }
 
-  /* 대표 약력 박스 (index.html의 .profile-box 계승) */
-  .profile-box {
+  /* 대표 약력 3단 시각 카드 */
+  .cred-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 2rem;
+  }
+  .cred-card {
     background: #ffffff;
     border: 1px solid #e4e2dd;
+    border-top: 3px solid #1b2a4a;
     border-radius: var(--border-radius-lg);
-    padding: 2rem;
-    margin-top: 2rem;
+    padding: 1.4rem 1.45rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.02);
   }
-  .bio-group {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 16px;
-    padding: 1.15rem 0;
-    border-bottom: 1px solid #efede8;
+  .cred-card.is-accent {
+    border-top-color: #6690b9;
   }
-  .bio-group:first-child { padding-top: 0; }
-  .bio-group:last-child { padding-bottom: 0; border-bottom: none; }
-  .bio-label {
-    font-size: 13.5px;
-    font-weight: 600;
-    color: #6690b9;
-    padding-top: 2px;
+  .cred-card.is-warm {
+    border-top-color: #dd9d71;
   }
-  .bio-list {
+  .cred-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1b2a4a;
+    margin-bottom: 0.85rem;
+  }
+  .cred-list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  .bio-list li {
-    font-size: 14.5px;
+  .cred-list li {
+    font-size: 13.5px;
     color: var(--color-text-secondary);
-    line-height: 1.75;
-    margin-bottom: 0.35rem;
+    line-height: 1.7;
+    margin-bottom: 0.45rem;
+    word-break: keep-all;
   }
-  .bio-list li:last-child { margin-bottom: 0; }
-  .bio-list strong {
+  .cred-list li:last-child { margin-bottom: 0; }
+  .cred-list strong {
     color: var(--color-text-primary);
     font-weight: 600;
   }
 
-/* 출간 저서 소개 카드 (.profile-box와 동일 톤) */
+  /* 출간 저서 소개 카드 (.profile-box와 동일 톤) */
   .book-card {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 22px;
     background: #ffffff;
     border: 1px solid #e4e2dd;
     border-radius: var(--border-radius-lg);
     padding: 1.5rem 1.75rem;
     margin-top: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 2px 6px rgba(27, 42, 74, 0.03);
   }
   .book-thumb {
-    flex: 0 0 104px;
-    width: 104px;
+    flex: 0 0 112px;
+    width: 112px;
     border-radius: 6px;
     overflow: hidden;
-    border: 1px solid #ebe8e1;
+    border: 1px solid #dce5ef;
     background: #f7f6f3;
+    box-shadow: 0 6px 16px rgba(27, 42, 74, 0.08);
   }
   .book-thumb img {
     display: block;
@@ -436,8 +460,8 @@
     font-size: 12.5px;
     color: #7c8b99;
     margin: 0;
-  }    
-    
+  }
+
   /* 객관적 기록 바 (index.html의 .kaiec-bar 100% 동일 규격) */
   .credentials-stack {
     display: flex;
@@ -677,9 +701,7 @@
     .section-title { font-size: 22px; }
     .principles-grid { grid-template-columns: 1fr; gap: 14px; }
     .workflow-box { padding: 1.4rem 1.25rem; }
-    .workflow-step { flex-direction: column; gap: 6px; }
-    .bio-group { grid-template-columns: 1fr; gap: 6px; }
-    .profile-box { padding: 1.5rem; }
+    .cred-grid { grid-template-columns: 1fr; gap: 14px; }
     .ministry-list { grid-template-columns: 1fr; }
     .ministry-item.accent-warm { grid-column: span 1; }
     .kaiec-bar { flex-wrap: wrap; padding: 14px; }
@@ -779,7 +801,7 @@
       </ol>
     </div>
 
- <!-- 주요 성경 권별 추천 주석 기준 (일부 예시) -->
+    <!-- 주요 성경 권별 추천 주석 기준 (일부 예시) -->
     <div class="ref-table-wrap">
       <div class="ref-table-head">
         <h4 class="ref-table-title">주요 성경 권별 참조 주석 기준 (일부 예시)</h4>
@@ -839,6 +861,7 @@
       </span>
       <span class="kaiec-link">전체 목록 보기 →</span>
     </a>
+  </div>
 </section>
 
 <!-- 4. 대표 사역자 소개 및 약력 -->
@@ -851,33 +874,53 @@
       <p>최근에는 교회 현장의 생성형 AI 활용이 늘어나면서, 설교·행정·교육에 AI를 쓰되 책임과 분별이 필요하다는 점을 더 분명히 다루며 작은 교회와 목회자를 위한 AI·디지털 교육 확산에도 참여하고 있습니다.</p>
     </div>
 
-    <!-- 책 날개 스타일의 담백한 약력 정리 -->
-    <div class="profile-box">
-      <div class="bio-group">
-        <div class="bio-label">학력</div>
-        <ul class="bio-list">
+    <!-- 약력 3단 시각 카드 -->
+    <div class="cred-grid">
+      <div class="cred-card">
+        <div class="cred-head">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1b2a4a" stroke-width="2" aria-hidden="true">
+            <path d="M22 10L12 5 2 10l10 5 10-5z"/>
+            <path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/>
+          </svg>
+          <span>학력</span>
+        </div>
+        <ul class="cred-list">
           <li><strong>Midwestern Baptist Theological Seminary</strong> 목회학박사 (D.Min.)</li>
           <li><strong>Golden Gate Baptist Theological Seminary</strong> 목회학석사 (M.Div.) · 선교학석사 (M.Miss.)</li>
         </ul>
       </div>
-      <div class="bio-group">
-        <div class="bio-label">사역 및 강의</div>
-        <ul class="bio-list">
+
+      <div class="cred-card is-accent">
+        <div class="cred-head">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6690b9" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="14" rx="2"/>
+            <path d="M8 21h8M12 18v3"/>
+          </svg>
+          <span>사역 및 강의</span>
+        </div>
+        <ul class="cred-list">
           <li><strong>The Helper Ministry</strong> 대표 (2019–현재)</li>
           <li>지역 교회 담임목회 10년 이상 사역 (2012-2025)</li>
           <li><strong>Golden Gate Baptist Theological Seminary</strong> 평신도 사역원 교수 (2018)</li>
         </ul>
       </div>
-      <div class="bio-group">
-        <div class="bio-label">수상 및 활동</div>
-        <ul class="bio-list">
+
+      <div class="cred-card is-warm">
+        <div class="cred-head">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dd9d71" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="8" r="5"/>
+            <path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/>
+          </svg>
+          <span>수상 및 활동</span>
+        </div>
+        <ul class="cred-list">
           <li><strong>한국AI윤리위원회(KAIEC)</strong> AI 윤리 교육위원 (2026.09–현재)</li>
           <li><strong>Baker Bookhouse Award in Theology</strong> 수상 (2015)</li>
         </ul>
       </div>
     </div>
 
-<!-- 출간 저서 카드 -->
+    <!-- 출간 저서 카드 -->
     <div class="book-card">
       <div class="book-thumb">
         <img src="/assets/img/christian-beliefs-book.webp" alt="장년성경공부시리즈 그리스도인의 신앙과 신학 (Christian Beliefs) 표지">
@@ -888,11 +931,10 @@
         <p class="book-desc">
           침례교 신앙고백(Baptist Faith &amp; Message)에 담긴 성경적·조직신학적 핵심 교리를 한국 교회 성도들의 눈높이에 맞춰 정리한 장년 성경공부 교재입니다.
         </p>
-        <!-- 출판사나 출간 연도를 함께 적으시려면 아래 줄 뒤에 ' · 출판사 (연도)' 형태로 덧붙이시면 됩니다 -->
         <p class="book-meta">장년성경공부시리즈 · 이한 지음</p>
       </div>
     </div>
-      
+
     <!-- 객관적 기록 카드 (기존 KAIEC 바 규격 통일) -->
     <div class="credentials-stack">
       <button type="button" class="kaiec-bar" id="open-award-modal" aria-haspopup="dialog" aria-controls="award-plaque-modal">
