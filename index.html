@@ -46,38 +46,45 @@
         border-bottom: 0.5px solid #e8eef5;
       }
 
-      .hero-container {
-        max-width: 1040px;
+.hero-container {
+        max-width: 920px;
         margin: 0 auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 3rem;
+        justify-content: flex-start;
+        gap: 1.75rem;
       }
 
       .hero-copy {
-        flex: 1 1 52%;
+        flex: 0 0 auto;
+        max-width: 390px;
         text-align: left;
       }
 
       section#promo.promo .hero-title {
-        font-family: var(--thm-serif);
-        font-size: 40px;
-        font-weight: 500;
-        line-height: 1.35;
+        font-family: 'Montserrat', 'Pretendard', 'Lato', sans-serif;
+        font-size: 38px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.25;
         color: var(--thm-ink);
-        margin: 0 0 1.25rem;
+        margin: 0 0 0.85rem;
         word-break: keep-all;
       }
 
       section#promo.promo .hero-intro {
-        font-family: var(--thm-sans);
-        font-size: 18px;
+        font-family: 'Pretendard', 'Lato', sans-serif;
+        font-size: 17.5px;
         font-weight: 400;
         color: var(--thm-body);
-        line-height: 1.8;
-        margin: 0 0 2.25rem;
+        line-height: 1.65;
+        margin: 0;
         word-break: keep-all;
+      }
+
+      .hero-visual {
+        flex: 1 1 auto;
+        max-width: 470px;
       }
 
       .hero-cta-btn {
@@ -455,15 +462,17 @@
         font-style: normal;
       }
 
-      @media (max-width: 768px) {
+@media (max-width: 768px) {
         section#promo.promo {
           padding: 5rem 1.5rem 4rem;
         }
         .hero-container {
           flex-direction: column;
-          gap: 2rem;
+          justify-content: center;
+          gap: 1.5rem;
         }
         .hero-copy {
+          max-width: 100%;
           text-align: center;
         }
         .hero-visual {
@@ -473,11 +482,10 @@
         }
         section#promo.promo .hero-title {
           font-size: 30px;
-          line-height: 1.4;
+          line-height: 1.3;
         }
         section#promo.promo .hero-intro {
           font-size: 16px;
-          margin-bottom: 1.75rem;
         }
         section.thm-section,
         section.contact-section {
@@ -542,9 +550,6 @@
     <div class="hero-copy">
       <h2 class="hero-title">The Helper Ministry</h2>
       <p class="hero-intro">작은 교회와 목회자를 위한 디지털 동역자</p>
-      <div>
-        <a href="#about" class="hero-cta-btn">더 알아보기</a>
-      </div>
     </div>
 
     <div class="hero-visual">
