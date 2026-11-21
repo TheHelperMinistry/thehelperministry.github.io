@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="The Helper Ministry 9년 성경 전권 매일묵상 시리즈 전체계획표 및 구속사적 커리큘럼 로드맵 (주 6회 · 총 2,796편)">
+    <title>9년 성경 전권 매일묵상 로드맵 | The Helper Ministry</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+<style>
+  .page-hero {
+    background-color: #ffffff;
+    padding: 8rem 2rem 4.5rem;
+    border-bottom: 0.5px solid #e1e8f0;
+  }
+  .page-hero-inner {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #6690b9;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .page-title {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--color-text-primary);
+    margin-bottom: 1.25rem;
+    word-break: keep-all;
+  }
+  .page-lead {
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: var(--color-text-secondary);
+    max-width: 780px;
+    margin-bottom: 2rem;
+    word-break: keep-all;
+  }
+
+  /* 핵심 통계 4칸 그리드 */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 1.5rem;
+  }
+  .stat-card {
+    background: #f4f7fa;
+    border: 1px solid #dce4ec;
+    border-radius: var(--border-radius-lg);
+    padding: 1.25rem 1.35rem;
+  }
+  .stat-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6690b9;
+    margin-bottom: 0.35rem;
+  }
+  .stat-value {
+    font-family: var(--font-serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: #1b2a4a;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+  .stat-sub {
+    font-size: 12.5px;
+    color: var(--color-text-secondary);
+    line-height: 1.45;
+    word-break: keep-all;
+  }
+
+  /* 설계 원칙 영역 */
+  .principles-section {
+    background-color: #fafbfc;
+    padding: 4.5rem 2rem;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  .section-inner {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-primary);
+  }
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .principle-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(102, 144, 185, 0.05);
+  }
+  .principle-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1b2a4a;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+  }
+  .principle-card p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin: 0;
+    word-break: keep-all;
+  }
+
+  /* 연차별 상세 커리큘럼 영역 */
+  .curriculum-section {
+    background-color: #ffffff;
+    padding: 5rem 2rem 6rem;
+  }
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 2rem;
+    padding: 1rem 1.25rem;
+    background: #f7f6f3;
+    border: 1px solid #e4e2dd;
+    border-radius: var(--border-radius-lg);
+  }
+  .filter-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 1px solid #d0dee9;
+    background: #ffffff;
+    color: #4a5b6d;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .filter-btn:hover {
+    border-color: #6690b9;
+    color: #1b2a4a;
+  }
+  .filter-btn.active {
+    background: #1b2a4a;
+    border-color: #1b2a4a;
+    color: #ffffff;
+  }
+  .sample-link-btn {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6690b9;
+    text-decoration: none;
+  }
+  .sample-link-btn:hover {
+    text-decoration: underline;
+    color: #1b2a4a;
+  }
+
+  /* 연차 블록 */
+  .year-block {
+    margin-bottom: 2.5rem;
+    border: 1px solid #dce4ec;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(27, 42, 74, 0.03);
+  }
+  .year-header {
+    background: #f4f7fa;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid #dce4ec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .year-title-group {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .year-badge {
+    display: inline-block;
+    background: #1b2a4a;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+  }
+  .year-theme {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 600;
+    color: #1b2a4a;
+    margin: 0;
+  }
+  .year-meta {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #6690b9;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .plan-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    text-align: left;
+  }
+  .plan-table th {
+    background: #fafbfc;
+    color: #4a5b6d;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+    font-size: 12.5px;
+  }
+  .plan-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid #eef2f6;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+    vertical-align: middle;
+  }
+  .plan-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .plan-table td.book-name {
+    font-weight: 600;
+    color: #1b2a4a;
+    white-space: nowrap;
+  }
+  .plan-table td.num-col {
+    white-space: nowrap;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .plan-table th.num-col {
+    text-align: right;
+  }
+  .plan-table td.theme-col {
+    word-break: keep-all;
+    min-width: 240px;
+  }
+
+  .status-pill {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    font-size: 11.5px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .status-done {
+    background: #e6f0fa;
+    color: #2b5b8c;
+  }
+  .status-plan {
+    background: #f2f1ed;
+    color: #7a766c;
+  }
+
+  .bottom-nav-box {
+    margin-top: 3rem;
+    padding: 1.75rem 2rem;
+    background: #f4f7fa;
+    border: 1px solid #dce4ec;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .bottom-nav-text {
+    font-size: 14.5px;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    word-break: keep-all;
+  }
+  .bottom-nav-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .btn-outline-navy {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid #6690b9;
+    background: #ffffff;
+    color: #1b2a4a;
+    font-size: 13.5px;
+    font-weight: 600;
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+  .btn-outline-navy:hover {
+    background: #6690b9;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .page-hero { padding: 6.5rem 1.5rem 3.5rem; }
+    .page-title { font-size: 26px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .principles-grid { grid-template-columns: 1fr; }
+    .principles-section, .curriculum-section { padding: 3.5rem 1.5rem; }
+    .year-header { padding: 1rem 1.15rem; }
+    .year-theme { font-size: 15.5px; }
+  }
+</style>
+</head>
+<body>
+
+    <header id="unified-header">
+      <div class="header-flex-wrapper">
+        <h1 class="custom-logo">
+          <a href="/index.html">
+            <span class="logo-title">The Helper Ministry</span>
+          </a>
+        </h1>
+        <nav class="custom-nav-frame">
+          <button type="button" class="custom-hamburger-btn" id="custom-menu-trigger" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="custom-menu-box" id="custom-menu-box">
+            <ul class="custom-nav-list">
+              <li class="nav-item"><a href="/index.html#promo">Home</a></li>
+              <li class="nav-item"><a href="/about.html">About</a></li>
+              <li class="nav-item"><a href="/index.html#What-We-Do">What We Do</a></li>
+              <li class="nav-item"><a href="/index.html#resources">Resources</a></li>
+              <li class="nav-item"><a href="/index.html#contact">Contact</a></li>
+              <li class="nav-item"><a href="/seminar.html">AI Seminar</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="section-label">9-Year Bible Devotional Roadmap</p>
+    <h1 class="page-title">9년 성경 전권 매일묵상 시리즈 전체계획표</h1>
+    <p class="page-lead">
+      성경 66권 전체를 구속사적 흐름과 신학적 연결에 따라 주 6회(월~토) 깊이 있게 묵상하도록 설계한 장기 커리큘럼입니다. 단순한 장·절 순서 나열을 넘어 구약과 신약의 핵심 주제를 유기적으로 짝지어 배치했습니다.
+    </p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">전체 커리큘럼 규모</div>
+        <div class="stat-value">총 2,796편</div>
+        <div class="stat-sub">주 6회(월~토) · 466.0주 과정</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">기집필 완료 현황</div>
+        <div class="stat-value">29권 · 1,857편</div>
+        <div class="stat-sub">전체 편수 대비 66.4% (309.5주)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">후속 집필 예정</div>
+        <div class="stat-value">37권 · 939편</div>
+        <div class="stat-sub">6년차 예레미야~9년차 요한계시록</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">연간 완충 여백</div>
+        <div class="stat-value">12편 (2.0주)</div>
+        <div class="stat-sub">9년 468주 슬롯 내 유연한 절기 조정</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="principles-section">
+  <div class="section-inner">
+    <p class="section-label">Curriculum Principles</p>
+    <h2 class="section-title">커리큘럼 설계 및 배열 원칙</h2>
+    <div class="principles-grid">
+      <div class="principle-card">
+        <h3>1. 구속사적·신학적 짝 배치</h3>
+        <p>레위기 직후에 히브리서를 배치하여 구약 제사와 영원한 대제사장 그리스도를 연결하고, 솔로몬 내러티브 직후에 잠언을, 사사기 직후에 룻기를, 사도행전 직후에 목회서신을 배치했습니다.</p>
+      </div>
+      <div class="principle-card">
+        <h3>2. 문맥 중심의 균형 잡힌 본문 분배</h3>
+        <p>각 성경 권역의 문학적 구조와 단락(pericope) 호흡을 해치지 않으면서 주 6회(월~토) 꾸준히 묵상할 수 있도록 장수 대비 적정 편수를 산정했습니다.</p>
+      </div>
+      <div class="principle-card">
+        <h3>3. 검증된 주석과 개혁주의 해석 기준</h3>
+        <p>저자 의도와 원문 문맥, 구속사적 통일성을 우선하며, 신뢰할 수 있는 성경 주석과 건전한 교리 기준을 바탕으로 현장 성도와 목회자가 함께 활용할 수 있게 집필합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="curriculum-section">
+  <div class="section-inner">
+    <p class="section-label">Master Curriculum</p>
+    <h2 class="section-title">성경 66권 연차별 상세 로드맵 (1년차 ~ 9년차)</h2>
+
+    <div class="filter-bar">
+      <div class="filter-btns" role="group" aria-label="진행 상태 필터">
+        <button type="button" class="filter-btn active" data-filter="all">전체 보기 (66권)</button>
+        <button type="button" class="filter-btn" data-filter="done">집필 완료 (29권)</button>
+        <button type="button" class="filter-btn" data-filter="plan">집필 예정 (37권)</button>
+      </div>
+      <a class="sample-link-btn" href="https://docs.google.com/document/d/1h9VnHSoIdvNOpCW5h1nqoYuG0bhfXbaXG_EiGHezsJI/edit?usp=sharing" target="_blank" rel="noopener">
+        창세기·마가복음 묵상 샘플 보기 →
+      </a>
+    </div>
+
+    <!-- 1년차 -->
+    <div class="year-block" data-year-group>
+      <div class="year-header">
+        <div class="year-title-group">
+          <span class="year-badge">1년차</span>
+          <h3 class="year-theme">언약의 시작: 창조와 구속, 그리고 거룩</h3>
+        </div>
+        <span class="year-meta">총 295편 / 49.2주 (약 2.8주 완충 여백)</span>
+      </div>
+      <div class="table-scroll">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>권명 (성경)</th>
+              <th>상태</th>
+              <th class="num-col">장수</th>
+              <th class="num-col">편수</th>
+              <th class="num-col">주수(6편)</th>
+              <th class="num-col">누적주</th>
+              <th>구속사적 중심 주제 및 배치 원칙</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="done">
+              <td class="book-name">창세기</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">50장</td>
+              <td class="num-col">88편</td>
+              <td class="num-col">14.7주</td>
+              <td class="num-col">14.7주</td>
+              <td class="theme-col">창조, 타락, 족장 내러티브, 요셉과 언약 보존 (상·하 통합 전권 단일 배분)</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">마가복음</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">16장</td>
+              <td class="num-col">70편</td>
+              <td class="num-col">11.7주</td>
+              <td class="num-col">26.3주</td>
+              <td class="theme-col">고난받는 종이신 메시아의 권위와 십자가, 즉각성의 서사</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">출애굽기</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">40장</td>
+              <td class="num-col">80편</td>
+              <td class="num-col">13.3주</td>
+              <td class="num-col">39.7주</td>
+              <td class="theme-col">유월절 구원, 시내산 언약, 성막 설계와 하나님의 임재 영광 충만</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">레위기</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">27장</td>
+              <td class="num-col">57편</td>
+              <td class="num-col">9.5주</td>
+              <td class="num-col">49.2주</td>
+              <td class="theme-col">제사 제도, 정결법, 속죄일 독립 블록, 거룩한 삶의 윤리</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 2년차 -->
+    <div class="year-block" data-year-group>
+      <div class="year-header">
+        <div class="year-title-group">
+          <span class="year-badge">2년차</span>
+          <h3 class="year-theme">율법의 완성자와 광야의 훈련</h3>
+        </div>
+        <span class="year-meta">총 341편 / 56.8주 (누적 106.0주)</span>
+      </div>
+      <div class="table-scroll">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>권명 (성경)</th>
+              <th>상태</th>
+              <th class="num-col">장수</th>
+              <th class="num-col">편수</th>
+              <th class="num-col">주수(6편)</th>
+              <th class="num-col">누적주</th>
+              <th>구속사적 중심 주제 및 배치 원칙</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="done">
+              <td class="book-name">히브리서</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">13장</td>
+              <td class="num-col">44편</td>
+              <td class="num-col">7.3주</td>
+              <td class="num-col">56.5주</td>
+              <td class="theme-col">레위기 직후 신학적 짝 배치, 더 좋은 대제사장과 영원한 단번의 제사</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">마태복음</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">28장</td>
+              <td class="num-col">144편</td>
+              <td class="num-col">24.0주</td>
+              <td class="num-col">80.5주</td>
+              <td class="theme-col">율법을 완성하러 오신 왕, 산상수훈과 하나님 나라 (상·하 통합 전권)</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">민수기</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">36장</td>
+              <td class="num-col">67편</td>
+              <td class="num-col">11.2주</td>
+              <td class="num-col">91.7주</td>
+              <td class="theme-col">시내산 진영 편성, 광야 40년의 반역과 하나님의 신실하심</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">신명기</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">34장</td>
+              <td class="num-col">86편</td>
+              <td class="num-col">14.3주</td>
+              <td class="num-col">106.0주</td>
+              <td class="theme-col">모압 평지의 세 설교, 쉐마, 약속의 땅을 앞둔 언약 갱신</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 3년차 -->
+    <div class="year-block" data-year-group>
+      <div class="year-header">
+        <div class="year-title-group">
+          <span class="year-badge">3년차</span>
+          <h3 class="year-theme">언약의 땅과 복음의 심장</h3>
+        </div>
+        <span class="year-meta">총 287편 / 47.8주 (누적 153.8주)</span>
+      </div>
+      <div class="table-scroll">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>권명 (성경)</th>
+              <th>상태</th>
+              <th class="num-col">장수</th>
+              <th class="num-col">편수</th>
+              <th class="num-col">주수(6편)</th>
+              <th class="num-col">누적주</th>
+              <th>구속사적 중심 주제 및 배치 원칙</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="done">
+              <td class="book-name">로마서</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">16장</td>
+              <td class="num-col">75편</td>
+              <td class="num-col">12.5주</td>
+              <td class="num-col">118.5주</td>
+              <td class="theme-col">율법 외에 나타난 하나님의 한 의, 이신칭의와 성령 안의 삶</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">여호수아</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">24장</td>
+              <td class="num-col">48편</td>
+              <td class="num-col">8.0주</td>
+              <td class="num-col">126.5주</td>
+              <td class="theme-col">가나안 정복 이야기, 열두 지파 기업 분배, 세겜 언약</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">사사기</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">21장</td>
+              <td class="num-col">71편</td>
+              <td class="num-col">11.8주</td>
+              <td class="num-col">138.3주</td>
+              <td class="theme-col">반복되는 배교와 사사들의 구원, 왕 없음의 비극</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">룻기</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">4장</td>
+              <td class="num-col">23편</td>
+              <td class="num-col">3.8주</td>
+              <td class="num-col">142.2주</td>
+              <td class="theme-col">사사기 직후 배치, 흉년의 땅에서 피어난 헤세드와 다윗 왕가의 서막</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">사무엘상</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">31장</td>
+              <td class="num-col">70편</td>
+              <td class="num-col">11.7주</td>
+              <td class="num-col">153.8주</td>
+              <td class="theme-col">한나의 기도, 사무엘 소명, 사울의 실패와 다윗의 기름 부음</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 4년차 -->
+    <div class="year-block" data-year-group>
+      <div class="year-header">
+        <div class="year-title-group">
+          <span class="year-badge">4년차</span>
+          <h3 class="year-theme">왕정의 흥망과 지혜, 그리고 은혜의 역설</h3>
+        </div>
+        <span class="year-meta">총 362편 / 60.3주 (누적 214.2주)</span>
+      </div>
+      <div class="table-scroll">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>권명 (성경)</th>
+              <th>상태</th>
+              <th class="num-col">장수</th>
+              <th class="num-col">편수</th>
+              <th class="num-col">주수(6편)</th>
+              <th class="num-col">누적주</th>
+              <th>구속사적 중심 주제 및 배치 원칙</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="done">
+              <td class="book-name">사무엘하</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">24장</td>
+              <td class="num-col">58편</td>
+              <td class="num-col">9.7주</td>
+              <td class="num-col">163.5주</td>
+              <td class="theme-col">다윗 언약, 왕국의 번영과 범죄, 압살롬 반역과 감사시</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">열왕기상</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">22장</td>
+              <td class="num-col">60편</td>
+              <td class="num-col">10.0주</td>
+              <td class="num-col">173.5주</td>
+              <td class="theme-col">솔로몬의 성전 봉헌, 왕국 분열, 엘리야와 바알의 갈멜산 대결</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">잠언</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">31장</td>
+              <td class="num-col">49편</td>
+              <td class="num-col">8.2주</td>
+              <td class="num-col">181.7주</td>
+              <td class="theme-col">솔로몬 성전 내러티브 직후 배치, 여호와 경외의 지혜</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">갈라디아서</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">6장</td>
+              <td class="num-col">36편</td>
+              <td class="num-col">6.0주</td>
+              <td class="num-col">187.7주</td>
+              <td class="theme-col">다른 복음은 없다: 십자가의 자유와 성령의 열매</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">야고보서</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">5장</td>
+              <td class="num-col">21편</td>
+              <td class="num-col">3.5주</td>
+              <td class="num-col">191.2주</td>
+              <td class="theme-col">시련 중의 인내, 행함으로 증명되는 온전한 믿음</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">열왕기하</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">25장</td>
+              <td class="num-col">70편</td>
+              <td class="num-col">11.7주</td>
+              <td class="num-col">202.8주</td>
+              <td class="theme-col">엘리사 사역, 북이스라엘 몰락, 유다의 멸망과 포로기</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">고린도전서</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">16장</td>
+              <td class="num-col">68편</td>
+              <td class="num-col">11.3주</td>
+              <td class="num-col">214.2주</td>
+              <td class="theme-col">십자가의 지혜, 교회의 거룩과 은사, 부활의 영광</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 5년차 -->
+    <div class="year-block" data-year-group>
+      <div class="year-header">
+        <div class="year-title-group">
+          <span class="year-badge">5년차</span>
+          <h3 class="year-theme">포로와 귀환, 교회의 영광</h3>
+        </div>
+        <span class="year-meta">총 293편 / 48.8주 (누적 263.0주)</span>
+      </div>
+      <div class="table-scroll">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>권명 (성경)</th>
+              <th>상태</th>
+              <th class="num-col">장수</th>
+              <th class="num-col">편수</th>
+              <th class="num-col">주수(6편)</th>
+              <th class="num-col">누적주</th>
+              <th>구속사적 중심 주제 및 배치 원칙</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="done">
+              <td class="book-name">역대상·하</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">65장</td>
+              <td class="num-col">99편</td>
+              <td class="num-col">16.5주</td>
+              <td class="num-col">230.7주</td>
+              <td class="theme-col">다윗 가문과 성전 예배 중심 구속사 재조망</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">에스라·느헤미야</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">23장</td>
+              <td class="num-col">54편</td>
+              <td class="num-col">9.0주</td>
+              <td class="num-col">239.7주</td>
+              <td class="theme-col">성전 재건, 율법 학사 에스라의 개혁, 성벽 완공과 언약 회복</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">고린도후서</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">13장</td>
+              <td class="num-col">46편</td>
+              <td class="num-col">7.7주</td>
+              <td class="num-col">247.3주</td>
+              <td class="theme-col">위로의 하나님, 질그릇 속의 보배, 약함 속의 능력</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">에베소서</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">6장</td>
+              <td class="num-col">36편</td>
+              <td class="num-col">6.0주</td>
+              <td class="num-col">253.3주</td>
+              <td class="theme-col">창세 전의 선택, 만물을 통일하시는 그리스도의 몸된 교회</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">골로새서</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">4장</td>
+              <td class="num-col">23편</td>
+              <td class="num-col">3.8주</td>
+              <td class="num-col">257.2주</td>
+              <td class="theme-col">그리스도의 충족성과 우월성 (옥중서신 묶음)</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">빌레몬서</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">1장</td>
+              <td class="num-col">6편</td>
+              <td class="num-col">1.0주</td>
+              <td class="num-col">258.2주</td>
+              <td class="theme-col">그리스도 안에서 형제 된 오네시모 (옥중서신 묶음)</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">빌립보서</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">4장</td>
+              <td class="num-col">29편</td>
+              <td class="num-col">4.8주</td>
+              <td class="num-col">263.0주</td>
+              <td class="theme-col">기쁨의 서신, 그리스도의 자기 비하와 복음의 진전</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 6년차 -->
+    <div class="year-block" data-year-group>
+      <div class="year-header">
+        <div class="year-title-group">
+          <span class="year-badge">6년차</span>
+          <h3 class="year-theme">위로의 예언과 인자의 복음, 그리고 눈물의 선지자</h3>
+        </div>
+        <span class="year-meta">총 329편 / 54.8주 (누적 317.8주)</span>
+      </div>
+      <div class="table-scroll">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>권명 (성경)</th>
+              <th>상태</th>
+              <th class="num-col">장수</th>
+              <th class="num-col">편수</th>
+              <th class="num-col">주수(6편)</th>
+              <th class="num-col">누적주</th>
+              <th>구속사적 중심 주제 및 배치 원칙</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="done">
+              <td class="book-name">이사야</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">66장</td>
+              <td class="num-col">138편</td>
+              <td class="num-col">23.0주</td>
+              <td class="num-col">286.0주</td>
+              <td class="theme-col">거룩하신 왕, 심판과 임마누엘, 고난받는 종, 새 하늘과 새 땅 (상·하 통합 전권)</td>
+            </tr>
+            <tr data-status="done">
+              <td class="book-name">누가복음</td>
+              <td><span class="status-pill status-done">완료</span></td>
+              <td class="num-col">24장</td>
+              <td class="num-col">141편</td>
+              <td class="num-col">23.5주</td>
+              <td class="num-col">309.5주</td>
+              <td class="theme-col">잃어버린 자를 찾아 구원하러 오신 인자, 예루살렘 여정과 십자가·부활</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">예레미야 (전반)</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">25장분</td>
+              <td class="num-col">50편</td>
+              <td class="num-col">8.3주</td>
+              <td class="num-col">317.8주</td>
+              <td class="theme-col">유다 말기 심판 경고와 새 언약의 선포 (6년차 마감 및 7년차 연계)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 7년차 -->
+    <div class="year-block" data-year-group>
+      <div class="year-header">
+        <div class="year-title-group">
+          <span class="year-badge">7년차</span>
+          <h3 class="year-theme">묵시와 하나님의 주권, 사도와 목회</h3>
+        </div>
+        <span class="year-meta">총 301편 / 50.2주 (누적 368.0주)</span>
+      </div>
+      <div class="table-scroll">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>권명 (성경)</th>
+              <th>상태</th>
+              <th class="num-col">장수</th>
+              <th class="num-col">편수</th>
+              <th class="num-col">주수(6편)</th>
+              <th class="num-col">누적주</th>
+              <th>구속사적 중심 주제 및 배치 원칙</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="plan">
+              <td class="book-name">예레미야 (후반)</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">27장분</td>
+              <td class="num-col">34편</td>
+              <td class="num-col">5.7주</td>
+              <td class="num-col">323.5주</td>
+              <td class="theme-col">예루살렘 함락, 토기장이 비유, 포로 귀환의 약속</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">예레미야애가</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">5장</td>
+              <td class="num-col">9편</td>
+              <td class="num-col">1.5주</td>
+              <td class="num-col">325.0주</td>
+              <td class="theme-col">파괴된 시온을 향한 슬픔과 아침마다 새로운 주의 성실</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">에스겔</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">48장</td>
+              <td class="num-col">75편</td>
+              <td class="num-col">12.5주</td>
+              <td class="num-col">337.5주</td>
+              <td class="theme-col">떠나시는 영광, 마른 뼈의 부활, 새 성전과 여호와 삼마</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">사도행전 (상)</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">1–14장</td>
+              <td class="num-col">40편</td>
+              <td class="num-col">6.7주</td>
+              <td class="num-col">344.2주</td>
+              <td class="theme-col">오순절 성령 강림, 예루살렘과 안디옥 교회, 1차 전도여행</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">데살로니가전·후</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">8장</td>
+              <td class="num-col">24편</td>
+              <td class="num-col">4.0주</td>
+              <td class="num-col">348.2주</td>
+              <td class="theme-col">바울 2차 전도여행 직후 배치, 주의 강림과 재림의 소망</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">다니엘</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">12장</td>
+              <td class="num-col">28편</td>
+              <td class="num-col">4.7주</td>
+              <td class="num-col">352.8주</td>
+              <td class="theme-col">바벨론 궁정의 신앙, 제국들을 꺾으시는 영원한 하나님 나라</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">에스더</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">10장</td>
+              <td class="num-col">16편</td>
+              <td class="num-col">2.7주</td>
+              <td class="num-col">355.5주</td>
+              <td class="theme-col">보이지 않는 하나님의 섭리와 민족의 역전적 구원</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">사도행전 (하)</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">15–28장</td>
+              <td class="num-col">45편</td>
+              <td class="num-col">7.5주</td>
+              <td class="num-col">363.0주</td>
+              <td class="theme-col">예루살렘 공의회, 2·3차 전도여행, 로마 압송과 연금</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">디모데전·후·디도</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">13장</td>
+              <td class="num-col">30편</td>
+              <td class="num-col">5.0주</td>
+              <td class="num-col">368.0주</td>
+              <td class="theme-col">사도행전 직후 목회 계승: 교회 직분과 질서, 선한 싸움과 바울의 마지막 유언</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 8년차 -->
+    <div class="year-block" data-year-group>
+      <div class="year-header">
+        <div class="year-title-group">
+          <span class="year-badge">8년차</span>
+          <h3 class="year-theme">열방을 향한 공의, 성육신한 하나님</h3>
+        </div>
+        <span class="year-meta">총 294편 / 49.0주 (누적 417.0주)</span>
+      </div>
+      <div class="table-scroll">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>권명 (성경)</th>
+              <th>상태</th>
+              <th class="num-col">장수</th>
+              <th class="num-col">편수</th>
+              <th class="num-col">주수(6편)</th>
+              <th class="num-col">누적주</th>
+              <th>구속사적 중심 주제 및 배치 원칙</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="plan">
+              <td class="book-name">소선지서 (전반)</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">호·욜·암·옵·욘</td>
+              <td class="num-col">58편</td>
+              <td class="num-col">9.7주</td>
+              <td class="num-col">377.7주</td>
+              <td class="theme-col">열방을 향한 공의의 선포와 회복의 부름 (호세아 · 요엘 · 아모스 · 오바댜 · 요나)</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">요한복음</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">21장</td>
+              <td class="num-col">114편</td>
+              <td class="num-col">19.0주</td>
+              <td class="num-col">396.7주</td>
+              <td class="theme-col">말씀이 육신이 되심, 일곱 표적과 '에고 에이미', 참된 생명의 길</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">소선지서 (후반)</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">미·나·합·습·학·슥·말</td>
+              <td class="num-col">72편</td>
+              <td class="num-col">12.0주</td>
+              <td class="num-col">408.7주</td>
+              <td class="theme-col">남유다 말기와 포로 귀환기 선지자들의 심판과 메시아 대망</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">요한1·2·3서</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">7장</td>
+              <td class="num-col">22편</td>
+              <td class="num-col">3.7주</td>
+              <td class="num-col">412.3주</td>
+              <td class="theme-col">요한복음 직후 배치, 빛과 사랑 안의 사귐, 진리를 아는 지식</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">베드로전·후·유다</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">9장</td>
+              <td class="num-col">28편</td>
+              <td class="num-col">4.7주</td>
+              <td class="num-col">417.0주</td>
+              <td class="theme-col">디아스포라 나그네들의 산 소망과 영적 거짓에 대한 경계</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 9년차 -->
+    <div class="year-block" data-year-group>
+      <div class="year-header">
+        <div class="year-title-group">
+          <span class="year-badge">9년차</span>
+          <h3 class="year-theme">지혜와 예배, 완성된 하나님 나라</h3>
+        </div>
+        <span class="year-meta">총 294편 / 49.0주 (최종 누적 466.0주)</span>
+      </div>
+      <div class="table-scroll">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>권명 (성경)</th>
+              <th>상태</th>
+              <th class="num-col">장수</th>
+              <th class="num-col">편수</th>
+              <th class="num-col">주수(6편)</th>
+              <th class="num-col">누적주</th>
+              <th>구속사적 중심 주제 및 배치 원칙</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="plan">
+              <td class="book-name">시편 (상)</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">1–72편</td>
+              <td class="num-col">72편</td>
+              <td class="num-col">12.0주</td>
+              <td class="num-col">429.0주</td>
+              <td class="theme-col">복 있는 사람, 탄식과 찬양, 다윗의 시 (1·2권)</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">욥기</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">42장</td>
+              <td class="num-col">48편</td>
+              <td class="num-col">8.0주</td>
+              <td class="num-col">437.0주</td>
+              <td class="theme-col">까닭 없는 고난, 친구들과의 변론, 폭풍우 속의 하나님</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">전도서</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">12장</td>
+              <td class="num-col">20편</td>
+              <td class="num-col">3.3주</td>
+              <td class="num-col">440.3주</td>
+              <td class="theme-col">해 아래의 헛됨, 청년의 때에 창조주를 기억하라</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">아가</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">8장</td>
+              <td class="num-col">12편</td>
+              <td class="num-col">2.0주</td>
+              <td class="num-col">442.3주</td>
+              <td class="theme-col">그리스도와 교회의 연합, 죽음같이 강한 사랑</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">시편 (하)</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">73–150편</td>
+              <td class="num-col">78편</td>
+              <td class="num-col">13.0주</td>
+              <td class="num-col">455.3주</td>
+              <td class="theme-col">아삽의 시, 성전에 올라가는 노래, 할렐루야 대미 (3·4·5권)</td>
+            </tr>
+            <tr data-status="plan">
+              <td class="book-name">요한계시록</td>
+              <td><span class="status-pill status-plan">예정</span></td>
+              <td class="num-col">22장</td>
+              <td class="num-col">64편</td>
+              <td class="num-col">10.7주</td>
+              <td class="num-col">466.0주</td>
+              <td class="theme-col">일곱 교회, 어린 양의 보좌, 바벨론 패망과 새 예루살렘 (시리즈 대단원)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="bottom-nav-box">
+      <div class="bottom-nav-text">
+        <strong>교회 및 소그룹 매일묵상 도입 안내</strong><br>
+        소규모 교회 성도 묵상 교재나 구역·소그룹 성경공부 자료로 활용하기를 원하시면 편하게 문의해 주십시오.
+      </div>
+      <div class="bottom-nav-actions">
+        <a class="btn-outline-navy" href="/about.html">신학적 기준 · 주석 원칙 보기</a>
+        <a class="btn-outline-navy" href="/index.html#contact">사역 문의하기</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <footer class="footer-clean">
+      <div class="container">
+        <p>Copyright &copy; 2026 The Helper Ministry. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var triggerBtn = document.getElementById("custom-menu-trigger");
+        var drawerBox = document.getElementById("custom-menu-box");
+
+        if (triggerBtn && drawerBox) {
+          triggerBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            triggerBtn.classList.toggle("btn-active");
+            drawerBox.classList.toggle("box-open");
+          });
+
+          document.addEventListener("click", function (e) {
+            if (!triggerBtn.contains(e.target) && !drawerBox.contains(e.target)) {
+              triggerBtn.classList.remove("btn-active");
+              drawerBox.classList.remove("box-open");
+            }
+          });
+        }
+
+        // 진행 상태 필터링 (전체 / 집필 완료 / 집필 예정)
+        var filterBtns = document.querySelectorAll(".filter-btn");
+        var yearBlocks = document.querySelectorAll("[data-year-group]");
+
+        filterBtns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            filterBtns.forEach(function (b) { b.classList.remove("active"); });
+            btn.classList.add("active");
+
+            var filter = btn.getAttribute("data-filter");
+            yearBlocks.forEach(function (block) {
+              var rows = block.querySelectorAll("tbody tr");
+              var visibleCount = 0;
+
+              rows.forEach(function (row) {
+                var status = row.getAttribute("data-status");
+                if (filter === "all" || status === filter) {
+                  row.style.display = "";
+                  visibleCount++;
+                } else {
+                  row.style.display = "none";
+                }
+              });
+
+              block.style.display = visibleCount > 0 ? "" : "none";
+            });
+          });
+        });
+      });
+    </script>
+
+</body>
+</html>
