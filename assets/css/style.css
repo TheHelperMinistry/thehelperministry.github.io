@@ -1,9 +1,9 @@
 /*
    The Helper Ministry 공용 스타일시트
    - 전역 디자인 토큰 (딥 네이비 / 슬레이트 블루 / 웜 샌드)
+   - 본문 폰트·자간·행간 및 히어로 상단 여백 표준
    - 고정 헤더 + 네비게이션 (모바일 햄버거 포함)
    - 공용 푸터
-   모든 정적 페이지(index, about, devotional, seminar 등)가 공통으로 사용합니다.
 */
 
 :root {
@@ -32,6 +32,8 @@ html {
 
 body {
   font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.8;
   color: var(--color-text-primary);
   background: #ffffff;
   letter-spacing: -0.02em;
@@ -44,6 +46,7 @@ input,
 select,
 textarea {
   font-family: inherit;
+  letter-spacing: inherit;
 }
 
 h1, h2, h3, .title, .logo-title {
@@ -62,11 +65,11 @@ h1, h2, h3, .title, .logo-title {
   border: 0;
 }
 
-/* ====== 페이지 첫 섹션(히어로) 상단 오프셋 (고정 헤더 회피) ====== */
+/* ====== 페이지 첫 섹션(히어로) 상단 여백 표준 (고정 헤더 80px + 여유 56px) ====== */
 .offset-header,
 .hero,
 .promo {
-  padding-top: 140px !important;
+  padding-top: 136px !important;
 }
 
 /* ====== 고정 헤더 ====== */
@@ -156,7 +159,7 @@ h1, h2, h3, .title, .logo-title {
   .offset-header,
   .hero,
   .promo {
-    padding-top: 110px !important;
+    padding-top: 104px !important;
   }
 
   #unified-header {
