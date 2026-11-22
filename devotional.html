@@ -1,1229 +1,2053 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="The Helper Ministry 9년 성경 전권 매일묵상 시리즈 전체계획표 및 구속사적 커리큘럼 로드맵 (주 6회 · 총 2,796편)">
-    <title>9년 성경 전권 매일묵상 로드맵 | The Helper Ministry</title>
-    <link rel="shortcut icon" href="/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="단편적인 은혜나 빠른 통독을 넘어, 창세기부터 요한계시록까지 하나님의 말씀 전체를 본문의 흐름 그대로 묵상하는 한국교회 성도와 제자훈련 공동체를 위한 9년 완독 매일묵상 프로그램입니다." />
+  <title>9년 성경 전권 매일묵상 시리즈 — The Helper Ministry</title>
+  <link rel="shortcut icon" href="/favicon.ico" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Web Fonts matching thehelperministry.kr -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Official Site Stylesheet (active when deployed on thehelperministry.kr) -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
 
-    <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Tailwind CSS CDN for responsive grids & utilities -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', 'Lato', 'Apple SD Gothic Neo', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            serif: ['"Noto Serif KR"', 'Georgia', 'serif'],
+            kicker: ['Montserrat', 'Pretendard', 'sans-serif']
+          },
+          colors: {
+            thm: {
+              ink: '#1b2a4a',
+              inkHover: '#13203a',
+              body: '#475569',
+              muted: '#64748b',
+              accent: '#6690b9',
+              accentHover: '#537ca5',
+              accentDark: '#4a6e91',
+              accentTint: '#eef4f9',
+              sand: '#dd9d71',
+              sandText: '#9a5b32',
+              sandTint: '#fdf3ec',
+              bgSub: '#f4f7fa',
+              bgSlate: '#fafbfc',
+              bgWarm: '#f7f6f3',
+              border: '#e2e8f0',
+              borderWarm: '#e4e2dd',
+              footer: '#111111'
+            }
+          }
+        }
+      }
+    };
+  </script>
 
-<style>
-  .page-hero {
-    background-color: #ffffff;
-    padding: 12rem 2rem 4.5rem;
-    border-bottom: 0.5px solid #e1e8f0;
-  }
-  .page-hero-inner {
-    max-width: 920px;
-    margin: 0 auto;
-  }
-  .section-label {
-    font-size: 13px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #6690b9;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  .page-title {
-    font-family: var(--font-serif);
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 1.35;
-    color: var(--color-text-primary);
-    margin-bottom: 1.25rem;
-    word-break: keep-all;
-  }
-  .page-lead {
-    font-size: 16.5px;
-    line-height: 1.85;
-    color: var(--color-text-secondary);
-    max-width: 780px;
-    margin-bottom: 2rem;
-    word-break: keep-all;
-  }
+  <!-- Inline Fallback & Official Site Component Styles (Seamless standalone & live deployment) -->
+  <style>
+    :root {
+      --thm-serif: 'Noto Serif KR', Georgia, serif;
+      --thm-sans: 'Pretendard', 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+      --thm-ink: #1b2a4a;
+      --thm-body: #475569;
+      --thm-accent: #6690b9;
+      --thm-accent-hover: #537ca5;
+      --thm-accent-dark: #4a6e91;
+      --thm-sand: #dd9d71;
+      --thm-border: #e2e8f0;
+      --thm-radius-md: 10px;
+      --thm-radius-lg: 14px;
+    }
 
-  /* 핵심 통계 4칸 그리드 */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin-top: 1.5rem;
-  }
-  .stat-card {
-    background: #f4f7fa;
-    border: 1px solid #dce4ec;
-    border-radius: var(--border-radius-lg);
-    padding: 1.25rem 1.35rem;
-  }
-  .stat-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: #6690b9;
-    margin-bottom: 0.35rem;
-  }
-  .stat-value {
-    font-family: var(--font-serif);
-    font-size: 21px;
-    font-weight: 700;
-    color: #1b2a4a;
-    line-height: 1.3;
-    margin-bottom: 0.25rem;
-  }
-  .stat-sub {
-    font-size: 12.5px;
-    color: var(--color-text-secondary);
-    line-height: 1.45;
-    word-break: keep-all;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  /* 설계 원칙 영역 */
-  .principles-section {
-    background-color: #fafbfc;
-    padding: 4.5rem 2rem;
-    border-bottom: 0.5px solid var(--color-border-tertiary);
-  }
-  .section-inner {
-    max-width: 920px;
-    margin: 0 auto;
-  }
-  .section-title {
-    font-family: var(--font-serif);
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 1.35;
-    margin-bottom: 1.5rem;
-    color: var(--color-text-primary);
-  }
-  .principles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-  .principle-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: var(--border-radius-lg);
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(102, 144, 185, 0.05);
-  }
-  .principle-card h3 {
-    font-size: 15px;
-    font-weight: 600;
-    color: #1b2a4a;
-    margin-top: 0;
-    margin-bottom: 0.6rem;
-  }
-  .principle-card p {
-    font-size: 13.5px;
-    line-height: 1.7;
-    color: var(--color-text-secondary);
-    margin: 0;
-    word-break: keep-all;
-  }
+    body {
+      font-family: var(--thm-sans);
+      color: var(--thm-body);
+      background-color: #ffffff;
+      margin: 0;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  /* 연차별 상세 커리큘럼 영역 */
-  .curriculum-section {
-    background-color: #ffffff;
-    padding: 5rem 2rem 6rem;
-  }
-  .filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 2rem;
-    padding: 1rem 1.25rem;
-    background: #f7f6f3;
-    border: 1px solid #e4e2dd;
-    border-radius: var(--border-radius-lg);
-  }
-  .filter-btns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .filter-btn {
-    padding: 6px 14px;
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 20px;
-    border: 1px solid #d0dee9;
-    background: #ffffff;
-    color: #4a5b6d;
-    cursor: pointer;
-    transition: all 0.15s ease;
-  }
-  .filter-btn:hover {
-    border-color: #6690b9;
-    color: #1b2a4a;
-  }
-  .filter-btn.active {
-    background: #1b2a4a;
-    border-color: #1b2a4a;
-    color: #ffffff;
-  }
-  .sample-link-btn {
-    font-size: 13px;
-    font-weight: 600;
-    color: #6690b9;
-    text-decoration: none;
-  }
-  .sample-link-btn:hover {
-    text-decoration: underline;
-    color: #1b2a4a;
-  }
+    /* Unified Header Fallback matching thehelperministry.kr */
+    #unified-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e8eef5;
+      width: 100%;
+    }
 
-  /* 연차 블록 */
-  .year-block {
-    margin-bottom: 2.5rem;
-    border: 1px solid #dce4ec;
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(27, 42, 74, 0.03);
-  }
-  .year-header {
-    background: #f4f7fa;
-    padding: 1.2rem 1.5rem;
-    border-bottom: 1px solid #dce4ec;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .year-title-group {
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .year-badge {
-    display: inline-block;
-    background: #1b2a4a;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 4px;
-  }
-  .year-theme {
-    font-family: var(--font-serif);
-    font-size: 17px;
-    font-weight: 600;
-    color: #1b2a4a;
-    margin: 0;
-  }
-  .year-meta {
-    font-size: 12.5px;
-    font-weight: 600;
-    color: #6690b9;
-  }
+    #unified-header .header-flex-wrapper {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
 
-  .table-scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .plan-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13.5px;
-    text-align: left;
-  }
-  .plan-table th {
-    background: #fafbfc;
-    color: #4a5b6d;
-    font-weight: 600;
-    padding: 10px 14px;
-    border-bottom: 1px solid #e2e8f0;
-    white-space: nowrap;
-    font-size: 12.5px;
-  }
-  .plan-table td {
-    padding: 11px 14px;
-    border-bottom: 1px solid #eef2f6;
-    color: var(--color-text-secondary);
-    line-height: 1.55;
-    vertical-align: middle;
-  }
-  .plan-table tbody tr:last-child td {
-    border-bottom: none;
-  }
-  .plan-table td.book-name {
-    font-weight: 600;
-    color: #1b2a4a;
-    white-space: nowrap;
-  }
-  .plan-table td.num-col {
-    white-space: nowrap;
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-  }
-  .plan-table th.num-col {
-    text-align: right;
-  }
-  .plan-table td.theme-col {
-    word-break: keep-all;
-    min-width: 240px;
-  }
+    #unified-header .custom-logo {
+      margin: 0;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1;
+      font-family: 'Montserrat', 'Pretendard', sans-serif;
+    }
 
-  .status-pill {
-    display: inline-block;
-    padding: 2px 9px;
-    border-radius: 12px;
-    font-size: 11.5px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .status-done {
-    background: #e6f0fa;
-    color: #2b5b8c;
-  }
-  .status-plan {
-    background: #f2f1ed;
-    color: #7a766c;
-  }
+    #unified-header .custom-logo a {
+      color: var(--thm-ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-  .bottom-nav-box {
-    margin-top: 3rem;
-    padding: 1.75rem 2rem;
-    background: #f4f7fa;
-    border: 1px solid #dce4ec;
-    border-radius: var(--border-radius-lg);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .bottom-nav-text {
-    font-size: 14.5px;
-    color: var(--color-text-secondary);
-    line-height: 1.65;
-    word-break: keep-all;
-  }
-  .bottom-nav-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .btn-outline-navy {
-    display: inline-block;
-    padding: 10px 18px;
-    border: 1px solid #6690b9;
-    background: #ffffff;
-    color: #1b2a4a;
-    font-size: 13.5px;
-    font-weight: 600;
-    border-radius: var(--border-radius-md);
-    text-decoration: none;
-    transition: all 0.15s ease;
-  }
-  .btn-outline-navy:hover {
-    background: #6690b9;
-    color: #ffffff;
-    text-decoration: none;
-  }
+    #unified-header .custom-nav-frame {
+      display: flex;
+      align-items: center;
+    }
 
-  @media (max-width: 768px) {
-    .page-hero { padding: 10rem 1.5rem 3.5rem; }
-    .page-title { font-size: 26px; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .principles-grid { grid-template-columns: 1fr; }
-    .principles-section, .curriculum-section { padding: 3.5rem 1.5rem; }
-    .year-header { padding: 1rem 1.15rem; }
-    .year-theme { font-size: 15.5px; }
-  }
-</style>
+    #unified-header .custom-nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #unified-header .custom-nav-list .nav-item a {
+      display: inline-block;
+      padding: 8px 13px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #475569;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: color 0.18s ease, background-color 0.18s ease;
+    }
+
+    #unified-header .custom-nav-list .nav-item a:hover,
+    #unified-header .custom-nav-list .nav-item a:focus {
+      color: var(--thm-accent);
+      background-color: #f4f7fa;
+      text-decoration: none;
+    }
+
+    #unified-header .custom-nav-list .nav-item.active a {
+      color: var(--thm-accent-dark);
+      background-color: #eef4f9;
+      font-weight: 600;
+    }
+
+    /* Mobile Hamburger Button */
+    #unified-header .custom-hamburger-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 42px;
+      height: 42px;
+      padding: 8px;
+      background: transparent;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #unified-header .custom-hamburger-btn span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: var(--thm-ink);
+      border-radius: 2px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    #unified-header .custom-hamburger-btn.btn-active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    #unified-header .custom-hamburger-btn.btn-active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    #unified-header .custom-hamburger-btn.btn-active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Subnav Bar matching about.html */
+    .subnav-bar {
+      background-color: #f4f7fa;
+      border-top: 0.5px solid #e1e8f0;
+      border-bottom: 0.5px solid #e1e8f0;
+      padding: 1.05rem 1.5rem;
+    }
+
+    .subnav-list {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 24px;
+    }
+
+    .subnav-list a {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #4a5b6d;
+      text-decoration: none;
+      padding: 4px 2px;
+      transition: color 0.15s ease;
+    }
+
+    .subnav-list a:hover,
+    .subnav-list a:focus {
+      color: #6690b9;
+      text-decoration: none;
+    }
+
+    /* Section Typography & Surface System matching about.html / index.html */
+    .thm-section-label {
+      font-family: 'Montserrat', 'Pretendard', sans-serif;
+      font-size: 12.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #6690b9;
+      font-weight: 700;
+      margin: 0 0 0.9rem;
+    }
+
+    .thm-section-title {
+      font-family: var(--thm-serif);
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 1.38;
+      color: var(--thm-ink);
+      margin: 0 0 1.25rem;
+      word-break: keep-all;
+    }
+
+    .bg-white-section {
+      background-color: #ffffff;
+    }
+
+    .bg-slate-section {
+      background-color: #fafbfc;
+      border-top: 0.5px solid #e6ecf2;
+      border-bottom: 0.5px solid #e6ecf2;
+    }
+
+    .bg-warm-section {
+      background-color: #f7f6f3;
+      border-top: 0.5px solid #e6e3dc;
+      border-bottom: 0.5px solid #e6e3dc;
+    }
+
+    /* Official .kaiec-bar Link Component matching about.html & index.html */
+    .kaiec-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      text-align: left;
+      padding: 15px 18px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .kaiec-bar:hover,
+    .kaiec-bar:focus {
+      border-color: #6690b9;
+      box-shadow: 0 6px 16px rgba(102, 144, 185, 0.09);
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+    }
+
+    .kaiec-mark {
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1b2a4a;
+      color: #ffffff;
+      border-radius: 9px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+
+    .kaiec-mark.mark-award {
+      background: #4a6e91;
+      font-size: 10.5px;
+    }
+
+    .kaiec-mark.mark-accent {
+      background: #6690b9;
+      font-size: 9px;
+    }
+
+    .kaiec-text {
+      flex: 1 1 auto;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .kaiec-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--thm-ink);
+      line-height: 1.45;
+      word-break: keep-all;
+    }
+
+    .kaiec-meta {
+      font-size: 12.5px;
+      color: var(--thm-body);
+      line-height: 1.5;
+      word-break: keep-all;
+    }
+
+    .kaiec-link {
+      flex: 0 0 auto;
+      font-size: 13px;
+      font-weight: 600;
+      color: #6690b9;
+      white-space: nowrap;
+    }
+
+    /* Official Soft Outline Button matching about.html */
+    .btn-outline-soft {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      background: #ffffff;
+      color: #4a6e91;
+      border: 1px solid #c5d6e6;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-outline-soft:hover,
+    .btn-outline-soft:focus {
+      border-color: #6690b9;
+      background: #f4f7fa;
+      color: #1b2a4a;
+      text-decoration: none;
+    }
+
+    .btn-primary-thm {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #1b2a4a;
+      color: #ffffff;
+      border: 1px solid #1b2a4a;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(27, 42, 74, 0.14);
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .btn-primary-thm:hover,
+    .btn-primary-thm:focus {
+      background: #273c68;
+      border-color: #273c68;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* Official Contact Section matching about.html & index.html */
+    .contact-section {
+      background-color: #eef4f9;
+      padding: 5.5rem 1.5rem;
+      text-align: center;
+      border-top: 0.5px solid #d0dee9;
+    }
+
+    .contact-section .contact-title {
+      font-family: var(--thm-serif);
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 1.4;
+      margin: 0 0 1.25rem;
+      color: var(--thm-ink);
+    }
+
+    .contact-section address {
+      font-size: 16px;
+      color: var(--thm-body);
+      line-height: 1.85;
+      max-width: 640px;
+      margin: 0 auto;
+      font-style: normal;
+      word-break: keep-all;
+    }
+
+    .contact-section address a {
+      color: #4a6e91;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(102, 144, 185, 0.45);
+      padding-bottom: 2px;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .contact-section address a:hover {
+      color: #1b2a4a;
+      border-color: #1b2a4a;
+    }
+
+    /* Official Footer matching about.html & index.html */
+    .footer-clean {
+      background-color: #111111;
+      color: #b8c0cc;
+      padding: 2.25rem 1.5rem;
+      text-align: center;
+    }
+
+    .footer-clean .container {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .footer-clean p {
+      margin: 0;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      color: #b8c0cc;
+    }
+
+    /* Card elevation */
+    .thm-card-surface {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(102, 144, 185, 0.06);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .thm-card-surface:hover {
+      border-color: #b8cfe4;
+      box-shadow: 0 8px 22px rgba(27, 42, 74, 0.08);
+    }
+
+    /* Mobile Responsive Overrides */
+    @media (max-width: 768px) {
+      #unified-header .header-flex-wrapper {
+        padding: 0 1.25rem;
+        height: 64px;
+      }
+
+      #unified-header .custom-hamburger-btn {
+        display: flex;
+      }
+
+      #unified-header .custom-menu-box {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border-bottom: 1px solid #e2e8f0;
+        box-shadow: 0 12px 28px rgba(27, 42, 74, 0.1);
+        padding: 12px 16px 16px;
+      }
+
+      #unified-header .custom-menu-box.box-open {
+        display: block;
+      }
+
+      #unified-header .custom-nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+      }
+
+      #unified-header .custom-nav-list .nav-item a {
+        display: block;
+        padding: 11px 14px;
+        font-size: 14.5px;
+      }
+
+      .thm-section-title {
+        font-size: 23px;
+      }
+
+      .kaiec-bar {
+        flex-wrap: wrap;
+        padding: 14px;
+      }
+
+      .kaiec-link {
+        width: 100%;
+        padding-left: 58px;
+        margin-top: 2px;
+      }
+
+      .contact-section {
+        padding: 4rem 1.25rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header id="unified-header">
-      <div class="header-flex-wrapper">
-        <h1 class="custom-logo">
-          <a href="/index.html">
-            <span class="logo-title">The Helper Ministry</span>
-          </a>
-        </h1>
-        <nav class="custom-nav-frame">
-          <button type="button" class="custom-hamburger-btn" id="custom-menu-trigger" aria-label="메뉴 열기">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <div class="custom-menu-box" id="custom-menu-box">
-            <ul class="custom-nav-list">
-              <li class="nav-item"><a href="/index.html#promo">Home</a></li>
-              <li class="nav-item"><a href="/about.html">About</a></li>
-              <li class="nav-item"><a href="/index.html#What-We-Do">What We Do</a></li>
-              <li class="nav-item"><a href="/index.html#resources">Resources</a></li>
-              <li class="nav-item"><a href="/index.html#contact">Contact</a></li>
-              <li class="nav-item"><a href="/seminar.html">AI Seminar</a></li>
-            </ul>
+  <!-- ===================================================================== -->
+  <!-- 0. UNIFIED HEADER (Exact markup from about.html & index.html)         -->
+  <!-- ===================================================================== -->
+  <header id="unified-header">
+    <div class="header-flex-wrapper">
+      <h1 class="custom-logo">
+        <a href="/index.html">
+          <span class="logo-title">The Helper Ministry</span>
+        </a>
+      </h1>
+      <nav class="custom-nav-frame" aria-label="주 메뉴">
+        <button type="button" class="custom-hamburger-btn" id="custom-menu-trigger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="custom-menu-box">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="custom-menu-box" id="custom-menu-box">
+          <ul class="custom-nav-list">
+            <li class="nav-item"><a href="/index.html#promo">Home</a></li>
+            <li class="nav-item"><a href="/about.html">About</a></li>
+            <li class="nav-item"><a href="/index.html#What-We-Do">What We Do</a></li>
+            <li class="nav-item active"><a href="/index.html#resources" aria-current="page">Resources</a></li>
+            <li class="nav-item"><a href="/index.html#contact">Contact</a></li>
+            <li class="nav-item"><a href="/seminar.html">AI Seminar</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =================================================================== -->
+    <!-- 1. HERO SECTION (Clean White #ffffff matching index.html/about.html)-->
+    <!-- =================================================================== -->
+    <section id="hero" class="bg-white border-b border-[#e8eef5] pt-12 pb-14 sm:pt-16 sm:pb-16 lg:pt-20 lg:pb-20">
+      <div class="max-w-[1040px] mx-auto px-5 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <!-- Left Column: Editorial Headline, Copy & CTAs -->
+          <div class="lg:col-span-7 space-y-5">
+            <p class="thm-section-label !mb-2">9-YEAR BIBLE DEVOTIONAL SERIES</p>
+
+            <h2 class="font-serif text-[28px] sm:text-[36px] lg:text-[40px] font-medium text-thm-ink leading-[1.35] tracking-tight break-keep">
+              9년, 성경 66권 전권을<br class="hidden sm:inline" />
+              문맥과 구속사의 깊이로 걷다
+            </h2>
+
+            <p class="text-[15.5px] sm:text-[17px] text-thm-body leading-[1.85] break-keep max-w-[560px]">
+              단편적인 은혜나 빠른 통독을 넘어, 창세기부터 요한계시록까지 하나님의 말씀 전체를 본문의 흐름 그대로 묵상하는 한국교회 성도와 제자훈련 공동체를 위한 9년 완독 매일묵상 프로그램입니다.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+              <a href="https://docs.google.com/document/d/1h9VnHSoIdvNOpCW5h1nqoYuG0bhfXbaXG_EiGHezsJI/edit?usp=sharing" target="_blank" rel="noopener" class="btn-primary-thm">
+                <span>창세기·마가복음 묵상 샘플 보기</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="#curriculum" class="btn-outline-soft">
+                <span>9년 커리큘럼 살펴보기</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+            </div>
           </div>
-        </nav>
-      </div>
-    </header>
 
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <p class="section-label">9-Year Bible Devotional Roadmap</p>
-    <h1 class="page-title">9년 성경 전권 매일묵상 시리즈 전체계획표</h1>
-    <p class="page-lead">
-      성경 66권 전체를 구속사적 흐름과 신학적 연결에 따라 주 6회(월~토) 깊이 있게 묵상하도록 설계한 장기 커리큘럼입니다. 단순한 장·절 순서 나열을 넘어 구약과 신약의 핵심 주제를 유기적으로 짝지어 배치했습니다.
-    </p>
+          <!-- Right Column: Editorial SVG Illustration framed like index.html .hero-visual -->
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl border border-[#dce5ef] bg-gradient-to-br from-[#f8fafc] to-[#eef4f9] p-5 sm:p-6 shadow-[0_8px_24px_rgba(27,42,74,0.06)]">
+              <svg viewBox="0 0 420 330" class="w-full h-auto block" role="img" aria-label="성경 66권 구약 39권과 신약 27권이 구속사적 언약의 흐름으로 연결되는 9년 묵상 다이어그램">
+                <!-- Soft Background Geometry -->
+                <circle cx="210" cy="164" r="118" fill="#ffffff" fill-opacity="0.72" stroke="#dce5ef" stroke-width="1.2" />
+                <circle cx="210" cy="164" r="96" fill="none" stroke="#6690b9" stroke-opacity="0.22" stroke-width="1.2" stroke-dasharray="4 5" />
 
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-label">전체 커리큘럼 규모</div>
-        <div class="stat-value">총 2,796편</div>
-        <div class="stat-sub">주 6회(월~토) · 466.0주 과정</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">기집필 완료 현황</div>
-        <div class="stat-value">29권 · 1,857편</div>
-        <div class="stat-sub">전체 편수 대비 66.4% (309.5주)</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">후속 집필 예정</div>
-        <div class="stat-value">37권 · 939편</div>
-        <div class="stat-sub">6년차 예레미야~9년차 요한계시록</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">연간 완충 여백</div>
-        <div class="stat-value">12편 (2.0주)</div>
-        <div class="stat-sub">9년 468주 슬롯 내 유연한 절기 조정</div>
-      </div>
-    </div>
-  </div>
-</section>
+                <!-- 9-Year Covenant / Redemptive Arc -->
+                <path d="M 94 186 A 118 118 0 1 1 326 186" fill="none" stroke="#6690b9" stroke-width="2.2" stroke-linecap="round" />
+                <path d="M 118 228 Q 210 264 302 228" fill="none" stroke="#1b2a4a" stroke-opacity="0.2" stroke-width="1.4" stroke-dasharray="3 4" />
 
-<section class="principles-section">
-  <div class="section-inner">
-    <p class="section-label">Curriculum Principles</p>
-    <h2 class="section-title">커리큘럼 설계 및 배열 원칙</h2>
-    <div class="principles-grid">
-      <div class="principle-card">
-        <h3>1. 구속사적·신학적 짝 배치</h3>
-        <p>레위기 직후에 히브리서를 배치하여 구약 제사와 영원한 대제사장 그리스도를 연결하고, 솔로몬 내러티브 직후에 잠언을, 사사기 직후에 룻기를, 사도행전 직후에 목회서신을 배치했습니다.</p>
-      </div>
-      <div class="principle-card">
-        <h3>2. 문맥 중심의 균형 잡힌 본문 분배</h3>
-        <p>각 성경 권역의 문학적 구조와 단락(pericope) 호흡을 해치지 않으면서 주 6회(월~토) 꾸준히 묵상할 수 있도록 장수 대비 적정 편수를 산정했습니다.</p>
-      </div>
-      <div class="principle-card">
-        <h3>3. 검증된 주석과 개혁주의 해석 기준</h3>
-        <p>저자 의도와 원문 문맥, 구속사적 통일성을 우선하며, 신뢰할 수 있는 성경 주석과 건전한 교리 기준을 바탕으로 현장 성도와 목회자가 함께 활용할 수 있게 집필합니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
+                <!-- 9 Year Nodes along the Arc -->
+                <g>
+                  <circle cx="94" cy="186" r="4.2" fill="#ffffff" stroke="#1b2a4a" stroke-width="1.8" />
+                  <circle cx="100" cy="122" r="4.2" fill="#ffffff" stroke="#6690b9" stroke-width="1.8" />
+                  <circle cx="137" cy="74" r="4.2" fill="#ffffff" stroke="#1b2a4a" stroke-width="1.8" />
+                  <circle cx="180" cy="50" r="4.2" fill="#ffffff" stroke="#6690b9" stroke-width="1.8" />
+                  <circle cx="210" cy="46" r="5" fill="#dd9d71" stroke="#1b2a4a" stroke-width="1.6" />
+                  <circle cx="240" cy="50" r="4.2" fill="#ffffff" stroke="#6690b9" stroke-width="1.8" />
+                  <circle cx="283" cy="74" r="4.2" fill="#ffffff" stroke="#1b2a4a" stroke-width="1.8" />
+                  <circle cx="320" cy="122" r="4.2" fill="#ffffff" stroke="#6690b9" stroke-width="1.8" />
+                  <circle cx="326" cy="186" r="4.2" fill="#dd9d71" stroke="#1b2a4a" stroke-width="1.8" />
+                </g>
 
-<section class="curriculum-section">
-  <div class="section-inner">
-    <p class="section-label">Master Curriculum</p>
-    <h2 class="section-title">성경 66권 연차별 상세 로드맵 (1년차 ~ 9년차)</h2>
+                <!-- Redemptive-Historical Bridge Lines Connecting OT & NT -->
+                <path d="M 118 148 Q 210 116 302 148" fill="none" stroke="#dd9d71" stroke-width="1.5" stroke-dasharray="4 3" />
 
-    <div class="filter-bar">
-      <div class="filter-btns" role="group" aria-label="진행 상태 필터">
-        <button type="button" class="filter-btn active" data-filter="all">전체 보기 (66권)</button>
-        <button type="button" class="filter-btn" data-filter="done">집필 완료 (29권)</button>
-        <button type="button" class="filter-btn" data-filter="plan">집필 예정 (37권)</button>
-      </div>
-      <a class="sample-link-btn" href="https://docs.google.com/document/d/1h9VnHSoIdvNOpCW5h1nqoYuG0bhfXbaXG_EiGHezsJI/edit?usp=sharing" target="_blank" rel="noopener">
-        창세기·마가복음 묵상 샘플 보기 →
-      </a>
-    </div>
+                <!-- Open Bible Line Art in Center (exact index.html stroke style) -->
+                <g transform="translate(210, 168)" stroke-linecap="round" stroke-linejoin="round">
+                  <!-- Small Star/Cross Focal Accent -->
+                  <path d="M 0 -46 L 0 -30 M -6 -40 L 6 -40" stroke="#dd9d71" stroke-width="1.8" />
 
-    <!-- 1년차 -->
-    <div class="year-block" data-year-group>
-      <div class="year-header">
-        <div class="year-title-group">
-          <span class="year-badge">1년차</span>
-          <h3 class="year-theme">언약의 시작: 창조와 구속, 그리고 거룩</h3>
+                  <!-- Book Pages -->
+                  <path d="M 0 -16 C -15 -24 -36 -25 -54 -20 L -54 28 C -36 23 -15 24 0 32 C 15 24 36 23 54 28 L 54 -20 C 36 -25 15 -24 0 -16 Z" fill="#ffffff" stroke="#1b2a4a" stroke-width="1.9" />
+                  <line x1="0" y1="-16" x2="0" y2="32" stroke="#1b2a4a" stroke-width="1.8" />
+
+                  <!-- Bookmark Ribbon -->
+                  <path d="M 14 -21 L 14 -3 L 20 -7 L 26 -3 L 26 -22" fill="#eef4f9" stroke="#6690b9" stroke-width="1.6" />
+
+                  <!-- Text Lines on Left Page (OT) -->
+                  <line x1="-43" y1="-8" x2="-11" y2="-5" stroke="#6690b9" stroke-width="1.7" />
+                  <line x1="-43" y1="3" x2="-11" y2="6" stroke="#1b2a4a" stroke-opacity="0.35" stroke-width="1.6" />
+                  <line x1="-43" y1="14" x2="-18" y2="16" stroke="#1b2a4a" stroke-opacity="0.35" stroke-width="1.6" />
+
+                  <!-- Text Lines on Right Page (NT) -->
+                  <line x1="11" y1="6" x2="43" y2="3" stroke="#dd9d71" stroke-width="1.7" />
+                  <line x1="11" y1="16" x2="39" y2="14" stroke="#1b2a4a" stroke-opacity="0.35" stroke-width="1.6" />
+                </g>
+
+                <!-- OT & NT Pill Labels -->
+                <g font-family="Pretendard, sans-serif" font-size="11.5" font-weight="600" text-anchor="middle">
+                  <rect x="20" y="134" width="84" height="28" rx="14" fill="#ffffff" stroke="#6690b9" stroke-width="1.2" />
+                  <text x="62" y="152" fill="#1b2a4a">구약 39권</text>
+
+                  <rect x="316" y="134" width="84" height="28" rx="14" fill="#fdf3ec" stroke="#dd9d71" stroke-width="1.2" />
+                  <text x="358" y="152" fill="#9a5b32">신약 27권</text>
+                </g>
+
+                <!-- Top & Bottom Labels -->
+                <g font-family="Montserrat, Pretendard, sans-serif" text-anchor="middle">
+                  <rect x="148" y="12" width="124" height="24" rx="12" fill="#1b2a4a" />
+                  <text x="210" y="28" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#ffffff">9-YEAR CYCLE</text>
+                </g>
+
+                <!-- Bottom Pairing Strip -->
+                <g font-family="Pretendard, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">
+                  <rect x="36" y="274" width="110" height="26" rx="8" fill="#ffffff" stroke="#dce5ef" stroke-width="1" />
+                  <text x="91" y="291" fill="#475569">레위기 → 히브리서</text>
+
+                  <rect x="155" y="274" width="110" height="26" rx="8" fill="#ffffff" stroke="#dce5ef" stroke-width="1" />
+                  <text x="210" y="291" fill="#475569">사사기 → 룻기</text>
+
+                  <rect x="274" y="274" width="110" height="26" rx="8" fill="#ffffff" stroke="#dce5ef" stroke-width="1" />
+                  <text x="329" y="291" fill="#475569">사도행전 → 목회서신</text>
+                </g>
+              </svg>
+            </div>
+          </div>
         </div>
-        <span class="year-meta">총 295편 / 49.2주 (약 2.8주 완충 여백)</span>
-      </div>
-      <div class="table-scroll">
-        <table class="plan-table">
-          <thead>
-            <tr>
-              <th>권명 (성경)</th>
-              <th>상태</th>
-              <th class="num-col">장수</th>
-              <th class="num-col">편수</th>
-              <th class="num-col">주수(6편)</th>
-              <th class="num-col">누적주</th>
-              <th>구속사적 중심 주제 및 배치 원칙</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-status="done">
-              <td class="book-name">창세기</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">50장</td>
-              <td class="num-col">88편</td>
-              <td class="num-col">14.7주</td>
-              <td class="num-col">14.7주</td>
-              <td class="theme-col">창조, 타락, 족장 내러티브, 요셉과 언약 보존 (상·하 통합 전권 단일 배분)</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">마가복음</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">16장</td>
-              <td class="num-col">70편</td>
-              <td class="num-col">11.7주</td>
-              <td class="num-col">26.3주</td>
-              <td class="theme-col">고난받는 종이신 메시아의 권위와 십자가, 즉각성의 서사</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">출애굽기</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">40장</td>
-              <td class="num-col">80편</td>
-              <td class="num-col">13.3주</td>
-              <td class="num-col">39.7주</td>
-              <td class="theme-col">유월절 구원, 시내산 언약, 성막 설계와 하나님의 임재 영광 충만</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">레위기</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">27장</td>
-              <td class="num-col">57편</td>
-              <td class="num-col">9.5주</td>
-              <td class="num-col">49.2주</td>
-              <td class="theme-col">제사 제도, 정결법, 속죄일 독립 블록, 거룩한 삶의 윤리</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
 
-    <!-- 2년차 -->
-    <div class="year-block" data-year-group>
-      <div class="year-header">
-        <div class="year-title-group">
-          <span class="year-badge">2년차</span>
-          <h3 class="year-theme">율법의 완성자와 광야의 훈련</h3>
+        <!-- Bottom of Hero: 4 Crisp Summary Metric Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 mt-10 sm:mt-12">
+          <!-- Metric 1 -->
+          <div class="rounded-[14px] bg-white border border-thm-border p-4 sm:p-5 shadow-[0_4px_12px_rgba(102,144,185,0.06)] flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-thm-bgSub border border-[#e1e8f0] flex items-center justify-center shrink-0" aria-hidden="true">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 6.5c-2.2-1.6-5.2-1.8-8-1v11.5c2.8-.8 5.8-.6 8 1 2.2-1.6 5.2-1.8 8-1V5.5c-2.8-.8-5.8-.6-8 1z" />
+                <path d="M12 6.5V18" stroke="#6690b9" />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <p class="text-xs font-medium text-thm-muted">전체 범위</p>
+              <p class="text-[15px] sm:text-base font-bold text-thm-ink mt-0.5 break-keep">성경 66권 전권</p>
+              <p class="text-xs text-thm-body mt-0.5 break-keep">구약 39권 · 신약 27권</p>
+            </div>
+          </div>
+
+          <!-- Metric 2 -->
+          <div class="rounded-[14px] bg-white border border-thm-border p-4 sm:p-5 shadow-[0_4px_12px_rgba(102,144,185,0.06)] flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-thm-bgSub border border-[#e1e8f0] flex items-center justify-center shrink-0" aria-hidden="true">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
+                <path d="M8 3.2v3.3M16 3.2v3.3M3.5 9.8h17" stroke="#6690b9" />
+                <circle cx="12" cy="14.8" r="1.5" fill="#dd9d71" stroke="none" />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <p class="text-xs font-medium text-thm-muted">묵상 기간</p>
+              <p class="text-[15px] sm:text-base font-bold text-thm-ink mt-0.5 break-keep">9년 완독 사이클</p>
+              <p class="text-xs text-thm-body mt-0.5 break-keep">단락 중심 장기 호흡</p>
+            </div>
+          </div>
+
+          <!-- Metric 3 -->
+          <div class="rounded-[14px] bg-white border border-thm-border p-4 sm:p-5 shadow-[0_4px_12px_rgba(102,144,185,0.06)] flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-thm-bgSub border border-[#e1e8f0] flex items-center justify-center shrink-0" aria-hidden="true">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 11a8 8 0 1 0-2.3 5.6" />
+                <path d="M20 4v7h-7" stroke="#6690b9" />
+                <circle cx="12" cy="12" r="2" fill="#eef4f9" stroke="#6690b9" />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <p class="text-xs font-medium text-thm-muted">묵상 리듬</p>
+              <p class="text-[15px] sm:text-base font-bold text-thm-ink mt-0.5 break-keep">주 6일 (월~토)</p>
+              <p class="text-xs text-thm-body mt-0.5 break-keep">연 52주 꾸준한 경건</p>
+            </div>
+          </div>
+
+          <!-- Metric 4 -->
+          <div class="rounded-[14px] bg-white border border-thm-border p-4 sm:p-5 shadow-[0_4px_12px_rgba(102,144,185,0.06)] flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-thm-bgSub border border-[#e1e8f0] flex items-center justify-center shrink-0" aria-hidden="true">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="8.5" r="3" />
+                <path d="M3.5 19c.6-3 2.8-4.5 5.5-4.5s4.9 1.5 5.5 4.5" />
+                <circle cx="16.5" cy="9.5" r="2.2" stroke="#6690b9" />
+                <path d="M16 14.8c2 .3 3.7 1.6 4.4 4.2" stroke="#6690b9" />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <p class="text-xs font-medium text-thm-muted">권장 활용</p>
+              <p class="text-[15px] sm:text-base font-bold text-thm-ink mt-0.5 break-keep">하루 25~30분</p>
+              <p class="text-xs text-thm-body mt-0.5 break-keep">개인 묵상 · 소그룹 연동</p>
+            </div>
+          </div>
         </div>
-        <span class="year-meta">총 341편 / 56.8주 (누적 106.0주)</span>
       </div>
-      <div class="table-scroll">
-        <table class="plan-table">
-          <thead>
-            <tr>
-              <th>권명 (성경)</th>
-              <th>상태</th>
-              <th class="num-col">장수</th>
-              <th class="num-col">편수</th>
-              <th class="num-col">주수(6편)</th>
-              <th class="num-col">누적주</th>
-              <th>구속사적 중심 주제 및 배치 원칙</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-status="done">
-              <td class="book-name">히브리서</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">13장</td>
-              <td class="num-col">44편</td>
-              <td class="num-col">7.3주</td>
-              <td class="num-col">56.5주</td>
-              <td class="theme-col">레위기 직후 신학적 짝 배치, 더 좋은 대제사장과 영원한 단번의 제사</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">마태복음</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">28장</td>
-              <td class="num-col">144편</td>
-              <td class="num-col">24.0주</td>
-              <td class="num-col">80.5주</td>
-              <td class="theme-col">율법을 완성하러 오신 왕, 산상수훈과 하나님 나라 (상·하 통합 전권)</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">민수기</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">36장</td>
-              <td class="num-col">67편</td>
-              <td class="num-col">11.2주</td>
-              <td class="num-col">91.7주</td>
-              <td class="theme-col">시내산 진영 편성, 광야 40년의 반역과 하나님의 신실하심</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">신명기</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">34장</td>
-              <td class="num-col">86편</td>
-              <td class="num-col">14.3주</td>
-              <td class="num-col">106.0주</td>
-              <td class="theme-col">모압 평지의 세 설교, 쉐마, 약속의 땅을 앞둔 언약 갱신</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    </section>
 
-    <!-- 3년차 -->
-    <div class="year-block" data-year-group>
-      <div class="year-header">
-        <div class="year-title-group">
-          <span class="year-badge">3년차</span>
-          <h3 class="year-theme">언약의 땅과 복음의 심장</h3>
+    <!-- =================================================================== -->
+    <!-- 2. SUB-NAVIGATION BAR (Exact match to about.html)                   -->
+    <!-- =================================================================== -->
+    <nav class="subnav-bar" aria-label="9년 매일묵상 상세 목차">
+      <ul class="subnav-list">
+        <li><a href="#vision">비전과 신학</a></li>
+        <li><a href="#pairing">구속사적 짝 배치</a></li>
+        <li><a href="#structure">매일 묵상 7단계</a></li>
+        <li><a href="#application">교회 활용 가이드</a></li>
+        <li><a href="#curriculum">9년 전권 커리큘럼</a></li>
+        <li><a href="#process">저작 과정 및 집필자</a></li>
+      </ul>
+    </nav>
+
+    <!-- =================================================================== -->
+    <!-- 3. SECTION 1: 비전과 신학적 토대 (#ffffff)                           -->
+    <!-- =================================================================== -->
+    <section id="vision" class="bg-white-section py-16 sm:py-22 scroll-mt-20">
+      <div class="max-w-[960px] mx-auto px-5 sm:px-8">
+        <p class="thm-section-label">Vision &amp; Theological Foundation</p>
+        <h2 class="thm-section-title">분량보다 깊이를, 단편보다 문맥 전체를</h2>
+
+        <div class="space-y-4 text-[15.5px] sm:text-[16px] text-thm-body leading-[1.9] break-keep">
+          <p>
+            빠르게 소비되고 잊히는 신앙의 시대 속에서, 성경의 한 구절을 앞뒤 문맥에서 떼어내어 자의적으로 적용하는 일은 흔합니다. 이 시리즈는 <strong class="font-semibold text-thm-ink">분량보다 깊이</strong>를 우선합니다. 매일 성경의 자연스러운 문학적·신학적 단락(페리코페) 하나를 인위적으로 자르지 않고 온전히 마주함으로써, 주 6일의 꾸준한 리듬으로 9년 전체에 걸쳐 말씀이 스스로 말하는 바를 깊이 경청하도록 설계했습니다.
+          </p>
+          <p>
+            이 프로젝트는 미국 남침례교(SBC) 배경의 개혁주의 침례교회 목회자(M.Div., M.Miss., D.Min.)가 한국교회의 개혁과 건강한 제자훈련이라는 목회적 소명을 담아 집필한 성경 전권 묵상 커리큘럼입니다.
+          </p>
         </div>
-        <span class="year-meta">총 287편 / 47.8주 (누적 153.8주)</span>
-      </div>
-      <div class="table-scroll">
-        <table class="plan-table">
-          <thead>
-            <tr>
-              <th>권명 (성경)</th>
-              <th>상태</th>
-              <th class="num-col">장수</th>
-              <th class="num-col">편수</th>
-              <th class="num-col">주수(6편)</th>
-              <th class="num-col">누적주</th>
-              <th>구속사적 중심 주제 및 배치 원칙</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-status="done">
-              <td class="book-name">로마서</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">16장</td>
-              <td class="num-col">75편</td>
-              <td class="num-col">12.5주</td>
-              <td class="num-col">118.5주</td>
-              <td class="theme-col">율법 외에 나타난 하나님의 한 의, 이신칭의와 성령 안의 삶</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">여호수아</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">24장</td>
-              <td class="num-col">48편</td>
-              <td class="num-col">8.0주</td>
-              <td class="num-col">126.5주</td>
-              <td class="theme-col">가나안 정복 이야기, 열두 지파 기업 분배, 세겜 언약</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">사사기</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">21장</td>
-              <td class="num-col">71편</td>
-              <td class="num-col">11.8주</td>
-              <td class="num-col">138.3주</td>
-              <td class="theme-col">반복되는 배교와 사사들의 구원, 왕 없음의 비극</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">룻기</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">4장</td>
-              <td class="num-col">23편</td>
-              <td class="num-col">3.8주</td>
-              <td class="num-col">142.2주</td>
-              <td class="theme-col">사사기 직후 배치, 흉년의 땅에서 피어난 헤세드와 다윗 왕가의 서막</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">사무엘상</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">31장</td>
-              <td class="num-col">70편</td>
-              <td class="num-col">11.7주</td>
-              <td class="num-col">153.8주</td>
-              <td class="theme-col">한나의 기도, 사무엘 소명, 사울의 실패와 다윗의 기름 부음</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
 
-    <!-- 4년차 -->
-    <div class="year-block" data-year-group>
-      <div class="year-header">
-        <div class="year-title-group">
-          <span class="year-badge">4년차</span>
-          <h3 class="year-theme">왕정의 흥망과 지혜, 그리고 은혜의 역설</h3>
+        <!-- 3-Column Principles Grid matching about.html -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-9">
+          <!-- Principle 01 -->
+          <div class="thm-card-surface p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-kicker text-xs font-bold tracking-wider text-thm-accent">01</span>
+              <svg class="w-9 h-9" viewBox="0 0 40 40" fill="none" stroke="#1b2a4a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 11c-3.8-2.6-8.8-3-13.5-1.6v19.2c4.7-1.4 9.7-1 13.5 1.6 3.8-2.6 8.8-3 13.5-1.6V9.4C28.8 8 23.8 8.4 20 11z" fill="#f4f7fa" />
+                <path d="M20 11v19.2" />
+                <path d="M20 5.5v3.2M17.2 7.1h5.6" stroke="#dd9d71" />
+              </svg>
+            </div>
+            <h3 class="text-[16px] font-bold text-thm-ink mb-2.5 leading-snug break-keep">성경의 영감과 무오성</h3>
+            <p class="text-[14px] text-thm-body leading-[1.78] break-keep">
+              시카고 성경 무오 선언(Chicago Statement)을 기준으로 하나님의 말씀의 완전한 권위와 무오성을 고백합니다.
+            </p>
+          </div>
+
+          <!-- Principle 02 -->
+          <div class="thm-card-surface p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-kicker text-xs font-bold tracking-wider text-thm-accent">02</span>
+              <svg class="w-9 h-9" viewBox="0 0 40 40" fill="none" stroke="#1b2a4a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6L32 11.5v8.8c0 6.8-5 11.6-12 13.7-7-2.1-12-6.9-12-13.7v-8.8L20 6z" fill="#eef4f9" />
+                <path d="M15.5 20.5l3 3 6.5-6.8" stroke="#6690b9" stroke-width="2" />
+              </svg>
+            </div>
+            <h3 class="text-[16px] font-bold text-thm-ink mb-2.5 leading-snug break-keep">개혁주의 언약신학과 침례교 신앙</h3>
+            <p class="text-[14px] text-thm-body leading-[1.78] break-keep">
+              개혁주의 언약신학 및 침례교 신앙고백(BF&amp;M 2000, 1689 LBCF)의 균형 잡힌 틀 안에서 본문을 관찰하고 논증합니다.
+            </p>
+          </div>
+
+          <!-- Principle 03 -->
+          <div class="thm-card-surface p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-kicker text-xs font-bold tracking-wider text-thm-accent">03</span>
+              <svg class="w-9 h-9" viewBox="0 0 40 40" fill="none" stroke="#1b2a4a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="18" cy="18" r="9.5" fill="#f4f7fa" />
+                <path d="M25 25l7 7" stroke="#6690b9" stroke-width="2.2" />
+                <path d="M14 16h8M14 20h5.5" stroke="#6690b9" />
+              </svg>
+            </div>
+            <h3 class="text-[16px] font-bold text-thm-ink mb-2.5 leading-snug break-keep">본문 자체에서 출발하는 주해</h3>
+            <p class="text-[14px] text-thm-body leading-[1.78] break-keep">
+              학자나 주석의 견해를 단순 나열하지 않고, 성경 본문의 문학적 구조와 문맥 관찰을 근거로 신학적 의미를 도출합니다.
+            </p>
+          </div>
         </div>
-        <span class="year-meta">총 362편 / 60.3주 (누적 214.2주)</span>
-      </div>
-      <div class="table-scroll">
-        <table class="plan-table">
-          <thead>
-            <tr>
-              <th>권명 (성경)</th>
-              <th>상태</th>
-              <th class="num-col">장수</th>
-              <th class="num-col">편수</th>
-              <th class="num-col">주수(6편)</th>
-              <th class="num-col">누적주</th>
-              <th>구속사적 중심 주제 및 배치 원칙</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-status="done">
-              <td class="book-name">사무엘하</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">24장</td>
-              <td class="num-col">58편</td>
-              <td class="num-col">9.7주</td>
-              <td class="num-col">163.5주</td>
-              <td class="theme-col">다윗 언약, 왕국의 번영과 범죄, 압살롬 반역과 감사시</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">열왕기상</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">22장</td>
-              <td class="num-col">60편</td>
-              <td class="num-col">10.0주</td>
-              <td class="num-col">173.5주</td>
-              <td class="theme-col">솔로몬의 성전 봉헌, 왕국 분열, 엘리야와 바알의 갈멜산 대결</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">잠언</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">31장</td>
-              <td class="num-col">49편</td>
-              <td class="num-col">8.2주</td>
-              <td class="num-col">181.7주</td>
-              <td class="theme-col">솔로몬 성전 내러티브 직후 배치, 여호와 경외의 지혜</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">갈라디아서</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">6장</td>
-              <td class="num-col">36편</td>
-              <td class="num-col">6.0주</td>
-              <td class="num-col">187.7주</td>
-              <td class="theme-col">다른 복음은 없다: 십자가의 자유와 성령의 열매</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">야고보서</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">5장</td>
-              <td class="num-col">21편</td>
-              <td class="num-col">3.5주</td>
-              <td class="num-col">191.2주</td>
-              <td class="theme-col">시련 중의 인내, 행함으로 증명되는 온전한 믿음</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">열왕기하</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">25장</td>
-              <td class="num-col">70편</td>
-              <td class="num-col">11.7주</td>
-              <td class="num-col">202.8주</td>
-              <td class="theme-col">엘리사 사역, 북이스라엘 몰락, 유다의 멸망과 포로기</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">고린도전서</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">16장</td>
-              <td class="num-col">68편</td>
-              <td class="num-col">11.3주</td>
-              <td class="num-col">214.2주</td>
-              <td class="theme-col">십자가의 지혜, 교회의 거룩과 은사, 부활의 영광</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
 
-    <!-- 5년차 -->
-    <div class="year-block" data-year-group>
-      <div class="year-header">
-        <div class="year-title-group">
-          <span class="year-badge">5년차</span>
-          <h3 class="year-theme">포로와 귀환, 교회의 영광</h3>
+        <!-- Callout Note Box -->
+        <div class="mt-7 rounded-[14px] bg-thm-bgSub border border-[#dbe6f0] border-l-[3px] border-l-thm-accent px-5 py-4 sm:px-6 sm:py-5">
+          <h4 class="text-[14.5px] font-bold text-thm-ink mb-1.5">해석의 균형과 표기 원칙</h4>
+          <p class="text-[14px] text-thm-body leading-[1.8] break-keep">
+            신학적 입장 차이가 존재하는 본문에서는 개혁주의·남침례교(SBC) 입장을 분명히 제시하되 건전한 타 견해도 간략히 함께 안내합니다. 본문 범위와 성경 인용은 <strong class="font-semibold text-thm-ink">개역개정</strong>을 기준으로 하며, 성경 원어의 의미를 살려 <strong class="font-semibold text-thm-ink">'침례'</strong> 용어를 일관되게 사용합니다.
+          </p>
         </div>
-        <span class="year-meta">총 293편 / 48.8주 (누적 263.0주)</span>
       </div>
-      <div class="table-scroll">
-        <table class="plan-table">
-          <thead>
-            <tr>
-              <th>권명 (성경)</th>
-              <th>상태</th>
-              <th class="num-col">장수</th>
-              <th class="num-col">편수</th>
-              <th class="num-col">주수(6편)</th>
-              <th class="num-col">누적주</th>
-              <th>구속사적 중심 주제 및 배치 원칙</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-status="done">
-              <td class="book-name">역대상·하</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">65장</td>
-              <td class="num-col">99편</td>
-              <td class="num-col">16.5주</td>
-              <td class="num-col">230.7주</td>
-              <td class="theme-col">다윗 가문과 성전 예배 중심 구속사 재조망</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">에스라·느헤미야</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">23장</td>
-              <td class="num-col">54편</td>
-              <td class="num-col">9.0주</td>
-              <td class="num-col">239.7주</td>
-              <td class="theme-col">성전 재건, 율법 학사 에스라의 개혁, 성벽 완공과 언약 회복</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">고린도후서</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">13장</td>
-              <td class="num-col">46편</td>
-              <td class="num-col">7.7주</td>
-              <td class="num-col">247.3주</td>
-              <td class="theme-col">위로의 하나님, 질그릇 속의 보배, 약함 속의 능력</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">에베소서</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">6장</td>
-              <td class="num-col">36편</td>
-              <td class="num-col">6.0주</td>
-              <td class="num-col">253.3주</td>
-              <td class="theme-col">창세 전의 선택, 만물을 통일하시는 그리스도의 몸된 교회</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">골로새서</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">4장</td>
-              <td class="num-col">23편</td>
-              <td class="num-col">3.8주</td>
-              <td class="num-col">257.2주</td>
-              <td class="theme-col">그리스도의 충족성과 우월성 (옥중서신 묶음)</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">빌레몬서</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">1장</td>
-              <td class="num-col">6편</td>
-              <td class="num-col">1.0주</td>
-              <td class="num-col">258.2주</td>
-              <td class="theme-col">그리스도 안에서 형제 된 오네시모 (옥중서신 묶음)</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">빌립보서</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">4장</td>
-              <td class="num-col">29편</td>
-              <td class="num-col">4.8주</td>
-              <td class="num-col">263.0주</td>
-              <td class="theme-col">기쁨의 서신, 그리스도의 자기 비하와 복음의 진전</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    </section>
 
-    <!-- 6년차 -->
-    <div class="year-block" data-year-group>
-      <div class="year-header">
-        <div class="year-title-group">
-          <span class="year-badge">6년차</span>
-          <h3 class="year-theme">위로의 예언과 인자의 복음, 그리고 눈물의 선지자</h3>
+    <!-- =================================================================== -->
+    <!-- 4. SECTION 2: 구속사적 짝 배치 (#fafbfc)                             -->
+    <!-- =================================================================== -->
+    <section id="pairing" class="bg-slate-section py-16 sm:py-22 scroll-mt-20">
+      <div class="max-w-[960px] mx-auto px-5 sm:px-8">
+        <p class="thm-section-label">Curricular Design</p>
+        <h2 class="thm-section-title">성경이 성경을 해석하는 구속사적 짝 배치</h2>
+        <p class="text-[15.5px] sm:text-[16px] text-thm-body leading-[1.85] break-keep max-w-[740px]">
+          창세기부터 요한계시록까지 단순 나열하지 않고, 구약과 신약, 역사서와 지혜서·서신서를 신학적으로 짝지어 9년의 흐름 속에 유기적으로 배치했습니다.
+        </p>
+
+        <!-- 6 Pairing Bridge Cards (2x3 Desktop Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-9">
+          <!-- Pair 1 -->
+          <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
+            <div class="flex items-center gap-2 flex-wrap mb-3.5">
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">레위기</span>
+              <svg class="w-4 h-4 text-thm-accent shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10h12M11.5 5.5L16 10l-4.5 4.5" />
+              </svg>
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-sandTint text-thm-sandText border border-thm-sand/40">히브리서</span>
+            </div>
+            <p class="text-[13.5px] text-thm-body leading-[1.78] break-keep">
+              구약의 제사와 정결법, 속죄일의 그림자를 읽은 직후 영원한 대제사장이신 예수 그리스도의 단번의 제사를 통해 그 성취를 확인합니다.
+            </p>
+          </div>
+
+          <!-- Pair 2 -->
+          <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
+            <div class="flex items-center gap-2 flex-wrap mb-3.5">
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">사사기</span>
+              <svg class="w-4 h-4 text-thm-accent shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10h12M11.5 5.5L16 10l-4.5 4.5" />
+              </svg>
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-sandTint text-thm-sandText border border-thm-sand/40">룻기</span>
+            </div>
+            <p class="text-[13.5px] text-thm-body leading-[1.78] break-keep">
+              왕 없음의 비극과 반복되는 배교의 시대 직후, 흉년의 땅에서 피어난 하나님의 헤세드(인애)와 다윗 왕가의 서막을 마주합니다.
+            </p>
+          </div>
+
+          <!-- Pair 3 -->
+          <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
+            <div class="flex items-center gap-2 flex-wrap mb-3.5">
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">열왕기상(솔로몬)</span>
+              <svg class="w-4 h-4 text-thm-accent shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10h12M11.5 5.5L16 10l-4.5 4.5" />
+              </svg>
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-sandTint text-thm-sandText border border-thm-sand/40">잠언</span>
+            </div>
+            <p class="text-[13.5px] text-thm-body leading-[1.78] break-keep">
+              솔로몬의 성전 봉헌과 왕국의 서사 직후, 여호와를 경외하는 참된 지혜의 말씀을 일상의 자리와 연결해 묵상합니다.
+            </p>
+          </div>
+
+          <!-- Pair 4 -->
+          <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
+            <div class="flex items-center gap-2 flex-wrap mb-3.5">
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">예레미야 · 애가</span>
+              <svg class="w-4 h-4 text-thm-accent shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10h12M11.5 5.5L16 10l-4.5 4.5" />
+              </svg>
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-sandTint text-thm-sandText border border-thm-sand/40">에스겔</span>
+            </div>
+            <p class="text-[13.5px] text-thm-body leading-[1.78] break-keep">
+              예루살렘 함락의 슬픔과 새 언약의 약속을 거쳐, 포로지 바벨론에서 마른 뼈를 살리시고 새 성전을 보여주시는 하나님의 주권을 바라봅니다.
+            </p>
+          </div>
+
+          <!-- Pair 5 -->
+          <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
+            <div class="flex items-center gap-2 flex-wrap mb-3.5">
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">사도행전 (상·하)</span>
+              <svg class="w-4 h-4 text-thm-accent shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10h12M11.5 5.5L16 10l-4.5 4.5" />
+              </svg>
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-sandTint text-thm-sandText border border-thm-sand/40">데살로니가서 · 목회서신</span>
+            </div>
+            <p class="text-[13.5px] text-thm-body leading-[1.78] break-keep">
+              바울의 전도여행과 로마 압송의 역사적 맥락 바로 뒤에서 당시 교회를 향해 보낸 서신과 목회적 유언을 입체적으로 읽습니다.
+            </p>
+          </div>
+
+          <!-- Pair 6 -->
+          <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
+            <div class="flex items-center gap-2 flex-wrap mb-3.5">
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">요한복음</span>
+              <svg class="w-4 h-4 text-thm-accent shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10h12M11.5 5.5L16 10l-4.5 4.5" />
+              </svg>
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-sandTint text-thm-sandText border border-thm-sand/40">요한1·2·3서</span>
+            </div>
+            <p class="text-[13.5px] text-thm-body leading-[1.78] break-keep">
+              성육신하신 말씀의 복음을 깊이 묵상한 뒤, 빛과 사랑 안의 사귐으로 부르는 사도 요한의 서신으로 자연스럽게 이어갑니다.
+            </p>
+          </div>
         </div>
-        <span class="year-meta">총 329편 / 54.8주 (누적 317.8주)</span>
       </div>
-      <div class="table-scroll">
-        <table class="plan-table">
-          <thead>
-            <tr>
-              <th>권명 (성경)</th>
-              <th>상태</th>
-              <th class="num-col">장수</th>
-              <th class="num-col">편수</th>
-              <th class="num-col">주수(6편)</th>
-              <th class="num-col">누적주</th>
-              <th>구속사적 중심 주제 및 배치 원칙</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-status="done">
-              <td class="book-name">이사야</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">66장</td>
-              <td class="num-col">138편</td>
-              <td class="num-col">23.0주</td>
-              <td class="num-col">286.0주</td>
-              <td class="theme-col">거룩하신 왕, 심판과 임마누엘, 고난받는 종, 새 하늘과 새 땅 (상·하 통합 전권)</td>
-            </tr>
-            <tr data-status="done">
-              <td class="book-name">누가복음</td>
-              <td><span class="status-pill status-done">완료</span></td>
-              <td class="num-col">24장</td>
-              <td class="num-col">141편</td>
-              <td class="num-col">23.5주</td>
-              <td class="num-col">309.5주</td>
-              <td class="theme-col">잃어버린 자를 찾아 구원하러 오신 인자, 예루살렘 여정과 십자가·부활</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">예레미야 (전반)</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">25장분</td>
-              <td class="num-col">50편</td>
-              <td class="num-col">8.3주</td>
-              <td class="num-col">317.8주</td>
-              <td class="theme-col">유다 말기 심판 경고와 새 언약의 선포 (6년차 마감 및 7년차 연계)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    </section>
 
-    <!-- 7년차 -->
-    <div class="year-block" data-year-group>
-      <div class="year-header">
-        <div class="year-title-group">
-          <span class="year-badge">7년차</span>
-          <h3 class="year-theme">묵시와 하나님의 주권, 사도와 목회</h3>
+    <!-- =================================================================== -->
+    <!-- 5. SECTION 3: 매일 묵상 7단계 구조와 복습 장치 (#ffffff)             -->
+    <!-- =================================================================== -->
+    <section id="structure" class="bg-white-section py-16 sm:py-22 scroll-mt-20">
+      <div class="max-w-[960px] mx-auto px-5 sm:px-8">
+        <p class="thm-section-label">Daily Architecture</p>
+        <h2 class="thm-section-title">수동적 읽기를 넘어, 본문을 직접 관찰하고 응답하는 7단계</h2>
+        <p class="text-[15.5px] sm:text-[16px] text-thm-body leading-[1.85] break-keep max-w-[760px]">
+          하루 25~30분 동안 독자가 해설만 읽고 지나치지 않도록, 도입·관찰에서 깊은 주해, 그리고 삶과 기도의 응답으로 이어지는 정교한 7단계 구조를 따릅니다.
+        </p>
+
+        <!-- 3-Tier Visual Hierarchy: Row 1 (Steps 1-3) -> Row 2 (Step 4 Featured 8 cols + Step 5 Optional 4 cols) -> Row 3 (Steps 6-7) -->
+        <div class="space-y-5 mt-9">
+
+          <!-- ROW 1: 도입과 관찰 (3 Equal Cards) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+            <!-- Step 01 -->
+            <div class="thm-card-surface p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="font-kicker text-[11.5px] font-bold tracking-wider text-thm-accentDark">STEP 01</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-thm-bgSub text-thm-accentDark">도입</span>
+              </div>
+              <h3 class="text-[16px] font-bold text-thm-ink mb-2">오늘의 본문</h3>
+              <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+                단락(페리코페)의 핵심을 담은 제목과 본문 범위(개역개정 기준)를 제시합니다.
+              </p>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="thm-card-surface p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="font-kicker text-[11.5px] font-bold tracking-wider text-thm-accentDark">STEP 02</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-thm-bgSub text-thm-accentDark">흐름</span>
+              </div>
+              <h3 class="text-[16px] font-bold text-thm-ink mb-2">문맥 한 줄</h3>
+              <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+                오늘 본문이 성경 책 전체의 구속사적 흐름 속에서 어디에 놓여 있는지 1~2문장으로 짚어줍니다.
+              </p>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="thm-card-surface p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="font-kicker text-[11.5px] font-bold tracking-wider text-thm-accentDark">STEP 03</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-thm-bgSub text-thm-accentDark">관찰</span>
+              </div>
+              <h3 class="text-[16px] font-bold text-thm-ink mb-2">본문 읽기</h3>
+              <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+                해설을 읽기 전에 독자가 본문을 직접 살피도록 돕는 핵심 관찰 질문 1~2개를 던집니다.
+              </p>
+            </div>
+          </div>
+
+          <!-- ROW 2: 핵심 주해 (Step 04: 8 cols) + 선택 심화 (Step 05: 4 cols) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 items-stretch">
+            <!-- Step 04: Featured Core Card (8 Columns) -->
+            <div class="lg:col-span-8 rounded-[14px] bg-white border border-[#cbd9e8] border-l-4 border-l-thm-ink shadow-[0_6px_20px_rgba(27,42,74,0.08)] overflow-hidden flex flex-col justify-between">
+              <div class="bg-thm-bgSub border-b border-[#e1e8f0] px-5 sm:px-6 py-3.5 flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2.5">
+                  <span class="font-kicker text-xs font-bold tracking-wider text-thm-ink">STEP 04</span>
+                  <span class="text-thm-border" aria-hidden="true">|</span>
+                  <span class="text-xs font-semibold text-thm-accentDark">매일 묵상의 중심</span>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-thm-ink text-white">핵심 주해</span>
+              </div>
+              <div class="p-5 sm:p-7 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 class="text-lg sm:text-[19px] font-bold text-thm-ink mb-2.5">깊이 파기</h3>
+                  <p class="text-[14.5px] text-thm-body leading-[1.82] break-keep">
+                    원어 해설(문법 지식 없이도 이해하도록 음역 → 의미 → 신학적 함의 순으로 설명), 역사·문화적 배경, 문학적 구조, 신학적 핵심을 결합한 충실한 본문 주해를 제공합니다.
+                  </p>
+                </div>
+                <!-- 4 Compact Sub-Pills -->
+                <div class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-[#edf2f7]">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-thm-accentTint text-thm-ink">
+                    <span class="w-1.5 h-1.5 rounded-full bg-thm-accent" aria-hidden="true"></span>
+                    원어 음역·의미·함의
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-thm-accentTint text-thm-ink">
+                    <span class="w-1.5 h-1.5 rounded-full bg-thm-accent" aria-hidden="true"></span>
+                    역사·문화 배경
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-thm-accentTint text-thm-ink">
+                    <span class="w-1.5 h-1.5 rounded-full bg-thm-accent" aria-hidden="true"></span>
+                    문학적 구조
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-thm-accentTint text-thm-ink">
+                    <span class="w-1.5 h-1.5 rounded-full bg-thm-accent" aria-hidden="true"></span>
+                    신학적 핵심
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 05: Compact Dashed Optional Card (4 Columns) -->
+            <div class="lg:col-span-4 rounded-[14px] bg-thm-bgSlate border-[1.5px] border-dashed border-[#cbd5e1] p-5 sm:p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="font-kicker text-[11.5px] font-bold tracking-wider text-thm-muted">STEP 05</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-thm-sandTint text-thm-sandText border border-thm-sand/50">선택 제공</span>
+                </div>
+                <h3 class="text-[16px] font-bold text-thm-ink mb-2">구속사 연결</h3>
+                <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+                  억지스러운 알레고리나 무리한 연결을 피하고, 본문 자체가 예수 그리스도와 구속사의 방향을 명확히 가리킬 때만 작성합니다.
+                </p>
+              </div>
+              <p class="text-xs text-thm-muted mt-4 pt-3 border-t border-dashed border-[#dce3ec]">
+                * 매일 필수 항목이 아닙니다.
+              </p>
+            </div>
+          </div>
+
+          <!-- ROW 3: 적용과 응답 (2 Equal Cards) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+            <!-- Step 06 -->
+            <div class="thm-card-surface p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="font-kicker text-[11.5px] font-bold tracking-wider text-thm-accentDark">STEP 06</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-thm-bgSub text-thm-accentDark">적용</span>
+              </div>
+              <h3 class="text-[16px] font-bold text-thm-ink mb-2">오늘 내 삶</h3>
+              <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+                말씀의 진리를 오늘 나의 가정·일터·교회 자리로 가져오는 구체적인 적용 질문 1개를 제시합니다.
+              </p>
+            </div>
+
+            <!-- Step 07 -->
+            <div class="thm-card-surface p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="font-kicker text-[11.5px] font-bold tracking-wider text-thm-accentDark">STEP 07</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-thm-bgSub text-thm-accentDark">응답</span>
+              </div>
+              <h3 class="text-[16px] font-bold text-thm-ink mb-2">오늘의 기도</h3>
+              <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+                본문의 메시지에서 자연스럽게 흘러나오는 한 문장의 기도 방향을 담았습니다.
+              </p>
+            </div>
+          </div>
         </div>
-        <span class="year-meta">총 301편 / 50.2주 (누적 368.0주)</span>
-      </div>
-      <div class="table-scroll">
-        <table class="plan-table">
-          <thead>
-            <tr>
-              <th>권명 (성경)</th>
-              <th>상태</th>
-              <th class="num-col">장수</th>
-              <th class="num-col">편수</th>
-              <th class="num-col">주수(6편)</th>
-              <th class="num-col">누적주</th>
-              <th>구속사적 중심 주제 및 배치 원칙</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-status="plan">
-              <td class="book-name">예레미야 (후반)</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">27장분</td>
-              <td class="num-col">34편</td>
-              <td class="num-col">5.7주</td>
-              <td class="num-col">323.5주</td>
-              <td class="theme-col">예루살렘 함락, 토기장이 비유, 포로 귀환의 약속</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">예레미야애가</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">5장</td>
-              <td class="num-col">9편</td>
-              <td class="num-col">1.5주</td>
-              <td class="num-col">325.0주</td>
-              <td class="theme-col">파괴된 시온을 향한 슬픔과 아침마다 새로운 주의 성실</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">에스겔</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">48장</td>
-              <td class="num-col">75편</td>
-              <td class="num-col">12.5주</td>
-              <td class="num-col">337.5주</td>
-              <td class="theme-col">떠나시는 영광, 마른 뼈의 부활, 새 성전과 여호와 삼마</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">사도행전 (상)</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">1–14장</td>
-              <td class="num-col">40편</td>
-              <td class="num-col">6.7주</td>
-              <td class="num-col">344.2주</td>
-              <td class="theme-col">오순절 성령 강림, 예루살렘과 안디옥 교회, 1차 전도여행</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">데살로니가전·후</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">8장</td>
-              <td class="num-col">24편</td>
-              <td class="num-col">4.0주</td>
-              <td class="num-col">348.2주</td>
-              <td class="theme-col">바울 2차 전도여행 직후 배치, 주의 강림과 재림의 소망</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">다니엘</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">12장</td>
-              <td class="num-col">28편</td>
-              <td class="num-col">4.7주</td>
-              <td class="num-col">352.8주</td>
-              <td class="theme-col">바벨론 궁정의 신앙, 제국들을 꺾으시는 영원한 하나님 나라</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">에스더</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">10장</td>
-              <td class="num-col">16편</td>
-              <td class="num-col">2.7주</td>
-              <td class="num-col">355.5주</td>
-              <td class="theme-col">보이지 않는 하나님의 섭리와 민족의 역전적 구원</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">사도행전 (하)</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">15–28장</td>
-              <td class="num-col">45편</td>
-              <td class="num-col">7.5주</td>
-              <td class="num-col">363.0주</td>
-              <td class="theme-col">예루살렘 공의회, 2·3차 전도여행, 로마 압송과 연금</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">디모데전·후·디도</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">13장</td>
-              <td class="num-col">30편</td>
-              <td class="num-col">5.0주</td>
-              <td class="num-col">368.0주</td>
-              <td class="theme-col">사도행전 직후 목회 계승: 교회 직분과 질서, 선한 싸움과 바울의 마지막 유언</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
 
-    <!-- 8년차 -->
-    <div class="year-block" data-year-group>
-      <div class="year-header">
-        <div class="year-title-group">
-          <span class="year-badge">8년차</span>
-          <h3 class="year-theme">열방을 향한 공의, 성육신한 하나님</h3>
+        <!-- Review Devices: 블록 정리 & 책 마무리 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
+          <div class="rounded-[14px] bg-thm-bgWarm border border-thm-borderWarm p-5 sm:p-6 flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-white border border-thm-borderWarm flex items-center justify-center shrink-0" aria-hidden="true">
+              <svg class="w-6 h-6" viewBox="0 0 28 28" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4.5" y="5" width="19" height="5" rx="1.5" fill="#f4f7fa" />
+                <rect x="4.5" y="12" width="19" height="5" rx="1.5" fill="#ffffff" />
+                <rect x="4.5" y="19" width="13" height="4.5" rx="1.5" stroke="#6690b9" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-[15.5px] font-bold text-thm-ink mb-1.5">
+                블록 정리 <span class="font-kicker text-xs font-semibold text-thm-muted ml-1">Block Review</span>
+              </h4>
+              <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+                각 권의 주요 단락(블록)을 마칠 때마다 지나온 본문의 흐름과 핵심 신학을 요약·정리하여 성도들이 큰 그림을 기억하도록 돕습니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="rounded-[14px] bg-thm-bgSlate border border-thm-border p-5 sm:p-6 flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-white border border-thm-border flex items-center justify-center shrink-0" aria-hidden="true">
+              <svg class="w-6 h-6" viewBox="0 0 28 28" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 5.5h12.5a3.5 3.5 0 0 1 3.5 3.5v13.5H9.5A3.5 3.5 0 0 0 6 26V5.5z" fill="#eef4f9" />
+                <path d="M10.5 11.5h7M10.5 15.5h5" stroke="#6690b9" />
+                <circle cx="20.5" cy="7.5" r="2" fill="#dd9d71" stroke="none" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-[15.5px] font-bold text-thm-ink mb-1.5">
+                책 마무리 <span class="font-kicker text-xs font-semibold text-thm-muted ml-1">Book Synthesis</span>
+              </h4>
+              <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+                한 권의 묵상을 완주한 뒤 책 전체의 구조와 신학적 메시지를 종합적으로 정리합니다. <span class="text-thm-muted">(블록 정리와 책 마무리는 복습과 신학적 정리에 집중하기 위해 별도의 기도문을 두지 않습니다.)</span>
+              </p>
+            </div>
+          </div>
         </div>
-        <span class="year-meta">총 294편 / 49.0주 (누적 417.0주)</span>
-      </div>
-      <div class="table-scroll">
-        <table class="plan-table">
-          <thead>
-            <tr>
-              <th>권명 (성경)</th>
-              <th>상태</th>
-              <th class="num-col">장수</th>
-              <th class="num-col">편수</th>
-              <th class="num-col">주수(6편)</th>
-              <th class="num-col">누적주</th>
-              <th>구속사적 중심 주제 및 배치 원칙</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-status="plan">
-              <td class="book-name">소선지서 (전반)</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">호·욜·암·옵·욘</td>
-              <td class="num-col">58편</td>
-              <td class="num-col">9.7주</td>
-              <td class="num-col">377.7주</td>
-              <td class="theme-col">열방을 향한 공의의 선포와 회복의 부름 (호세아 · 요엘 · 아모스 · 오바댜 · 요나)</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">요한복음</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">21장</td>
-              <td class="num-col">114편</td>
-              <td class="num-col">19.0주</td>
-              <td class="num-col">396.7주</td>
-              <td class="theme-col">말씀이 육신이 되심, 일곱 표적과 '에고 에이미', 참된 생명의 길</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">소선지서 (후반)</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">미·나·합·습·학·슥·말</td>
-              <td class="num-col">72편</td>
-              <td class="num-col">12.0주</td>
-              <td class="num-col">408.7주</td>
-              <td class="theme-col">남유다 말기와 포로 귀환기 선지자들의 심판과 메시아 대망</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">요한1·2·3서</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">7장</td>
-              <td class="num-col">22편</td>
-              <td class="num-col">3.7주</td>
-              <td class="num-col">412.3주</td>
-              <td class="theme-col">요한복음 직후 배치, 빛과 사랑 안의 사귐, 진리를 아는 지식</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">베드로전·후·유다</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">9장</td>
-              <td class="num-col">28편</td>
-              <td class="num-col">4.7주</td>
-              <td class="num-col">417.0주</td>
-              <td class="theme-col">디아스포라 나그네들의 산 소망과 영적 거짓에 대한 경계</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
 
-    <!-- 9년차 -->
-    <div class="year-block" data-year-group>
-      <div class="year-header">
-        <div class="year-title-group">
-          <span class="year-badge">9년차</span>
-          <h3 class="year-theme">지혜와 예배, 완성된 하나님 나라</h3>
+        <!-- Sample CTA Bar (.kaiec-bar style) -->
+        <a class="kaiec-bar mt-6" href="https://docs.google.com/document/d/1h9VnHSoIdvNOpCW5h1nqoYuG0bhfXbaXG_EiGHezsJI/edit?usp=sharing" target="_blank" rel="noopener">
+          <span class="kaiec-mark mark-accent" aria-hidden="true">SAMPLE</span>
+          <span class="kaiec-text">
+            <span class="kaiec-title">창세기 · 마가복음 매일묵상 실제 원고 샘플 확인하기</span>
+            <span class="kaiec-meta">7단계 구조와 원어 해설, 블록 정리가 실제 지면에 어떻게 구현되는지 바로 살펴보실 수 있습니다.</span>
+          </span>
+          <span class="kaiec-link">샘플 문서 보기 →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 6. SECTION 4: 교회와 소그룹에서의 활용 가이드 (#f7f6f3)               -->
+    <!-- =================================================================== -->
+    <section id="application" class="bg-warm-section py-16 sm:py-22 scroll-mt-20">
+      <div class="max-w-[960px] mx-auto px-5 sm:px-8">
+        <p class="thm-section-label">Ministry Application</p>
+        <h2 class="thm-section-title">9년 전권 완주부터 권별 소그룹 성경공부까지</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
+          <!-- Track A -->
+          <div class="rounded-[14px] bg-white border border-thm-borderWarm p-6 sm:p-7 shadow-[0_2px_8px_rgba(27,42,74,0.03)] flex flex-col">
+            <div class="flex items-center justify-between gap-3 mb-4">
+              <span class="px-3 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">Track A</span>
+              <svg class="w-10 h-10" viewBox="0 0 44 44" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="22" cy="22" r="14" fill="#f4f7fa" />
+                <path d="M22 12v10l6.5 3.8" stroke="#6690b9" stroke-width="2" />
+                <circle cx="22" cy="22" r="2.2" fill="#1b2a4a" stroke="none" />
+              </svg>
+            </div>
+            <h3 class="text-[18px] font-bold text-thm-ink mb-2.5 break-keep">9년 성경 전권 완주 트랙</h3>
+            <p class="text-[14.5px] text-thm-body leading-[1.82] break-keep">
+              교회 전체 또는 제자훈련 공동체가 월~토 주 6일 리듬으로 9년에 걸쳐 성경 66권 전체를 함께 걸어가는 장기 커리큘럼입니다. 주중 개인 묵상 후 주말 셀·소그룹에서 함께 나누며 공동체 전체가 같은 말씀의 호흡을 맞출 수 있습니다.
+            </p>
+          </div>
+
+          <!-- Track B -->
+          <div class="rounded-[14px] bg-white border border-thm-borderWarm border-l-[3px] border-l-thm-sand p-6 sm:p-7 shadow-[0_2px_8px_rgba(27,42,74,0.03)] flex flex-col">
+            <div class="flex items-center justify-between gap-3 mb-4">
+              <span class="px-3 py-1 rounded-md text-xs font-bold bg-thm-sandTint text-thm-sandText border border-thm-sand/40">Track B</span>
+              <svg class="w-10 h-10" viewBox="0 0 44 44" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="8" y="10" width="12" height="24" rx="2" fill="#f4f7fa" />
+                <rect x="24" y="10" width="12" height="10" rx="2" fill="#fdf3ec" stroke="#dd9d71" />
+                <rect x="24" y="24" width="12" height="10" rx="2" fill="#ffffff" stroke="#6690b9" />
+              </svg>
+            </div>
+            <h3 class="text-[18px] font-bold text-thm-ink mb-2.5 break-keep">권별 선택 성경공부 트랙</h3>
+            <p class="text-[14.5px] text-thm-body leading-[1.82] break-keep">
+              각 권이 독립적인 블록 정리와 책 마무리를 갖추고 있어, 교회의 목회적 필요와 성도들의 영적 상황에 맞춰 원하는 성경(예: 마가복음, 로마서, 레위기+히브리서 짝 과정 등)을 선택해 소그룹·장년 성경공부 교재로 바로 활용할 수 있습니다.
+            </p>
+          </div>
         </div>
-        <span class="year-meta">총 294편 / 49.0주 (최종 누적 466.0주)</span>
       </div>
-      <div class="table-scroll">
-        <table class="plan-table">
-          <thead>
-            <tr>
-              <th>권명 (성경)</th>
-              <th>상태</th>
-              <th class="num-col">장수</th>
-              <th class="num-col">편수</th>
-              <th class="num-col">주수(6편)</th>
-              <th class="num-col">누적주</th>
-              <th>구속사적 중심 주제 및 배치 원칙</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-status="plan">
-              <td class="book-name">시편 (상)</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">1–72편</td>
-              <td class="num-col">72편</td>
-              <td class="num-col">12.0주</td>
-              <td class="num-col">429.0주</td>
-              <td class="theme-col">복 있는 사람, 탄식과 찬양, 다윗의 시 (1·2권)</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">욥기</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">42장</td>
-              <td class="num-col">48편</td>
-              <td class="num-col">8.0주</td>
-              <td class="num-col">437.0주</td>
-              <td class="theme-col">까닭 없는 고난, 친구들과의 변론, 폭풍우 속의 하나님</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">전도서</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">12장</td>
-              <td class="num-col">20편</td>
-              <td class="num-col">3.3주</td>
-              <td class="num-col">440.3주</td>
-              <td class="theme-col">해 아래의 헛됨, 청년의 때에 창조주를 기억하라</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">아가</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">8장</td>
-              <td class="num-col">12편</td>
-              <td class="num-col">2.0주</td>
-              <td class="num-col">442.3주</td>
-              <td class="theme-col">그리스도와 교회의 연합, 죽음같이 강한 사랑</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">시편 (하)</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">73–150편</td>
-              <td class="num-col">78편</td>
-              <td class="num-col">13.0주</td>
-              <td class="num-col">455.3주</td>
-              <td class="theme-col">아삽의 시, 성전에 올라가는 노래, 할렐루야 대미 (3·4·5권)</td>
-            </tr>
-            <tr data-status="plan">
-              <td class="book-name">요한계시록</td>
-              <td><span class="status-pill status-plan">예정</span></td>
-              <td class="num-col">22장</td>
-              <td class="num-col">64편</td>
-              <td class="num-col">10.7주</td>
-              <td class="num-col">466.0주</td>
-              <td class="theme-col">일곱 교회, 어린 양의 보좌, 바벨론 패망과 새 예루살렘 (시리즈 대단원)</td>
-            </tr>
-          </tbody>
-        </table>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 7. SECTION 5: 9년 성경 전권 커리큘럼 (#ffffff)                       -->
+    <!-- =================================================================== -->
+    <section id="curriculum" class="bg-white-section py-16 sm:py-22 scroll-mt-20">
+      <div class="max-w-[960px] mx-auto px-5 sm:px-8">
+        <p class="thm-section-label">9-Year Master Curriculum</p>
+        <h2 class="thm-section-title">성경 66권 연차별 상세 커리큘럼</h2>
+        <p class="text-[15.5px] sm:text-[16px] text-thm-body leading-[1.85] break-keep max-w-[780px]">
+          각 권 옆의 괄호 안 숫자는 해당 성경을 구성하는 매일묵상 편수이며, 본문의 문학적 구조와 신학적 밀도에 따라 배정되었습니다. 연차별 탭을 선택하거나 성경 이름·키워드로 검색해 보실 수 있습니다.
+        </p>
+
+        <!-- Interactive Controls Bar: Tabs + Instant Search -->
+        <div id="curriculumControls" class="mt-8 rounded-[14px] bg-thm-bgSub border border-[#dce5ef] p-4 sm:p-5 space-y-4">
+          <!-- Search Row -->
+          <div class="relative">
+            <label for="bookSearchInput" class="sr-only">성경 권명 또는 주제 검색</label>
+            <svg class="w-4 h-4 text-thm-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="M20 20l-3.5-3.5" />
+            </svg>
+            <input
+              id="bookSearchInput"
+              type="text"
+              autocomplete="off"
+              placeholder="성경 권명 또는 주제 검색 (예: 로마서, 언약, 제자도)..."
+              class="w-full rounded-[10px] bg-white border border-[#cbd9e8] pl-10 pr-10 py-2.5 text-sm text-thm-ink placeholder:text-[#8696a8] focus:outline-none focus:border-thm-accent focus:ring-2 focus:ring-thm-accent/20 transition-all"
+            />
+            <button
+              id="clearSearchBtn"
+              type="button"
+              aria-label="검색어 지우기"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 p-1.5 rounded-md text-thm-muted hover:text-thm-ink hover:bg-thm-bgSub transition-colors"
+            >
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Year Tabs -->
+          <div role="tablist" aria-label="연차 선택" class="flex flex-wrap items-center gap-2">
+            <!-- Tabs rendered dynamically via JS -->
+          </div>
+        </div>
+
+        <!-- Search Active Notice -->
+        <div id="searchStatusBar" class="hidden mt-4 flex items-center justify-between flex-wrap gap-2 px-4 py-2.5 rounded-lg bg-thm-accentTint border border-[#d1e1f0] text-xs sm:text-sm text-thm-ink">
+          <span id="searchStatusText" class="font-medium"></span>
+          <button id="resetSearchLink" type="button" class="font-semibold text-thm-accentDark hover:text-thm-ink underline underline-offset-2">
+            검색 초기화
+          </button>
+        </div>
+
+        <!-- Curriculum Cards Render Container -->
+        <div id="curriculumContainer" class="mt-7 space-y-9" aria-live="polite">
+          <!-- Populated dynamically with all 9 years / 66 books -->
+        </div>
       </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 8. SECTION 6: 저작 과정, 참고 문헌 및 집필자 (#fafbfc)                -->
+    <!--    (NO 3-step commentary verification block — lives on about.html)  -->
+    <!-- =================================================================== -->
+    <section id="process" class="bg-slate-section py-16 sm:py-22 scroll-mt-20">
+      <div class="max-w-[960px] mx-auto px-5 sm:px-8">
+        <p class="thm-section-label">Methodology &amp; Author</p>
+        <h2 class="thm-section-title">엄밀한 저작 과정과 검증된 자료 위에 세웁니다</h2>
+
+        <!-- A. 4-Step Editorial & Verification Process -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mt-8">
+          <!-- Step 01 -->
+          <div class="relative thm-card-surface p-5 sm:p-6 flex flex-col">
+            <div class="flex items-center justify-between mb-3.5">
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-thm-ink text-white font-kicker text-xs font-bold">01</span>
+              <svg class="hidden lg:block w-4 h-4 text-thm-accent/70" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10h12M11.5 5.5L16 10l-4.5 4.5" />
+              </svg>
+            </div>
+            <h3 class="text-[15.5px] font-bold text-thm-ink mb-2">단락 구조 설계</h3>
+            <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+              성경 각 권의 문학적·신학적 단락(페리코페)을 분석해 흐름을 끊지 않는 하루치 본문을 설계합니다.
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="relative thm-card-surface p-5 sm:p-6 flex flex-col">
+            <div class="flex items-center justify-between mb-3.5">
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-thm-accent text-white font-kicker text-xs font-bold">02</span>
+              <svg class="hidden lg:block w-4 h-4 text-thm-accent/70" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10h12M11.5 5.5L16 10l-4.5 4.5" />
+              </svg>
+            </div>
+            <h3 class="text-[15.5px] font-bold text-thm-ink mb-2">복수 주석 교차 연구</h3>
+            <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+              BestCommentaries와 The Gospel Coalition(TGC) 추천 주석 중 로고스(Logos) 라이브러리로 직접 보유한 핵심 주석들을 교차 연구합니다.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="relative thm-card-surface p-5 sm:p-6 flex flex-col">
+            <div class="flex items-center justify-between mb-3.5">
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-thm-ink text-white font-kicker text-xs font-bold">03</span>
+              <svg class="hidden lg:block w-4 h-4 text-thm-accent/70" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10h12M11.5 5.5L16 10l-4.5 4.5" />
+              </svg>
+            </div>
+            <h3 class="text-[15.5px] font-bold text-thm-ink mb-2">본문 중심 집필</h3>
+            <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+              주석의 단순 나열을 피하고, 본문 관찰과 원어 핵심, 구속사적 통일성을 담아 매일 묵상을 집필합니다.
+            </p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="relative thm-card-surface p-5 sm:p-6 flex flex-col">
+            <div class="flex items-center justify-between mb-3.5">
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-thm-accent text-white font-kicker text-xs font-bold">04</span>
+              <svg class="w-4 h-4 text-thm-accent" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4.5 10.5l3.5 3.5 7.5-8" />
+              </svg>
+            </div>
+            <h3 class="text-[15.5px] font-bold text-thm-ink mb-2">신학·문체 최종 검수</h3>
+            <p class="text-[13.5px] text-thm-body leading-[1.75] break-keep">
+              인용 구절과 학술 출처의 사실 검증, 개혁주의·침례교 교리 균형 및 가독성을 최종 점검합니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- B. Reference Library Download & Standards Link (.kaiec-bar stack) -->
+        <div class="mt-8 space-y-3">
+          <a class="kaiec-bar" href="/assets/docs/recommended-commentaries-66.pdf" target="_blank" rel="noopener">
+            <span class="kaiec-mark mark-award" aria-hidden="true">PDF</span>
+            <span class="kaiec-text">
+              <span class="kaiec-title">성경 66권 추천 주석 통합 목록 (전체 기준표)</span>
+              <span class="kaiec-meta">BestCommentaries · TGC 통합 559종 중 로고스(Logos) 직접 보유·참조 275종(구약 173 · 신약 102) 검증 기록 · 목회자 서재 구성 참고용</span>
+            </span>
+            <span class="kaiec-link">전체 목록 보기 →</span>
+          </a>
+
+          <a class="kaiec-bar" href="/about.html#standards">
+            <span class="kaiec-mark" aria-hidden="true">STD</span>
+            <span class="kaiec-text">
+              <span class="kaiec-title">The Helper Ministry 신학적 기준 및 3단계 주해 검증 원칙</span>
+              <span class="kaiec-meta">원문 주해부터 역사·비평 점검, 정경 통합에 이르는 상세 주해 워크플로우를 About 페이지에서 확인하실 수 있습니다.</span>
+            </span>
+            <span class="kaiec-link">검증 원칙 보기 →</span>
+          </a>
+        </div>
+
+        <!-- C. Compact Author Profile Card -->
+        <div class="mt-8 rounded-[14px] bg-white border border-thm-border p-6 sm:p-8 shadow-[0_4px_12px_rgba(102,144,185,0.06)]">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div class="max-w-[600px] space-y-3">
+              <div class="flex items-center gap-2.5 flex-wrap">
+                <span class="px-2.5 py-0.5 rounded-md font-kicker text-[11px] font-bold tracking-wider uppercase bg-thm-accentTint text-thm-accentDark">AUTHOR · 집필자</span>
+                <span class="text-xs font-medium text-thm-muted">The Helper Ministry 대표 · M.Div., M.Miss., D.Min.</span>
+              </div>
+              <h3 class="font-serif text-[22px] font-semibold text-thm-ink leading-snug">
+                이한 목사
+              </h3>
+              <p class="text-[14.5px] text-thm-body leading-[1.82] break-keep">
+                미국 남침례교(SBC) 배경의 개혁주의 침례교회 목회자로, Golden Gate Baptist Theological Seminary(M.Div., M.Miss.)와 Midwestern Baptist Theological Seminary(D.Min.)를 졸업했습니다. Baker Bookhouse Award in Theology(2015)를 수상했으며, 지역 교회 담임목회 10년 이상 및 신학교 강의를 거쳐 한국교회의 개혁과 건강한 제자훈련을 섬기고 있습니다.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row lg:flex-col gap-2.5 shrink-0 lg:min-w-[235px] pt-4 lg:pt-0 border-t lg:border-t-0 lg:border-l border-[#edf2f7] lg:pl-7">
+              <a href="/about.html#leader" class="btn-primary-thm !text-[13.5px] !py-2.5 !px-4">
+                <span>대표 약력 · 신학적 기준 자세히 보기</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="mailto:TheHelperMinistry@gmail.com" class="btn-outline-soft !text-[13.5px] !py-2.5 !px-4">
+                <span>이메일 문의</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 9. CONTACT SECTION (#eef4f9 matching about.html & index.html)       -->
+    <!-- =================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="max-w-[800px] mx-auto">
+        <h2 class="contact-title">Contact</h2>
+        <address>
+          <p class="mb-4">
+            9년 성경 전권 매일묵상 시리즈의 교회·소그룹 도입이나 자료 활용에 관해 궁금한 점이 있으시면 언제든 편하게 문의해 주세요.
+          </p>
+          <a href="mailto:TheHelperMinistry@gmail.com">TheHelperMinistry@gmail.com</a>
+        </address>
+        <div class="mt-7 flex items-center justify-center flex-wrap gap-3">
+          <a href="/about.html" class="btn-outline-soft">About 페이지 보기</a>
+          <a href="/seminar.html" class="btn-outline-soft">AI 세미나 안내</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- 10. FOOTER (.footer-clean, #111111 matching about.html & index.html)  -->
+  <!-- ===================================================================== -->
+  <footer class="footer-clean">
+    <div class="container">
+      <p>Copyright &copy; 2026 The Helper Ministry. All rights reserved.</p>
     </div>
+  </footer>
 
-    <div class="bottom-nav-box">
-      <div class="bottom-nav-text">
-        <strong>교회 및 소그룹 매일묵상 도입 안내</strong><br>
-        소규모 교회 성도 묵상 교재나 구역·소그룹 성경공부 자료로 활용하기를 원하시면 편하게 문의해 주십시오.
-      </div>
-      <div class="bottom-nav-actions">
-        <a class="btn-outline-navy" href="/about.html">신학적 기준 · 주석 원칙 보기</a>
-        <a class="btn-outline-navy" href="/index.html#contact">사역 문의하기</a>
-      </div>
-    </div>
+  <!-- ===================================================================== -->
+  <!-- INTERACTIVE CONTROLLER: MOBILE MENU + 9-YEAR CURRICULUM + SEARCH      -->
+  <!-- ===================================================================== -->
+  <script>
+    (function () {
+      'use strict';
 
-  </div>
-</section>
-
-    <footer class="footer-clean">
-      <div class="container">
-        <p>Copyright &copy; 2026 The Helper Ministry. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
-    <script src="/assets/js/main.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var triggerBtn = document.getElementById("custom-menu-trigger");
-        var drawerBox = document.getElementById("custom-menu-box");
-
-        if (triggerBtn && drawerBox) {
-          triggerBtn.addEventListener("click", function (e) {
-            e.preventDefault();
-            triggerBtn.classList.toggle("btn-active");
-            drawerBox.classList.toggle("box-open");
-          });
-
-          document.addEventListener("click", function (e) {
-            if (!triggerBtn.contains(e.target) && !drawerBox.contains(e.target)) {
-              triggerBtn.classList.remove("btn-active");
-              drawerBox.classList.remove("box-open");
+      /**
+       * Complete 9-Year Bible Devotional Curriculum Data (All 66 Books)
+       * Displays book name with episode count in parentheses + rich pastoral/theological description.
+       */
+      const CURRICULUM_DATA = [
+        {
+          year: 1,
+          label: '1년차',
+          theme: '언약의 시작 — 창조와 구속, 그리고 거룩',
+          books: [
+            {
+              title: '창세기',
+              count: '88편',
+              testament: '구약',
+              desc: '창조와 타락, 족장 내러티브, 그리고 요셉을 통한 언약 보존의 여정을 다룹니다. 하나님이 세상을 어떻게 지으셨고 죄로 무너진 인류를 어떤 언약으로 붙드시는지를 추적하며, 성경 전체를 여는 구속사의 기초 문법을 탄탄히 세웁니다.'
+            },
+            {
+              title: '마가복음',
+              count: '70편',
+              testament: '신약',
+              desc: '고난받는 종이신 메시아의 권위와 십자가, 즉각성의 서사를 생동감 있게 따라갑니다. 기적과 가르침을 넘어 제자도의 참된 대가가 무엇인지 묻는 본문을 통해, 예수 그리스도를 따르는 삶의 본질을 점검합니다.'
+            },
+            {
+              title: '출애굽기',
+              count: '80편',
+              testament: '구약',
+              desc: '유월절 구원, 시내산 언약, 성막 설계와 하나님의 임재 영광 충만을 깊이 있게 살핍니다. 구원이 단순한 해방이 아니라 하나님을 예배하고 그분의 임재 안에 거하는 백성으로 빚어지는 과정임을 확인합니다.'
+            },
+            {
+              title: '레위기',
+              count: '57편',
+              testament: '구약',
+              desc: '제사 제도, 정결법, 속죄일 독립 블록, 거룩한 삶의 윤리를 문맥에 따라 명쾌하게 풀어냅니다. 어렵고 낯설게 느껴지기 쉬운 율법 본문 속에서 거룩하신 하나님과 죄인 된 백성이 어떻게 화목하며 살아가는지를 배웁니다.'
             }
-          });
+          ]
+        },
+        {
+          year: 2,
+          label: '2년차',
+          theme: '율법의 완성자와 광야의 훈련',
+          books: [
+            {
+              title: '히브리서',
+              count: '44편',
+              testament: '신약',
+              desc: '레위기 직후에 배치하여, 더 좋은 대제사장이신 예수 그리스도와 영원한 단번의 제사를 대조적으로 조명합니다. 구약의 그림자가 그리스도 안에서 어떻게 성취되었는지를 깨달아 흔들리지 않는 믿음의 확신을 세웁니다.'
+            },
+            {
+              title: '마태복음',
+              count: '144편',
+              testament: '신약',
+              desc: '율법을 완성하러 오신 왕의 사역과 산상수훈, 하나님 나라의 원리를 전권에 걸쳐 치밀하게 묵상합니다. 구약의 약속이 성취된 메시아의 통치 아래 제자 공동체가 어떤 의와 성품으로 살아야 하는지를 다룹니다.'
+            },
+            {
+              title: '민수기',
+              count: '67편',
+              testament: '구약',
+              desc: '시내산 진영 편성부터 광야 40년의 반역과 그 가운데서도 멈추지 않는 하나님의 신실하심을 추적합니다. 불신앙과 원망의 광야를 통과하는 오늘의 교회와 성도에게 순종과 인내의 훈련이 갖는 의미를 일깨웁니다.'
+            },
+            {
+              title: '신명기',
+              count: '86편',
+              testament: '구약',
+              desc: '모압 평지에서 선포된 모세의 세 설교, 쉐마, 그리고 약속의 땅을 앞둔 언약 갱신의 말씀을 깊이 살핍니다. 율법이 차가운 규정이 아니라 하나님을 마음 다해 사랑하는 언약 백성의 응답임을 선명하게 보여줍니다.'
+            }
+          ]
+        },
+        {
+          year: 3,
+          label: '3년차',
+          theme: '언약의 땅과 복음의 심장',
+          books: [
+            {
+              title: '로마서',
+              count: '75편',
+              testament: '신약',
+              desc: '율법 외에 나타난 하나님의 한 의, 이신칭의, 그리고 성령 안의 삶을 논증의 흐름 그대로 따라갑니다. 죄의 보편성에서 시작해 칭의와 성화, 하나님의 주권적 선택과 교회의 실제 윤리까지 복음의 핵심 교리를 체계적으로 정립합니다.'
+            },
+            {
+              title: '여호수아',
+              count: '48편',
+              testament: '구약',
+              desc: '가나안 정복 이야기, 열두 지파의 기업 분배, 세겜 언약을 통해 언약을 반드시 이루시는 하나님을 만납니다. 약속의 성취가 인간의 무력이 아니라 말씀에 대한 순종과 하나님의 전적인 은혜에 달려 있음을 확인합니다.'
+            },
+            {
+              title: '사사기',
+              count: '71편',
+              testament: '구약',
+              desc: '반복되는 배교와 사사들의 구원, 그리고 왕 없음의 비극을 가감 없이 직면합니다. 세속화와 영적 타협이 공동체를 어떻게 무너뜨리는지 살피며, 인간 구원자의 한계를 넘어 참된 왕을 갈망하게 합니다.'
+            },
+            {
+              title: '룻기',
+              count: '23편',
+              testament: '구약',
+              desc: '사사기 직후에 배치하여, 흉년의 땅에서 피어난 하나님의 헤세드(인애)와 다윗 왕가의 서막을 조명합니다. 어두운 시대 속에서도 신실한 평범한 이들의 삶을 통해 구속의 역사를 이어 가시는 하나님의 섭리를 묵상합니다.'
+            },
+            {
+              title: '사무엘상',
+              count: '70편',
+              testament: '구약',
+              desc: '한나의 기도, 사무엘의 소명, 사울의 실패와 다윗의 기름 부음을 중심으로 왕정 시대의 문을 엽니다. 외모와 권력을 좇는 세상의 방식과 중심을 보시는 하나님의 통치 방식이 어떻게 충돌하는지를 깊이 살핍니다.'
+            }
+          ]
+        },
+        {
+          year: 4,
+          label: '4년차',
+          theme: '왕정의 흥망과 지혜, 그리고 은혜의 역설',
+          books: [
+            {
+              title: '사무엘하',
+              count: '58편',
+              testament: '구약',
+              desc: '다윗 언약, 왕국의 번영과 뼈아픈 범죄, 압살롬의 반역과 감사시를 정직하게 마주합니다. 인간 왕의 연약함과 죄의 파괴력을 숨기지 않는 성경의 기록 속에서, 영원한 왕국을 약속하신 은혜의 언약을 붙듭니다.'
+            },
+            {
+              title: '열왕기상',
+              count: '60편',
+              testament: '구약',
+              desc: '솔로몬의 성전 봉헌, 왕국의 분열, 그리고 엘리야와 바알의 갈멜산 대결을 다룹니다. 언약에 대한 충성이 무너질 때 화려한 번영도 어떻게 균열되는지 보며, 우상 숭배의 시대에 참 하나님을 증언하는 신앙을 배웁니다.'
+            },
+            {
+              title: '잠언',
+              count: '49편',
+              testament: '구약',
+              desc: '솔로몬의 성전 내러티브 직후에 배치하여, 여호와 경외에서 출발하는 참된 지혜를 일상과 연결합니다. 말과 관계, 재물과 노동, 가정과 공동체의 구체적인 자리에서 복음적 분별력을 기르는 실천적 지혜를 훈련합니다.'
+            },
+            {
+              title: '갈라디아서',
+              count: '36편',
+              testament: '신약',
+              desc: '다른 복음은 없다는 사도의 단호한 선포와 함께, 십자가의 자유와 성령의 열매를 깊이 묵상합니다. 율법주의와 방종이라는 양극단을 경계하며 오직 은혜와 믿음으로 서는 복음의 자유를 변증합니다.'
+            },
+            {
+              title: '야고보서',
+              count: '21편',
+              testament: '신약',
+              desc: '시련 중의 인내와 행함으로 증명되는 온전한 믿음을 실제적인 삶의 언어로 풀어냅니다. 갈라디아서 직후에 읽음으로써 칭의와 성화의 균형을 잡고, 말과 행동이 일치하는 성숙한 제자도를 점검합니다.'
+            },
+            {
+              title: '열왕기하',
+              count: '70편',
+              testament: '구약',
+              desc: '엘리사의 사역, 북이스라엘의 몰락, 남유다의 멸망과 포로기까지의 역사를 구속사적 관점으로 읽습니다. 끝내 회개하지 않은 왕국을 향한 공의의 심판 속에서도, 다윗의 등불을 끄지 않으시는 하나님의 신실함을 발견합니다.'
+            },
+            {
+              title: '고린도전서',
+              count: '68편',
+              testament: '신약',
+              desc: '십자가의 지혜, 교회의 거룩과 은사, 그리고 부활의 영광을 통해 건강한 교회의 본질을 배웁니다. 분열, 성적 타락, 예배 무질서 등 현실 교회가 겪는 구체적인 문제들을 오직 십자가 복음으로 풀어가는 목회적 통찰을 얻습니다.'
+            }
+          ]
+        },
+        {
+          year: 5,
+          label: '5년차',
+          theme: '포로와 귀환, 교회의 영광',
+          books: [
+            {
+              title: '역대상·하',
+              count: '99편',
+              testament: '구약',
+              desc: '다윗 가문과 성전 예배를 중심으로 이스라엘의 구속사를 새롭게 재조망합니다. 포로에서 돌아온 공동체에게 정체성과 소망을 불어넣었던 본문을 통해, 참된 예배와 말씀 회복이 공동체 갱신의 출발점임을 확인합니다.'
+            },
+            {
+              title: '에스라·느헤미야',
+              count: '54편',
+              testament: '구약',
+              desc: '성전 재건, 율법 학사 에스라의 개혁, 성벽 완공과 언약 회복의 과정을 따라갑니다. 외적 재건이 반드시 말씀 교육과 회개, 언약적 헌신이라는 내적 개혁과 맞물려야 함을 목회적으로 적용합니다.'
+            },
+            {
+              title: '고린도후서',
+              count: '46편',
+              testament: '신약',
+              desc: '위로의 하나님, 질그릇 속의 보배, 약함 속에서 온전해지는 그리스도의 능력을 묵상합니다. 세속적 성공 기준에 맞서 고난과 진실함으로 복음을 증언하는 참된 사역자와 성도의 영적 태도를 배웁니다.'
+            },
+            {
+              title: '에베소서',
+              count: '36편',
+              testament: '신약',
+              desc: '창세 전의 선택과 만물을 통일하시는 그리스도의 몸된 교회의 영광을 웅장하게 조망합니다. 교리가 어떻게 교회 연합과 가정·일터의 거룩한 삶, 그리고 영적 전쟁으로 이어지는지를 한눈에 정리합니다.'
+            },
+            {
+              title: '골로새서',
+              count: '23편',
+              testament: '신약',
+              desc: '옥중서신 묶음의 첫 권으로, 만물 위에 뛰어나신 그리스도의 충족성과 우월성을 선포합니다. 혼합주의와 거짓 영성의 유혹 앞에서 오직 그리스도 한 분만으로 충분하다는 확고한 신앙을 세웁니다.'
+            },
+            {
+              title: '빌레몬서',
+              count: '6편',
+              testament: '신약',
+              desc: '옥중서신 묶음 안에서, 그리스도 안에서 형제 된 오네시모를 향한 바울의 중보를 살핍니다. 복음이 사회적 신분과 인간적 상처를 어떻게 용서와 화해의 공동체로 변혁시키는지 생생하게 보여줍니다.'
+            },
+            {
+              title: '빌립보서',
+              count: '29편',
+              testament: '신약',
+              desc: '기쁨의 서신으로 불리며, 그리스도의 자기 비하와 고난 속에서도 멈추지 않는 복음의 진전을 다룹니다. 환경에 흔들리지 않는 그리스도 안의 기쁨과 겸손한 섬김, 푯대를 향한 성도의 경주를 격려합니다.'
+            }
+          ]
+        },
+        {
+          year: 6,
+          label: '6년차',
+          theme: '위로의 예언과 인자의 복음, 그리고 눈물의 선지자',
+          books: [
+            {
+              title: '이사야',
+              count: '138편',
+              testament: '구약',
+              desc: '거룩하신 왕, 심판과 임마누엘, 고난받는 종, 그리고 새 하늘과 새 땅에 이르는 웅장한 예언을 전권으로 묵상합니다. 구약의 복음서라 불릴 만큼 선명하게 드러나는 메시아 예언과 열방을 품으시는 하나님의 구원 경륜을 깊이 탐구합니다.'
+            },
+            {
+              title: '누가복음',
+              count: '141편',
+              testament: '신약',
+              desc: '잃어버린 자를 찾아 구원하러 오신 인자의 사역과 예루살렘 여정, 십자가와 부활을 세밀하게 살핍니다. 가난한 자와 소외된 자, 이방인에게까지 열려 있는 하나님의 은혜와 성령의 역사를 풍성한 비유와 서사 속에서 만납니다.'
+            },
+            {
+              title: '예레미야 전반',
+              count: '50편',
+              testament: '구약',
+              desc: '유다 말기의 준엄한 심판 경고와 다가올 새 언약의 선포를 따라갑니다. 거짓 평안을 외치는 시대 속에서 외롭게 진리를 대언한 선지자의 눈물을 통해, 타협 없는 회개와 마음 판에 새겨질 새 언약의 소망을 붙듭니다.'
+            }
+          ]
+        },
+        {
+          year: 7,
+          label: '7년차',
+          theme: '묵시와 하나님의 주권, 사도와 목회',
+          books: [
+            {
+              title: '예레미야 후반',
+              count: '34편',
+              testament: '구약',
+              desc: '예루살렘 함락과 토기장이 비유, 그리고 심판 너머에 예비된 포로 귀환의 약속을 다룹니다. 모든 인간적 기반이 무너지는 절망의 한복판에서도 역사의 주권을 놓지 않으시는 하나님의 신실하심을 확인합니다.'
+            },
+            {
+              title: '예레미야애가',
+              count: '9편',
+              testament: '구약',
+              desc: '파괴된 시온을 향한 깊은 슬픔과 그럼에도 아침마다 새로운 주의 성실을 고백하는 애가를 묵상합니다. 고난과 상실을 억지로 덮지 않고 하나님 앞에 정직히 탄식하며 소망을 되찾는 성경적 애도의 길을 배웁니다.'
+            },
+            {
+              title: '에스겔',
+              count: '75편',
+              testament: '구약',
+              desc: '성전을 떠나시는 영광, 마른 뼈의 부활, 새 성전과 여호와 삼마(거기 계시는 하나님)의 환상을 풀어냅니다. 죄로 인해 무너진 백성에게 새 영과 새 마음을 부어 다시 살리시는 하나님의 전적인 주권과 회복을 바라봅니다.'
+            },
+            {
+              title: '사도행전 상',
+              count: '40편',
+              testament: '신약',
+              desc: '오순절 성령 강림, 예루살렘과 안디옥 교회의 탄생, 그리고 1차 전도여행의 역동적인 확장을 다룹니다. 부활하신 주님이 성령을 통해 교회를 세우시고 복음의 경계를 유대에서 이방으로 넓혀 가시는 선교의 본질을 배웁니다.'
+            },
+            {
+              title: '데살로니가전·후',
+              count: '24편',
+              testament: '신약',
+              desc: '바울의 2차 전도여행 직후에 배치하여, 환난 중의 믿음과 주의 강림 및 재림의 소망을 살핍니다. 종말에 대한 왜곡된 오해를 바로잡고, 다시 오실 주님을 기다리는 성도의 거룩하고 성실한 일상을 정립합니다.'
+            },
+            {
+              title: '다니엘',
+              count: '28편',
+              testament: '구약',
+              desc: '바벨론 궁정의 신앙과 세상 제국들을 꺾으시는 영원한 하나님 나라의 묵시를 깊이 묵상합니다. 세속 문화의 압박 속에서도 뜻을 정하여 신앙의 정절을 지키는 삶과, 역사의 결국을 다스리시는 주권자 하나님에 대한 확신을 심어줍니다.'
+            },
+            {
+              title: '에스더',
+              count: '16편',
+              testament: '구약',
+              desc: '하나님의 이름이 직접 언급되지 않지만, 보이지 않는 하나님의 섭리와 민족의 역전적 구원을 선명하게 추적합니다. 우연처럼 보이는 일상과 위기의 순간들 이면에서 자기 백성을 지키시는 하나님의 숨은 손길을 신뢰하게 합니다.'
+            },
+            {
+              title: '사도행전 하',
+              count: '45편',
+              testament: '신약',
+              desc: '예루살렘 공의회, 2·3차 전도여행, 로마 압송과 연금에 이르기까지 땅끝을 향한 복음의 행진을 따라갑니다. 복음의 순수성을 지키는 교회의 결단과 고난과 투옥조차 선교의 통로로 바꾸시는 하나님의 역사를 확인합니다.'
+            },
+            {
+              title: '디모데전·후·디도',
+              count: '30편',
+              testament: '신약',
+              desc: '사도행전 직후 목회 계승의 흐름 속에서 교회의 직분과 질서, 선한 싸움과 바울의 마지막 유언을 묵상합니다. 바른 교훈을 수호하고 경건의 훈련에 힘쓰는 건강한 지역 교회의 직분·치리·제자훈련 원리를 확립합니다.'
+            }
+          ]
+        },
+        {
+          year: 8,
+          label: '8년차',
+          theme: '열방을 향한 공의, 성육신한 하나님',
+          books: [
+            {
+              title: '소선지서 전반',
+              count: '58편',
+              testament: '구약',
+              desc: '호세아, 요엘, 아모스, 오바댜, 요나를 통해 열방을 향한 하나님의 공의의 선포와 회복의 부름을 듣습니다. 언약적 사랑과 사회적 공의, 회개를 촉구하는 심판과 이방인을 향한 긍휼까지 선지자들의 다채로운 목소리를 입체적으로 연결합니다.'
+            },
+            {
+              title: '요한복음',
+              count: '114편',
+              testament: '신약',
+              desc: '말씀이 육신이 되신 성육신의 신비, 일곱 표적과 \'에고 에이미(나는 ~이다)\' 선언, 참된 생명의 길을 깊이 파고듭니다. 예수 그리스도가 누구이신지를 깊이 알게 하여, 단순한 지식을 넘어 영생과 인격적 연합으로 나아가게 합니다.'
+            },
+            {
+              title: '소선지서 후반',
+              count: '72편',
+              testament: '구약',
+              desc: '미가, 나훔, 하박국, 스바냐, 학개, 스가랴, 말라기를 통해 남유다 말기와 포로 귀환기 선지자들의 심판과 메시아 대망을 살핍니다. 어두운 현실 속에서 의인이 믿음으로 사는 법과 형식화된 예배를 깨뜨리는 영적 각성을 촉구합니다.'
+            },
+            {
+              title: '요한1·2·3서',
+              count: '22편',
+              testament: '신약',
+              desc: '요한복음 직후에 배치하여, 빛과 사랑 안의 사귐과 진리를 아는 지식을 점검합니다. 거짓 가르침이 위협하는 시대 속에서 참된 신앙의 세 표지인 바른 교리, 의로운 순종, 형제 사랑을 균형 있게 검증합니다.'
+            },
+            {
+              title: '베드로전·후·유다',
+              count: '28편',
+              testament: '신약',
+              desc: '디아스포라 나그네들을 향한 산 소망과 영적 거짓에 대한 단호한 경계를 다룹니다. 세상 속에서 나그네로 살아가며 겪는 고난을 소망으로 이겨내는 법과, 교회 안팎의 거짓 교사로부터 믿음의 도를 힘써 지키는 지혜를 배웁니다.'
+            }
+          ]
+        },
+        {
+          year: 9,
+          label: '9년차',
+          theme: '지혜와 예배, 완성된 하나님 나라',
+          books: [
+            {
+              title: '시편 상',
+              count: '72편',
+              testament: '구약',
+              desc: '시편 1–72편(1·2권)을 중심으로 복 있는 사람의 길, 탄식과 찬양, 다윗의 시를 하루 한 편씩 깊이 묵상합니다. 기쁨과 두려움, 절망과 감사 등 인간의 모든 감정을 하나님 앞에서 기도와 예배의 언어로 승화시키는 법을 익힙니다.'
+            },
+            {
+              title: '욥기',
+              count: '48편',
+              testament: '구약',
+              desc: '까닭 없는 고난과 친구들과의 치열한 변론, 그리고 마침내 폭풍우 속에서 말씀하시는 하나님을 대면합니다. 인과응보라는 단순한 신앙 공식을 깨뜨리고, 이해할 수 없는 고난 앞에서도 창조주 하나님의 주권과 지혜를 경외하는 깊은 믿음으로 나아갑니다.'
+            },
+            {
+              title: '전도서',
+              count: '20편',
+              testament: '구약',
+              desc: '해 아래의 모든 수고와 헛됨을 정직하게 통찰하며, 청년의 때에 창조주를 기억하라는 지혜를 전합니다. 유한한 인생과 세상의 허무에 갇히지 않고, 하나님을 경외하며 오늘 주신 일상을 선물로 누리는 복음적 세계관을 배웁니다.'
+            },
+            {
+              title: '아가',
+              count: '12편',
+              testament: '구약',
+              desc: '죽음같이 강한 사랑의 노래를 통해 창조 질서 안의 부부 사랑과 그리스도와 교회의 연합을 깊이 묵상합니다. 억지스러운 알레고리를 경계하면서도 구속사적 언약 사랑의 아름다움을 건강하고 균형 있게 해석합니다.'
+            },
+            {
+              title: '시편 하',
+              count: '78편',
+              testament: '구약',
+              desc: '시편 73–150편(3·4·5권)에 담긴 아삽의 시, 성전에 올라가는 노래, 그리고 할렐루야 대미를 찬양의 호흡으로 따라갑니다. 악인의 형통에 대한 회의와 민족적 비극을 넘어, 마침내 모든 호흡 있는 자가 여호와를 찬양하는 영원한 예배로 나아갑니다.'
+            },
+            {
+              title: '요한계시록',
+              count: '64편',
+              testament: '신약',
+              desc: '일곱 교회를 향한 편지, 어린 양의 보좌, 바벨론의 패망과 새 예루살렘으로 9년 여정의 대단원을 맺습니다. 난해한 상징에 매몰되지 않고 구약과 신약을 관통하는 구속사적 맥락 속에서, 고난받는 교회에 주어지는 궁극적 승리와 완성을 확신하게 합니다.'
+            }
+          ]
         }
+      ];
 
-        // 진행 상태 필터링 (전체 / 집필 완료 / 집필 예정)
-        var filterBtns = document.querySelectorAll(".filter-btn");
-        var yearBlocks = document.querySelectorAll("[data-year-group]");
+      // Interactive Curriculum State
+      let activeView = '1'; // '1'..'9' or 'all'
+      let searchQuery = '';
 
-        filterBtns.forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            filterBtns.forEach(function (b) { b.classList.remove("active"); });
-            btn.classList.add("active");
+      /**
+       * Escape HTML entities safely before DOM injection.
+       */
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
 
-            var filter = btn.getAttribute("data-filter");
-            yearBlocks.forEach(function (block) {
-              var rows = block.querySelectorAll("tbody tr");
-              var visibleCount = 0;
+      /**
+       * Render an individual Book Card: Book Title (count), OT/NT pill, rich description.
+       */
+      function renderBookCard(book) {
+        const isOT = book.testament === '구약';
+        const testamentPill = isOT
+          ? '<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-[#eef4f9] text-[#4a6e91]">구약</span>'
+          : '<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-[#fdf3ec] text-[#9a5b32] border border-[#dd9d71]/40">신약</span>';
 
-              rows.forEach(function (row) {
-                var status = row.getAttribute("data-status");
-                if (filter === "all" || status === filter) {
-                  row.style.display = "";
-                  visibleCount++;
-                } else {
-                  row.style.display = "none";
-                }
-              });
+        return `
+          <article class="thm-card-surface p-5 sm:p-6 flex flex-col">
+            <div class="flex items-center justify-between gap-3 flex-wrap mb-2.5">
+              <h4 class="text-[16.5px] font-bold text-thm-ink">
+                ${escapeHtml(book.title)}
+                <span class="text-[13.5px] font-semibold text-thm-muted ml-0.5">(${escapeHtml(book.count)})</span>
+              </h4>
+              ${testamentPill}
+            </div>
+            <p class="text-[14px] text-thm-body leading-[1.82] break-keep">
+              ${escapeHtml(book.desc)}
+            </p>
+          </article>
+        `;
+      }
 
-              block.style.display = visibleCount > 0 ? "" : "none";
-            });
+      /**
+       * Render a Year Header Banner + 2-column Book Card grid.
+       */
+      function renderYearSection(yearObj, booksToRender) {
+        const cardsHtml = booksToRender.map((book) => renderBookCard(book)).join('');
+        return `
+          <div class="space-y-4">
+            <div class="rounded-[12px] bg-thm-bgSub border border-[#dce5ef] border-l-[3.5px] border-l-thm-ink px-5 py-3.5 sm:px-6 sm:py-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3.5">
+              <span class="inline-flex items-center justify-center px-3 py-0.5 rounded-md bg-thm-ink text-white text-xs font-bold tracking-wide w-fit shrink-0">
+                ${escapeHtml(yearObj.label)}
+              </span>
+              <h3 class="font-serif text-[17px] sm:text-[18.5px] font-semibold text-thm-ink leading-snug break-keep">
+                ${escapeHtml(yearObj.theme)}
+              </h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+              ${cardsHtml}
+            </div>
+          </div>
+        `;
+      }
+
+      /**
+       * Render Year Tabs (1년차 ~ 9년차 + 전체 보기).
+       */
+      function renderTabs() {
+        const tabList = document.querySelector('#curriculumControls [role="tablist"]');
+        if (!tabList) return;
+
+        const isSearching = searchQuery.trim().length > 0;
+        let html = '';
+
+        CURRICULUM_DATA.forEach((item) => {
+          const isActive = !isSearching && activeView === String(item.year);
+          const classes = isActive
+            ? 'bg-thm-ink text-white border-thm-ink shadow-sm'
+            : 'bg-white text-thm-body border-[#dce5ef] hover:border-thm-accent hover:text-thm-ink';
+
+          html += `
+            <button
+              type="button"
+              role="tab"
+              aria-selected="${isActive ? 'true' : 'false'}"
+              data-year="${item.year}"
+              class="curriculum-tab px-3.5 py-2 rounded-lg text-[13.5px] font-semibold border transition-all cursor-pointer ${classes}"
+            >
+              ${item.label}
+            </button>
+          `;
+        });
+
+        const isAllActive = !isSearching && activeView === 'all';
+        const allClasses = isAllActive
+          ? 'bg-thm-ink text-white border-thm-ink shadow-sm'
+          : 'bg-white text-thm-accentDark border-[#b8cfe4] hover:bg-thm-accentTint hover:text-thm-ink';
+
+        html += `
+          <button
+            type="button"
+            role="tab"
+            aria-selected="${isAllActive ? 'true' : 'false'}"
+            data-year="all"
+            class="curriculum-tab sm:ml-auto px-3.5 py-2 rounded-lg text-[13.5px] font-semibold border transition-all cursor-pointer ${allClasses}"
+          >
+            전체 보기
+          </button>
+        `;
+
+        tabList.innerHTML = html;
+
+        tabList.querySelectorAll('.curriculum-tab').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            activeView = btn.getAttribute('data-year');
+            if (searchQuery.trim().length > 0) {
+              searchQuery = '';
+              const input = document.getElementById('bookSearchInput');
+              if (input) input.value = '';
+              toggleClearBtn();
+            }
+            renderTabs();
+            renderCurriculum();
           });
         });
-      });
-    </script>
+      }
 
+      /**
+       * Render Curriculum content based on active tab or live search query.
+       */
+      function renderCurriculum() {
+        const container = document.getElementById('curriculumContainer');
+        const statusBar = document.getElementById('searchStatusBar');
+        const statusText = document.getElementById('searchStatusText');
+        if (!container) return;
+
+        const q = searchQuery.trim().toLowerCase();
+
+        // Live Search across ALL 9 years
+        if (q.length > 0) {
+          let totalMatches = 0;
+          let html = '';
+
+          CURRICULUM_DATA.forEach((yearObj) => {
+            const matchedBooks = yearObj.books.filter((book) => {
+              const haystack = `${book.title} ${book.testament} ${book.desc} ${yearObj.label} ${yearObj.theme}`.toLowerCase();
+              return haystack.includes(q);
+            });
+            if (matchedBooks.length > 0) {
+              totalMatches += matchedBooks.length;
+              html += renderYearSection(yearObj, matchedBooks);
+            }
+          });
+
+          if (statusBar && statusText) {
+            statusBar.classList.remove('hidden');
+            statusText.textContent = `"${searchQuery.trim()}" 검색 결과: ${totalMatches}개 권역이 일치합니다.`;
+          }
+
+          if (totalMatches === 0) {
+            container.innerHTML = `
+              <div class="rounded-[14px] bg-thm-bgSub border border-[#dce5ef] p-9 text-center">
+                <p class="text-[15.5px] font-bold text-thm-ink">일치하는 성경 권역이 없습니다.</p>
+                <p class="text-sm text-thm-body mt-1.5">다른 성경 이름이나 주제어(예: 로마서, 언약, 제자도, 시편)로 다시 검색해 보세요.</p>
+              </div>
+            `;
+          } else {
+            container.innerHTML = html;
+          }
+          return;
+        }
+
+        // Standard Tab View
+        if (statusBar) statusBar.classList.add('hidden');
+
+        if (activeView === 'all') {
+          container.innerHTML = CURRICULUM_DATA
+            .map((yearObj) => renderYearSection(yearObj, yearObj.books))
+            .join('');
+        } else {
+          const targetYear = CURRICULUM_DATA.find((item) => String(item.year) === activeView) || CURRICULUM_DATA[0];
+          container.innerHTML = renderYearSection(targetYear, targetYear.books);
+        }
+      }
+
+      /**
+       * Toggle visibility of the search clear button.
+       */
+      function toggleClearBtn() {
+        const clearBtn = document.getElementById('clearSearchBtn');
+        if (!clearBtn) return;
+        clearBtn.classList.toggle('hidden', searchQuery.trim().length === 0);
+      }
+
+      /**
+       * Initialize Mobile Navigation, Subnav Smooth Scroll, Tabs & Search.
+       */
+      function init() {
+        try {
+          // 1. Mobile Navigation Drawer (matching about.html / index.html)
+          const triggerBtn = document.getElementById('custom-menu-trigger');
+          const drawerBox = document.getElementById('custom-menu-box');
+
+          if (triggerBtn && drawerBox) {
+            triggerBtn.addEventListener('click', function (e) {
+              e.preventDefault();
+              const isOpen = drawerBox.classList.toggle('box-open');
+              triggerBtn.classList.toggle('btn-active', isOpen);
+              triggerBtn.setAttribute('aria-expanded', String(isOpen));
+              triggerBtn.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+            });
+
+            document.addEventListener('click', function (e) {
+              if (!triggerBtn.contains(e.target) && !drawerBox.contains(e.target)) {
+                triggerBtn.classList.remove('btn-active');
+                drawerBox.classList.remove('box-open');
+                triggerBtn.setAttribute('aria-expanded', 'false');
+                triggerBtn.setAttribute('aria-label', '메뉴 열기');
+              }
+            });
+          }
+
+          // 2. Smooth scroll with sticky header offset for in-page anchor links
+          document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener('click', function (e) {
+              const targetId = this.getAttribute('href');
+              if (!targetId || targetId === '#') return;
+              const targetEl = document.querySelector(targetId);
+              if (!targetEl) return;
+
+              e.preventDefault();
+              const header = document.getElementById('unified-header');
+              const offset = header ? header.offsetHeight + 12 : 80;
+              const top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
+              window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+            });
+          });
+
+          // 3. Curriculum Tabs & Initial Render (1년차 default)
+          renderTabs();
+          renderCurriculum();
+
+          // 4. Instant Search Listeners
+          const searchInput = document.getElementById('bookSearchInput');
+          const clearBtn = document.getElementById('clearSearchBtn');
+          const resetLink = document.getElementById('resetSearchLink');
+
+          if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+              searchQuery = e.target.value || '';
+              toggleClearBtn();
+              renderTabs();
+              renderCurriculum();
+            });
+          }
+
+          const resetSearch = () => {
+            searchQuery = '';
+            if (searchInput) {
+              searchInput.value = '';
+              searchInput.focus();
+            }
+            toggleClearBtn();
+            renderTabs();
+            renderCurriculum();
+          };
+
+          if (clearBtn) clearBtn.addEventListener('click', resetSearch);
+          if (resetLink) resetLink.addEventListener('click', resetSearch);
+        } catch (err) {
+          console.error('Page initialization error:', err);
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
 </body>
 </html>
