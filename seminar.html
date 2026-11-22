@@ -9,7 +9,7 @@
     <title>AI Seminar Vol.1 - The Helper Ministry</title>
     <link rel="shortcut icon" href="/favicon.ico">
 
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -20,26 +20,6 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <style>
-      :root {
-        --thm-serif: 'Noto Serif KR', Georgia, serif;
-        --thm-sans: 'Pretendard', 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
-        --thm-ink: #1b2a4a;
-        --thm-body: #475569;
-        --thm-accent: #6690b9;
-        --thm-accent-hover: #537ca5;
-        --thm-warm: #dd9d71;
-        --thm-border: #e2e8f0;
-        --thm-radius-md: 10px;
-        --thm-radius-lg: 14px;
-      }
-
-      body {
-        font-family: var(--thm-sans);
-        color: var(--thm-body);
-        background-color: #ffffff;
-        margin: 0;
-      }
-
       /* 히어로 섹션 (기존 톤 유지 + 우측 일러스트 2단 배치) */
       section#promo.hero {
         background-color: #ffffff;
@@ -65,28 +45,26 @@
       .hero-eyebrow {
         font-size: 13px;
         letter-spacing: 0.16em;
-        color: var(--thm-accent);
+        color: var(--theme-blue);
         text-transform: uppercase;
         margin: 0 0 1rem;
         font-weight: 700;
       }
 
       section#promo.hero .hero-title {
-        font-family: var(--thm-serif);
+        font-family: var(--font-serif);
         font-size: 36px;
         font-weight: 500;
         line-height: 1.35;
-        color: var(--thm-ink);
+        color: var(--color-text-primary);
         margin: 0 0 1.25rem;
-        word-break: keep-all;
       }
 
       section#promo.hero .hero-sub {
         font-size: 17px;
-        color: var(--thm-body);
+        color: var(--color-text-secondary);
         line-height: 1.75;
         margin: 0;
-        word-break: keep-all;
       }
 
       .seminar-hero-visual {
@@ -113,14 +91,13 @@
       }
 
       .verse-text {
-        font-family: var(--thm-serif);
+        font-family: var(--font-serif);
         font-size: 17px;
         line-height: 1.8;
         color: #4a5b6d;
         max-width: 640px;
         margin: 0 auto 0.5rem;
         font-style: italic;
-        word-break: keep-all;
       }
 
       .verse-ref {
@@ -130,7 +107,7 @@
         margin: 0;
       }
 
-      /* 섹션 공통 및 배경색 복구 */
+      /* 섹션 공통 및 배경색 */
       section.thm-section {
         padding: 6rem 2rem;
         width: 100%;
@@ -172,26 +149,24 @@
         font-size: 13px;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: var(--thm-accent);
+        color: var(--theme-blue);
         font-weight: 700;
         margin-bottom: 1.25rem;
       }
 
       .section-title {
-        font-family: var(--thm-serif);
+        font-family: var(--font-serif);
         font-size: 32px;
         font-weight: 500;
         line-height: 1.3;
         margin: 0 0 2rem;
-        color: var(--thm-ink);
-        word-break: keep-all;
+        color: var(--color-text-primary);
       }
 
       .section-body {
         font-size: 16px;
         line-height: 1.9;
-        color: var(--thm-body);
-        word-break: keep-all;
+        color: var(--color-text-secondary);
       }
 
       .section-body p {
@@ -209,7 +184,7 @@
       .benefit-box {
         background: #ffffff;
         border: 1px solid #e2e8f0;
-        border-radius: var(--thm-radius-lg);
+        border-radius: var(--border-radius-lg);
         padding: 2rem;
         box-shadow: 0 4px 12px rgba(102, 144, 185, 0.06);
       }
@@ -217,16 +192,15 @@
       .benefit-box h3 {
         font-size: 18px;
         font-weight: 600;
-        color: var(--thm-accent);
+        color: var(--theme-blue);
         margin: 0 0 1rem;
       }
 
       .benefit-box p {
         font-size: 14.5px;
-        color: var(--thm-body);
+        color: var(--color-text-secondary);
         line-height: 1.75;
         margin: 0;
-        word-break: keep-all;
       }
 
       /* 실전 자산 리스트 */
@@ -239,23 +213,23 @@
       .asset-item {
         padding: 1.75rem;
         background: #ffffff;
-        border-radius: var(--thm-radius-md);
+        border-radius: var(--border-radius-md);
         margin-bottom: 1rem;
         border: 1px solid #e2e8f0;
-        border-left: 4px solid var(--thm-accent);
+        border-left: 4px solid var(--theme-blue);
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
       }
 
       .asset-title {
         font-size: 16px;
         font-weight: 600;
-        color: var(--thm-ink);
+        color: var(--color-text-primary);
         margin: 0 0 0.6rem;
       }
 
       .asset-body {
         font-size: 14px;
-        color: var(--thm-body);
+        color: var(--color-text-secondary);
         line-height: 1.7;
         margin: 0;
       }
@@ -271,7 +245,7 @@
       .model-card {
         background: #ffffff;
         border: 1px solid #e2e8f0;
-        border-radius: var(--thm-radius-lg);
+        border-radius: var(--border-radius-lg);
         padding: 1.5rem 1.25rem;
         display: flex;
         flex-direction: column;
@@ -280,7 +254,7 @@
       }
 
       .model-card:hover {
-        border-color: var(--thm-accent);
+        border-color: var(--theme-blue);
       }
 
       .model-icon {
@@ -302,16 +276,15 @@
         font-size: 14.5px;
         font-weight: 600;
         margin: 0 0 0.6rem;
-        color: var(--thm-ink);
+        color: var(--color-text-primary);
         line-height: 1.4;
       }
 
       .card-body {
         font-size: 13px;
-        color: var(--thm-body);
+        color: var(--color-text-secondary);
         line-height: 1.65;
         margin: 0;
-        word-break: keep-all;
       }
 
       /* 30년 목회 자산 로드맵 다이어그램 & 3칸 요약 */
@@ -319,7 +292,7 @@
         margin-top: 2rem;
         background: #ffffff;
         border: 1px solid #e4e2dd;
-        border-radius: var(--thm-radius-lg);
+        border-radius: var(--border-radius-lg);
         padding: 1.25rem 1.5rem;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
       }
@@ -341,7 +314,7 @@
       .info-item {
         background: #ffffff;
         border: 1px solid #e2e8f0;
-        border-radius: var(--thm-radius-md);
+        border-radius: var(--border-radius-md);
         padding: 1.5rem 1rem;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
       }
@@ -358,21 +331,20 @@
       .info-value {
         font-size: 15.5px;
         font-weight: 600;
-        color: var(--thm-ink);
+        color: var(--color-text-primary);
         margin: 0;
         line-height: 1.5;
-        word-break: keep-all;
       }
 
       /* CTA 버튼 */
       .seminar-cta-btn {
         display: inline-block;
         padding: 15px 40px;
-        background: var(--thm-accent);
+        background: var(--theme-blue);
         color: #ffffff;
         font-size: 15px;
         font-weight: 600;
-        border-radius: var(--thm-radius-md);
+        border-radius: var(--border-radius-md);
         cursor: pointer;
         border: none;
         text-decoration: none;
@@ -384,28 +356,26 @@
       .seminar-cta-btn:hover,
       .seminar-cta-btn:focus {
         opacity: 0.95;
-        background: var(--thm-accent-hover);
+        background: var(--theme-blue-hover);
         color: #ffffff;
         text-decoration: none;
       }
 
       section.cta-section .cta-title {
-        font-family: var(--thm-serif);
+        font-family: var(--font-serif);
         font-size: 32px;
         font-weight: 500;
         line-height: 1.4;
         margin: 0 0 1.5rem;
-        color: var(--thm-ink);
-        word-break: keep-all;
+        color: var(--color-text-primary);
       }
 
       section.cta-section .cta-sub {
         font-size: 16px;
-        color: var(--thm-body);
+        color: var(--color-text-secondary);
         line-height: 1.8;
         max-width: 640px;
         margin: 0 auto 2.5rem;
-        word-break: keep-all;
       }
 
       @media (max-width: 768px) {
@@ -687,27 +657,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
     <script src="/assets/js/main.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var triggerBtn = document.getElementById("custom-menu-trigger");
-        var drawerBox = document.getElementById("custom-menu-box");
-
-        if (triggerBtn && drawerBox) {
-          triggerBtn.addEventListener("click", function (e) {
-            e.preventDefault();
-            triggerBtn.classList.toggle("btn-active");
-            drawerBox.classList.toggle("box-open");
-          });
-
-          document.addEventListener("click", function (e) {
-            if (!triggerBtn.contains(e.target) && !drawerBox.contains(e.target)) {
-              triggerBtn.classList.remove("btn-active");
-              drawerBox.classList.remove("box-open");
-            }
-          });
-        }
-      });
-    </script>
 
 </body>
 </html>
