@@ -65,4 +65,199 @@ h1, h2, h3, .title, .logo-title {
 /* ====== 페이지 첫 섹션(히어로) 상단 오프셋 (고정 헤더 회피) ====== */
 .offset-header,
 .hero,
-.promo
+.promo {
+  padding-top: 140px !important;
+}
+
+/* ====== 고정 헤더 ====== */
+#unified-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--color-border-tertiary);
+  box-shadow: 0 1px 4px rgba(27, 42, 74, 0.05);
+  z-index: 10000;
+}
+
+.header-flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.custom-logo {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.custom-logo a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.custom-nav-frame {
+  display: block;
+}
+
+.custom-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+
+.custom-nav-list .nav-item {
+  margin-right: 28px;
+}
+
+.custom-nav-list .nav-item:last-child,
+.custom-nav-list .nav-item.last {
+  margin-right: 0;
+}
+
+.custom-nav-list .nav-item a {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  padding: 10px 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.custom-nav-list .nav-item a:hover,
+.custom-nav-list .nav-item a:focus {
+  color: var(--theme-blue);
+  text-decoration: none;
+}
+
+.custom-nav-list .nav-item.active a {
+  color: var(--theme-blue);
+  font-weight: 700;
+}
+
+.custom-hamburger-btn {
+  display: none;
+}
+
+/* ====== 모바일 (768px 이하) ====== */
+@media (max-width: 768px) {
+  .offset-header,
+  .hero,
+  .promo {
+    padding-top: 110px !important;
+  }
+
+  #unified-header {
+    height: 70px;
+  }
+
+  .custom-hamburger-btn {
+    display: block;
+    width: 22px;
+    height: 16px;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 10005;
+  }
+
+  .custom-hamburger-btn span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--color-text-primary);
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .custom-hamburger-btn span:nth-child(1) { top: 0px; }
+  .custom-hamburger-btn span:nth-child(2) { top: 7px; }
+  .custom-hamburger-btn span:nth-child(3) { top: 14px; }
+
+  .custom-menu-box {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid var(--color-border-tertiary);
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+    visibility: hidden;
+    transition: max-height 0.25s ease-in-out;
+    box-shadow: 0 4px 10px rgba(27, 42, 74, 0.06);
+    z-index: 10002;
+  }
+
+  .custom-menu-box.box-open {
+    max-height: 380px;
+    padding: 10px 20px;
+    visibility: visible;
+  }
+
+  .custom-hamburger-btn.btn-active span:nth-child(1) {
+    top: 7px;
+    transform: rotate(135deg);
+  }
+  .custom-hamburger-btn.btn-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .custom-hamburger-btn.btn-active span:nth-child(3) {
+    top: 7px;
+    transform: rotate(-135deg);
+  }
+
+  .custom-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .custom-nav-list .nav-item {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .custom-nav-list .nav-item a {
+    font-size: 15px;
+    padding: 12px 0;
+    display: block;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .custom-nav-list .nav-item:last-child a,
+  .custom-nav-list .nav-item.last a {
+    border-bottom: none;
+  }
+}
+
+/* ====== 공용 푸터 ====== */
+.footer-clean {
+  padding: 2rem 0;
+  background: #111111;
+  color: #767676;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.footer-clean p {
+  margin: 0;
+}
