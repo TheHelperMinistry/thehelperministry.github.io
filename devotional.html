@@ -12,12 +12,12 @@
   <!-- Web Fonts matching thehelperministry.kr -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Official Site Stylesheet (active when deployed on thehelperministry.kr) -->
+  <!-- Official Site Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css" />
 
   <!-- Tailwind CSS CDN for responsive grids & utilities -->
@@ -27,7 +27,7 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Pretendard', 'Lato', 'Apple SD Gothic Neo', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            sans: ['Pretendard Variable', 'Pretendard', 'Lato', 'Apple SD Gothic Neo', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             serif: ['"Noto Serif KR"', 'Georgia', 'serif'],
             kicker: ['Montserrat', 'Pretendard', 'sans-serif']
           },
@@ -57,11 +57,11 @@
     };
   </script>
 
-  <!-- Inline Fallback & Official Site Component Styles (Seamless standalone & live deployment) -->
+  <!-- Page-specific Component Styles (Header & Footer are handled by /assets/css/style.css) -->
   <style>
     :root {
       --thm-serif: 'Noto Serif KR', Georgia, serif;
-      --thm-sans: 'Pretendard', 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+      --thm-sans: 'Pretendard Variable', 'Pretendard', 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
       --thm-ink: #1b2a4a;
       --thm-body: #475569;
       --thm-accent: #6690b9;
@@ -71,133 +71,6 @@
       --thm-border: #e2e8f0;
       --thm-radius-md: 10px;
       --thm-radius-lg: 14px;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--thm-sans);
-      color: var(--thm-body);
-      background-color: #ffffff;
-      margin: 0;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Unified Header Fallback matching thehelperministry.kr */
-    #unified-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background-color: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid #e8eef5;
-      width: 100%;
-    }
-
-    #unified-header .header-flex-wrapper {
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-    }
-
-    #unified-header .custom-logo {
-      margin: 0;
-      font-size: 19px;
-      font-weight: 700;
-      line-height: 1;
-      font-family: 'Montserrat', 'Pretendard', sans-serif;
-    }
-
-    #unified-header .custom-logo a {
-      color: var(--thm-ink);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    #unified-header .custom-nav-frame {
-      display: flex;
-      align-items: center;
-    }
-
-    #unified-header .custom-nav-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    #unified-header .custom-nav-list .nav-item a {
-      display: inline-block;
-      padding: 8px 13px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #475569;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: color 0.18s ease, background-color 0.18s ease;
-    }
-
-    #unified-header .custom-nav-list .nav-item a:hover,
-    #unified-header .custom-nav-list .nav-item a:focus {
-      color: var(--thm-accent);
-      background-color: #f4f7fa;
-      text-decoration: none;
-    }
-
-    #unified-header .custom-nav-list .nav-item.active a {
-      color: var(--thm-accent-dark);
-      background-color: #eef4f9;
-      font-weight: 600;
-    }
-
-    /* Mobile Hamburger Button */
-    #unified-header .custom-hamburger-btn {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 5px;
-      width: 42px;
-      height: 42px;
-      padding: 8px;
-      background: transparent;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    #unified-header .custom-hamburger-btn span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      background-color: var(--thm-ink);
-      border-radius: 2px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    #unified-header .custom-hamburger-btn.btn-active span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-
-    #unified-header .custom-hamburger-btn.btn-active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    #unified-header .custom-hamburger-btn.btn-active span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
     }
 
     /* Subnav Bar matching about.html */
@@ -355,7 +228,7 @@
       white-space: nowrap;
     }
 
-    /* Official Soft Outline Button matching about.html */
+    /* Official Soft Outline & Primary Buttons */
     .btn-outline-soft {
       display: inline-flex;
       align-items: center;
@@ -446,26 +319,6 @@
       border-color: #1b2a4a;
     }
 
-    /* Official Footer matching about.html & index.html */
-    .footer-clean {
-      background-color: #111111;
-      color: #b8c0cc;
-      padding: 2.25rem 1.5rem;
-      text-align: center;
-    }
-
-    .footer-clean .container {
-      max-width: 1060px;
-      margin: 0 auto;
-    }
-
-    .footer-clean p {
-      margin: 0;
-      font-size: 13px;
-      letter-spacing: 0.02em;
-      color: #b8c0cc;
-    }
-
     /* Card elevation */
     .thm-card-surface {
       background: #ffffff;
@@ -480,45 +333,7 @@
       box-shadow: 0 8px 22px rgba(27, 42, 74, 0.08);
     }
 
-    /* Mobile Responsive Overrides */
     @media (max-width: 768px) {
-      #unified-header .header-flex-wrapper {
-        padding: 0 1.25rem;
-        height: 64px;
-      }
-
-      #unified-header .custom-hamburger-btn {
-        display: flex;
-      }
-
-      #unified-header .custom-menu-box {
-        display: none;
-        position: absolute;
-        top: 64px;
-        left: 0;
-        right: 0;
-        background: #ffffff;
-        border-bottom: 1px solid #e2e8f0;
-        box-shadow: 0 12px 28px rgba(27, 42, 74, 0.1);
-        padding: 12px 16px 16px;
-      }
-
-      #unified-header .custom-menu-box.box-open {
-        display: block;
-      }
-
-      #unified-header .custom-nav-list {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 4px;
-      }
-
-      #unified-header .custom-nav-list .nav-item a {
-        display: block;
-        padding: 11px 14px;
-        font-size: 14.5px;
-      }
-
       .thm-section-title {
         font-size: 23px;
       }
@@ -543,7 +358,7 @@
 <body>
 
   <!-- ===================================================================== -->
-  <!-- 0. UNIFIED HEADER (Exact markup from about.html & index.html)         -->
+  <!-- 0. UNIFIED HEADER (Managed with /assets/css/style.css & /assets/js/main.js) -->
   <!-- ===================================================================== -->
   <header id="unified-header">
     <div class="header-flex-wrapper">
@@ -559,12 +374,12 @@
           <span></span>
         </button>
         <div class="custom-menu-box" id="custom-menu-box">
-        <ul class="custom-nav-list">
-          <li class="nav-item"><a href="/index.html#promo">Home</a></li>
-          <li class="nav-item"><a href="/about.html">About</a></li>
-          <li class="nav-item active"><a href="/devotional.html">9-Year Bible</a></li>
-          <li class="nav-item"><a href="/seminar.html">AI Seminar</a></li>
-        </ul>
+          <ul class="custom-nav-list">
+            <li class="nav-item"><a href="/index.html#promo">Home</a></li>
+            <li class="nav-item"><a href="/about.html">About</a></li>
+            <li class="nav-item active"><a href="/devotional.html">9-Year Bible</a></li>
+            <li class="nav-item"><a href="/seminar.html">AI Seminar</a></li>
+          </ul>
         </div>
       </nav>
     </div>
@@ -575,7 +390,7 @@
     <!-- =================================================================== -->
     <!-- 1. HERO SECTION (Clean White #ffffff matching index.html/about.html)-->
     <!-- =================================================================== -->
-    <section id="hero" class="bg-white border-b border-[#e8eef5] pt-12 pb-14 sm:pt-16 sm:pb-16 lg:pt-20 lg:pb-20">
+    <section id="hero" class="offset-header bg-white border-b border-[#e8eef5] pb-14 sm:pb-16 lg:pb-20">
       <div class="max-w-[1040px] mx-auto px-5 sm:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
@@ -633,24 +448,15 @@
                 <!-- Redemptive-Historical Bridge Lines Connecting OT & NT -->
                 <path d="M 118 148 Q 210 116 302 148" fill="none" stroke="#dd9d71" stroke-width="1.5" stroke-dasharray="4 3" />
 
-                <!-- Open Bible Line Art in Center (exact index.html stroke style) -->
+                <!-- Open Bible Line Art in Center -->
                 <g transform="translate(210, 168)" stroke-linecap="round" stroke-linejoin="round">
-                  <!-- Small Star/Cross Focal Accent -->
                   <path d="M 0 -46 L 0 -30 M -6 -40 L 6 -40" stroke="#dd9d71" stroke-width="1.8" />
-
-                  <!-- Book Pages -->
                   <path d="M 0 -16 C -15 -24 -36 -25 -54 -20 L -54 28 C -36 23 -15 24 0 32 C 15 24 36 23 54 28 L 54 -20 C 36 -25 15 -24 0 -16 Z" fill="#ffffff" stroke="#1b2a4a" stroke-width="1.9" />
                   <line x1="0" y1="-16" x2="0" y2="32" stroke="#1b2a4a" stroke-width="1.8" />
-
-                  <!-- Bookmark Ribbon -->
                   <path d="M 14 -21 L 14 -3 L 20 -7 L 26 -3 L 26 -22" fill="#eef4f9" stroke="#6690b9" stroke-width="1.6" />
-
-                  <!-- Text Lines on Left Page (OT) -->
                   <line x1="-43" y1="-8" x2="-11" y2="-5" stroke="#6690b9" stroke-width="1.7" />
                   <line x1="-43" y1="3" x2="-11" y2="6" stroke="#1b2a4a" stroke-opacity="0.35" stroke-width="1.6" />
                   <line x1="-43" y1="14" x2="-18" y2="16" stroke="#1b2a4a" stroke-opacity="0.35" stroke-width="1.6" />
-
-                  <!-- Text Lines on Right Page (NT) -->
                   <line x1="11" y1="6" x2="43" y2="3" stroke="#dd9d71" stroke-width="1.7" />
                   <line x1="11" y1="16" x2="39" y2="14" stroke="#1b2a4a" stroke-opacity="0.35" stroke-width="1.6" />
                 </g>
@@ -664,7 +470,7 @@
                   <text x="358" y="152" fill="#9a5b32">신약 27권</text>
                 </g>
 
-                <!-- Top & Bottom Labels -->
+                <!-- Top Label -->
                 <g font-family="Montserrat, Pretendard, sans-serif" text-anchor="middle">
                   <rect x="148" y="12" width="124" height="24" rx="12" fill="#1b2a4a" />
                   <text x="210" y="28" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#ffffff">9-YEAR CYCLE</text>
@@ -688,7 +494,6 @@
 
         <!-- Bottom of Hero: 4 Crisp Summary Metric Cards -->
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 mt-10 sm:mt-12">
-          <!-- Metric 1 -->
           <div class="rounded-[14px] bg-white border border-thm-border p-4 sm:p-5 shadow-[0_4px_12px_rgba(102,144,185,0.06)] flex items-start gap-3.5">
             <div class="w-10 h-10 rounded-xl bg-thm-bgSub border border-[#e1e8f0] flex items-center justify-center shrink-0" aria-hidden="true">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -703,7 +508,6 @@
             </div>
           </div>
 
-          <!-- Metric 2 -->
           <div class="rounded-[14px] bg-white border border-thm-border p-4 sm:p-5 shadow-[0_4px_12px_rgba(102,144,185,0.06)] flex items-start gap-3.5">
             <div class="w-10 h-10 rounded-xl bg-thm-bgSub border border-[#e1e8f0] flex items-center justify-center shrink-0" aria-hidden="true">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -719,7 +523,6 @@
             </div>
           </div>
 
-          <!-- Metric 3 -->
           <div class="rounded-[14px] bg-white border border-thm-border p-4 sm:p-5 shadow-[0_4px_12px_rgba(102,144,185,0.06)] flex items-start gap-3.5">
             <div class="w-10 h-10 rounded-xl bg-thm-bgSub border border-[#e1e8f0] flex items-center justify-center shrink-0" aria-hidden="true">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -735,7 +538,6 @@
             </div>
           </div>
 
-          <!-- Metric 4 -->
           <div class="rounded-[14px] bg-white border border-thm-border p-4 sm:p-5 shadow-[0_4px_12px_rgba(102,144,185,0.06)] flex items-start gap-3.5">
             <div class="w-10 h-10 rounded-xl bg-thm-bgSub border border-[#e1e8f0] flex items-center justify-center shrink-0" aria-hidden="true">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#1b2a4a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -756,7 +558,7 @@
     </section>
 
     <!-- =================================================================== -->
-    <!-- 2. SUB-NAVIGATION BAR (Exact match to about.html)                   -->
+    <!-- 2. SUB-NAVIGATION BAR                                               -->
     <!-- =================================================================== -->
     <nav class="subnav-bar" aria-label="9년 매일묵상 상세 목차">
       <ul class="subnav-list">
@@ -786,9 +588,7 @@
           </p>
         </div>
 
-        <!-- 3-Column Principles Grid matching about.html -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-9">
-          <!-- Principle 01 -->
           <div class="thm-card-surface p-6">
             <div class="flex items-center justify-between mb-4">
               <span class="font-kicker text-xs font-bold tracking-wider text-thm-accent">01</span>
@@ -804,7 +604,6 @@
             </p>
           </div>
 
-          <!-- Principle 02 -->
           <div class="thm-card-surface p-6">
             <div class="flex items-center justify-between mb-4">
               <span class="font-kicker text-xs font-bold tracking-wider text-thm-accent">02</span>
@@ -819,7 +618,6 @@
             </p>
           </div>
 
-          <!-- Principle 03 -->
           <div class="thm-card-surface p-6">
             <div class="flex items-center justify-between mb-4">
               <span class="font-kicker text-xs font-bold tracking-wider text-thm-accent">03</span>
@@ -836,7 +634,6 @@
           </div>
         </div>
 
-        <!-- Callout Note Box -->
         <div class="mt-7 rounded-[14px] bg-thm-bgSub border border-[#dbe6f0] border-l-[3px] border-l-thm-accent px-5 py-4 sm:px-6 sm:py-5">
           <h4 class="text-[14.5px] font-bold text-thm-ink mb-1.5">해석의 균형과 표기 원칙</h4>
           <p class="text-[14px] text-thm-body leading-[1.8] break-keep">
@@ -857,9 +654,7 @@
           창세기부터 요한계시록까지 단순 나열하지 않고, 구약과 신약, 역사서와 지혜서·서신서를 신학적으로 짝지어 9년의 흐름 속에 유기적으로 배치했습니다.
         </p>
 
-        <!-- 6 Pairing Bridge Cards (2x3 Desktop Grid) -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-9">
-          <!-- Pair 1 -->
           <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
             <div class="flex items-center gap-2 flex-wrap mb-3.5">
               <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">레위기</span>
@@ -873,7 +668,6 @@
             </p>
           </div>
 
-          <!-- Pair 2 -->
           <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
             <div class="flex items-center gap-2 flex-wrap mb-3.5">
               <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">사사기</span>
@@ -887,7 +681,6 @@
             </p>
           </div>
 
-          <!-- Pair 3 -->
           <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
             <div class="flex items-center gap-2 flex-wrap mb-3.5">
               <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">열왕기상(솔로몬)</span>
@@ -901,7 +694,6 @@
             </p>
           </div>
 
-          <!-- Pair 4 -->
           <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
             <div class="flex items-center gap-2 flex-wrap mb-3.5">
               <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">예레미야 · 애가</span>
@@ -915,7 +707,6 @@
             </p>
           </div>
 
-          <!-- Pair 5 -->
           <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
             <div class="flex items-center gap-2 flex-wrap mb-3.5">
               <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">사도행전 (상·하)</span>
@@ -929,7 +720,6 @@
             </p>
           </div>
 
-          <!-- Pair 6 -->
           <div class="thm-card-surface p-5 sm:p-6 flex flex-col">
             <div class="flex items-center gap-2 flex-wrap mb-3.5">
               <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">요한복음</span>
@@ -957,12 +747,9 @@
           하루 25~30분 동안 독자가 해설만 읽고 지나치지 않도록, 도입·관찰에서 깊은 주해, 그리고 삶과 기도의 응답으로 이어지는 정교한 7단계 구조를 따릅니다.
         </p>
 
-        <!-- 3-Tier Visual Hierarchy: Row 1 (Steps 1-3) -> Row 2 (Step 4 Featured 8 cols + Step 5 Optional 4 cols) -> Row 3 (Steps 6-7) -->
         <div class="space-y-5 mt-9">
-
-          <!-- ROW 1: 도입과 관찰 (3 Equal Cards) -->
+          <!-- ROW 1 -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
-            <!-- Step 01 -->
             <div class="thm-card-surface p-5 sm:p-6">
               <div class="flex items-center justify-between gap-2 mb-3">
                 <span class="font-kicker text-[11.5px] font-bold tracking-wider text-thm-accentDark">STEP 01</span>
@@ -974,7 +761,6 @@
               </p>
             </div>
 
-            <!-- Step 02 -->
             <div class="thm-card-surface p-5 sm:p-6">
               <div class="flex items-center justify-between gap-2 mb-3">
                 <span class="font-kicker text-[11.5px] font-bold tracking-wider text-thm-accentDark">STEP 02</span>
@@ -986,7 +772,6 @@
               </p>
             </div>
 
-            <!-- Step 03 -->
             <div class="thm-card-surface p-5 sm:p-6">
               <div class="flex items-center justify-between gap-2 mb-3">
                 <span class="font-kicker text-[11.5px] font-bold tracking-wider text-thm-accentDark">STEP 03</span>
@@ -999,9 +784,8 @@
             </div>
           </div>
 
-          <!-- ROW 2: 핵심 주해 (Step 04: 8 cols) + 선택 심화 (Step 05: 4 cols) -->
+          <!-- ROW 2 -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 items-stretch">
-            <!-- Step 04: Featured Core Card (8 Columns) -->
             <div class="lg:col-span-8 rounded-[14px] bg-white border border-[#cbd9e8] border-l-4 border-l-thm-ink shadow-[0_6px_20px_rgba(27,42,74,0.08)] overflow-hidden flex flex-col justify-between">
               <div class="bg-thm-bgSub border-b border-[#e1e8f0] px-5 sm:px-6 py-3.5 flex items-center justify-between gap-2">
                 <div class="flex items-center gap-2.5">
@@ -1018,7 +802,6 @@
                     원어 해설(문법 지식 없이도 이해하도록 음역 → 의미 → 신학적 함의 순으로 설명), 역사·문화적 배경, 문학적 구조, 신학적 핵심을 결합한 충실한 본문 주해를 제공합니다.
                   </p>
                 </div>
-                <!-- 4 Compact Sub-Pills -->
                 <div class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-[#edf2f7]">
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-thm-accentTint text-thm-ink">
                     <span class="w-1.5 h-1.5 rounded-full bg-thm-accent" aria-hidden="true"></span>
@@ -1040,7 +823,6 @@
               </div>
             </div>
 
-            <!-- Step 05: Compact Dashed Optional Card (4 Columns) -->
             <div class="lg:col-span-4 rounded-[14px] bg-thm-bgSlate border-[1.5px] border-dashed border-[#cbd5e1] p-5 sm:p-6 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between gap-2 mb-3">
@@ -1058,9 +840,8 @@
             </div>
           </div>
 
-          <!-- ROW 3: 적용과 응답 (2 Equal Cards) -->
+          <!-- ROW 3 -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-            <!-- Step 06 -->
             <div class="thm-card-surface p-5 sm:p-6">
               <div class="flex items-center justify-between gap-2 mb-3">
                 <span class="font-kicker text-[11.5px] font-bold tracking-wider text-thm-accentDark">STEP 06</span>
@@ -1072,7 +853,6 @@
               </p>
             </div>
 
-            <!-- Step 07 -->
             <div class="thm-card-surface p-5 sm:p-6">
               <div class="flex items-center justify-between gap-2 mb-3">
                 <span class="font-kicker text-[11.5px] font-bold tracking-wider text-thm-accentDark">STEP 07</span>
@@ -1086,7 +866,6 @@
           </div>
         </div>
 
-        <!-- Review Devices: 블록 정리 & 책 마무리 -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
           <div class="rounded-[14px] bg-thm-bgWarm border border-thm-borderWarm p-5 sm:p-6 flex items-start gap-4">
             <div class="w-11 h-11 rounded-xl bg-white border border-thm-borderWarm flex items-center justify-center shrink-0" aria-hidden="true">
@@ -1125,7 +904,6 @@
           </div>
         </div>
 
-        <!-- Sample CTA Bar (.kaiec-bar style) -->
         <a class="kaiec-bar mt-6" href="https://docs.google.com/document/d/1h9VnHSoIdvNOpCW5h1nqoYuG0bhfXbaXG_EiGHezsJI/edit?usp=sharing" target="_blank" rel="noopener">
           <span class="kaiec-mark mark-accent" aria-hidden="true">SAMPLE</span>
           <span class="kaiec-text">
@@ -1146,7 +924,6 @@
         <h2 class="thm-section-title">9년 전권 완주부터 권별 소그룹 성경공부까지</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
-          <!-- Track A -->
           <div class="rounded-[14px] bg-white border border-thm-borderWarm p-6 sm:p-7 shadow-[0_2px_8px_rgba(27,42,74,0.03)] flex flex-col">
             <div class="flex items-center justify-between gap-3 mb-4">
               <span class="px-3 py-1 rounded-md text-xs font-bold bg-thm-accentTint text-thm-ink">Track A</span>
@@ -1162,7 +939,6 @@
             </p>
           </div>
 
-          <!-- Track B -->
           <div class="rounded-[14px] bg-white border border-thm-borderWarm border-l-[3px] border-l-thm-sand p-6 sm:p-7 shadow-[0_2px_8px_rgba(27,42,74,0.03)] flex flex-col">
             <div class="flex items-center justify-between gap-3 mb-4">
               <span class="px-3 py-1 rounded-md text-xs font-bold bg-thm-sandTint text-thm-sandText border border-thm-sand/40">Track B</span>
@@ -1192,9 +968,7 @@
           각 권 옆의 괄호 안 숫자는 해당 성경을 구성하는 매일묵상 편수이며, 본문의 문학적 구조와 신학적 밀도에 따라 배정되었습니다. 연차별 탭을 선택하거나 성경 이름·키워드로 검색해 보실 수 있습니다.
         </p>
 
-        <!-- Interactive Controls Bar: Tabs + Instant Search -->
         <div id="curriculumControls" class="mt-8 rounded-[14px] bg-thm-bgSub border border-[#dce5ef] p-4 sm:p-5 space-y-4">
-          <!-- Search Row -->
           <div class="relative">
             <label for="bookSearchInput" class="sr-only">성경 권명 또는 주제 검색</label>
             <svg class="w-4 h-4 text-thm-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1220,13 +994,9 @@
             </button>
           </div>
 
-          <!-- Year Tabs -->
-          <div role="tablist" aria-label="연차 선택" class="flex flex-wrap items-center gap-2">
-            <!-- Tabs rendered dynamically via JS -->
-          </div>
+          <div role="tablist" aria-label="연차 선택" class="flex flex-wrap items-center gap-2"></div>
         </div>
 
-        <!-- Search Active Notice -->
         <div id="searchStatusBar" class="hidden mt-4 flex items-center justify-between flex-wrap gap-2 px-4 py-2.5 rounded-lg bg-thm-accentTint border border-[#d1e1f0] text-xs sm:text-sm text-thm-ink">
           <span id="searchStatusText" class="font-medium"></span>
           <button id="resetSearchLink" type="button" class="font-semibold text-thm-accentDark hover:text-thm-ink underline underline-offset-2">
@@ -1234,25 +1004,19 @@
           </button>
         </div>
 
-        <!-- Curriculum Cards Render Container -->
-        <div id="curriculumContainer" class="mt-7 space-y-9" aria-live="polite">
-          <!-- Populated dynamically with all 9 years / 66 books -->
-        </div>
+        <div id="curriculumContainer" class="mt-7 space-y-9" aria-live="polite"></div>
       </div>
     </section>
 
     <!-- =================================================================== -->
     <!-- 8. SECTION 6: 저작 과정, 참고 문헌 및 집필자 (#fafbfc)                -->
-    <!--    (NO 3-step commentary verification block — lives on about.html)  -->
     <!-- =================================================================== -->
     <section id="process" class="bg-slate-section py-16 sm:py-22 scroll-mt-20">
       <div class="max-w-[960px] mx-auto px-5 sm:px-8">
         <p class="thm-section-label">Methodology &amp; Author</p>
         <h2 class="thm-section-title">엄밀한 저작 과정과 검증된 자료 위에 세웁니다</h2>
 
-        <!-- A. 4-Step Editorial & Verification Process -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mt-8">
-          <!-- Step 01 -->
           <div class="relative thm-card-surface p-5 sm:p-6 flex flex-col">
             <div class="flex items-center justify-between mb-3.5">
               <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-thm-ink text-white font-kicker text-xs font-bold">01</span>
@@ -1266,7 +1030,6 @@
             </p>
           </div>
 
-          <!-- Step 02 -->
           <div class="relative thm-card-surface p-5 sm:p-6 flex flex-col">
             <div class="flex items-center justify-between mb-3.5">
               <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-thm-accent text-white font-kicker text-xs font-bold">02</span>
@@ -1280,7 +1043,6 @@
             </p>
           </div>
 
-          <!-- Step 03 -->
           <div class="relative thm-card-surface p-5 sm:p-6 flex flex-col">
             <div class="flex items-center justify-between mb-3.5">
               <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-thm-ink text-white font-kicker text-xs font-bold">03</span>
@@ -1294,7 +1056,6 @@
             </p>
           </div>
 
-          <!-- Step 04 -->
           <div class="relative thm-card-surface p-5 sm:p-6 flex flex-col">
             <div class="flex items-center justify-between mb-3.5">
               <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-thm-accent text-white font-kicker text-xs font-bold">04</span>
@@ -1309,7 +1070,6 @@
           </div>
         </div>
 
-        <!-- B. Reference Library Download & Standards Link (.kaiec-bar stack) -->
         <div class="mt-8 space-y-3">
           <a class="kaiec-bar" href="/assets/docs/recommended-commentaries-66.pdf" target="_blank" rel="noopener">
             <span class="kaiec-mark mark-award" aria-hidden="true">PDF</span>
@@ -1330,7 +1090,6 @@
           </a>
         </div>
 
-        <!-- C. Compact Author Profile Card -->
         <div class="mt-8 rounded-[14px] bg-white border border-thm-border p-6 sm:p-8 shadow-[0_4px_12px_rgba(102,144,185,0.06)]">
           <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div class="max-w-[600px] space-y-3">
@@ -1373,7 +1132,7 @@
           <a href="mailto:TheHelperMinistry@gmail.com">TheHelperMinistry@gmail.com</a>
         </address>
         <div class="mt-7 flex items-center justify-center flex-wrap gap-3">
-          <a href="/about.html" class="btn-outline-soft">About 페이지 보기</a>
+          <a href="/about.html" class="btn-outline-soft">단체 및 신학적 기준 보기</a>
           <a href="/seminar.html" class="btn-outline-soft">AI 세미나 안내</a>
         </div>
       </div>
@@ -1382,7 +1141,7 @@
   </main>
 
   <!-- ===================================================================== -->
-  <!-- 10. FOOTER (.footer-clean, #111111 matching about.html & index.html)  -->
+  <!-- 10. FOOTER (.footer-clean managed by /assets/css/style.css)           -->
   <!-- ===================================================================== -->
   <footer class="footer-clean">
     <div class="container">
@@ -1391,16 +1150,13 @@
   </footer>
 
   <!-- ===================================================================== -->
-  <!-- INTERACTIVE CONTROLLER: MOBILE MENU + 9-YEAR CURRICULUM + SEARCH      -->
+  <!-- SHARED SCRIPTS + CURRICULUM INTERACTIVITY                            -->
   <!-- ===================================================================== -->
+  <script src="/assets/js/main.js"></script>
   <script>
     (function () {
       'use strict';
 
-      /**
-       * Complete 9-Year Bible Devotional Curriculum Data (All 66 Books)
-       * Displays book name with episode count in parentheses + rich pastoral/theological description.
-       */
       const CURRICULUM_DATA = [
         {
           year: 1,
@@ -1767,13 +1523,9 @@
         }
       ];
 
-      // Interactive Curriculum State
-      let activeView = '1'; // '1'..'9' or 'all'
+      let activeView = '1';
       let searchQuery = '';
 
-      /**
-       * Escape HTML entities safely before DOM injection.
-       */
       function escapeHtml(str) {
         return String(str)
           .replace(/&/g, '&amp;')
@@ -1783,9 +1535,6 @@
           .replace(/'/g, '&#39;');
       }
 
-      /**
-       * Render an individual Book Card: Book Title (count), OT/NT pill, rich description.
-       */
       function renderBookCard(book) {
         const isOT = book.testament === '구약';
         const testamentPill = isOT
@@ -1808,9 +1557,6 @@
         `;
       }
 
-      /**
-       * Render a Year Header Banner + 2-column Book Card grid.
-       */
       function renderYearSection(yearObj, booksToRender) {
         const cardsHtml = booksToRender.map((book) => renderBookCard(book)).join('');
         return `
@@ -1830,9 +1576,6 @@
         `;
       }
 
-      /**
-       * Render Year Tabs (1년차 ~ 9년차 + 전체 보기).
-       */
       function renderTabs() {
         const tabList = document.querySelector('#curriculumControls [role="tablist"]');
         if (!tabList) return;
@@ -1893,9 +1636,6 @@
         });
       }
 
-      /**
-       * Render Curriculum content based on active tab or live search query.
-       */
       function renderCurriculum() {
         const container = document.getElementById('curriculumContainer');
         const statusBar = document.getElementById('searchStatusBar');
@@ -1904,7 +1644,6 @@
 
         const q = searchQuery.trim().toLowerCase();
 
-        // Live Search across ALL 9 years
         if (q.length > 0) {
           let totalMatches = 0;
           let html = '';
@@ -1938,7 +1677,6 @@
           return;
         }
 
-        // Standard Tab View
         if (statusBar) statusBar.classList.add('hidden');
 
         if (activeView === 'all') {
@@ -1951,44 +1689,14 @@
         }
       }
 
-      /**
-       * Toggle visibility of the search clear button.
-       */
       function toggleClearBtn() {
         const clearBtn = document.getElementById('clearSearchBtn');
         if (!clearBtn) return;
         clearBtn.classList.toggle('hidden', searchQuery.trim().length === 0);
       }
 
-      /**
-       * Initialize Mobile Navigation, Subnav Smooth Scroll, Tabs & Search.
-       */
       function init() {
         try {
-          // 1. Mobile Navigation Drawer (matching about.html / index.html)
-          const triggerBtn = document.getElementById('custom-menu-trigger');
-          const drawerBox = document.getElementById('custom-menu-box');
-
-          if (triggerBtn && drawerBox) {
-            triggerBtn.addEventListener('click', function (e) {
-              e.preventDefault();
-              const isOpen = drawerBox.classList.toggle('box-open');
-              triggerBtn.classList.toggle('btn-active', isOpen);
-              triggerBtn.setAttribute('aria-expanded', String(isOpen));
-              triggerBtn.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
-            });
-
-            document.addEventListener('click', function (e) {
-              if (!triggerBtn.contains(e.target) && !drawerBox.contains(e.target)) {
-                triggerBtn.classList.remove('btn-active');
-                drawerBox.classList.remove('box-open');
-                triggerBtn.setAttribute('aria-expanded', 'false');
-                triggerBtn.setAttribute('aria-label', '메뉴 열기');
-              }
-            });
-          }
-
-          // 2. Smooth scroll with sticky header offset for in-page anchor links
           document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
             anchor.addEventListener('click', function (e) {
               const targetId = this.getAttribute('href');
@@ -2004,11 +1712,9 @@
             });
           });
 
-          // 3. Curriculum Tabs & Initial Render (1년차 default)
           renderTabs();
           renderCurriculum();
 
-          // 4. Instant Search Listeners
           const searchInput = document.getElementById('bookSearchInput');
           const clearBtn = document.getElementById('clearSearchBtn');
           const resetLink = document.getElementById('resetSearchLink');
