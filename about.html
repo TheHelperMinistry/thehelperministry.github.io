@@ -9,7 +9,7 @@
     <title>About — The Helper Ministry</title>
     <link rel="shortcut icon" href="/favicon.ico">
 
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -796,7 +796,7 @@
               <td><strong style="font-weight: 700; white-space: nowrap;">요한계시록</strong> <span style="font-size: 0.82em; font-weight: 400; opacity: 0.68; white-space: nowrap;">(묵시서)</span></td>
               <td>Beale (NIGTC), Aune (WBC), Koester (AYB)</td>
               <td>Mounce (NICNT), Hamilton Jr. (PtW)</td>
-            </tr> 
+            </tr>
           </tbody>
         </table>
       </div>
@@ -916,7 +916,7 @@
       <a href="mailto:TheHelperMinistry@gmail.com">TheHelperMinistry@gmail.com</a>
     </address>
     <div class="contact-links">
-      <a href="/index.html#resources" class="btn-outline-soft">진행 중인 프로젝트 보기</a>
+      <a href="/devotional.html" class="btn-outline-soft">9년 매일묵상 시리즈 보기</a>
       <a href="/seminar.html" class="btn-outline-soft">AI 세미나 안내</a>
     </div>
   </div>
@@ -947,24 +947,6 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         document.body.style.overflow = "";
-
-        var triggerBtn = document.getElementById("custom-menu-trigger");
-        var drawerBox = document.getElementById("custom-menu-box");
-
-        if (triggerBtn && drawerBox) {
-          triggerBtn.addEventListener("click", function (e) {
-            e.preventDefault();
-            triggerBtn.classList.toggle("btn-active");
-            drawerBox.classList.toggle("box-open");
-          });
-
-          document.addEventListener("click", function (e) {
-            if (!triggerBtn.contains(e.target) && !drawerBox.contains(e.target)) {
-              triggerBtn.classList.remove("btn-active");
-              drawerBox.classList.remove("box-open");
-            }
-          });
-        }
 
         var openModalBtn = document.getElementById("open-award-modal");
         var closeModalBtn = document.getElementById("close-award-modal");
